@@ -1,0 +1,783 @@
+/*
+ Theme Name:     WSU News
+ Theme URI:      http://web.wsu.edu
+ Description:    A child theme for Washington State University's Spine framework
+ Author:         WSU University Communications
+ Author URI:     http://ucomm.wsu.edu
+ Template:       spine
+ Version:        0.0.1
+*/
+
+#jacket {
+	overflow-x: hidden;
+	overflow-y: visible;
+	}
+
+.sections .section {
+	background-image: url('//news.wsu.dev/wp-content/themes/spine/styles/bookmark/backgrounds/gradients/gradient-graytolight-south-2.jpg');
+	background-color: #f9f9f9;
+	background-repeat: repeat-x;
+	background-position: left top;
+	}
+
+.sections {
+	width: 100%;
+	position: relative;
+	}
+
+.articles {
+	xmin-width: 600px;
+	max-width: 100%;
+	padding: 0 2rem;
+	overflow: hidden;
+	}
+	
+
+	
+body main .margin-right {
+	xxwidth: 6000px !important;
+	}
+	
+.size-lt-medium .ten-twelfths {
+	width: 100%;
+	}
+	
+/* Defaults */
+
+body main {
+	font-size: 16px;
+	line-height: 1.6em;
+	color: #2a3033;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	}
+main h1, main h2, main h3, main h4 {
+	color: #2a3033;
+	}
+
+.page-template h1.article-title {
+	font-size: 1.9em;
+	font-weight: bold;
+	xxfont-weight: 800;
+	line-height: 1.1em;
+	}
+.page-template h1.hero {
+	margin: 2.5rem 0 .5rem;
+	font-size: 6em;
+	font-weight: bold;
+	font-weight: 800;
+	line-height: .9em;
+	}
+.page-template main h2 {
+	margin: 2.5rem 0 .5rem;
+	font-weight: normal;
+	font-size: 2.2em;
+	line-height: 1em;
+	}
+.page-template main h3 {
+	margin: 1em 0 .25em;
+	font-weight: normal;
+	font-size: 1.5em;
+	text-transform: none;
+	color: #981e32;
+	line-height: 1em;
+	}
+.page-template main h4 {
+	margin: 1em 0 .25em;
+	font-weight: normal;
+	font-size: 1.6em;
+	line-height: 1em;
+	}
+
+
+.articles {
+	padding-top: 150px;
+	}
+
+.sections .news-section {
+	
+	z-index: 100;
+	box-sizing: border-box;
+	xxwidth: 40px;
+	xxwidth: 87%;
+	}
+.size-gt-small .sections .news-section {
+	position: absolute !important;
+	width: calc(100%);
+	}
+.size-gt-small .news-section.opened .section-title {
+	display: none;
+	}
+x.sections section:nth-of-type(1),
+.sections section.crimson {
+	width: calc(100%);
+	}
+x.size-gt-small .sections .section:nth-of-type(2),
+.size-gt-small .sections .section.yellow {
+	z-index: 80;
+	width: calc(100% + 40px);
+	}
+x.size-gt-small .sections .section:nth-of-type(3),
+.size-gt-small .sections .section.blue {
+	z-index: 70;
+	width: calc(100% + 80px);
+	}
+ x.sections .section:nth-of-type(4),
+ .size-gt-small .sections .section.orange {
+	z-index: 60;
+	width: calc(100% + 120px);
+	}
+x.size-gt-small .sections .section:nth-of-type(5),
+.size-gt-small .sections .section.green {
+	z-index: 50;
+	width: calc(100% + 160px);
+	}
+.size-gt-small .sections .section.photo {
+	z-index: 40;
+	width: calc(100% + 200px);
+	}
+	
+.size-large .sections .section:nth-of-type(2) { width: calc(100% + 30px); }
+.size-large .sections .section:nth-of-type(3) { width: calc(100% + 60px); }
+.size-large .sections .section:nth-of-type(4) { width: calc(100% + 90px); }
+.size-large .sections .section:nth-of-type(5) { width: calc(100% + 120px); }
+.size-large .sections .section:nth-of-type(6) { width: calc(100% + 150px); }
+	
+.sections .section.opened {
+	margin-left: 0px;
+	}
+
+.size-gt-small .section.opened:not(:first-of-type) .section-header:hover:before {
+	content: "\00ab";
+	content: "\00bb";
+	position: absolute;
+	top: 50vh;
+	right: 5px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 30px;
+	}
+
+.size-gt-small .section-header {
+	width: 40px;
+	position: absolute;
+	right: 0px;
+	height: 100%;
+	z-index: 200;
+	}
+
+.section aside {
+	float: right !important;
+	width: 132px;
+	width: 198px;
+	min-height: 100px;
+	height: 100%;
+	display: block;
+	}
+	
+.section aside:before {
+	content: "news";
+	font-size: 8em;
+	line-height: 1em;
+	top: 0px;
+	xxright: 200px;
+	right: 200px;
+	right: calc(100% - 10px);
+	position: absolute;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	z-index: 100;
+	}
+.size-lt-medium .section aside:before {
+	display: none;
+	}
+
+.size-lt-medium .section-title {
+	font-size: 8rem;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	}
+	
+.cbold {
+	
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	}
+.ucase {
+	text-transform: uppercase;
+	}
+.section-side {
+	padding: 0px 40px 0px 1rem;
+	}
+.section-side ul {
+	padding: 25px 0;
+	
+	}
+.section-side ul ul {
+	padding: 0;
+	}
+.section-side ul ~ ul {
+	padding-top: 0px;
+	}
+.crimson .section-side hr {
+	height: 3px;
+	xmargin-left: 30px;
+	background: -moz-linear-gradient(left,  rgba(106,14,32,1) 0%, rgba(106,14,32,0.51) 50%, rgba(152,30,50,0.01) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(106,14,32,1)), color-stop(50%,rgba(106,14,32,0.51)), color-stop(100%,rgba(152,30,50,0.01))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a0e20', endColorstr='#03981e32',GradientType=1 ); /* IE6-9 */
+	}
+	
+.section-side li {
+	list-style: none;
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	color: white;
+	}
+.section-side ul ul li {
+	font-weight: normal;
+	font-size: .8em;
+	line-height: 1.2em;
+	padding-top: .2em;
+	}
+.crimson .section-side li,
+.crimson .section-side li a {
+	color: white;
+	}
+.crimson .section-side ul ul li,
+.crimson .section-side ul ul li a {
+	color: #d7dadb;
+	}
+.crimson .section-side li:hover,
+.crimson .section-side li a:hover {
+	color: white;
+	cursor: pointer;
+	}
+	
+.section.crimson aside,
+.size-small .section.crimson {
+	background: #981e32;
+	}
+.section.crimson aside:before,
+.section.crimson .article-title a {
+	color: #981e32;
+	}
+	
+.section.yellow aside,
+.size-small .section.yellow {
+	background: #c69214;
+	}
+.section.yellow aside:before,
+.section.yellow .article-title a {
+	color: #c69214;
+	}
+.section.yellow aside:before {
+	content: "Local";
+	
+	}
+	
+.section.orange aside,
+.size-small .section.orange {
+	background: #b67233;
+	}
+.section.orange aside:before,
+.section.orange .article-title a {
+	color: #b67233;
+	}
+.section.orange aside:before {
+	content: "Events";
+	}
+	
+.section.blue aside,
+.size-small .section.blue {
+	background: #4f868e;
+	}
+.section.blue aside:before,
+.section.blue .article-title a {
+	color: #4f868e;
+	}
+.section.blue aside:before {
+	content: "Press";
+	
+	}
+	
+.section.green aside,
+.size-small .section.green {
+	background: #8f7e35;
+	}
+.section.green aside:before,
+.section.green .article-title a {
+	color: #8f7e35;
+	}
+.section.green aside:before {
+	content: "Staff";
+	
+	}
+
+.section.crimson .section-header {
+	
+	color: #b5babe;
+	xxcolor: white;
+	background: #981e32;
+	}
+
+.row, .section, main div {
+	xmin-height: 100px;
+	}	
+
+.size-gt-small .section:not(.crimson) .section-header:not(.opened):hover {
+	color: white;
+	cursor: pointer;
+	}
+.section.yellow .section-header {
+	background: #c7911b;
+	color: #e5cd93;
+	}
+.xnews-section.yellow.opened .section-header {
+	background: #9e7510;
+	background: #d7b258;
+	background: #ffb81c;
+	}
+.size-gt-small .section.yellow:not(.opened) .section-header:hover {
+	color: white;
+	background: #ffb81c;
+	}
+	
+.section.blue .section-header {
+	xborder-left: 5px #4f868e solid;
+	}
+.section.blue .section-header {
+	color: #d3e1e3;
+	color: #aec7cb;
+	background-color: #4f868e;
+	}
+.size-gt-small .section.blue:not(.opened) .section-header:hover {
+	background: #00a5bd;
+	}
+
+.section.orange .section-header {
+	xborder-left: 5px #8f7e35 solid;
+	}
+.section.orange .section-header {
+	color: #8f7e35;
+	color: #ddbea1;
+	background-color: #b67233;
+	}
+.size-gt-small .section.orange:not(.opened) .section-header:hover {
+	background: #f6861f;
+	}
+	
+.section.green .section-header {
+	color: #cbc4a2;
+	background-color: #8f7e35;
+	}
+.size-gt-small .section.green:not(.opened) .section-header:hover {
+	background: #ada400;
+	}
+	
+.section-title {
+	font-weight: 300;
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: uppercase;
+	}
+	
+.size-gt-small .section-title {
+	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: right bottom;
+	right: 2px;
+	top: -25px;
+	position: absolute;
+	z-index: 100;
+	}
+	
+.section-tabs .section-title {
+	right: -7px;
+	}
+	
+main article header .article-title {
+	font-weight: 300;
+	}
+	
+.size-gt-small .section-tabs {
+	position: absolute;
+	position: fixed;
+	width: 132px;
+	width: 198px;
+	margin-left: -329px;
+	margin-left: -396px;
+	z-index: 999164;
+	top: 0px;
+	bottom: 0px;	
+	}
+.section-tabs .section-tab {
+	width: 20%;
+	float: right;
+	height: 100%;
+	top: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	box-sizing: border-box;
+	xborder-right-width: 5px;
+	xborder-right-style: solid;
+	box-shadow: inset -5px 0px 0px 0px rgba(0, 0, 0, .5);
+	-xwebkit-box-shadow: inset 5px 0px 0px -1px #ABABAB;
+	-xmoz-box-shadow: inset 5px 0px 0px -1px #ABABAB;
+	-xo-box-shadow: inset 5px 0px 0px -1px #ABABAB;
+	position: relative;
+	display: none;
+	}
+.section-tabs .section-tab:hover {
+	border-right-width: 0px;
+	cursor: pointer;
+	}
+.section-tab.crimson {
+	color: #981e32;
+	border-right-color: #981e32;
+	color: white;
+	background: #981e32;
+	box-shadow: inset -5px 0px 0px 0px rgba(82, 0, 14, 0.5);
+	}
+.section-tab.crimson:hover {
+	color: white;
+	background: #981e32;
+	background: #c60c30;
+	xborder-right-color: #6d1323;
+	}
+.section-tab.yellow {
+	color: #c7911b;
+	border-right-color: #c7911b;
+	color: white;
+	background: #c7911b;
+	box-shadow: inset -5px 0px 0px 0px rgba(119, 88, 12, 0.5);
+	}
+.section-tab.yellow:hover {
+	xcolor: white;
+	background: #c7911b;
+	background: #ffb81c;
+	}
+.section-tab.blue {
+	color: #4f868e;
+	border-right-color: #4f868e;
+	background: #4f868e;
+	color: white;
+	box-shadow: inset -5px 0px 0px 0px rgba(47, 80, 85, 0.5);
+	}
+.section-tab.blue:hover {
+	color: white;
+	background: #4f868e;
+	background: #00a5bd;
+	xborder-right-color: #2f5055;
+	}
+.section-tab.green {
+	color: #8f7e35;
+	border-right-color: #8f7e35;
+	color: white;
+	background: #8f7e35;
+	box-shadow: inset -5px 0px 0px 0px rgba(86, 76, 32, 0.5);
+	}
+.section-tab.green:hover {
+	color: white;
+	background: #8f7e35;
+	background: #ada400;
+	xborder-right-color: #564c20;
+	}
+.section-tab.orange {
+	color: #b67233;
+	border-right-color: #b67233;
+	color: white;
+	background: #b67233;
+	box-shadow: inset -5px 0px 0px 0px rgba(109, 68, 31, 0.5);
+	}
+.section-tab.orange:hover {
+	color: white;
+	background: #b67233;
+	background: #f6861f;
+	xborder-right-color: #6d441f;
+	}
+	
+.section-tabs .section-header {
+	display: block;
+	}
+	
+	
+.size-small .fluid .sections section {
+	width: 100% !important;
+	}
+x.size-small .enclosure {
+	display: none;
+	}
+.size-small section aside,
+.size-small .article-summary,
+.size-small .article-footer,
+.size-small article .source,
+section.local .category-wsu-spokane-news::before {
+	display: none !important;
+	}
+.size-small .section-header {
+	padding-left: 1.8rem;
+	}
+.size-small section {
+	padding-bottom: 2rem;
+	}
+.size-small section article:nth-of-type(2) ~ article {
+	display: none !important;
+	}
+.size-small .article-title a {
+	color: white !important;
+	}
+.size-small section .articles {
+	padding-top: 0px;
+	}
+	
+/* Sections */
+
+.crimson .enclosure {
+	xxbackground-image: url('/wp-content/uploads/sites/18/2015/02/Tagebau_welzow_sued-1188x891.jpg');
+	background-repeat: no-repeat;
+	background-position: left top;
+	xxbackground-size: auto 400px;
+	}
+.crimson .enclosure .articles {
+	xxpadding-top: 300px;
+	}
+.single article,
+.single article header {
+	background-image: none !important;
+	}
+.articles article.has-featured-image:nth-of-type(1) {
+	padding-top: ;
+	background-size: 0 0;
+	}
+.articles article.has-featured-image:nth-of-type(1) header {
+	xpadding-top: 200px;
+	
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	margin: 0px -2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	x-webkit-filter: grayscale(100%);
+    xfilter: gray;
+    xxopacity: .4;
+    height: 300px;
+	}
+.articles article.has-featured-image:first-of-type header hgroup:first-of-type {
+	position: relative;
+	height: 300px;
+	margin: 0px -2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	background: -moz-linear-gradient(top,  rgba(94,106,113,0) 0%, rgba(94,106,113,0) 67%, rgba(94,106,113,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,106,113,0)), color-stop(67%,rgba(94,106,113,0)), color-stop(100%,rgba(94,106,113,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005e6a71', endColorstr='#5e6a71',GradientType=0 ); /* IE6-9 */
+
+	}
+.articles article.has-featured-image:first-of-type header .article-title a {
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	padding-bottom: 1rem;
+	xfont-family: "Open Sans Condensed";
+	xfont-weight: bold;
+	font-size: 2rem;
+	
+	}
+	
+article.has-featured-image.tag-rock-doc hgroup:first-of-type:before {
+	content: "Rock Doc";
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	font-size: 1rem;
+	background: black;
+	xxbackground: #5e6a71;
+	background: #2a3033;
+	color: white;
+	display: inline-block;
+	position: absolute;
+	bottom: 45px;
+	padding: 0px 6px;
+	text-transform: uppercase;
+	}
+
+img#leadimg {
+	width: calc(100% + 4rem) !important;
+	max-width: 1000%;
+	height: 400px !important;
+	background-repeat: none;
+	background-position: top center;
+	xbackground-size: auto 400px;
+	background-size: cover;
+	xx-webkit-filter: grayscale(100%);
+    xxfilter: gray;
+    display: block;
+    margin-left: -2em;
+    xmargin-right: -2rem;
+    z-index: 0;
+	}
+.sections .featured .articles article:first-of-type figure {
+	display: none;
+	}
+.crimson .articles {
+	padding-top: 0px;
+	}
+
+section.local .category-wsu-spokane-news:before {
+	content: "Spokane";
+	background: #77580c;
+	color: #e5cd93;
+	text-transform: uppercase;
+	padding: 2px 6px;
+	}
+	
+.articles article {
+	padding-bottom: 15px;
+	}
+.articles article ~ article {
+	border-top: 5px #d6dada solid;
+	}
+	
+/* Events */
+
+.today-tomorrow dl {
+	xbackground-color: #d6dada;
+	margin-bottom: 5px;
+	
+	clear: both;
+	border-top: 5px #d6dada solid;
+	padding: 10px 0px;
+	}
+	
+.today-tomorrow dl dt,
+.today-tomorrow dl dd {
+	display: block;
+	}
+.today-tomorrow dl dt {
+	xfont-weight: normal;
+	width: 70%;
+	xmargin-left: 25%;
+	line-height: 1em;
+	}
+.today-tomorrow dl dt,
+.today-tomorrow dl dd {
+	float: right;
+	}
+.today-tomorrow dl:nth-of-type(even) dt,
+.today-tomorrow dl:nth-of-type(even) dd {
+	float: left;
+	}
+.today-tomorrow dl dd {
+	width: 25%;
+	position: relative;
+	}
+.today-tomorrow dl dd time {
+	xposition: absolute;
+	left: 0px;
+	top: 20px;
+	}
+.today-tomorrow dl dd time .hour {
+	font-size: 3rem;
+	
+	}
+.today-tomorrow dl dd time .hour {
+	text-transform: uppercase;
+	
+	}
+.oclock {
+	display: none;
+	}
+.today-tomorrow a {
+	color: #626a71;
+	display: block;
+	clear: both;
+	}
+.today-tomorow a:hover .title,
+.today-tomorow dl:hover .title {
+	color: #981e32;
+	background: blue;
+	}
+.today-tomorrow header {
+	font-family: "Open Sans Condensed";
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+	display: block;
+	}
+.today-tomorrow .title {
+	line-height: 1.2em !important;
+	}
+.series {
+	background-color: #626970;
+	color: white;
+	display: inline-block;
+	margin: -2px -2px;
+	padding: 2px 4px;
+	}
+.today-tomorrow dl dt address {
+	text-transform: uppercase;
+	font-size: .8em;
+	line-height: 1em;
+	color: #d7dadb;
+	color: #b5babe;
+	font-weight: normal;
+	display: block;
+	padding: 5px 0px;
+	}
+	
+/* Articles */
+
+body:not(.single) .article-footer {
+	display: none;
+	}
+
+
+/* Single - Story */ 
+
+body.single {
+	background: #981e32;
+	}
+body.single #binder {
+	background: #f9f9f9;
+	}
+.single .column.two {
+	background: white;
+	}
+
+/* Photo */
+
+.photo {
+	background-image: url('http://news.wsu.dev/wp-content/uploads/sites/18/2015/02/100603625.jpg') !important;
+	background-size: 100% auto;
+	background-position: left center;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+	}
+section#photo {
+	position: fixed !important;
+	}
+section.photo.opened {
+	box-shadow: 200px 0px 0px rgba(94, 106, 113, .5);
+	}
+.photo.opened:before {
+	content: "Cramming for Finals";
+	font-family: "Open Sans Condensed";
+	position: absolute;
+	left: 2rem;
+	top: 2rem;
+	font-weight: bold;
+	font-size: 3rem;
+	color: white;
+	
+	}
+.photo .articles {
+	display: none;
+	}
