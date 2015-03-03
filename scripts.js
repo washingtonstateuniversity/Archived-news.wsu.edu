@@ -1,6 +1,8 @@
 (function($){
 
 $(document).ready(function() {
+	
+$("img.aside").removeClass("aside").parents("figure").addClass("aside");
 
 $( ".sections .section-header" ).click(function() {
   
@@ -45,7 +47,7 @@ $( ".section-tab" ).click(function() {
   $("main .section").removeClass("opened");
   var section = $(this).attr("data-sec");
   
-  $("main .section").each( function() {
+  $("main .news-section:not(.photo)").each( function() {
 	  if ( ( $(this).attr("data-sec") >= section ) && ( section != "6" )  ) {
 		  $(this).animate({left: "0px"}, {duration:300, queue:false});
 	  }
