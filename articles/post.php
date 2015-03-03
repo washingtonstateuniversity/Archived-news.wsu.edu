@@ -13,40 +13,62 @@
 	<?php //echo $featured_image_img; ?>
 	
 	<header class="article-header" <?php echo $featured_image_bg; ?>>
-		<hgroup>
+		<hgroup class="article-meta">
+			<time class="article-date" hour="<?php echo get_the_date(); ?>" datetime="<?php echo get_the_date( 'c' ); ?>">
+				<span class="default"><?php echo get_the_date(); ?></span>
+				<span class="year-four"><?php echo get_the_date( 'Y' ); ?></span>
+				<span class="year-two"><?php echo get_the_date( 'y' ); ?></span>
+				<span class="oclock"><?php echo get_the_date( 'g' ); ?></span>
+				<span class="oclock-zeros"><?php echo get_the_date( 'h' ); ?></span>
+				<span class="hours"><?php echo get_the_date( 'G' ); ?></span>
+				<span class="hours-zeros"><?php echo get_the_date( 'H' ); ?></span>
+				<span class="minutes"><?php echo get_the_date( 'i' ); ?></span>
+				<span class="timezone"><?php echo get_the_date( 'T' ); ?></span>
+				<?php // echo get_the_date( 'c' ); ?>
+			</time>
+		</hgroup>
+		<hgroup class="article-byline">
+			<cite class="article-author">
+				<span class="author" role="author"><?php the_author_posts_link(); ?></span>
+				<span class="affiliation"><?php echo get_the_author_meta('affiliation'); ?></span>
+			</cite>
+		</hgroup>
+		<hgroup class="article-title">
 		<?php if ( is_single() ) : ?>
 			<?php if ( spine_get_option( 'articletitle_show' ) == 'true' ) : ?>
-				<h1 class="article-title"><?php the_title(); ?></h1>
+				<h1><?php the_title(); ?></h1>
 			<?php endif; ?>
 		<?php else : ?>
-			<h2 class="article-title">
+			<h2>
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2>
 		<?php endif; // is_single() or in_a_relationship() ?>
 		</hgroup>
-		<hgroup class="source">
-			<time class="article-date" datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-			<cite class="article-author" role="author"><?php the_author_posts_link(); ?></cite>
-		</hgroup>
+		
 	</header>
 
 	<?php if ( ! is_singular() ) : ?>
-		<div class="article-summary">
-			<?php
-
-			if ( spine_has_thumbnail_image() ) {
+			
+		<?php
+		
+		if ( spine_has_thumbnail_image() ) {
 				?><figure class="article-thumbnail"><?php spine_the_thumbnail_image(); ?></figure><?php
 			} elseif ( spine_has_featured_image() ) {
 				?><figure class="article-thumbnail"><?php the_post_thumbnail( 'spine-thumbnail_size' ); ?></figure><?php
 			}
+		
+		?>
+			
+		<div class="article-summary">
+			<?php
 
 			// If a manual excerpt is available, default to that. If `<!--more-->` exists in content, default
 			// to that. If an option is set specifically to display excerpts, default to that. Otherwise show
 			// full content.
 			if ( $post->post_excerpt ) {
-				echo get_the_excerpt() . ' <a href="' . get_permalink() . '"><span class="excerpt-more-default">&raquo; More ...</span></a>';
+				echo get_the_excerpt() . ' <a href="' . get_permalink() . '"><span class="excerpt-more-default">Read Story</span></a>';
 			} elseif ( strstr( $post->post_content, '<!--more-->' ) ) {
-				the_content( '<span class="content-more-default">&raquo; More ...</span>' );
+				the_content( '<span class="content-more-default">Read Story</span>' );
 			} elseif ( 'excerpt' === spine_get_option( 'archive_content_display' ) ) {
 				the_excerpt();
 			} else {
