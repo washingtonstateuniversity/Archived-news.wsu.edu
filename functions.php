@@ -55,7 +55,7 @@ function news_mcekit_editor_style($url) {
  
     // Retrieves the plugin directory URL
     // Change the path here if using different directories
-    $url .= get_stylesheet_directory_uri(). '/editor-styles.css';
+    $url .= get_stylesheet_directory_uri(). '/styles/editor-styles.css';
  
     return $url;
 }
@@ -149,7 +149,7 @@ add_action('wp_enqueue_scripts', 'news_mcekit_editor_enqueue');
  * Enqueue stylesheet, if it exists.
  */
 function news_mcekit_editor_enqueue() {
-  $StyleUrl = get_stylesheet_directory_uri().'editor-styles.css'; // Customstyle.css is relative to the current file
+  $StyleUrl = get_stylesheet_directory_uri().'/styles/editor-styles.css'; // Customstyle.css is relative to the current file
   wp_enqueue_style( 'myCustomStyles', $StyleUrl );
 }
 
