@@ -70,6 +70,10 @@ $( ".section-tab" ).click(function() {
 
 });
 
+setTimeout(function() {
+	$("body.single .spine-share ul").clone().addClass("spine-share").prependTo(".article-title");
+}, 500);
+
 //var window_height $(window).height();
 
 })(jQuery);

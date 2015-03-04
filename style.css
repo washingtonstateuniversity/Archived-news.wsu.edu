@@ -35,6 +35,10 @@
 .size-lt-medium .ten-twelfths {
 	width: 100%;
 	}
+body.single,
+body.single #jacket {
+	background: black;
+	}
 	
 /* Defaults */
 
