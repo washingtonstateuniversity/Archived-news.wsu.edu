@@ -904,6 +904,9 @@ div:not(.article-featured) .article-header .article-title {
 	order: 2;
 	-webkit-order: 2;
 	}
+.article-featured .article-summary {
+	padding-top: 1rem;
+	}
 
 
 /* Articles */
