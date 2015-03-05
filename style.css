@@ -153,11 +153,15 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	content: "\00bb";
 	position: absolute;
 	top: 50vh;
-	right: 5px;
+	right: 0px;
+	left: 0px;
+	height: 50px;
 	color: rgba(255, 255, 255, 0.5);
 	font-size: 30px;
+	text-align: center;
+	padding-top: 15px;
 	}
-
+	
 .size-gt-small .section-header {
 	width: 40px;
 	position: absolute;
@@ -351,6 +355,10 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	
 	}
 
+.section:not(.opened):not(.photo) .section-header {
+	box-shadow: inset 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
+	}
+
 .section.crimson .section-header {
 	color: #b5babe;
 	background: #981e32;
@@ -373,7 +381,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	color: white;
 	background: #ffb81c;
 	}
-.size-gt-small .section.yellow.opened .section-header:hover {
+.size-gt-small .section.yellow.opened .section-header:hover:before {
 	background: #981e32; /* Crimson */
 	}
 	
@@ -388,7 +396,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .size-gt-small .section.blue:not(.opened) .section-header:hover {
 	background: #00a5bd;
 	}
-.size-gt-small .section.blue.opened .section-header:hover {
+.size-gt-small .section.blue.opened .section-header:hover:before {
 	background: #c69214; /* Yellow */
 	}
 
@@ -403,7 +411,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .size-gt-small .section.orange:not(.opened) .section-header:hover {
 	background: #f6861f;
 	}
-.size-gt-small .section.orange.opened .section-header:hover {
+.size-gt-small .section.orange.opened .section-header:hover:before {
 	background: #4f868e; /* Blue */
 	}
 	
@@ -414,7 +422,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .size-gt-small .section.green:not(.opened) .section-header:hover {
 	background: #ada400;
 	}
-.size-gt-small .section.green.opened .section-header:hover {
+.size-gt-small .section.green.opened .section-header:hover:before {
 	background: #b67233; /* Orange */
 	}
 	
@@ -579,7 +587,6 @@ section.local .category-wsu-spokane-news::before {
 	padding-top: 0px;
 	}
 
-
 .news-section .article-featured .article-title h2,
 .news-section .article-title h2 {
 	margin: 0px;
@@ -648,7 +655,6 @@ x.article-featured hgroup.article-title:hover {
 	}
 
 .article-featured hgroup.article-title h2:before {
-	content: "Rock Doc";
 	font-family: "Open Sans Condensed";
 	font-weight: bold;
 	font-size: 1rem;
@@ -663,6 +669,12 @@ x.article-featured hgroup.article-title:hover {
 	text-transform: uppercase;
 	line-height: 1em;
 	}
+	
+.article-featured article.category-rockdoc hgroup.article-title h2:before,
+.article-featured article.tag-rock-doc hgroup.article-title h2:before { content: "Rock Doc"; }
+
+.article-featured article.category-askdruniverse hgroup.article-title h2:before,
+.article-featured article.tag-dr-universe hgroup.article-title h2:before { content: "Ask Dr. Universe"; }
 
 .article-featured article:first-of-type figure {
 	display: none;
