@@ -71,7 +71,8 @@ $( ".section-tab" ).click(function() {
 });
 
 setTimeout(function() {
-	$("body.single .spine-share ul").clone().addClass("spine-share").prependTo(".article-title");
+	$("body.single .spine-share ul").clone().addClass("spine-share looseleaf").prependTo(".article-title");
+	$(".spine-share.looseleaf li a").wrapInner("<span class='channel-title'></div>");
 }, 500);
 
 //var window_height $(window).height();

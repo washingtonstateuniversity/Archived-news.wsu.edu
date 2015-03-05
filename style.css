@@ -596,6 +596,10 @@ section.local .category-wsu-spokane-news::before {
 	padding-top: .2em;
 	padding-bottom: .5em;
 	}
+.news-section .article-featured .article-meta,
+.news-section .article-featured .article-byline {
+	display: none;
+	}
 .news-section .article-featured .article-title a {
 	color: white;
 	}
@@ -679,7 +683,7 @@ x.article-featured hgroup.article-title:hover {
 .article-featured article:first-of-type figure {
 	display: none;
 	}
-article.has-thumbnail-image {
+div:not(.article-featured) article.has-thumbnail-image {
 	display: -webkit-flex;
 	}
 
@@ -690,7 +694,7 @@ article.has-thumbnail-image .article-header,
 article.has-thumbnail-image .article-thumbnail {
 	
 	}
-article.has-thumbnail-image .article-header {
+div:not(.article-featured) article.has-thumbnail-image .article-header {
 	-webkit-flex: 1;
 	}
 article.has-thumbnail-image .article-thumbnail {
@@ -884,19 +888,19 @@ a:hover .series {
 	
 /* Articles */
 
-.article-header {
+div:not(.article-featured) .article-header {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
 	}
-.article-header .article-meta {
+div:not(.article-featured) .article-header .article-meta {
 	order: 1;
 	-webkit-order: 1;
 	}
-.article-header .article-byline {
+div:not(.article-featured) .article-header .article-byline {
 	order: 3;
 	-webkit-order: 3;
 	}
-.article-header .article-title {
+div:not(.article-featured) .article-header .article-title {
 	order: 2;
 	-webkit-order: 2;
 	}
@@ -906,6 +910,9 @@ a:hover .series {
 
 body:not(.single) .article-footer {
 	display: none;
+	}
+.article-footer {
+	clear: both;
 	}
 
 .single article,
@@ -1241,6 +1248,40 @@ aside.widget li a {
 aside.widget li a:hover {
 	color: #981e32;
 	color: #2a3033;
+	}
+	
+/* Sharing */
+
+.single article .article-title {
+	position: relative;
+	}
+ul.spine-share.looseleaf {
+	padding: 0px;
+	margin: 0px;
+	float: right;
+	position: absolute;
+	right: 0;
+	top: -18px;
+	}
+.spine-share.looseleaf li {
+	list-style: none;
+	display: inline-block;
+	padding: 0px;
+	}
+.spine-share.looseleaf li a {
+	color: #8d959a;
+	border-bottom: none;
+	padding: 0px 0 0 5px;
+	}
+.spine-share.looseleaf li a:hover {
+	margin: 0px;
+	background-color: transparent;
+	color: gray !important;
+	color: #981e32 !important;
+	padding: 0px 0 0 5px;
+	}
+.spine-share.looseleaf li a::before {
+	display: inline;
 	}
 
 
