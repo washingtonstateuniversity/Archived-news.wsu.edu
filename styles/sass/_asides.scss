@@ -1,0 +1,68 @@
+/* Asides */
+
+.story {
+	
+	figure.aside {
+		width: calc(292px + 1rem) !important;
+		padding: 5px 5px 0 5px !important;
+		background: #2a3033;
+		xbackground: white;
+		color: white;
+		xcolor: #2a3033;
+		xbox-shadow: -5px -5px 0px #2a3033;
+		
+		}
+		
+	aside,
+	.aside,
+	.pullquote {
+		border-left: 5px #2a3033 solid;
+		padding: 0 0 0 1rem;
+		margin: 0 0 1em 0em;
+		width: 100%;
+		box-sizing: border-box;
+		}
+	
+	figure.aside {
+		width: auto !important;
+		width: 396px !important;
+		//width: 264px !important;
+		//width: 50% !important;
+		}
+		
+	.pullquote {
+		font-size: 1.5em;
+		line-height: 1.2em;
+		width: 50%;
+		}
+			
+	}
+	
+.size-gt-small .story {
+	
+	aside,
+	.aside,
+	.pullquote {
+		margin: 0 0 1em 1em;
+		margin-right: -198px;
+		float: right;
+		}
+	
+	}
+	
+.size-lt-medium .story {
+	
+	aside,
+	.aside,
+	.pullquote {
+		width: 100%;
+		clear: both;
+		margin-bottom: 1em;
+		}
+	
+	.alignright {
+		float: none;
+		}
+	
+	}
+	
