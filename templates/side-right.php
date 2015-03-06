@@ -9,7 +9,7 @@
 <?php get_template_part('parts/headers'); ?>
 <?php get_template_part('parts/featured-images'); ?>
 
-<section class="row side-right pad">
+<section class="row side-right pad wide">
 
 	<div class="column one">
 
