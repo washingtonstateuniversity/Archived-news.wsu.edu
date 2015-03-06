@@ -1,4 +1,4 @@
-<section class="row side-right pad">
+<section class="story row margin-right pad wide">
 
 	<div class="column one">
 
@@ -10,9 +10,13 @@
 
 	</div><!--/column-->
 
-	<div class="column two">
+</section>
+
+<section class="row single pad wide">
+
+	<div class="column one">
 		
-		<ul class="side-sections">
+		<ul class="footer-sections padless">
 	<li class="news crimson"><a href="">Topics</a></li>
 	<li class="local yellow"><a href="">Local</a>
 		<ul>
@@ -45,6 +49,6 @@
 
 		<?php get_sidebar(); ?>
 
-	</div><!--/column two-->
+	</div><!--/column one-->
 
 </section>
