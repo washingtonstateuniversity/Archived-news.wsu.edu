@@ -36,7 +36,7 @@
 		<hgroup class="article-title">
 		<?php if ( is_single() ) : ?>
 			<?php if ( spine_get_option( 'articletitle_show' ) == 'true' ) : ?>
-				<h1><?php the_title(); ?></h1>
+				<h1 class="serif"><?php the_title(); ?></h1>
 			<?php endif; ?>
 		<?php else : ?>
 			<h2>
