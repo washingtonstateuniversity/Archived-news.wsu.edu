@@ -81,7 +81,12 @@ function news_mce_before_init( $settings ) {
         array(
             'title' => 'Download Link',
             'selector' => 'a',
-            'classes' => 'download'
+            'classes' => 'download',
+            ),
+        array(
+            'title' => 'Location',
+            'inline' => 'b',
+            'classes' => 'location',
             ),
         array(
             'title' => 'Testimonial',
@@ -91,23 +96,16 @@ function news_mce_before_init( $settings ) {
         array(
             'title' => 'Data',
             'block' => 'dl',
-            'wrapper' => true
+            'wrapper' => true,
         ),
         array(
-            'title' => '> Data Title',
-            'inline' => 'dt',
+            'title' => 'Data Title',
+            'block' => 'dt',
         ),
         array(
-            'title' => '> Datum',
-            'inline' => 'dd',
+            'title' => 'Datum',
+            'block' => 'dd',
         ),
-        array(  
-			'title' => '.translation',  
-			'block' => 'blockquote',  
-			'classes' => 'translation',
-			'wrapper' => true,
-			
-		),  
 		array(  
 			'title' => 'Aside',  
 			'block' => 'aside',  
