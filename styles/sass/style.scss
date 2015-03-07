@@ -9,6 +9,7 @@
 */
 
 @import 'vars';
+@import 'colors';
 @import 'asides';
 
 #jacket {
@@ -358,7 +359,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	
 	}
 
-#spine #glue {
+x#spine #glue {
 	box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
 	}
 .section:not(.opened):not(.photo) .section-header {
@@ -1294,40 +1295,7 @@ aside.widget li a:hover {
 	color: #2a3033;
 	}
 	
-/* Sharing */
-
-.single article .article-title {
-	position: relative;
-	}
-ul.spine-share.looseleaf {
-	padding: 0px;
-	margin: 0px;
-	float: right;
-	position: absolute;
-	right: 0;
-	top: -18px;
-	}
-.spine-share.looseleaf li {
-	list-style: none;
-	display: inline-block;
-	padding: 0px;
-	}
-.spine-share.looseleaf li a {
-	color: #8d959a;
-	border-bottom: none;
-	padding: 0px 0 0 5px;
-	}
-.spine-share.looseleaf li a:hover {
-	margin: 0px;
-	background-color: transparent;
-	color: gray !important;
-	color: #981e32 !important;
-	padding: 0px 0 0 5px;
-	}
-.spine-share.looseleaf li a::before {
-	display: inline;
-	}
-
+@import 'meta';
 
 /* Photo */
 
