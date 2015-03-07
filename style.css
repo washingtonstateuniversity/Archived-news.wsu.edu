@@ -376,7 +376,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .section.green aside:before {
   content: "Staff"; }
 
-#spine #glue {
+x#spine #glue {
   box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1); }
 
 .section:not(.opened):not(.photo) .section-header {
@@ -1275,36 +1275,38 @@ aside.widget li a:hover {
   color: #2a3033; }
 
 /* Sharing */
-.single article .article-title {
-  position: relative; }
+.spine-share-position {
+  float: right;
+  margin-right: 10px;
+  margin-top: 15px;
+  width: 40px; }
 
-ul.spine-share.looseleaf {
+.spine-share.looseleaf {
   padding: 0px;
   margin: 0px;
-  float: right;
-  position: absolute;
-  right: 0;
-  top: -18px; }
+  position: fixed; }
 
 .spine-share.looseleaf li {
   list-style: none;
-  display: inline-block;
-  padding: 0px; }
+  display: block;
+  padding: 0px;
+  margin: 0px; }
 
 .spine-share.looseleaf li a {
-  color: #8d959a;
+  color: #b5babe;
   border-bottom: none;
-  padding: 0px 0 0 5px; }
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  display: block; }
 
 .spine-share.looseleaf li a:hover {
   margin: 0px;
   background-color: transparent;
-  color: gray !important;
   color: #981e32 !important;
-  padding: 0px 0 0 5px; }
-
-.spine-share.looseleaf li a::before {
-  display: inline; }
+  text-align: center; }
 
 /* Photo */
 .photo {
