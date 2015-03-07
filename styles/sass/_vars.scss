@@ -3,3 +3,8 @@
 @mixin serif {
 	font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, Serif;
 	}
+	
+@mixin header-type {
+	font-weight: 300;
+	font-size: 2rem;
+	}
