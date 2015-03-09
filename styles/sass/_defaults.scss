@@ -1,0 +1,44 @@
+body main {
+	font-size: 16px;
+	line-height: 1.6em;
+	color: #2a3033;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	}
+main h1, main h2, main h3, main h4 {
+	color: #2a3033;
+	}
+
+.page-template h1.article-title {
+	font-size: 1.9em;
+	font-weight: bold;
+	xxfont-weight: 800;
+	line-height: 1.1em;
+	}
+.page-template h1.hero {
+	margin: 2.5rem 0 .5rem;
+	font-size: 6em;
+	font-weight: bold;
+	font-weight: 800;
+	line-height: .9em;
+	}
+.page-template main h2:not(:first-of-type) {
+	margin: 2.5rem 0 .5rem;
+	font-weight: normal;
+	font-size: 2.2em;
+	line-height: 1em;
+	}
+.page-template main h3 {
+	margin: 1em 0 .25em;
+	font-weight: normal;
+	font-size: 1.5em;
+	text-transform: none;
+	color: #981e32;
+	line-height: 1em;
+	}
+.page-template main h4 {
+	margin: 1em 0 .25em;
+	font-weight: normal;
+	font-size: 1.5em;
+	line-height: 1em;
+	}

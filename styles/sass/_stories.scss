@@ -1,0 +1,80 @@
+body:not(.single) .article-footer {
+	display: none;
+	}
+.article-footer {
+	clear: both;
+	}
+
+.single article,
+.single article header {
+	background-image: none;
+	}
+main div:not(.article-featured) article,
+main div:not(.article-featured) article header {
+	background-size: 0 0;
+	}
+
+/* Stories Meta */
+
+article header time::before {
+	display: none;
+	}
+article header .article-meta {
+	text-transform: uppercase;
+	font-size: .8em;
+	line-height: 1em;
+	color: #8d959a;
+	}
+article header .article-meta:before {
+	content: "";
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	margin-right: 3px;
+	background: #b5babe;
+	background: #d7dadb;
+	}
+article header cite a {
+	color: #8d959a;
+	}
+article header .article-meta time span {
+	display: none;
+	}
+article header .article-meta time span.default {
+	display: inline-block;
+	}
+	
+article header cite::before {
+	text-transform: none;
+	font-weight: normal;
+	font-style: italic;
+	content: "By ";
+	@include serif;
+	}
+	
+.articles article {
+	padding-top: 1rem;
+	}
+.articles .article-featured article {
+	padding-top: 0;
+	}
+article a span.content-more-default {
+	display: inline-block;
+	position: relative;
+	padding-left: 8px;
+	margin-left: 2px;
+	text-transform: uppercase;
+	font-size: .8em;
+	xpadding-top: .1em;
+	padding-bottom: .1em;
+	}
+article a span.content-more-default:before {
+	content: "";
+	background: #981e32;
+	box-shadow: 0 6px 0 0 #981e32, 0 12px 0 0 #981e32;
+	position: absolute;
+	left: 0px;
+	top: 4px;
+	width: 3px;
+	height: 3px;
+	}

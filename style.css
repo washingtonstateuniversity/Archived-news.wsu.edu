@@ -142,28 +142,8 @@
   overflow-x: hidden;
   overflow-y: visible; }
 
-.sections .section {
-  background-image: url("//news.wsu.dev/wp-content/themes/spine/styles/bookmark/backgrounds/gradients/gradient-graytolight-south-2.jpg");
-  background-color: #f9f9f9;
-  background-repeat: repeat-x;
-  background-position: left top; }
-
-.sections {
-  width: 100%;
-  position: relative; }
-
-.articles {
-  xmin-width: 600px;
-  max-width: 100%;
-  padding: 0 2rem;
-  overflow: hidden; }
-
-.size-lt-medium .ten-twelfths {
+.size-lt-medium .fluid .ten-twelfths {
   width: 100%; }
-
-body.single,
-body.single #jacket {
-  background: black; }
 
 /* Defaults */
 body main {
@@ -210,6 +190,22 @@ main h1, main h2, main h3, main h4 {
   line-height: 1em; }
 
 /* Search */
+/* Sections */
+.sections .section {
+  background-image: url("//news.wsu.dev/wp-content/themes/spine/styles/bookmark/backgrounds/gradients/gradient-graytolight-south-2.jpg");
+  background-color: #f9f9f9;
+  background-repeat: repeat-x;
+  background-position: left top; }
+
+.sections {
+  width: 100%;
+  position: relative; }
+
+.articles {
+  max-width: 100%;
+  padding: 0 2rem;
+  overflow: hidden; }
+
 .articles {
   padding-top: 150px; }
 
@@ -884,15 +880,11 @@ section.local .category-wsu-spokane-news:before {
   -webkit-flex: 1;
   -ms-flex: 1;
   -webkit-box-flex: 1;
-          flex: 1;
-  xxwidth: 75%;
-  xposition: relative; }
+          flex: 1; }
 
 .today-tomorrow dl.event dd {
   width: 110px;
-  x-webkit-flex: 1px;
-  -webkit-order: 1;
-  xposition: relative; }
+  -webkit-order: 1; }
 
 .today-tomorrow dl.event:nth-of-type(even) dt {
   -webkit-order: 1; }
@@ -948,18 +940,6 @@ section.local .category-wsu-spokane-news:before {
   padding: 4px 0px;
   display: block; }
 
-.series {
-  background-color: #626970;
-  background-color: #d7dadb;
-  color: white;
-  display: inline-block;
-  margin: -2px 0px -2px 0px;
-  padding: 2px 4px;
-  line-height: 1em; }
-
-a:hover .series {
-  background-color: #981e32; }
-
 .today-tomorrow dl dt address {
   text-transform: uppercase;
   font-size: .8em;
@@ -972,6 +952,18 @@ a:hover .series {
 
 .today-tomorrow a:hover dt address {
   color: #5e6a71; }
+
+.series {
+  background-color: #626970;
+  background-color: #d7dadb;
+  color: white;
+  display: inline-block;
+  margin: -2px 0px -2px 0px;
+  padding: 2px 4px;
+  line-height: 1em; }
+
+a:hover .series {
+  background-color: #981e32; }
 
 /* Articles */
 div:not(.article-featured) .article-header {
@@ -1004,7 +996,7 @@ div:not(.article-featured) .article-header .article-title {
   width: 100%;
   clear: both; }
 
-/* Articles */
+/* Stories - Listings */
 body:not(.single) .article-footer {
   display: none; }
 
@@ -1017,10 +1009,9 @@ body:not(.single) .article-footer {
 
 main div:not(.article-featured) article,
 main div:not(.article-featured) article header {
-  xxbackground-image: none !important;
   background-size: 0 0; }
 
-/* Story Meta */
+/* Stories Meta */
 article header time::before {
   display: none; }
 
@@ -1081,7 +1072,11 @@ article a span.content-more-default:before {
   width: 3px;
   height: 3px; }
 
-/* Single - Story */
+/* Story - Single */
+body.single,
+body.single #jacket {
+  background: black; }
+
 body.single {
   background: white !important; }
 
