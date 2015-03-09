@@ -1,0 +1,129 @@
+/*
+ Theme Name:     WSU News
+ Theme URI:      http://web.wsu.edu
+ Description:    A child theme for Washington State University's Spine framework
+ Author:         WSU University Communications
+ Author URI:     http://ucomm.wsu.edu
+ Template:       spine
+ Version:        0.0.1
+*/
+
+@import 'vars';
+@import 'colors';
+
+@import 'asides';
+@import 'imagery';
+
+#jacket {
+	overflow-x: hidden;
+	overflow-y: visible;
+	}
+
+.size-lt-medium .fluid .ten-twelfths {
+	width: 100%;
+	}
+	
+/* Defaults */
+
+@import 'defaults';
+	
+	
+/* Search */
+
+.spine-sitenav {
+	
+	}
+
+/* Sections */
+
+@import 'sections';
+	
+	
+	
+/* Events */
+
+@import 'events';
+
+.series {
+	background-color: #626970;
+	background-color: #d7dadb;
+	color: white;
+	display: inline-block;
+	margin: -2px 0px -2px 0px;
+	padding: 2px 4px;
+	line-height: 1em;
+	}
+a:hover .series {
+	background-color: #981e32;
+	}
+
+
+/* Articles */
+
+div:not(.article-featured) .article-header {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	}
+div:not(.article-featured) .article-header .article-meta {
+	order: 1;
+	-webkit-order: 1;
+	}
+div:not(.article-featured) .article-header .article-byline {
+	order: 3;
+	-webkit-order: 3;
+	}
+div:not(.article-featured) .article-header .article-title {
+	order: 2;
+	-webkit-order: 2;
+	}
+.article-featured .article-summary {
+	padding-top: 1rem;
+	}
+
+.tagged-full-feature main section:first-of-type .column.two {
+		xfloat: none;
+		width: 100%;
+		clear: both;
+		}
+
+/* Stories - Listings */
+
+@import 'stories';
+
+
+/* Story - Single */ 
+
+@import 'story';
+	
+@import 'meta';
+
+/* Photo */
+
+.photo {
+	background-image: url('http://news.wsu.dev/wp-content/uploads/sites/18/2015/02/100603625.jpg') !important;
+	background-size: 100% auto;
+	background-position: left center;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+	}
+section#photo {
+	position: fixed !important;
+	}
+section.photo.opened {
+	box-shadow: 200px 0px 0px rgba(94, 106, 113, .5);
+	}
+.photo.opened:before {
+	content: "Cramming for Finals";
+	font-family: "Open Sans Condensed";
+	position: absolute;
+	left: 2rem;
+	top: 2rem;
+	font-weight: bold;
+	font-size: 3rem;
+	color: white;
+	
+	}
+.photo .articles {
+	display: none;
+	}
