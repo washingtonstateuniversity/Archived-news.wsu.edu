@@ -18,13 +18,13 @@ figcaption.gallery-caption {
 	clear: both;
 	// color: white;
 	color: $gray-darker;
-	padding: 10px 0px 0 0;
-	//border-bottom: 5px $gray-darker solid;
-	border-top: 5px $gray-darker solid;
 	font-weight: bold;
 	}
 
-.figure-footer {
+.gallery-footer {
+	padding: 10px 0px 0 0;
+	//border-bottom: 5px $gray-darker solid;
+	border-top: 5px $gray-darker solid;
 	border-top: none;
 	}	
 
