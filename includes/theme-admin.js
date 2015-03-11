@@ -1,13 +1,6 @@
-
-
-
-
 (function($){
 
-
 	$(document).mouseup(function() {
-		
-		
 		
 	if ($('body.modal-open:not(modal-tweaked)').length) {
 		// alert("hello");
@@ -21,8 +14,6 @@
 		$('body').addClass('modal-tweaked');
 		
 		}
-
-
 
 	}); 
 
