@@ -126,7 +126,7 @@ function my_post_gallery( $output, $attr) {
         'itemtag'    => $html5 ? 'figure'     : 'dl',
         'icontag'    => $html5 ? 'div'        : 'dt',
         'captiontag' => $html5 ? 'figcaption' : 'dd',
-        'gallery_caption' => $html5 ? 'figcaption' : 'dd',
+        'gallery_caption' => '',
         'gallery_display' => '',
         'gallery_credit' => 'cite',
         'columns'    => 3,
@@ -272,7 +272,7 @@ function my_post_gallery( $output, $attr) {
     }
  
     $output .= "
-    	<footer class=\"figure-footer\">
+    	<footer class=\"gallery-footer\">
 	    	<figcaption class=\"gallery-caption\">{$gallery_caption}</figcaption>
 	    	<cite class=\"gallery-credit\">{$gallery_credit}</cite>
 	    </footer>
