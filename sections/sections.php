@@ -1,5 +1,5 @@
 <div class="section-tabs">	
-	<div class="section-tab green" data-sec="5"><span class="section-title">Staff</span></div>
+	<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
 	<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
 	<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
 	<div class="section-tab yellow" data-sec="2"><span class="section-title">Local</span></div>
@@ -53,8 +53,9 @@
 
 		<hr>
 		
-		<ul>
-		<?php 
+		<?php /*
+			
+			echo "<ul>";
 			
 			( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG )) ? $child_of = "478" : $child_of = "12982";
 			
@@ -76,8 +77,9 @@
 			'walker'             => null
 		    );
 		    wp_list_categories( $args ); 
-		?>
-		</ul>
+		    
+		    echo "</ul>";
+		*/ ?>
 		
 		<hr>
 		
