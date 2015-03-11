@@ -10,9 +10,7 @@ $(document).ready(function() {
 		});
 	
 	$(window).on( "swipeleft", function() { 
-						
-		if ( $("#jacket").not(".size-lt-large") ) {
-		
+								
 			var disclosed = $(".news-section.opened").attr("data-sec");
 			
 			$(".section").removeClass("opened");
@@ -30,9 +28,7 @@ $(document).ready(function() {
 				  $(this).delay(300).show( "blind",{direction: "horizontal"}, 100 );
 				}
 			});
-		
-		}
-		
+				
 	});
 
 	
