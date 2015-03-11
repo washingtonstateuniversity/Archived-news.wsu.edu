@@ -4,6 +4,38 @@ $(document).ready(function() {
 	
 	$("img.aside").removeClass("aside").parents("figure").addClass("aside");
 
+	
+	$( ".section.current" ).click(function() {
+		
+		});
+	
+	$(window).on( "swipeleft", function() { 
+						
+		if ( $("#jacket").not(".size-lt-large") ) {
+		
+			var disclosed = $(".news-section.opened").attr("data-sec");
+			
+			$(".section").removeClass("opened");
+  
+			$(".section").each( function() {
+			
+				if ( $(this).attr("data-sec") < disclosed + 1 ) {
+				  $(this).animate({left: "-1000px"}, {duration:500, queue:false});
+				}
+			
+			});
+		
+			$(".section-tab").each( function() {
+				if ( $(this).attr("data-sec") < disclosed ) {
+				  $(this).delay(300).show( "blind",{direction: "horizontal"}, 100 );
+				}
+			});
+		
+		}
+		
+	});
+
+	
 	$( ".section-header, .section-photo:not(.opened) figure" ).click(function() {
   
 	var section = $(this).parents(".section").attr("data-sec");
