@@ -22,6 +22,38 @@ function news_admin_enqueue_scripts() {
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'quote', 'status', 'video', 'audio' ) );
 
 /**
+ * Before or after 125th refresh
+ */
+
+add_filter( 'body_class', 'epoch_class' );
+function epoch_class( $classes ) {
+	
+	$epoch = ( get_the_date('Ymd') > 20150301 ? "epoch-after125" : "epoch-before125" );
+	
+	if ( is_singular() ) {
+	$classes[] = $epoch;
+	// return the $classes array
+	return $classes;
+	}
+}
+
+/**
+ * Return section
+ */
+function get_section() {
+
+	// Paths may be polluted with additional site information, so we
+	// compare the post/page permalink with the home URL.
+	$path = str_replace( get_home_url(), '', get_permalink() );
+	$path = trim( $path, '/' );
+	$path = explode( '/', $path );
+	$section = $path[0];
+
+	return $section;
+}
+
+
+/**
  * Add imagery options to settings panes.
  */
 add_action('print_media_templates', 'wsunews_extend_image_settings');
