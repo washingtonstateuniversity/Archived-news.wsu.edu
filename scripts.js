@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
 	
-$("img.aside").removeClass("aside").parents("figure").addClass("aside");
+	$("img.aside").removeClass("aside").parents("figure").addClass("aside");
 
-$( ".sections .section-header" ).click(function() {
+	$( ".section-header, .section-photo:not(.opened) figure" ).click(function() {
   
 	var section = $(this).parents(".section").attr("data-sec");
 	var disclosure = ( $(this).parents(".section").hasClass("opened") ) ? "opened" : "unopened";
@@ -40,33 +40,37 @@ $( ".sections .section-header" ).click(function() {
 
   $("body").spine("equalize");
   
+  // Lefthand Sections
+  $( ".section-tab" ).click(function() {
+  
+	  $("main .section").removeClass("opened");
+	  var section = $(this).attr("data-sec");
+	  
+	  $("main .news-section:not(.photo)").each( function() {
+		  if ( ( $(this).attr("data-sec") >= section ) && ( section !== "6" )  ) {
+			  $(this).animate({left: "0px"}, {duration:300, queue:false});
+		  }
+		  if ( $(this).attr("data-sec") === section ) {
+			  $(this).addClass("opened");
+		  }
+	
+	  });
+	  
+	  $(".section-tab").each( function() {
+		  if (  $(this).attr("data-sec") >= section  ) {
+			  $(this).hide();
+		  }
+	  });
+	  
+	  $(this).parents(".section").addClass("opened");
+	  $("body").spine("equalize");
+	  
+	});
+  
+  
 });
 
-$( ".section-tab" ).click(function() {
-  
-  $("main .section").removeClass("opened");
-  var section = $(this).attr("data-sec");
-  
-  $("main .news-section:not(.photo)").each( function() {
-	  if ( ( $(this).attr("data-sec") >= section ) && ( section !== "6" )  ) {
-		  $(this).animate({left: "0px"}, {duration:300, queue:false});
-	  }
-	  if ( $(this).attr("data-sec") === section ) {
-		  $(this).addClass("opened");
-	  }
 
-  });
-  
-  $(".section-tab").each( function() {
-	  if (  $(this).attr("data-sec") >= section  ) {
-		  $(this).hide();
-	  }
-  });
-  
-  $(this).parents(".section").addClass("opened");
-  $("body").spine("equalize");
-  
-});
 
 });
 
