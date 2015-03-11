@@ -115,7 +115,7 @@
 				'category_name'    => '',
 				'orderby'          => 'post_date',
 				'order'            => 'DESC',
-				'tag'				=> 'popular',
+				'tag'				=> 'popular, popular-story',
 				'include'          => '',
 				'exclude'          => '',
 				'meta_key'         => '',
