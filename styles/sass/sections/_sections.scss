@@ -216,6 +216,15 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	cursor: pointer;
 	}
 	
+.section aside li a {
+	color: white;
+	display: inline-block;
+	}
+.section aside li a:hover {
+	padding: 2px 4px;
+	margin: -2px -4px;
+	}
+	
 .section.crimson aside,
 .size-small .section.crimson {
 	background: #981e32;
@@ -233,6 +242,9 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .section.yellow .article-title a {
 	color: #c69214;
 	}
+.section.yellow aside:before {
+	content: "Local";
+	}
 .section.yellow aside li a {
 	color: $yellow-lightest;
 	display: inline-block;
@@ -240,11 +252,6 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .section.yellow aside li a:hover {
 	color: white;
 	background: $yellow-dark;
-	padding: 2px 4px;
-	margin: -2px -4px;
-	}
-.section.yellow aside:before {
-	content: "Local";
 	}
 	
 .section.orange aside,
@@ -258,6 +265,13 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .section.orange aside:before {
 	content: "Events";
 	}
+.section.orange aside li a {
+	color: $yellow-lightest;
+	}
+.section.orange aside li a:hover {
+	color: white;
+	background: $yellow-dark;
+	}
 	
 .section.blue aside,
 .size-small .section.blue {
@@ -269,7 +283,14 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	}
 .section.blue aside:before {
 	content: "Press";
-	
+	}
+.section.blue aside li a {
+	color: $blue-lightest;
+	display: inline-block;
+	}
+.section.blue aside li a:hover {
+	color: white;
+	background: $blue-dark;
 	}
 	
 .section.green aside,
@@ -281,8 +302,15 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	color: #8f7e35;
 	}
 .section.green aside:before {
-	content: "Staff";
-	
+	content: "People";
+	}
+.section.green aside li a {
+	color: $green-lightest;
+	display: inline-block;
+	}
+.section.green aside li a:hover {
+	color: white;
+	background: $green-dark;
 	}
 
 x#spine #glue {
