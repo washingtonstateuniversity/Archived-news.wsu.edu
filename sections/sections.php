@@ -1,3 +1,11 @@
+<?php
+	
+	$news_section = get_section();
+	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
+	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "493" : "13004";
+	
+?>
+
 <div class="section-tabs">	
 	<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
 	<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
@@ -8,7 +16,7 @@
 
 <div class="sections column ten-twelfths equalize">
 
-	<section id="crimson" class="section sec-1 crimson featured column one news-section opened clear-none" data-sec="1">
+	<section id="crimson" class="section sec-1 crimson featured column one news-section <?php echo ( $news_section == "news" ? "current" : "closed" ); ?>" data-sec="1">
 		
 		<header class="section-header"><span class="section-title">News</span></header>
 		
@@ -165,61 +173,10 @@
 	 ?>
 	 
 	</div>
+	
+	<?php get_template_part( 'sections/today', '' ); ?>
 	 
-	 <div id="" class="today-tomorrow">
-		 
-		 <dl class="tab">
-				 	<dt class="today" tab="1">Today</dt>
-				 	<dt class="tomorrow" tab="2">Tomorrow</dt>
-				 	<dd class="today">
-		 
-					 <a href="#">
-					 <dl class="event cf">
-						 <dt>
-						 	<span class="event-title">Washington Policy Center’s Young Professionals minimum wage debate</span>
-						 	<address>Bryan Hall Theatre, WSU Campus, Pullman, WA</address>
-						 </dt>
-						 <dd>
-						 	<time><span class="hour">8:45</span><span class="meridiem">AM</span></time>
-						 	
-						 </dd>
-					 </dl>
-					 </a>
-					 <a href="#">
-					 <dl class="event cf">
-						 <dt>
-						 	<span class="series">Lunch & Learn</span>
-						 	<span class="event-title">Interviewing Basics for New Healthcare Professionals</span>
-						 	<address>Bryan Hall Theatre, WSU Campus, Pullman, WA</address>
-						 </dt>
-						 <dd>
-						 	<time><span class="hour">6:00</span><span class="meridiem">PM</span></time>
-						 	
-						 </dd>
-					 </dl>
-					 </a>
-					 <a href="#">
-					 <dl class="event cf">
-						 <dt>
-						 	<span class="event-title">Resource Nights: “Capital Ideas”</span>
-						 	<address>Todd Addition, Room 268, Pullman</address>
-						 </dt>
-						 <dd>
-						 	<time><span class="hour">8:30</span><span class="meridiem">PM</span></time>
-						 	
-						 </dd>
-					 </dl>
-					 </a>
-		 
-				</dd>
-				
-				<dd class="tomorrow" tab="2">
-				</dd>
-
-		</dl>
-	 
-	 </div>
-	 
+	 	 
 	 <div class="articles-continued">
 		 <header>Headlines</header>
 	 
@@ -229,6 +186,7 @@
 			'posts_per_page'   => 5,
 			'category__not_in' => array(473),
 			'category_name'	   => 'top-stories',
+			'exclude'			=> $exclude_photos,
 			'offset'			=> 1,
 		);
 		
@@ -253,7 +211,7 @@
 		
 	</section>
 	
-	<section id="yellow" class="section sec-2 yellow local column two news-section clear-none" data-sec="2">
+	<section id="yellow" class="section sec-2 yellow local column two news-section <?php echo ( $news_section == "local" ? "current" : "" ); ?>" data-sec="2">
 		
 		<header class="section-header"><span class="section-title">Local</span></header>
 		
@@ -261,50 +219,21 @@
 		
 			<aside class="section-side column two">
 				
-			<ul>
-				<li>Pullman</li>
-				<li>Vancouver</li>
-				<li>Spokane</li>
-				<li>Tricities</li>
-				<li>Everett</li>
-				<hr>
-				<li>Extension</li>
-				<li>Global Campus</li>
-				<hr>
-				<li>Hometown</li>
-			</ul>
+				<?php get_template_part( 'sections/side', 'local' ); ?>
 			
 			</aside>
 			
 			<div class="articles column one">
-		
-		<?php
-		
-			$articles_campuses = array(
-				'posts_per_page'   => 5,
-				'category_name'         => 'wsu-spokane-news, wsu-tri-cities-news, wsu-vancouver-news, wsu-everett-news, wsu-extension-news',
-				//'tag'			   => 'featured',
-				'post_status'      => 'publish',
-			);
-				
-			$articles = new WP_Query( $articles_campuses );
-			
-			while ( $articles->have_posts() ) : $articles->the_post();
-		
-				get_template_part( 'articles/post', get_post_type() );
-		
-			endwhile;
-			
-			wp_reset_postdata();
-		?>
-		
-		</div><!--/ articles -->
+
+				<?php get_template_part( 'sections/section', 'local' ); ?>
+
+		</div><!--/ .column.one articles -->
 		
 		</div><!--/ nest -->
-	
+		
 	</section>
 	
-	<section id="blue" class="section sec-3 blue students column three news-section clear-none" data-sec="3">
+	<section id="blue" class="section sec-3 blue students column three news-section <?php echo ( $news_section == "news" ? "current" : "" ); ?>" data-sec="3">
 		
 		<header class="section-header"><span class="section-title">Press</span></header>
 		
@@ -339,7 +268,11 @@
 	
 		endwhile;
 		
-		wp_reset_postdata();?>
+		wp_reset_postdata();
+		
+		?>
+		
+		<?php if ( $news_section == "press" ) { echo $news_section_link; } ?>
 		
 		</div><!--/ articles -->
 		
@@ -347,7 +280,7 @@
 	
 	</section>
 	
-	<section id="orange" class="section sec-4 orange alumni column four news-section clear-none" data-sec="4">
+	<section id="orange" class="section sec-4 orange events column four news-section <?php echo ( $news_section == "events" ? "current" : "" ); ?>" data-sec="4">
 		<header class="section-header"><span class="section-title">Events</span></header>
 		
 		<div class="enclosure row margin-right equalize">
@@ -393,7 +326,7 @@
 	
 	</section>
 	
-	<section id="staff" class="section sec-5 green staff column five news-section clear-none" data-sec="5">
+	<section id="staff" class="section sec-5 green people column five news-section <?php echo ( $news_section == "people" ? "current" : "closed" ); ?>" data-sec="5">
 	
 		<header class="section-header"><span class="section-title">Staff</span></header>
 		
