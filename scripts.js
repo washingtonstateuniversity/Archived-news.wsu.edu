@@ -9,7 +9,7 @@ $(document).ready(function() {
 		
 		});
 	
-	$(window).on( "swipeleft", function() { 
+	$(window).on( "swipe", function() { 
 								
 			var disclosed = $(".news-section.opened").attr("data-sec");
 			
@@ -38,7 +38,7 @@ $(document).ready(function() {
 	var disclosure = ( $(this).parents(".section").hasClass("opened") ) ? "opened" : "unopened";
 	//var medium = ( $("#jacket").hasClass("size-medium") ) ? true : false;
 		
-	if ( disclosure === "unopened" && !( $("#jacket").hasClass("size-lt-large") ) ) {
+	if ( disclosure === "unopened" /* && !( $("#jacket").hasClass("size-lt-large") ) */ ) {
 		
 		$(".section").removeClass("opened");
   
@@ -97,7 +97,6 @@ $(document).ready(function() {
   
   
 });
-
 
 
 });
