@@ -223,13 +223,13 @@
 	 
 	 <?php
 	
-	$posts_featured = array(
-		'posts_per_page'   => 5,
-		'category__not_in' => array(473),
-		'category_name'	   => 'top-stories',
-		'offset'			=> 1,
-	);
-	
+		$posts_featured = array(
+			'posts_per_page'   => 5,
+			'category__not_in' => array(473),
+			'category_name'	   => 'top-stories',
+			'offset'			=> 1,
+		);
+		
 		$articles = new WP_Query( $posts_featured );
 		
 		while ( $articles->have_posts() ) : $articles->the_post();
@@ -434,26 +434,23 @@
 	
 	</section>
 	
-	<section id="photo" class="section sec-6 gray-darkest photo gray-darkest-back photo column five news-section clear-none unbound recto unequaled" data-sec="6">
+	<section id="photo" class="section section-photo sec-6 gray-darkest photo gray-darkest-back photo column five news-section clear-none unbound recto unequaled" data-sec="6">
 	
 		<header class="section-header"><span class="section-title">Photo</span></header>
-		
-		<div class="enclosure row margin-right equalize xreverse">
-		
-		<div class="articles column one">
+
 	
 		<?php
 		
-		$posts_staff = array(
-			'posts_per_page'   => 1,
-			'category_name'         => 'photo',
+		$posts_photos = array(
+			'posts_per_page'   => 5,
+			'category_name'         => 'seen',
 		);
 	
-		$articles = new WP_Query( $posts_staff );
+		$articles = new WP_Query( $posts_photos );
 		
 		while ( $articles->have_posts() ) : $articles->the_post();
 	
-			get_template_part( 'articles/post', get_post_type() );
+			get_template_part( 'articles/post', 'image' );
 	
 		endwhile;
 		
@@ -461,9 +458,7 @@
 		
 	 	?>
 	 
-		</div>
-		
-		</div><!--/ nest -->
+
 	
 	</section>
 
