@@ -106,16 +106,15 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	font-size: 8em;
 	line-height: 1em;
 	top: 0px;
-	xxright: 200px;
 	right: 200px;
 	right: calc(100% - 10px);
-	xxright: calc(100% + 2rem);
 	position: absolute;
 	text-transform: uppercase;
 	font-family: "Open Sans Condensed";
 	font-weight: bold;
 	z-index: 100;
 	}
+
 .size-lt-medium .section aside:before {
 	display: none;
 	}
@@ -128,7 +127,6 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	}
 	
 .cbold {
-	
 	font-family: "Open Sans Condensed";
 	font-weight: bold;
 	}
@@ -234,6 +232,16 @@ x.size-gt-small .sections .section:nth-of-type(5),
 .section.yellow aside:before,
 .section.yellow .article-title a {
 	color: #c69214;
+	}
+.section.yellow aside li a {
+	color: $yellow-lightest;
+	display: inline-block;
+	}
+.section.yellow aside li a:hover {
+	color: white;
+	background: $yellow-dark;
+	padding: 2px 4px;
+	margin: -2px -4px;
 	}
 .section.yellow aside:before {
 	content: "Local";
@@ -532,73 +540,6 @@ section .article-featured h2 a:hover {
 	}
 .articles article.has-featured-image:nth-of-type(1) {
 	background-size: 0 0;
-	}
-.articles .article-featured article header {
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	margin: 0px -2rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	x-webkit-filter: grayscale(100%);
-    xfilter: gray;
-    xxopacity: .4;
-    height: 300px;
-	}
-.article-featured hgroup.article-title {
-	position: relative;
-	height: 300px;
-	margin: 0px -2rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	background: -moz-linear-gradient(top,  rgba(94,106,113,0) 0%, rgba(94,106,113,0) 67%, rgba(94,106,113,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,106,113,0)), color-stop(67%,rgba(94,106,113,0)), color-stop(100%,rgba(94,106,113,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005e6a71', endColorstr='#5e6a71',GradientType=0 ); /* IE6-9 */
-	}
-.article-featured hgroup.article-title h2 {
-	color: white;
-	position: absolute;
-	bottom: 0px;
-	padding-bottom: 1rem;
-	xfont-family: "Open Sans Condensed";
-	xfont-weight: bold;
-	font-size: 2rem;
-	padding: 0px 0px 10px 0px;
-	}
-.article-featured hgroup.article-meta.above {
-	display: none;
-	}
-
-.article-featured hgroup.article-title h2:before {
-	font-family: "Open Sans Condensed";
-	font-weight: bold;
-	font-size: 1rem;
-	background: black;
-	xxbackground: #5e6a71;
-	background: #2a3033;
-	color: white;
-	display: inline-block;
-	position: absolute;
-	bottom: calc(100%);
-	padding: 2px 4px;
-	text-transform: uppercase;
-	line-height: 1em;
-	}
-	
-.article-featured article.category-rockdoc hgroup.article-title h2:before,
-.article-featured article.tag-rock-doc hgroup.article-title h2:before { content: "Rock Doc"; }
-
-.article-featured article.category-askdruniverse hgroup.article-title h2:before,
-.article-featured article.tag-dr-universe hgroup.article-title h2:before { content: "Ask Dr. Universe"; }
-
-.article-featured article:first-of-type figure {
-	display: none;
-	}
-div:not(.article-featured) article.has-thumbnail-image {
-	display: -webkit-flex;
 	}
 
 xarticle.has-thumbnail-image .article-header {

@@ -10,16 +10,26 @@
 	height: 100vh;
 	overflow: hidden;
 	}
-section#photo {
+.section-photo:not(#x) {
 	position: fixed !important;
 	}
 	
+.section-photo:not(.opened) {
+	cursor: pointer;
+	}
+	
 .section-photo figure {
-	position: relative;
+	position: absolute;
+	width: 100%;
+	//width: calc(100% - 40px);
 	height: 100vh;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: left top;
+	background-position: center center;
+	}
+
+.section-photo:not(.opened) figure {
+	width: 100%;
 	}
 
 .section-photo figure header {

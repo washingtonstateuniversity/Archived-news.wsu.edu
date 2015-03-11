@@ -1,0 +1,96 @@
+.articles .article-featured article header {
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0px -2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	//-webkit-filter: grayscale(100%);
+    //filter: gray;
+    //opacity: .4;
+    height: 60vh;
+	}
+.article-featured hgroup.article-title {
+	position: relative;
+	height: 300px;
+	height: 60vh;
+	margin: 0px -2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	background: -moz-linear-gradient(top,  rgba(94,106,113,0) 0%, rgba(94,106,113,0) 67%, rgba(94,106,113,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,106,113,0)), color-stop(67%,rgba(94,106,113,0)), color-stop(100%,rgba(94,106,113,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005e6a71', endColorstr='#5e6a71',GradientType=0 ); /* IE6-9 */
+	}
+.article-featured hgroup.article-title {
+	background: linear-gradient(to bottom, transparent 0%, transparent 67%, $gray-darker 100%);
+	}
+.article-featured hgroup.article-title h2 {
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	padding-bottom: 1rem;
+	xfont-family: "Open Sans Condensed";
+	xfont-weight: bold;
+	font-size: 2rem;
+	padding: 0px 0px 10px 0px;
+	}
+.article-featured hgroup.article-meta.above {
+	display: none;
+	}
+
+.article-featured hgroup.article-title h2:before {
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	font-size: 1rem;
+	background: black;
+	xxbackground: #5e6a71;
+	background: #2a3033;
+	color: white;
+	display: inline-block;
+	position: absolute;
+	bottom: calc(100%);
+	padding: 2px 4px;
+	text-transform: uppercase;
+	line-height: 1em;
+	}
+	
+.article-featured article.category-rockdoc hgroup.article-title h2:before,
+.article-featured article.tag-rock-doc hgroup.article-title h2:before { content: "Rock Doc"; }
+
+.article-featured article.category-askdruniverse hgroup.article-title h2:before,
+.article-featured article.tag-dr-universe hgroup.article-title h2:before { content: "Ask Dr. Universe"; }
+
+.article-featured article:first-of-type figure {
+	display: none;
+	}
+div:not(.article-featured) article.has-thumbnail-image {
+	display: -webkit-flex;
+	}
+
+div:not(.article-featured) .article-header {
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	}
+div:not(.article-featured) .article-header .article-meta {
+	order: 1;
+	-webkit-order: 1;
+	}
+div:not(.article-featured) .article-header .article-byline {
+	order: 3;
+	-webkit-order: 3;
+	}
+div:not(.article-featured) .article-header .article-title {
+	order: 2;
+	-webkit-order: 2;
+	}
+.article-featured .article-summary {
+	padding-top: 1rem;
+	}
+
+.tagged-full-feature main section:first-of-type .column.two {
+	width: 100%;
+	clear: both;
+	}
