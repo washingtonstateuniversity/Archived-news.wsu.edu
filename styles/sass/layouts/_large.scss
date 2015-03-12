@@ -1,0 +1,36 @@
+.sections {
+	width: 75%;
+	}
+.section aside {
+	float: none !important;
+	width: 100% !important;
+	}
+.section .articles {
+	width: 100% !important;
+	float: none;
+	}
+.section-side {
+	min-height: 1px !important;
+	}
+.section.crimson aside ul ~ ul {
+	display: none;
+	}
+.section aside:before {
+	right: auto;
+	left: 0px;
+	position: relative;
+	display: inline-block;
+	color: white !important;
+	}
+.section aside ul:first-of-type {
+	width: 50%;
+	xfloat: left;
+	display: inline-block;
+	margin-left: 15px;
+	}
+.articles {
+	padding-top: 0px;
+	}
+.section.opened .section-header {
+	display: none;
+	}

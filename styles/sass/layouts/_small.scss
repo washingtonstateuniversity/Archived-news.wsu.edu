@@ -1,0 +1,39 @@
+.sections {
+	width: 100%;
+	}
+	
+.fluid & .sections section {
+	width: 100%;
+	}
+
+section aside,
+.article-summary,
+.article-footer,
+article .source,
+article .article-thumbnail {
+	display: none !important;
+	}
+.section-header {
+	padding-left: 1.8rem;
+	}
+section {
+	padding-bottom: 2rem;
+	}
+section article:nth-of-type(2) ~ article {
+	display: none !important;
+	}
+.article-title a {
+	color: white !important;
+	}
+section .articles {
+	padding-top: 0px;
+	}
+	
+.article-featured article header,
+.article-featured hgroup.article-title {
+	height: 300px;
+	}
+.article-featured hgroup.article-title h2 {
+	width: 100%;
+	}
+	
