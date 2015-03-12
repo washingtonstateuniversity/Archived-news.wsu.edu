@@ -47,7 +47,12 @@ function get_section() {
 	$path = str_replace( get_home_url(), '', get_permalink() );
 	$path = trim( $path, '/' );
 	$path = explode( '/', $path );
-	$section = $path[0];
+	
+	if ( is_front_page() ) {
+		$section = "cover";
+	} else {
+		$section = $path[0];
+	}
 
 	return $section;
 }
