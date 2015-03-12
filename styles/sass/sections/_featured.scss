@@ -1,7 +1,9 @@
+.article-featured {
+	margin-bottom: 1rem;
+	}
 .article-featured .article-body {
 	display: none;
 	}
-
 .articles .article-featured article header {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -20,15 +22,6 @@
 	margin: 0px -2rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	background: -moz-linear-gradient(top,  rgba(94,106,113,0) 0%, rgba(94,106,113,0) 67%, rgba(94,106,113,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,106,113,0)), color-stop(67%,rgba(94,106,113,0)), color-stop(100%,rgba(94,106,113,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(94,106,113,0) 0%,rgba(94,106,113,0) 67%,rgba(94,106,113,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005e6a71', endColorstr='#5e6a71',GradientType=0 ); /* IE6-9 */
-	}
-.article-featured hgroup.article-title {
 	background: linear-gradient(to bottom, transparent 0%, transparent 67%, $gray-darker 100%);
 	}
 .article-featured hgroup.article-title h2 {
@@ -36,29 +29,41 @@
 	position: absolute;
 	bottom: 0px;
 	padding-bottom: 1rem;
-	xfont-family: "Open Sans Condensed";
-	xfont-weight: bold;
-	font-size: 2rem;
-	padding: 0px 0px 10px 0px;
+	//font-family: "Open Sans Condensed";
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 4rem !important;
+	padding: 0px 0px 2rem 0px;
+	width: 50%;
+	line-height: .9em;
+	text-shadow: 2px 0px 10px $gray-darker;
+	text-shadow: 1px 2px 2px $gray-darker;
+	}
+.article-featured:not(.x) hgroup.article-title h2 a {
+	color: white;
 	}
 .article-featured hgroup.article-meta.above {
 	display: none;
 	}
 
-.article-featured hgroup.article-title h2:before {
-	font-family: "Open Sans Condensed";
+.article-featured:not(.x) hgroup.article-title h2:before {
+	
 	font-weight: bold;
 	font-size: 1rem;
 	background: black;
 	xxbackground: #5e6a71;
 	background: #2a3033;
-	color: white;
+	color: $gray-darker;
+	background: $gray-lightly;
+	background: white;
 	display: inline-block;
 	position: absolute;
-	bottom: calc(100%);
+	bottom: calc(100% + 5px);
 	padding: 2px 4px;
 	text-transform: uppercase;
 	line-height: 1em;
+	text-shadow: none;
+	box-shadow: 1px 2px 1px $gray-darker;
 	}
 	
 .article-featured article.category-rockdoc hgroup.article-title h2:before,
@@ -92,7 +97,10 @@ div:not(.article-featured) .article-header .article-title {
 	}
 .article-featured .article-summary {
 	padding-top: 1rem;
+	display: none;
 	}
+	
+
 
 .tagged-full-feature main section:first-of-type .column.two {
 	width: 100%;
