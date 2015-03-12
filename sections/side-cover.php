@@ -32,37 +32,7 @@
 		</ul>
 
 		<hr>
-		
-		<?php /*
-			
-			echo "<ul>";
-			
-			( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG )) ? $child_of = "478" : $child_of = "12982";
-			
-		    $args = array(
-			'show_option_all'    => '',
-			'orderby'            => 'name',
-			'hide_empty'         => 0,
-			'use_desc_for_title' => 1,
-			'child_of'           => $child_of,
-			'feed'               => '',
-			'include'            => '',
-			'hierarchical'       => 0,
-			'title_li'           => __( '<span>Challenges</span>' ),
-			'number'             => null,
-			'echo'               => 1,
-			'depth'              => 1,
-			'current_category'   => 0,
-			'taxonomy'           => 'category',
-			'walker'             => null
-		    );
-		    wp_list_categories( $args ); 
-		    
-		    echo "</ul>";
-		*/ ?>
-		
-		<hr>
-		
+				
 		<ul class="recent">
 			<header>Just In</header>
 			<?php $args = array(
