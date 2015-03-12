@@ -8,9 +8,19 @@
 	}
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php echo $featured_image_bg; ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php //echo $featured_image_bg; ?>>
 
 	<?php //echo $featured_image_img; ?>
+	
+	<?php
+		
+		if ( spine_has_thumbnail_image() ) {
+				?><figure class="article-thumbnail"><?php spine_the_thumbnail_image(); ?></figure><?php
+			} elseif ( spine_has_featured_image() ) {
+				?><figure class="article-thumbnail"><?php the_post_thumbnail( 'spine-thumbnail_size' ); ?></figure><?php
+			}
+		
+	?>
 	
 	<header class="article-header" <?php echo $featured_image_bg; ?>>
 		<hgroup class="article-meta">
@@ -49,15 +59,7 @@
 
 	<?php if ( ! is_singular() ) : ?>
 			
-		<?php
 		
-		if ( spine_has_thumbnail_image() ) {
-				?><figure class="article-thumbnail"><?php spine_the_thumbnail_image(); ?></figure><?php
-			} elseif ( spine_has_featured_image() ) {
-				?><figure class="article-thumbnail"><?php the_post_thumbnail( 'spine-thumbnail_size' ); ?></figure><?php
-			}
-		
-		?>
 			
 		<div class="article-summary">
 			<?php
