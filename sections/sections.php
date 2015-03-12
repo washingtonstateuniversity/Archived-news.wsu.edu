@@ -14,7 +14,7 @@
 	<div class="section-tab crimson" data-sec="1"><span class="section-title">Front</span></div>
 </div>
 
-<div class="sections column ten-twelfths equalize">
+<div class="sections column equalize">
 
 	<section id="crimson" class="section sec-1 crimson featured column one news-section <?php echo ( $news_section == "cover" ? "opened current" : "closed" ); ?>" data-sec="1">
 		
@@ -137,10 +137,7 @@
 		
 		<aside class="section-side column two">
 			
-		<ul>
-			<li>WSU In the Media</li>
-			<li>Press Releases</li>
-		</ul>
+			<?php get_template_part( 'sections/side', 'events' ); ?>
 		
 		</aside>
 		
