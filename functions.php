@@ -165,7 +165,7 @@ function my_post_gallery( $output, $attr) {
         'captiontag' => $html5 ? 'figcaption' : 'dd',
         'gallery_caption' => '',
         'gallery_display' => '',
-        'gallery_credit' => 'cite',
+        'gallery_credit' => '',
         'columns'    => 3,
         'size'       => 'thumbnail',
         'include'    => '',
@@ -203,7 +203,7 @@ function my_post_gallery( $output, $attr) {
     $itemtag = tag_escape( $atts['itemtag'] );
     $captiontag = tag_escape( $atts['captiontag'] );
     $gallery_caption = $atts['gallery_caption'];
-    $gallery_display = $atts['gallery_display'];
+    $gallery_display = tag_escape( $atts['gallery_display'] );
     $gallery_credit = $atts['gallery_credit'];
     $icontag = tag_escape( $atts['icontag'] );
     $valid_tags = wp_kses_allowed_html( 'post' );
