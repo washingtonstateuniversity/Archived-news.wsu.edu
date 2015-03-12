@@ -71,3 +71,14 @@ a:hover .series {
 	background-color: #981e32;
 	}
 
+/* Layouts */
+
+.size-lt-xlarge {
+	
+	@import 'layouts/large';
+}
+
+.size-lt-medium {
+	
+	@import 'layouts/small';
+}
