@@ -23,7 +23,9 @@
 		<div class="enclosure row margin-right equalize reverse">
 		
 		<aside class="section-side column two">
-		<?php get_template_part( 'sections/side', 'cover' ); ?>
+		
+			<?php // get_template_part( 'sections/side', 'cover' ); ?>
+			<?php include(locate_template('sections/side-cover.php')); ?>
 		
 		</aside>
 		
@@ -173,18 +175,15 @@
 	
 	</section>
 	
-	<section id="staff" class="section sec-5 green people column five news-section <?php echo ( $news_section == "people" ? "opened current" : "closed" ); ?>" data-sec="5">
+	<section id="people" class="section sec-5 green people column five news-section <?php echo ( $news_section == "people" ? "opened current" : "closed" ); ?>" data-sec="5">
 	
-		<header class="section-header"><span class="section-title">Staff</span></header>
+		<header class="section-header"><span class="section-title">People</span></header>
 		
 		<div class="enclosure row margin-right equalize xreverse">
 			
 		<aside class="section-side column two">
 			
-		<ul>
-			<li>Announcements</li>
-			<li>Obituaries</li>
-		</ul>
+			<?php get_template_part( 'sections/side', 'people' ); ?>
 		
 		</aside>
 		
