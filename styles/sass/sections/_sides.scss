@@ -1,0 +1,209 @@
+.section aside {
+	float: right !important;
+	width: 132px;
+	width: 198px;
+	min-height: 100px;
+	height: 100%;
+	display: block;
+	}
+	
+.section aside:before {
+	content: "news";
+	font-size: 8em;
+	line-height: 1em;
+	top: 0px;
+	right: 200px;
+	right: calc(100% - 10px);
+	position: absolute;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	z-index: 100;
+	}
+
+.size-lt-medium .section aside:before {
+	display: none;
+	}
+
+.size-lt-medium .section-title {
+	font-size: 8rem;
+	text-transform: uppercase;
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	}
+	
+.cbold {
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	}
+.ucase {
+	text-transform: uppercase;
+	}
+.section-side {
+	padding: 0px 40px 0px 1rem;
+	}
+.section-side ul {
+	padding: 25px 0;
+	
+	}
+.section-side ul ul {
+	padding: 0;
+	}
+.section-side ul ~ ul {
+	padding-top: 0px;
+	}
+.crimson .section-side hr {
+	height: 3px;
+	xmargin-left: 30px;
+	background: -moz-linear-gradient(left,  rgba(106,14,32,1) 0%, rgba(106,14,32,0.51) 50%, rgba(152,30,50,0.01) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(106,14,32,1)), color-stop(50%,rgba(106,14,32,0.51)), color-stop(100%,rgba(152,30,50,0.01))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a0e20', endColorstr='#03981e32',GradientType=1 ); /* IE6-9 */
+	display: none;
+	}
+
+	
+.section.news-section aside li,
+.section.news-section aside ul header {
+	list-style: none;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1em;
+	color: white;
+	}
+.section.news-section aside li {
+	padding: 0;
+	margin: 0;
+	}
+.section.news-section aside li a {
+	color: white;
+	display: inline-block;
+	}
+.section.news-section aside li a:hover {
+	padding: 2px 4px;
+	margin: -2px -4px;
+	}
+.section.news-section aside ul header {
+	font-family: "Open Sans Condensed";
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1rem;
+	display: block; 
+	}
+.section.news-section aside ul header ~ li {
+	font-size: .9rem;
+	font-weight: normal;
+	padding-top: .3rem;
+	}
+	
+
+.crimson .section-side li a {
+	color: white;
+	}
+.crimson .section-side ul ul li,
+.crimson .section-side ul ul li a {
+	color: #d7dadb;
+	}
+
+.section.crimson aside ul li a,
+.section.crimson aside ul header {
+	color: $gray-lighter;
+	}
+
+.section.crimson aside li a:hover {
+	color: white;
+	background: $crimson-dark;
+	}
+
+	
+.section.crimson aside,
+.size-small .section.crimson {
+	background: $crimson;
+	}
+.section.crimson aside:before,
+.section.crimson .article-title a {
+	color: $crimson;
+	}
+	
+.section.yellow aside,
+.size-small .section.yellow {
+	background: #c69214;
+	}
+.section.yellow aside:before,
+.section.yellow .article-title a {
+	color: #c69214;
+	}
+.section.yellow aside:before {
+	content: "Local";
+	}
+.section.yellow aside li a {
+	color: $yellow-lighter;
+	display: inline-block;
+	}
+.section.yellow aside li a:hover {
+	color: white;
+	background: $yellow-dark;
+	}
+	
+.section.orange aside,
+.size-small .section.orange {
+	background: #b67233;
+	}
+.section.orange aside:before,
+.section.orange .article-title a {
+	color: #b67233;
+	}
+.section.orange aside:before {
+	content: "Events";
+	}
+.section.orange aside li a {
+	color: $yellow-lightest;
+	}
+.section.orange aside li a:hover {
+	color: white;
+	background: $yellow-dark;
+	}
+	
+.section.blue aside,
+.size-small .section.blue {
+	background: #4f868e;
+	}
+.section.blue aside:before,
+.section.blue .article-title a {
+	color: #4f868e;
+	}
+.section.blue aside:before {
+	content: "Press";
+	}
+.section.blue aside li a {
+	color: $blue-lightest;
+	display: inline-block;
+	}
+.section.blue aside li a:hover {
+	color: white;
+	background: $blue-dark;
+	}
+
+.section.green aside,
+.size-small .section.green {
+	background: #8f7e35;
+	}
+.section.green aside:before,
+.section.green .article-title a {
+	color: #8f7e35;
+	}
+.section.green aside:before {
+	content: "People";
+	}
+.section.green aside li a {
+	color: $green-lightest;
+	display: inline-block;
+	}
+.section.green aside li a:hover {
+	color: white;
+	color: white;
+	background: $green-dark;
+	}
