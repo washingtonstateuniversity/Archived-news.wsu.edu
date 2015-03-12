@@ -75,26 +75,7 @@
 .article-featured article:first-of-type figure {
 	display: none;
 	}
-div:not(.article-featured) article.has-thumbnail-image {
-	display: -webkit-flex;
-	}
 
-div:not(.article-featured) .article-header {
-	display: -webkit-flex;
-	-webkit-flex-direction: column;
-	}
-div:not(.article-featured) .article-header .article-meta {
-	order: 1;
-	-webkit-order: 1;
-	}
-div:not(.article-featured) .article-header .article-byline {
-	order: 3;
-	-webkit-order: 3;
-	}
-div:not(.article-featured) .article-header .article-title {
-	order: 2;
-	-webkit-order: 2;
-	}
 .article-featured .article-summary {
 	padding-top: 1rem;
 	display: none;
