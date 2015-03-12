@@ -12,6 +12,10 @@
 
 	<?php //echo $featured_image_img; ?>
 	
+	<div class="row">
+		
+	<div class="split one">
+	
 	<?php
 		
 		if ( spine_has_thumbnail_image() ) {
@@ -21,7 +25,11 @@
 			}
 		
 	?>
+		
+	</div>
 	
+	<div class="split two">
+		
 	<header class="article-header" <?php echo $featured_image_bg; ?>>
 		<hgroup class="article-meta">
 			<time class="article-date" hour="<?php echo get_the_date(); ?>" datetime="<?php echo get_the_date( 'c' ); ?>">
@@ -37,12 +45,7 @@
 				<?php // echo get_the_date( 'c' ); ?>
 			</time>
 		</hgroup>
-		<hgroup class="article-byline">
-			<cite class="article-author">
-				<span class="author" role="author"><?php the_author_posts_link(); ?></span>
-				<span class="affiliation"><?php echo get_the_author_meta('affiliation'); ?></span>
-			</cite>
-		</hgroup>
+		
 		<hgroup class="article-title">
 		<?php if ( is_single() ) : ?>
 			<?php if ( spine_get_option( 'articletitle_show' ) == 'true' ) : ?>
@@ -55,11 +58,16 @@
 		<?php endif; // is_single() or in_a_relationship() ?>
 		</hgroup>
 		
+		<hgroup class="article-byline">
+			<cite class="article-author">
+				<span class="author" role="author"><?php the_author_posts_link(); ?></span>
+				<span class="affiliation"><?php echo get_the_author_meta('affiliation'); ?></span>
+			</cite>
+		</hgroup>
+		
 	</header>
 
 	<?php if ( ! is_singular() ) : ?>
-			
-		
 			
 		<div class="article-summary">
 			<?php
@@ -79,6 +87,7 @@
 
 			?>
 		</div><!-- .article-summary -->
+	
 	<?php else : ?>
 		<div class="article-body">
 			<?php the_content(); ?>
@@ -147,6 +156,8 @@
 			echo '</dl>';
 		}
 	}
+	
+	
 
 	// Comments Allowed
 	// if ( comments_open()) {}
@@ -178,5 +189,9 @@
 		</div><!-- .author-info -->
 	<?php endif; ?>
 	</footer><!-- .entry-meta -->
-
+	
+	</div><!-- /column.two -->
+	
+	</div><!-- /row -->
+		
 </article>
