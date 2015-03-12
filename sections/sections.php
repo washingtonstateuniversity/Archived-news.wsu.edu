@@ -16,15 +16,14 @@
 
 <div class="sections column ten-twelfths equalize">
 
-	<section id="crimson" class="section sec-1 crimson featured column one news-section <?php echo ( $news_section == "news" ? "opened current" : "closed" ); ?>" data-sec="1">
+	<section id="crimson" class="section sec-1 crimson featured column one news-section <?php echo ( $news_section == "cover" ? "opened current" : "closed" ); ?>" data-sec="1">
 		
 		<header class="section-header"><span class="section-title">News</span></header>
 		
 		<div class="enclosure row margin-right equalize reverse">
 		
 		<aside class="section-side column two">
-		
-			<?php get_template_part( 'sections/side', 'cover' ); ?>
+		<?php get_template_part( 'sections/side', 'cover' ); ?>
 		
 		</aside>
 		
@@ -65,7 +64,7 @@
 		
 	</section>
 	
-	<section id="yellow" class="section sec-2 yellow local column two news-section <?php echo ( $news_section == "local" ? "current" : "" ); ?>" data-sec="2">
+	<section id="yellow" class="section sec-2 yellow local column two news-section <?php echo ( $news_section == "local" ? "opened current" : "" ); ?>" data-sec="2">
 		
 		<header class="section-header"><span class="section-title">Local</span></header>
 		
@@ -87,7 +86,7 @@
 		
 	</section>
 	
-	<section id="blue" class="section sec-3 blue students column three news-section <?php echo ( $news_section == "news" ? "current" : "" ); ?>" data-sec="3">
+	<section id="blue" class="section sec-3 blue students column three news-section <?php echo ( $news_section == "press" ? "opened current" : "" ); ?>" data-sec="3">
 		
 		<header class="section-header"><span class="section-title">Press</span></header>
 		
@@ -131,7 +130,7 @@
 	
 	</section>
 	
-	<section id="orange" class="section sec-4 orange events column four news-section <?php echo ( $news_section == "events" ? "current" : "" ); ?>" data-sec="4">
+	<section id="orange" class="section sec-4 orange events column four news-section <?php echo ( $news_section == "events" ? "opened current" : "" ); ?>" data-sec="4">
 		<header class="section-header"><span class="section-title">Events</span></header>
 		
 		<div class="enclosure row margin-right equalize">
@@ -177,7 +176,7 @@
 	
 	</section>
 	
-	<section id="staff" class="section sec-5 green people column five news-section <?php echo ( $news_section == "people" ? "current" : "closed" ); ?>" data-sec="5">
+	<section id="staff" class="section sec-5 green people column five news-section <?php echo ( $news_section == "people" ? "opened current" : "closed" ); ?>" data-sec="5">
 	
 		<header class="section-header"><span class="section-title">Staff</span></header>
 		
