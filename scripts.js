@@ -11,13 +11,13 @@
 			if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); }
 			var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
 				
-			//if ( disclosure === "unopened" ) {
+			if ( disclosure === "unopened" ) {
 			
 				$(".section").removeClass("opened");
 				
 				$(".section").each( function() {
 				
-					if ( $(this).attr("data-sec") < indexical ) {
+					if ( ( $(this).attr("data-sec") < indexical ) && ( $(this).attr("data-sec") !== "6" ) ) {
 					  //$(this).removeClass("delivered");
 					  $(this).animate({left: "-1000px"}, {duration:500, queue:false});
 					}
@@ -32,20 +32,17 @@
 				
 				$('.section[data-sec="'+indexical+'"]').addClass("opened");
 			
-			//} 
-			/*
-else if ( indexical !== "1" ) {
+			} 
+			else if ( indexical !== "1" ) {
 			
 				flipRight(indexical-1);
 			
 			} 
-*/
 			
 		}
 		
 		function flipRight(indexical) {
 			
-			var section = $(this).parents(".section").attr("data-sec");
 			if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); }
 			//alert(indexical);
 				
@@ -53,7 +50,7 @@ else if ( indexical !== "1" ) {
 			
 			$(".section").each( function() {
 			
-				if ( ( $(this).attr("data-sec") >= indexical ) && ( section !== "6" )  ) {
+				if ( ( $(this).attr("data-sec") >= indexical ) && ( $(this).attr("data-sec") !== "6" )  ) {
 				  $(this).animate({left: "0px"}, {duration:300, queue:false});
 			  	}
 				if ( $(this).attr("data-sec") === indexical ) {
@@ -63,7 +60,7 @@ else if ( indexical !== "1" ) {
 			});
 			
 			$(".section-tab").each( function() {
-				if (  $(this).attr("data-sec") >= indexical  ) {
+				if (  $(this).attr("data-sec") >= indexical ) {
 				  $(this).hide();
 				}
 		  	});
@@ -101,45 +98,13 @@ else if ( indexical !== "1" ) {
 			flipLeft(indexical);
 			
 		});
-				
-		/*
-			var section = $(this).parents(".section").attr("data-sec");
-			var disclosure = ( $(this).parents(".section").hasClass("opened") ) ? "opened" : "unopened";
-		*/
-		//var medium = ( $("#jacket").hasClass("size-medium") ) ? true : false;
-			
-	/*
-		if ( disclosure === "unopened" ) {
-			
-			$(".section").removeClass("opened");
+		
+		$( ".opened .section-header" ).click(function() {
 	  
-			$(".section").each( function() {
+			var indexical = $(this).parents(".section").attr("data-sec");
+			flipRight(indexical);
 			
-				if ( $(this).attr("data-sec") < section ) {
-				  $(this).animate({left: "-1000px"}, {duration:500, queue:false});
-				}
-			
-			});
-			
-			$(".section-tab").each( function() {
-				if ( $(this).attr("data-sec") < section ) {
-				  $(this).delay(300).show( "blind",{direction: "horizontal"}, 100 );
-				}
-			});
-			
-		$(this).parents(".section").addClass("opened");
-				
-		} else if ( section !== "1" ) {
-			
-			$(".section").removeClass("opened");
-			$('.sections [data-sec="'+(section-1)+'"]').animate({left: "0px"}, {duration:500, queue:false}).addClass("opened");
-			$('.section-tabs [data-sec="'+(section-1)+'"]').delay(300).hide( "blind",{direction: "horizontal"}, 100 );
-			
-		} 
-	
-	  $("body").spine("equalize");	
-	*/
-	  
+		});
 	
 	});
 
