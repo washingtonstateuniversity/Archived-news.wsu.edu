@@ -13,8 +13,17 @@ main div:not(.article-featured) article,
 main div:not(.article-featured) article header {
 	background-size: 0 0;
 	}
+	
+.article-title h2 {
+	xxfont-weight: 300;
+	font-size: 1.2em;
+	font-family: "Open Sans Condensed", sans-serif;
+	}
 
 /* Thumbnails */
+body.single article .article-thumbnail {
+	display: none;
+	}
 
 .article-summary img {
 	display: none;
@@ -65,7 +74,8 @@ article header cite::before {
 	padding-top: 0;
 	}
 article a span.content-more-default {
-	display: inline-block;
+	//display: inline-block;
+	display: block;
 	position: relative;
 	padding-left: 8px;
 	margin-left: 2px;
