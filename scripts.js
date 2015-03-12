@@ -11,7 +11,7 @@
 			if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); }
 			var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
 				
-			if ( disclosure === "unopened" ) {
+			//if ( disclosure === "unopened" ) {
 			
 				$(".section").removeClass("opened");
 				
@@ -32,11 +32,14 @@
 				
 				$('.section[data-sec="'+indexical+'"]').addClass("opened");
 			
-			} else if ( indexical !== "1" ) {
+			//} 
+			/*
+else if ( indexical !== "1" ) {
 			
 				flipRight(indexical-1);
 			
 			} 
+*/
 			
 		}
 		
