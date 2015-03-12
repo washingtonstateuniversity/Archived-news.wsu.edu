@@ -125,7 +125,7 @@ x#spine #glue {
 	color: white;
 	background: #ffb81c;
 	}
-.size-gt-small .section.yellow.opened .section-header:hover:before {
+x.size-gt-small .section.yellow.opened .section-header:hover:before {
 	background: #981e32; /* Crimson */
 	}
 	
@@ -140,7 +140,7 @@ x#spine #glue {
 .size-gt-small .section.blue:not(.opened) .section-header:hover {
 	background: #00a5bd;
 	}
-.size-gt-small .section.blue.opened .section-header:hover:before {
+x.size-gt-small .section.blue.opened .section-header:hover:before {
 	background: #c69214; /* Yellow */
 	}
 
@@ -155,7 +155,7 @@ x#spine #glue {
 .size-gt-small .section.orange:not(.opened) .section-header:hover {
 	background: #f6861f;
 	}
-.size-gt-small .section.orange.opened .section-header:hover:before {
+x.size-gt-small .section.orange.opened .section-header:hover:before {
 	background: #4f868e; /* Blue */
 	}
 	
@@ -166,7 +166,7 @@ x#spine #glue {
 .size-gt-small .section.green:not(.opened) .section-header:hover {
 	background: #ada400;
 	}
-.size-gt-small .section.green.opened .section-header:hover:before {
+x.size-gt-small .section.green.opened .section-header:hover:before {
 	background: #b67233; /* Orange */
 	}
 	
@@ -314,21 +314,9 @@ main article header .article-title {
 section .article-featured h2 a:hover {
 	color: white;
 	}
-.articles article.has-featured-image:nth-of-type(1) {
-	background-size: 0 0;
-	}
-div:not(.article-featured) article.has-thumbnail-image .article-header {
-	-webkit-flex: 1;
-	}
-article.has-thumbnail-image .article-thumbnail {
-	width: 198px;
-	}
 
 article.has-thumbnail-image .article-thumbnail {
-	xwidth: 35%;
-	}
-article.has-thumbnail-image .article-summary {
-	display: none;
+	width: 198px;
 	}
 
 section.local .category-wsu-spokane-news:before {
