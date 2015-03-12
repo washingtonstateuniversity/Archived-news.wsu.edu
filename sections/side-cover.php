@@ -20,12 +20,10 @@
 			'include'            => '',
 			'hierarchical'       => 0,
 			'title_li'           => __( '' ),
-			//'show_option_none'   => __( '' ),
 			'number'             => null,
 			'echo'               => 1,
 			'depth'              => 1,
 			'current_category'   => 0,
-			//'pad_counts'         => 0,
 			'taxonomy'           => 'category',
 			'walker'             => null
 		    );
@@ -65,21 +63,18 @@
 		
 		<hr>
 		
-		<ul>
+		<ul class="recent">
 			<header>Just In</header>
 			<?php $args = array(
-			    'numberposts' => 5,
-			    'offset' => 0,
-			    'category' => 0,
-			    'orderby' => 'post_date',
-			    'order' => 'DESC',
-			    //'include' => ,
-			    //'exclude' => ,
-			    //'meta_key' => ,
-			    //'meta_value' =>,
-			    'post_type' => 'post',
-			    'post_status' => 'publish',
-			    'suppress_filters' => true );
+			    'numberposts' 			=> 5,
+			    'offset' 				=> 0,
+			    'category' 				=> 0,
+			    'orderby' 				=> 'post_date',
+			    'order' 				=> 'DESC',
+			    'title_li'           	=> __( '' ),
+			    'post_type'				=> 'post',
+			    'post_status' 			=> 'publish',
+			    'suppress_filters' 		=> true );
 			
 			    $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 			    foreach( $recent_posts as $recent ){
@@ -90,7 +85,7 @@
 		
 		<hr>
 		
-		<ul>
+		<ul class="popular">
 			<header>Popular</header>
 			<?php $args = array(
 				'posts_per_page'   => 5,
