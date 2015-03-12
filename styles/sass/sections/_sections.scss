@@ -6,7 +6,7 @@
 	}
 
 .sections {
-	width: 100%;
+	width: 80%;
 	position: relative;
 	}
 
@@ -60,11 +60,13 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	width: calc(100% + 200px);
 	}
 	
+/*
 .size-large .sections .section:nth-of-type(2) { width: calc(100% + 30px); }
 .size-large .sections .section:nth-of-type(3) { width: calc(100% + 60px); }
 .size-large .sections .section:nth-of-type(4) { width: calc(100% + 90px); }
 .size-large .sections .section:nth-of-type(5) { width: calc(100% + 120px); }
 .size-large .sections .section:nth-of-type(6) { width: calc(100% + 150px); }
+*/
 	
 .sections .section.opened {
 	margin-left: 0px;
@@ -92,226 +94,7 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	z-index: 200;
 	}
 
-.section aside {
-	float: right !important;
-	width: 132px;
-	width: 198px;
-	min-height: 100px;
-	height: 100%;
-	display: block;
-	}
-	
-.section aside:before {
-	content: "news";
-	font-size: 8em;
-	line-height: 1em;
-	top: 0px;
-	right: 200px;
-	right: calc(100% - 10px);
-	position: absolute;
-	text-transform: uppercase;
-	font-family: "Open Sans Condensed";
-	font-weight: bold;
-	z-index: 100;
-	}
 
-.size-lt-medium .section aside:before {
-	display: none;
-	}
-
-.size-lt-medium .section-title {
-	font-size: 8rem;
-	text-transform: uppercase;
-	font-family: "Open Sans Condensed";
-	font-weight: bold;
-	}
-	
-.cbold {
-	font-family: "Open Sans Condensed";
-	font-weight: bold;
-	}
-.ucase {
-	text-transform: uppercase;
-	}
-.section-side {
-	padding: 0px 40px 0px 1rem;
-	}
-.section-side ul {
-	padding: 25px 0;
-	
-	}
-.section-side ul ul {
-	padding: 0;
-	}
-.section-side ul ~ ul {
-	padding-top: 0px;
-	}
-.crimson .section-side hr {
-	height: 3px;
-	xmargin-left: 30px;
-	background: -moz-linear-gradient(left,  rgba(106,14,32,1) 0%, rgba(106,14,32,0.51) 50%, rgba(152,30,50,0.01) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(106,14,32,1)), color-stop(50%,rgba(106,14,32,0.51)), color-stop(100%,rgba(152,30,50,0.01))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a0e20', endColorstr='#03981e32',GradientType=1 ); /* IE6-9 */
-	display: none;
-	}
-	
-.section-side ul header {
-	xfont-family: "Open Sans Condensed";
-	font-weight: bold;
-	font-weight: 300;
-	font-size: 2rem;
-	line-height: 1em;
-	color: white;
-	padding-bottom: 5px;
-	}
-
-.crimson .section-side ul header {
-	xbackground: #4f0010;
-	padding: 0px 5px;
-	xcolor: #981e32;
-	
-	margin-left: -5px;
-	}
-	
-.section-side ul li {
-	list-style: none;
-	font-weight: normal;
-	color: white;
-	font-size: .8em;
-	}
-.crimson .section-side ul li:before {
-	content: "";
-	background: -moz-linear-gradient(left,  rgba(106,14,32,1) 0%, rgba(106,14,32,0.51) 50%, rgba(152,30,50,0.01) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(106,14,32,1)), color-stop(50%,rgba(106,14,32,0.51)), color-stop(100%,rgba(152,30,50,0.01))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(106,14,32,1) 0%,rgba(106,14,32,0.51) 50%,rgba(152,30,50,0.01) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a0e20', endColorstr='#03981e32',GradientType=1 ); /* IE6-9 */
-	width: 100%;
-	height: 2px;
-	display: block;
-	margin-bottom: .3em;
-	}
-.section-side ul li {
-	font-weight: normal;
-	line-height: 1.2em;
-	padding-top: .2em;
-	}
-.crimson .section-side header,
-.crimson .section-side li a {
-	color: white;
-	}
-.crimson .section-side ul ul li,
-.crimson .section-side ul ul li a {
-	color: #d7dadb;
-	}
-.crimson .section-side li:hover,
-.crimson .section-side li a:hover {
-	color: white;
-	cursor: pointer;
-	}
-	
-.section aside li a {
-	color: white;
-	display: inline-block;
-	}
-.section aside li a:hover {
-	padding: 2px 4px;
-	margin: -2px -4px;
-	}
-	
-.section.crimson aside,
-.size-small .section.crimson {
-	background: #981e32;
-	}
-.section.crimson aside:before,
-.section.crimson .article-title a {
-	color: #981e32;
-	}
-	
-.section.yellow aside,
-.size-small .section.yellow {
-	background: #c69214;
-	}
-.section.yellow aside:before,
-.section.yellow .article-title a {
-	color: #c69214;
-	}
-.section.yellow aside:before {
-	content: "Local";
-	}
-.section.yellow aside li a {
-	color: $yellow-lightest;
-	display: inline-block;
-	}
-.section.yellow aside li a:hover {
-	color: white;
-	background: $yellow-dark;
-	}
-	
-.section.orange aside,
-.size-small .section.orange {
-	background: #b67233;
-	}
-.section.orange aside:before,
-.section.orange .article-title a {
-	color: #b67233;
-	}
-.section.orange aside:before {
-	content: "Events";
-	}
-.section.orange aside li a {
-	color: $yellow-lightest;
-	}
-.section.orange aside li a:hover {
-	color: white;
-	background: $yellow-dark;
-	}
-	
-.section.blue aside,
-.size-small .section.blue {
-	background: #4f868e;
-	}
-.section.blue aside:before,
-.section.blue .article-title a {
-	color: #4f868e;
-	}
-.section.blue aside:before {
-	content: "Press";
-	}
-.section.blue aside li a {
-	color: $blue-lightest;
-	display: inline-block;
-	}
-.section.blue aside li a:hover {
-	color: white;
-	background: $blue-dark;
-	}
-	
-.section.green aside,
-.size-small .section.green {
-	background: #8f7e35;
-	}
-.section.green aside:before,
-.section.green .article-title a {
-	color: #8f7e35;
-	}
-.section.green aside:before {
-	content: "People";
-	}
-.section.green aside li a {
-	color: $green-lightest;
-	display: inline-block;
-	}
-.section.green aside li a:hover {
-	color: white;
-	background: $green-dark;
-	}
 
 x#spine #glue {
 	box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -512,34 +295,7 @@ main article header .article-title {
 	display: block;
 	}
 	
-.size-small .fluid .sections section {
-	width: 100% !important;
-	}
-x.size-small .enclosure {
-	display: none;
-	}
-.size-small section aside,
-.size-small .article-summary,
-.size-small .article-footer,
-.size-small article .source,
-section.local .category-wsu-spokane-news::before {
-	display: none !important;
-	}
-.size-small .section-header {
-	padding-left: 1.8rem;
-	}
-.size-small section {
-	padding-bottom: 2rem;
-	}
-.size-small section article:nth-of-type(2) ~ article {
-	display: none !important;
-	}
-.size-small .article-title a {
-	color: white !important;
-	}
-.size-small section .articles {
-	padding-top: 0px;
-	}
+
 	
 /* Sections */
 
@@ -547,15 +303,7 @@ section.local .category-wsu-spokane-news::before {
 	padding-top: 0px;
 	}
 
-.news-section .article-featured .article-title h2,
-.news-section .article-title h2 {
-	margin: 0px;
-	font-weight: normal;
-	font-size: 2.2em;
-	line-height: 1em;
-	padding-top: .2em;
-	padding-bottom: .5em;
-	}
+
 .news-section .article-featured .article-meta,
 .news-section .article-featured .article-byline {
 	display: none;
@@ -569,20 +317,11 @@ section .article-featured h2 a:hover {
 .articles article.has-featured-image:nth-of-type(1) {
 	background-size: 0 0;
 	}
-
-xarticle.has-thumbnail-image .article-header {
-	text-align: right;
-	}
-article.has-thumbnail-image .article-header,
-article.has-thumbnail-image .article-thumbnail {
-	
-	}
 div:not(.article-featured) article.has-thumbnail-image .article-header {
 	-webkit-flex: 1;
 	}
 article.has-thumbnail-image .article-thumbnail {
 	width: 198px;
-	xxwidth: 50%;
 	}
 
 article.has-thumbnail-image .article-thumbnail {
@@ -612,7 +351,5 @@ section.local .category-wsu-spokane-news:before {
 	border-top-style: solid;
 	border-top-color: #d6dada;
 	}
-.yellow .articles article ~ article {
-	xborder-top-color: #e5cd93; /* Yellow Lighter */
-	xborder-top-color: #f1e4c4; /* Yellow Lightly */
-	}
+
+@import 'sides';
