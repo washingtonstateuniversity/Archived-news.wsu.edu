@@ -71,6 +71,34 @@ x.size-large .sections .section:nth-of-type(3) { width: calc(100% + 40px); }
 x.size-large .sections .section:nth-of-type(4) { width: calc(100% + 80px); }
 x.size-large .sections .section:nth-of-type(5) { width: calc(100% - 40px ); }
 x.size-large .sections .section:nth-of-type(6) { width: calc(100% - 0px); }
+
+.verso-1 .fluid .margin-right .column.one {
+	width: calc( 75% - 40px );
+	}
+	
+
+
+//$flips: 5;
+//$flipper: 40px;
+
+// @while $flips > 0 {
+
+	//.verso-#{$flips} .section:nth-of-type({$flips}) { width: calc(100%); }
+	
+	//$flips: $flips - 1;
+
+    //}
+//
+
+/*
+$flips: 4;
+
+@while $flips > 0 {
+  .verso-#{$flipped} .section:nth-of-type({$flipped}) { width: calc(100%); }
+  
+  $flips: $flips - 1;
+}
+*/
 	
 .sections .section.opened {
 	margin-left: 0px;

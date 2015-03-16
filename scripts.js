@@ -4,12 +4,10 @@
 		
 		var sectional = false;
 		
-		//alert(indexical);
 		
-		if ( indexical === undefined ) {
-			indexical = $(".news-section.opened").attr("data-sec");
-			sectional = true; 
-			}
+		
+		if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); sectional = true; }
+		
 		var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
 		
 		$(".section").removeClass("opened");
@@ -40,23 +38,22 @@
 		
 		} 
 		
+		$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5").addClass("verso-"+( indexical - 1));
+		
 	}
 	
 	function revolveLeft(indexical) {
 		
-		var sectional = "true";
+		var sectional = false;
 		
 		//alert(indexical);
 		
-		if ( indexical === undefined ) {
-			indexical = $(".news-section.opened").attr("data-sec");
-			sectional = "true"; 
-			}
+		if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); sectional = true;  }
 		var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
 		
 		$(".section").removeClass("opened");
 		
-		if ( disclosure !== "opened" || sectional === "true" ) {
+		if ( disclosure !== "opened" || sectional === true ) {
 		
 			$(".section").each( function() {
 			
@@ -65,12 +62,6 @@
 				  $(this).animate({left: "-1000px"}, {duration:500, queue:false});
 				}
 			
-			});
-			
-			$(".section-tab").each( function() {
-				if ( $(this).attr("data-sec") < indexical ) {
-				  $(this).delay(300).show( "blind",{direction: "horizontal"}, 100 );
-				}
 			});
 			
 			$('.section[data-sec="'+indexical+'"]').addClass("opened").click(function() {
@@ -115,6 +106,8 @@
 	  	});
 	  				
 		$('.section[data-sec="'+indexical+'"]').addClass("opened");  
+		
+		$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5").addClass("verso-"+( indexical - 1));
 	  
 	} // End flipRight		
 
