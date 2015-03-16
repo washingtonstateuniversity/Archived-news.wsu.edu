@@ -41,20 +41,53 @@ function epoch_class( $classes ) {
  * Return section
  */
 function get_section() {
-
+	
 	// Paths may be polluted with additional site information, so we
 	// compare the post/page permalink with the home URL.
+/*
 	$path = str_replace( get_home_url(), '', get_permalink() );
 	$path = trim( $path, '/' );
 	$path = explode( '/', $path );
+*/
 	
+/*
 	if ( is_front_page() ) {
 		$section = "cover";
 	} else {
 		$section = $path[0];
 	}
+*/
+/*
+	global $post;
+	
+	if ( is_front_page() ) {
+		$section = "cover";
+	} else if ($post->post_parent)	{
+		$ancestors=get_post_ancestors($post->ID);
+		$root=count($ancestors)-1;
+		$section = $ancestors[$root];
+		$section = $section->post_name;
+	} else {
+		$section = $post->post_name;
+	}
+*/
 
+	$section = "no section";
+	
+	if( is_page() ) { 
+		global $post;
+	        /* Get an array of Ancestors and Parents if they exist */
+		$parents = get_post_ancestors( $post->ID );
+	        /* Get the top Level page->ID count base 1, array base 0 so -1 */ 
+		$id = ($parents) ? $parents[count($parents)-1]: $post->ID;
+		/* Get the parent and set the $class with the page slug (post_name) */
+	    $parent = get_post( $id );
+		$section = $parent->post_name;
+		
+	}
+	
 	return $section;
+	
 }
 
 
