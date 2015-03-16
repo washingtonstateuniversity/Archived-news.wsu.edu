@@ -12,10 +12,6 @@
 
 	<?php //echo $featured_image_img; ?>
 	
-	<div class="row">
-		
-	<div class="split one">
-	
 	<?php
 		
 		if ( spine_has_thumbnail_image() ) {
@@ -25,11 +21,7 @@
 			}
 		
 	?>
-		
-	</div>
-	
-	<div class="split two">
-		
+				
 	<header class="article-header" <?php echo $featured_image_bg; ?>>
 		<hgroup class="article-meta">
 			<time class="article-date" hour="<?php echo get_the_date(); ?>" datetime="<?php echo get_the_date( 'c' ); ?>">
@@ -188,10 +180,6 @@
 			</div><!-- .author-description -->
 		</div><!-- .author-info -->
 	<?php endif; ?>
-	</footer><!-- .entry-meta -->
-	
-	</div><!-- /column.two -->
-	
-	</div><!-- /row -->
+	</footer><!-- .entry-meta -->	
 		
 </article>
