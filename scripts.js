@@ -1,10 +1,15 @@
 (function($){
-	
-	var indexical, sectional;
-	
+		
 	function flipLeft(indexical) {
-					
-		if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); var sectional = true;  }
+		
+		var sectional = false;
+		
+		//alert(indexical);
+		
+		if ( indexical === undefined ) {
+			indexical = $(".news-section.opened").attr("data-sec");
+			sectional = true; 
+			}
 		var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
 		
 		$(".section").removeClass("opened");
@@ -29,7 +34,7 @@
 			$('.section[data-sec="'+indexical+'"]').addClass("opened");
 		
 		} 
-		else if ( indexical !== "1" ) {
+		else if ( indexical !== "1" || sectional === "true" ) {
 		
 			flipRight(indexical-1);
 		
@@ -37,15 +42,21 @@
 		
 	}
 	
-	function revolveRight(indexical) {
-					
-		if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); }
+	function revolveLeft(indexical) {
+		
+		var sectional = "true";
+		
 		//alert(indexical);
+		
+		if ( indexical === undefined ) {
+			indexical = $(".news-section.opened").attr("data-sec");
+			sectional = "true"; 
+			}
 		var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
 		
 		$(".section").removeClass("opened");
 		
-		if ( disclosure !== "opened" ) {
+		if ( disclosure !== "opened" || sectional === "true" ) {
 		
 			$(".section").each( function() {
 			
@@ -62,7 +73,12 @@
 				}
 			});
 			
-			$('.section[data-sec="'+indexical+'"]').addClass("opened");
+			$('.section[data-sec="'+indexical+'"]').addClass("opened").click(function() {
+	  
+			var indexical = $(this).parents(".section").attr("data-sec");
+			flipRight(indexical);
+			
+		});
 		
 		} 
 		else if ( indexical !== "1" ) {
@@ -72,6 +88,7 @@
 		} 
 		
 	}
+
 	
 	function flipRight(indexical) {
 		
@@ -101,7 +118,7 @@
 	  
 	} // End flipRight		
 
-	$(document).on("ready resize", function() {
+	$(document).ready( function() {
 	
 		var xl_current_width = $(window).width();
 	
@@ -136,22 +153,25 @@
 		});
 		
 		$( ".section-header" ).click(function() {
-		
+			
+			var indexical = $(this).parents(".section").attr("data-sec");
+			
 			if ( $("#jacket").hasClass("size-gt-xlarge") ) {
-				var indexical = $(this).parents(".section").attr("data-sec");
 				flipLeft(indexical);
 			} else {
-				
+				revolveLeft(indexical);
 				}
 			
 		});
 		
+/*
 		$( ".opened .section-header" ).click(function() {
 	  
 			var indexical = $(this).parents(".section").attr("data-sec");
 			flipRight(indexical);
 			
 		});
+*/
 		
 		flipLeft();
 	
