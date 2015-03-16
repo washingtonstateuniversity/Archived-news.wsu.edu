@@ -1,32 +1,26 @@
-<ul>
-	<?php 
-		
-		( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG )) ? $child_of = "479" : $child_of = "12986";
-		
-	    $args = array(
-		'show_option_all'    => '',
-		'orderby'            => 'name',
-		//'order'              => 'ASC',
-		//'style'              => 'list',
-		//'show_count'         => 0,
-		'hide_empty'         => 0,
-		'use_desc_for_title' => 1,
-		'child_of'           => $child_of,
-		'feed'               => '',
-		//'feed_type'          => '',
-		//'feed_image'         => '',
-		//'exclude'            => '',
-		//'exclude_tree'       => '',
-		'include'            => '',
-		'hierarchical'       => 0,
-		'title_li'           => __( '' ),
-		'number'             => null,
-		'echo'               => 1,
-		'depth'              => 1,
-		'current_category'   => 0,
-		'taxonomy'           => 'category',
-		'walker'             => null
-	    );
-	    wp_list_categories( $args ); 
-	?>
-</ul>
+<?php
+	
+	( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG )) ? $child_of = "481" : $child_of = "12999";
+
+$defaults = array(
+	'theme_location'  => '',
+	'menu'            => 'people',
+	'container'       => 'nav',
+	'container_class' => '',
+	'container_id'    => '',
+	'menu_class'      => 'menu',
+	'menu_id'         => '',
+	'echo'            => true,
+	'fallback_cb'     => 'wp_page_menu',
+	'before'          => '',
+	'after'           => '',
+	'link_before'     => '',
+	'link_after'      => '',
+	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+	'depth'           => 0,
+	'walker'          => ''
+);
+
+wp_nav_menu( $defaults );
+
+?>
