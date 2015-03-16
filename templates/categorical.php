@@ -16,7 +16,7 @@
 
 	<div class="column one">
 		
-		<?php $section = get_section(); ?>
+		<?php $section = wsunews_get_section(); ?>
 		
 		<?php
 			

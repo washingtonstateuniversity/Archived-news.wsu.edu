@@ -1,6 +1,6 @@
 <?php
 	
-	$news_section = get_section();
+	$news_section = wsunews_get_section();
 	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
 	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "493" : "13004";
 	

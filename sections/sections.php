@@ -1,6 +1,6 @@
 <?php
 	
-	$news_section = get_section();
+	$news_section = wsunews_get_section();
 	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
 	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "493" : "13004";
 	
@@ -12,7 +12,7 @@
 
 	<section id="crimson" class="section sec-1 crimson featured news-section nested <?php echo ( $news_section == "cover" ? "opened current" : "not-current" ); ?>" data-sec="1">
 		
-		<header class="section-header"><span class="section-title">News</span></header><?php echo $news_section; ?>
+		<header class="section-header"><span class="section-title">News</span></header>
 		
 		<div class="enclosure row margin-right equalize">
 		
