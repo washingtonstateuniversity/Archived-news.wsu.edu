@@ -6,21 +6,15 @@
 	
 ?>
 
-<div class="section-tabs">	
-	<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
-	<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
-	<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
-	<div class="section-tab yellow" data-sec="2"><span class="section-title">Local</span></div>
-	<div class="section-tab crimson" data-sec="1"><span class="section-title">Front</span></div>
-</div>
+<div class="sections row margin-right equalize">
+	
+	<div class="column one fluid nest">
 
-<div class="sections column equalize">
-
-	<section id="crimson" class="section sec-1 crimson featured column one news-section <?php echo ( $news_section == "cover" ? "opened current" : "closed" ); ?>" data-sec="1">
+	<section id="crimson" class="section sec-1 crimson featured news-section nested <?php echo ( $news_section == "cover" ? "opened current" : "not-current" ); ?>" data-sec="1">
 		
-		<header class="section-header"><span class="section-title">News</span></header>
+		<header class="section-header"><span class="section-title">News</span></header><?php echo $news_section; ?>
 		
-		<div class="enclosure row margin-right equalize reverse">
+		<div class="enclosure row margin-right equalize">
 		
 		<aside class="section-side column two">
 		
@@ -31,46 +25,45 @@
 		
 		<div class="articles lead column one">
 	
-		<div class="article-featured">
-		
-		<?php
-		
-		$posts_featured = array(
-			'posts_per_page'   => 1,
-			'category__not_in' => array(473),
-			'category_name'	   => 'top-stories',
-		);
-		
-			$articles = new WP_Query( $posts_featured );
+			<div class="article-featured">
 			
-			while ( $articles->have_posts() ) : $articles->the_post();
-		
-				get_template_part( 'articles/post', get_post_type() );
-		
-			endwhile;
+			<?php
 			
-			wp_reset_postdata();
+			$posts_featured = array(
+				'posts_per_page'   => 1,
+				'category__not_in' => array(473),
+				'category_name'	   => 'top-stories',
+			);
 			
-		 ?>
+				$articles = new WP_Query( $posts_featured );
+				
+				while ( $articles->have_posts() ) : $articles->the_post();
+			
+					get_template_part( 'articles/post', get_post_type() );
+			
+				endwhile;
+				
+				wp_reset_postdata();
+				
+			 ?>
+			 
+			</div>
+		
+			<?php get_template_part( 'sections/today', '' ); ?>
 		 
-		</div>
-	
-		<?php get_template_part( 'sections/today', '' ); ?>
-	 
-		<?php get_template_part( 'sections/section', 'cover' ); ?>
-	 
+			<?php get_template_part( 'sections/section', 'cover' ); ?>
 	 
 		</div><!--/ articles -->
 		
-		</div><!--/ nest -->
+		</div><!--/ enclosure -->
 		
 	</section>
 	
-	<section id="yellow" class="section sec-2 yellow local column two news-section <?php echo ( $news_section == "local" ? "opened current" : "" ); ?>" data-sec="2">
+	<section id="yellow" class="section yellow locales news-section <?php echo ( $news_section == "locales" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
 		<header class="section-header"><span class="section-title">Local</span></header>
 		
-		<div class="enclosure row margin-right equalize reverse">
+		<div class="enclosure row margin-right equalize reverse nested">
 		
 			<aside class="section-side column two">
 				
@@ -88,11 +81,11 @@
 		
 	</section>
 	
-	<section id="blue" class="section sec-3 blue students column three news-section <?php echo ( $news_section == "press" ? "opened current" : "" ); ?>" data-sec="3">
+	<section id="blue" class="section blue press news-section <?php echo ( $news_section == "press" ? "opened current" : "not-current" ); ?>" data-sec="3">
 		
 		<header class="section-header"><span class="section-title">Press</span></header>
 		
-		<div class="enclosure row margin-right equalize reverse">
+		<div class="enclosure row margin-right equalize reverse nested">
 			
 		
 		<aside class="section-side column two">
@@ -132,10 +125,10 @@
 	
 	</section>
 	
-	<section id="orange" class="section sec-4 orange events column four news-section <?php echo ( $news_section == "events" ? "opened current" : "" ); ?>" data-sec="4">
+	<section id="orange" class="section sec-4 orange events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="4">
 		<header class="section-header"><span class="section-title">Events</span></header>
 		
-		<div class="enclosure row margin-right equalize">
+		<div class="enclosure row margin-right reverse nested equalize">
 		
 		<aside class="section-side column two">
 			
@@ -175,11 +168,11 @@
 	
 	</section>
 	
-	<section id="people" class="section sec-5 green people column five news-section <?php echo ( $news_section == "people" ? "opened current" : "closed" ); ?>" data-sec="5">
+	<section id="people" class="section green people news-section <?php echo ( $news_section == "people" ? "opened current" : "not-current" ); ?>" data-sec="5">
 	
 		<header class="section-header"><span class="section-title">People</span></header>
 		
-		<div class="enclosure row margin-right equalize xreverse">
+		<div class="enclosure row margin-right equalize reverse nested">
 			
 		<aside class="section-side column two">
 			
@@ -215,32 +208,47 @@
 	
 	</section>
 	
-	<section id="photo" class="section section-photo sec-6 gray-darkest photo gray-darkest-back photo column five news-section clear-none unbound recto unequaled" data-sec="6">
+	<section id="photo" class="section section-photo sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
 	
-		<header class="section-header"><span class="section-title">Photo</span></header>
+	<header class="section-header"><span class="section-title">Photo</span></header>
 
-	
-		<?php
-		
-		$posts_photos = array(
-			'posts_per_page'   => 5,
-			'category_name'         => 'seen',
-		);
-	
-		$articles = new WP_Query( $posts_photos );
-		
-		while ( $articles->have_posts() ) : $articles->the_post();
-	
-			get_template_part( 'articles/post', 'image' );
-	
-		endwhile;
-		
-		wp_reset_postdata();
-		
-	 	?>
-	 
 
+	<?php
 	
-	</section>
+	$posts_photos = array(
+		'posts_per_page'   => 5,
+		'category_name'         => 'seen',
+	);
 
+	$articles = new WP_Query( $posts_photos );
+	
+	while ( $articles->have_posts() ) : $articles->the_post();
+
+		get_template_part( 'articles/post', 'image' );
+
+	endwhile;
+	
+	wp_reset_postdata();
+	
+ 	?>
+ 
+</section>
+	
+	</div><!-- /.column.one -->
+	
+	<div class="column two">
+	
+		
+	
+	</div>
+	
 </div><!-- /sections -->
+
+<div class="section-tabs">	
+			<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
+			<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
+			<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
+			<div class="section-tab yellow" data-sec="2"><span class="section-title">Locales</span></div>
+			<div class="section-tab crimson" data-sec="1"><span class="section-title">Front</span></div>
+		</div>
+
