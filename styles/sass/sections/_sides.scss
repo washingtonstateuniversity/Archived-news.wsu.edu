@@ -1,14 +1,17 @@
 .section aside {
 	float: right !important;
-	width: 132px;
 	width: 198px;
 	min-height: 100px;
 	height: 100%;
 	display: block;
 	
 	}
+.size-lt-xlarge .section.crimson aside {
+	display: none;
+	}
 	
-.section aside:before {
+.section aside:before,
+.size-lt-xlarge .section.crimson .section-header:before {
 	content: "news";
 	font-size: 8em;
 	line-height: 1em;
@@ -20,6 +23,9 @@
 	font-family: "Open Sans Condensed";
 	font-weight: bold;
 	z-index: 100;
+	}
+.section.crimson .section-header:before {
+	color: $crimson;
 	}
 
 .size-lt-medium .section aside:before {
@@ -148,7 +154,7 @@
 	color: #c69214;
 	}
 .section.yellow aside:before {
-	content: "Local";
+	content: "Locales";
 	}
 .section.yellow aside li a {
 	color: $yellow-lighter;

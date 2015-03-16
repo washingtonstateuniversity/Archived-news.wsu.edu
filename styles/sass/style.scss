@@ -31,7 +31,7 @@ section#crimson {
 	
 /* Defaults */
 
-@import 'defaults';
+@import 'layouts/defaults';
 	
 
 /* Sections */
@@ -75,10 +75,18 @@ a:hover .series {
 
 .size-lt-xlarge {
 	
-	@import 'layouts/large';
+	//@import 'layouts/large';
+	
+}
+
+.size-lt-large {
+	
+	@import 'layouts/medium';
+	
 }
 
 .size-lt-medium {
 	
-	@import 'layouts/small';
+	//@import 'layouts/small';
+	
 }
