@@ -41,10 +41,15 @@ function epoch_class( $classes ) {
  * Return section
  */
 function wsunews_get_section() {
-
-	$section = "no section";
 	
-	if( is_page() ) { 
+	if ( is_front_page() ) {
+		
+		$section = "cover";
+		
+		}
+	
+	else if ( is_page() ) {
+		
 		global $post;
 	        /* Get an array of Ancestors and Parents if they exist */
 		$parents = get_post_ancestors( $post->ID );
