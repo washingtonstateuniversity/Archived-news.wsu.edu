@@ -1,5 +1,14 @@
 <?php
 
+add_action( 'wp_enqueue_scripts', 'spine_dev_wp_enqueue_scripts' );
+	
+function spine_dev_wp_enqueue_scripts() {
+    wp_dequeue_style( 'wsu-spine' );
+	wp_enqueue_style( 'wsu-spine', '//spine.dev/build/spine.min.css', array(), spine_get_script_version() );
+	wp_dequeue_script( 'wsu-spine' );
+	wp_enqueue_script( 'wsu-spine', '//spine.dev/build/spine.min.js', array( 'wsu-jquery-ui-full' ), spine_get_script_version() );
+	}
+
 add_action( 'wp_enqueue_scripts', 'news_scripts' );
 /**
  * Enqueue child theme Javascript files.
@@ -8,6 +17,8 @@ function news_scripts() {
 	wp_enqueue_script( 'brand.js', get_stylesheet_directory_uri() . '/scripts.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'brand.js', get_stylesheet_directory_uri() . '/scripts/jquery.mobile.custom.min.js', array( 'jquery' ), false, true );
 }
+
+
 
 add_action( 'admin_enqueue_scripts', 'news_admin_enqueue_scripts' );
 /**

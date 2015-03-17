@@ -65,44 +65,43 @@ x.size-gt-small .sections .section:nth-of-type(5),
 	z-index: 50;
 	width: calc(100% + 200px);
 	}
+		
+$flips: 1,2,3,4,5;
 	
-x.size-large .sections .section:nth-of-type(2) { width: calc(100% - 200px); }
-x.size-large .sections .section:nth-of-type(3) { width: calc(100% + 40px); }
-x.size-large .sections .section:nth-of-type(4) { width: calc(100% + 80px); }
-x.size-large .sections .section:nth-of-type(5) { width: calc(100% - 40px ); }
-x.size-large .sections .section:nth-of-type(6) { width: calc(100% - 0px); }
-
-.verso-1 .fluid .margin-right .column.one {
-	width: calc( 75% - 40px );
+@each $flip in $flips {
+		
+	.verso-#{$flip} {
+		$flap: 1 - $flip;
+		@each $flip in $flips {
+			
+			.sections .section:nth-of-type(#{$flip}) {
+				
+				width: calc(100% + #{( 40px * $flap )} );
+			}
+			$flap: $flap + 1;
+		}
 	}
-	
-
-
-//$flips: 5;
-//$flipper: 40px;
-
-// @while $flips > 0 {
-
-	//.verso-#{$flips} .section:nth-of-type({$flips}) { width: calc(100%); }
-	
-	//$flips: $flips - 1;
-
-    //}
-//
-
-/*
-$flips: 4;
-
-@while $flips > 0 {
-  .verso-#{$flipped} .section:nth-of-type({$flipped}) { width: calc(100%); }
-  
-  $flips: $flips - 1;
 }
-*/
 	
-.sections .section.opened {
-	margin-left: 0px;
-	}
+.verso-1 #jacket {
+	padding-left: 40px;
+}
+
+.verso-2 #jacket {
+	padding-left: 80px;
+}
+
+.verso-3 #jacket {
+	padding-left: 120px;
+}
+
+.verso-4 #jacket {
+	padding-left: 160px;
+}
+
+.verso-5 #jacket {
+	padding-left: 200px;
+}
 
 .size-gt-small .section.opened:not(:first-of-type) .section-header:hover:before {
 	content: "\00ab";
@@ -228,23 +227,25 @@ main article header .article-title {
 
 /* Section Tabs */
 .section-tabs {
-	top: 0px;
-	bottom: 0px;
-	width: 198px;
-	}
-.size-gt-large .section-tabs {
-	position: fixed;
 	
+	}
+.size-gt-medium .section-tabs {
+	position: fixed;
 	margin-left: -396px;
 	z-index: 999164;
 	top: 0px;
-	bottom: 0px;	
+	bottom: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 200px;
 	}
-.size-lt-xlarge.size-gt-small .section-tabs {
-	position: fixed;
+x.size-lt-xlarge.size-gt-small .section-tabs {
+	position: relative;
 	xleft: calc( 100% + 160px );
 	margin-left: 792px;
 	height: 100vh;
+	float: left;
+	width: 40px;
 	}
 	
 .section-tabs .section-tab {
@@ -259,13 +260,11 @@ main article header .article-title {
 	position: relative;
 	display: none;
 	}
-.size-lt-xlarge .section-tab {
-	float: left;
-	}
 .section-tabs .section-tab:hover {
 	border-right-width: 0px;
 	cursor: pointer;
 	}
+
 .section-tab.crimson {
 	color: #981e32;
 	border-right-color: #981e32;
