@@ -27,13 +27,13 @@
 	
 			<div class="article-featured">
 			
-			<?php
-			
-			$posts_featured = array(
-				'posts_per_page'   => 1,
-				'category__not_in' => array(473),
-				'category_name'	   => 'top-stories',
-			);
+				<?php
+				
+				$posts_featured = array(
+					'posts_per_page'   => 1,
+					'category__not_in' => array(473),
+					'category_name'	   => 'top-stories',
+				);
 			
 				$articles = new WP_Query( $posts_featured );
 				
@@ -44,8 +44,8 @@
 				endwhile;
 				
 				wp_reset_postdata();
-				
-			 ?>
+					
+				?>
 			 
 			</div>
 		
@@ -208,7 +208,7 @@
 	
 	</section>
 	
-	<section id="photo" class="section section-photo sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
+	<section id="photo" class="section views sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
 	
 	<header class="section-header"><span class="section-title">Photo</span></header>
 
@@ -242,13 +242,15 @@
 	
 	</div>
 	
+	<div class="section-tabs">	
+		<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
+		<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
+		<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
+		<div class="section-tab yellow" data-sec="2"><span class="section-title">Locales</span></div>
+		<div class="section-tab crimson" data-sec="1"><span class="section-title">Front</span></div>
+	</div>
+	
 </div><!-- /sections -->
 
-<div class="section-tabs">	
-			<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
-			<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
-			<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
-			<div class="section-tab yellow" data-sec="2"><span class="section-title">Locales</span></div>
-			<div class="section-tab crimson" data-sec="1"><span class="section-title">Front</span></div>
-		</div>
+
 
