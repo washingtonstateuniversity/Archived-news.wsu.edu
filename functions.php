@@ -32,6 +32,18 @@ function news_admin_enqueue_scripts() {
 
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'quote', 'status', 'video', 'audio' ) );
 
+
+/**
+ * Exclude Photo Features
+ */
+function exclude_photo_features($query) {
+	if ($query->is_home) {
+	$query->set('cat', '-7,-67,-6');
+	}
+	return $query;
+	}
+add_filter('pre_get_posts', 'exclude_photo_features');
+
 /**
  * Before or after 125th refresh
  */
