@@ -13,10 +13,15 @@
 
 	<?php //echo $featured_image_img; ?>
 	
+	<div class="paddle next" role="next"></div>
+	<div class="paddle previous" role="previous"></div>
+	
 	<header class="article-header">
 		<hgroup class="article-meta">
 			<time class="article-date" hour="<?php echo get_the_date(); ?>" datetime="<?php echo get_the_date( 'c' ); ?>">
 				<span class="default"><?php echo get_the_date(); ?></span>
+				<span class="day"><?php echo get_the_date( 'd' ); ?></span>
+				<span class="month"><?php echo get_the_date( 'M' ); ?></span>
 				<span class="year-four"><?php echo get_the_date( 'Y' ); ?></span>
 				<span class="year-two"><?php echo get_the_date( 'y' ); ?></span>
 				<span class="oclock"><?php echo get_the_date( 'g' ); ?></span>
@@ -162,5 +167,7 @@
 		</div><!-- .author-info -->
 	<?php endif; ?>
 	</footer><!-- .entry-meta -->
+	
+		
 
 </figure>

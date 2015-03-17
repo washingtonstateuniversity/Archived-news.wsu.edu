@@ -53,11 +53,20 @@
 			
 			?>
 			
-			<nav class="paging">
-				<?php echo paginate_links( $paging ); ?>
-			</nav>
+			
 		
 			<?php 
-				if ( $news_section != "local" ) { echo $news_section_link; }
+				if ( $news_section != "local" ) { 
+					
+					echo '<nav class="paging">';
+					echo paginate_links( $paging );
+					echo '</nav>';
+					
+				} else {
+					
+					echo $news_section_link;
+				
+				}
+				
 				//get_template_part( 'parts/pager', '' );
 			?>

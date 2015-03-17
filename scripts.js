@@ -32,58 +32,20 @@
 		}
 		else if ( indexical !== "1" || sectional === "true" ) {
 		
-			flipRight(indexical-1);
+			flipRight(indexical - 1);
 		
 		}
-				
+		
+
 		$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5");
-		
-		if ( indexical !== "1" ) {
 			
-			$("body").addClass("verso-"+( indexical - 1 ));
-
-		}
-		
-	}
+		if ( indexical !== "2" && indexical !== "1" ) {
+				
+				$("body").addClass("verso-"+( indexical - 1 ));
 	
-	function revolveLeft(indexical) {
-		
-		var sectional = false;
-		
-		//alert(indexical);
-		
-		if ( indexical === undefined ) { indexical = $(".news-section.opened").attr("data-sec"); sectional = true;  }
-		var disclosure = ( $('.section[data-sec="'+indexical+'"]').hasClass("opened") ) ? "opened" : "unopened";
-		
-		$(".section").removeClass("opened");
-		
-		if ( disclosure !== "opened" || sectional === true ) {
-		
-			$(".section").each( function() {
-			
-				if ( ( $(this).attr("data-sec") < indexical ) && ( $(this).attr("data-sec") !== "6" ) ) {
-				  //$(this).removeClass("delivered");
-				  $(this).animate({left: "-1000px"}, {duration:500, queue:false});
-				}
-			
-			});
-			
-			$('.section[data-sec="'+indexical+'"]').addClass("opened").click(function() {
-	  
-			var indexical = $(this).parents(".section").attr("data-sec");
-			flipRight(indexical);
-			
-		});
-		
-		} 
-		else if ( indexical !== "1" ) {
-		
-			flipRight(indexical-1);
-		
-		} 
-		
-	}
+			}
 
+	}
 	
 	function flipRight(indexical) {
 		
@@ -117,13 +79,14 @@
 		
 		$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5");
 		
-		if ( indexical !== "1" && indexical !== "2" ) {
+		if ( indexical !== "1" ) {
 			
+			//alert(indexical);
 			$("body").addClass("verso-"+( indexical - 1));
 			
 		}
 	  
-	} // End flipRight		
+	} // End flipRight	
 
 	$(document).ready( function() {
 	
@@ -167,12 +130,44 @@
 			flipLeft(indexical);
 			
 		});
+	
+		$( ".photo figure" ).click(function(e) {
+		
+			var pWidth = $(this).innerWidth();
+			var pOffset = $(this).offset(); 
+			var x = e.pageX - pOffset.left;
+			if( pWidth/2 > x ) {
+			    //console.log("left");
+			    $(this).next("figure").animate({left: "0px"}, {duration:500, queue:false});
+			} else {
+			    //console.log("right");
+			    $(this).animate({left: "-2000px"}, {duration:500, queue:false});
+			}
+		
+		});
+		
+		$( ".paddle" )
+		
+		.mouseenter( function() {
+			
+			var paddle = $(this).attr("role");
+			$(this).addClass("focused").parents("figure").addClass("focused-"+paddle);
+			
+			
+		})
+		
+		.mouseleave( function() {
+			
+			$(this).removeClass("focused");
+			$(this).parents("figure").removeClass("focused-next focused-previous");
+		
+		});
 		
 /*
 		$( ".opened .section-header" ).click(function() {
 	  
 			var indexical = $(this).parents(".section").attr("data-sec");
-			flipRight(indexical);
+			flipRight(indexical-1);
 			
 		});
 */

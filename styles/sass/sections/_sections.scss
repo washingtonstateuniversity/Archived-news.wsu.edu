@@ -81,7 +81,8 @@
 	}
 
 
-.size-gt-small .section.opened:not(:first-of-type) .section-header:hover:before {
+.section.opened:not(:first-of-type) .section-header:hover:before,
+.section.photo.opened .section-nav:before {
 	content: "\00ab";
 	content: "\00bb";
 	position: absolute;
@@ -94,20 +95,22 @@
 	text-align: center;
 	padding-top: 15px;
 	}
+.section.photo.opened .section-nav:before {
+	background: rgba(0, 0, 0, 0.25);
+	}
 	
-.size-gt-small .section-header {
+.section-header,
+.section-nav {
 	width: 40px;
 	position: absolute;
 	right: 0px;
 	height: 100%;
 	z-index: 200;
 	}
+	
 
 
 
-x#spine #glue {
-	box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
-	}
 .section:not(.opened):not(.photo) .section-header {
 	box-shadow: inset 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
 	}
@@ -117,66 +120,48 @@ x#spine #glue {
 	background: #981e32;
 	}
 
-.size-gt-small .section:not(.crimson) .section-header:not(.opened):hover {
+.section:not(.crimson):not(.photo) .section-header:not(.opened):hover {
 	color: white;
 	cursor: pointer;
 	}
+
 .section.yellow .section-header {
 	background: #c7911b;
 	color: #e5cd93;
 	}
-.xnews-section.yellow.opened .section-header {
-	background: #9e7510;
-	background: #d7b258;
-	background: #ffb81c;
-	}
-.size-gt-small .section.yellow:not(.opened) .section-header:hover {
+.section.yellow:not(.opened) .section-header:hover {
 	color: white;
 	background: #ffb81c;
 	}
-x.size-gt-small .section.yellow.opened .section-header:hover:before {
-	background: #981e32; /* Crimson */
-	}
 	
-.section.blue .section-header {
-	xborder-left: 5px #4f868e solid;
-	}
 .section.blue .section-header {
 	color: #d3e1e3;
 	color: #aec7cb;
 	background-color: #4f868e;
 	}
-.size-gt-small .section.blue:not(.opened) .section-header:hover {
+.section.blue:not(.opened) .section-header:hover {
 	background: #00a5bd;
 	}
-x.size-gt-small .section.blue.opened .section-header:hover:before {
-	background: #c69214; /* Yellow */
-	}
 
-.section.orange .section-header {
-	xborder-left: 5px #8f7e35 solid;
-	}
 .section.orange .section-header {
 	color: #8f7e35;
 	color: #ddbea1;
 	background-color: #b67233;
 	}
-.size-gt-small .section.orange:not(.opened) .section-header:hover {
+.section.orange:not(.opened) .section-header:hover {
 	background: #f6861f;
-	}
-x.size-gt-small .section.orange.opened .section-header:hover:before {
-	background: #4f868e; /* Blue */
 	}
 	
 .section.green .section-header {
 	color: #cbc4a2;
 	background-color: #8f7e35;
 	}
-.size-gt-small .section.green:not(.opened) .section-header:hover {
+.section.green:not(.opened) .section-header:hover {
 	background: #ada400;
 	}
-x.size-gt-small .section.green.opened .section-header:hover:before {
-	background: #b67233; /* Orange */
+	
+.section.photo .section-header {
+	color: white;
 	}
 	
 .section-title {
@@ -195,17 +180,13 @@ x.size-gt-small .section.green.opened .section-header:hover:before {
 	z-index: 100;
 	}
 	
-.section-tabs .section-title {
+.size-gt-small .section-tabs .section-title {
 	right: -7px;
-	}
-	
-main article header .article-title {
-	font-weight: 300;
 	}
 
 /* Section Tabs */
 
-.size-gt-medium .section-tabs {
+.section-tabs {
 	position: fixed;
 	margin-left: -396px;
 	z-index: 999164;
@@ -215,13 +196,9 @@ main article header .article-title {
 	bottom: 0px;
 	width: 200px;
 	}
-x.size-lt-xlarge.size-gt-small .section-tabs {
-	position: relative;
-	xleft: calc( 100% + 160px );
-	margin-left: 792px;
-	height: 100vh;
-	float: left;
-	width: 40px;
+.size-lt-large .section-tabs {
+	margin-left: -200px;
+	top: 50px;
 	}
 	
 .section-tabs .section-tab {
@@ -254,6 +231,7 @@ x.size-lt-xlarge.size-gt-small .section-tabs {
 	background: #c60c30;
 	xborder-right-color: #6d1323;
 	}
+	
 .section-tab.yellow {
 	color: #c7911b;
 	border-right-color: #c7911b;
@@ -261,11 +239,10 @@ x.size-lt-xlarge.size-gt-small .section-tabs {
 	background: #c7911b;
 	box-shadow: inset 5px 0px 0px 0px $yellow-dark;
 	}
-.size-gt-large .section-tab.yellow {
+.section-tab.yellow {
 	box-shadow: inset -5px 0px 0px 0px $yellow-dark;
 	}
 .section-tab.yellow:hover {
-	xcolor: white;
 	background: #c7911b;
 	background: #ffb81c;
 	}
@@ -282,7 +259,7 @@ x.size-lt-xlarge.size-gt-small .section-tabs {
 	background: #00a5bd;
 	xborder-right-color: #2f5055;
 	}
-.size-gt-large .section-tab.blue {
+.section-tab.blue {
 	box-shadow: inset -5px 0px 0px 0px $blue-dark;
 	}
 	

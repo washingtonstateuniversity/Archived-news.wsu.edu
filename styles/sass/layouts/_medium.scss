@@ -3,8 +3,9 @@
 	
 	#binder {
 		margin: 0 0;
+		xpadding-left: 10px;
 		}
-	#binder main {
+	x#binder main {
 		margin-left: 50px;
 		}
 
@@ -12,16 +13,22 @@
 	font-size: 12px;
 	}
 	
-.sections .section {
-	width: 100%;
-	position: relative;
-	}
+
 
 }
+
+.size-lt-792 {
+
+	.sections .section {
+		width: 100%;
+		position: relative;
+		}
+
+	}
 
 .size-lt-large #binder main {
 	margin-left: 0px;
 	}
 body[class*="verso-"] .size-lt-large #binder {
-	margin-left: 10px;
+	margin-left: 40px;
 	}

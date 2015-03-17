@@ -1,0 +1,167 @@
+
+	
+/* Photo */
+
+.photo {
+	//background-image: url('http://news.wsu.dev/wp-content/uploads/sites/18/2015/02/100603625.jpg') !important;
+	background-size: 100% auto;
+	background-position: left center;
+	background-size: cover;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 0 !important;
+	}
+.photo:not(#x) {
+	position: fixed !important;
+	}
+	
+.photo:not(#x):not(.opened) {
+	cursor: pointer;
+	}
+	
+.photo figure {
+	position: absolute;
+	width: 100%;
+	//width: calc(100% - 40px);
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	}
+
+.photo:not(.opened) figure {
+	width: 100%;
+	}
+	
+.photo figure header {
+	position: absolute;
+	}
+	
+.photo.opened {
+	box-shadow: 200px 0px 0px rgba(94, 106, 113, .5);
+	}
+.photo.opened:before {
+	
+	font-family: "Open Sans Condensed";
+	position: absolute;
+	left: 2rem;
+	top: 2rem;
+	font-weight: bold;
+	font-size: 3rem;
+	color: white;
+	
+	}
+.photo .articles {
+	display: none;
+	}
+	
+.photo:not(.opened) .section-header {
+	width: 100%;
+	}
+.photo.opened .section-header {
+	left: 0;
+	right: auto;
+	}
+
+.paddle {
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	position: absolute;
+	cursor: pointer;
+	display: none;
+	}
+.opened .paddle {
+	display: block;
+	}
+.opened .paddle.previous {
+	left: 0;
+	}
+.photo figure:not(:last-of-type) .paddle.previous {
+	//background: rgba(255, 167, 0, 0.28);
+	}
+.opened .paddle.next {
+	right: 0;
+	//background: rgba(0, 128, 0, 0.14);
+	}
+.opened .paddle.previous:before,
+.opened .paddle.next:after {
+	content: "";
+	font-size: 60px;
+	line-height: 1em;
+	text-align: center;
+	color: transparent;
+	top: 0;
+	bottom: 0;
+	width: 40px;
+	height: 100%;
+	position: absolute;
+	padding-top: calc( 50% );
+	//border: pink 1px solid;
+	}
+.opened .paddle.next:after {
+	right: 0;
+	}
+.opened .paddle.previous:before {
+	left: 0;
+	}
+.opened figure:not(:first-of-type) .paddle.next.focused:after {
+	content: "\00bb";
+	}
+.opened figure:not(:last-of-type) .paddle.previous.focused:before {
+	content: "\00ab";
+	}
+.opened figure:not(:first-of-type) .paddle.next.focused:after,
+.opened figure:not(:last-of-type) .paddle.previous.focused:before {
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	}
+x.opened figure.focused-next {
+	right: 40px;
+	}
+
+.photo figure .article-header {
+	width: 100%;
+	display: none;
+	}
+.photo.opened figure .article-header {
+	display: block;
+	}
+.photo.opened figure .article-header .article-title {
+	text-align: right;
+	padding-right: 220px;
+	padding-top: 15px;
+	text-shadow: 1px 1px 2px $gray-darker;
+	}
+.photo.opened figure .article-header .article-title a {
+	color: white;
+	}
+.photo .article-header .article-meta {
+	color: white;
+	background: $gray-darker;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: 80px;
+	}
+.photo .article-header time span,
+.photo .article-header .article-byline {
+	display: none;
+	}
+.photo.opened .article-header time .day,
+.photo.opened .article-header time .month {
+	display: block;
+	text-align: center;
+	}
+.photo .article-header time .day {
+	line-height: 1em;
+	font-size: 60px;
+	font-weight: 300;
+	}
+.photo .article-header time .month {
+	text-transform: uppercase;
+	}
+
+	
+	

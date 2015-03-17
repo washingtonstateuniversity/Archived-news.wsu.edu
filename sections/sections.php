@@ -208,16 +208,18 @@
 	
 	</section>
 	
-	<section id="photo" class="section views sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
+	<section id="photo" class="section sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
 	
 	<header class="section-header"><span class="section-title">Photo</span></header>
+<!-- 	<nav class="section-nav"><span class="section-title">Photo</span></nav> -->
 
 
 	<?php
 	
 	$posts_photos = array(
 		'posts_per_page'   => 5,
-		'category_name'         => 'seen',
+		'category_name'    => 'photo',
+		'order'				=>	'ASC'
 	);
 
 	$articles = new WP_Query( $posts_photos );
@@ -230,7 +232,11 @@
 	
 	wp_reset_postdata();
 	
+	
+	
  	?>
+ 	
+ 	go to photos
  
 </section>
 	
