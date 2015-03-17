@@ -53,7 +53,6 @@ section#crimson {
 
 @import 'sections/views';
 
-
 /* Events */
 
 @import 'events';
@@ -73,20 +72,7 @@ a:hover .series {
 
 /* Layouts */
 
-.size-lt-xlarge {
-	
-	//@import 'layouts/large';
-	
-}
+@import 'layouts/large';
+@import 'layouts/medium';
+@import 'layouts/small';
 
-.size-lt-large {
-	
-	@import 'layouts/medium';
-	
-}
-
-.size-lt-medium {
-	
-	//@import 'layouts/small';
-	
-}

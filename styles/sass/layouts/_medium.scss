@@ -1,6 +1,27 @@
-#binder {
-	margin: 0 0;
+	
+.size-lt-large {
+	
+	#binder {
+		margin: 0 0;
+		}
+	#binder main {
+		margin-left: 50px;
+		}
+
+.side-section {
+	font-size: 12px;
 	}
-#binder main {
-	margin-left: 0;
+	
+.sections .section {
+	width: 100%;
+	position: relative;
+	}
+
+}
+
+.size-lt-large #binder main {
+	margin-left: 0px;
+	}
+body[class*="verso-"] .size-lt-large #binder {
+	margin-left: 10px;
 	}

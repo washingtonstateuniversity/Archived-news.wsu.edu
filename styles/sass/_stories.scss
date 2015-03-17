@@ -13,6 +13,17 @@ main div:not(.article-featured) article,
 main div:not(.article-featured) article header {
 	background-size: 0 0;
 	}
+
+
+.articles {
+	max-width: 100%;
+	padding: 0 2rem;
+	overflow: hidden;
+	}
+
+.articles {
+	padding-top: 150px;
+	}
 	
 .article-title h2 {
 	font-size: 1.75em;

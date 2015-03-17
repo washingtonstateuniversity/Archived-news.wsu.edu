@@ -63,7 +63,7 @@
 		
 		<header class="section-header"><span class="section-title">Local</span></header>
 		
-		<div class="enclosure row margin-right equalize reverse nested">
+		<div class="enclosure row margin-right equalize reverse nested xat-medium-full-width">
 		
 			<aside class="section-side column two">
 				

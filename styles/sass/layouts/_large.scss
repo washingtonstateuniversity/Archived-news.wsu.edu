@@ -1,3 +1,43 @@
+.size-gt-large {
+	
+	.sections.row.margin-right > .column.one {
+		width: 693px;
+		}
+	x.section.crimson .row.margin-right {
+		padding-right: 40px;
+		}
+	x.section.crimson .row.margin-right .column.one {
+		width: 100%;
+		}
+		
+	
+	
+	}
+
+.size-lt-xlarge {
+	
+	.sections .section.crimson .row.margin-right .column.one {
+			width: 100% !important;
+			}
+			
+	}
+	
+.size-lt-xlarge {
+	
+	.section-tab {
+		width: 10px;
+		overflow: hidden;
+		box-shadow: none;
+		}
+	.section-tab .section-title {
+		display: none;
+		}
+			
+	}
+	
+
+
+/*
 .sections {
 	xxwidth: 594px;
 	}
@@ -34,3 +74,4 @@
 .section.opened .section-header {
 	display: none;
 	}
+*/

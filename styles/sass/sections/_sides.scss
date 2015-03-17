@@ -77,34 +77,32 @@
 	}
 
 	
-.section.news-section aside li,
-.section.news-section aside ul header {
+.section-side > ul > li,
+.section-side ul header {
 	list-style: none;
-	font-size: 1.8rem;
+	font-size: 1.8em;
 	font-weight: 300;
 	line-height: 1.2em;
 	color: white;
-	}
-.section.news-section aside li {
 	padding: 0;
 	margin: 0;
 	}
-.section.news-section aside li a {
+.section-side li a {
 	color: white;
 	display: inline-block;
 	}
-.section.news-section aside li a:hover {
+.section-side li a:hover {
 	padding: 2px 4px;
 	margin: -2px -4px;
 	}
-.section.news-section aside ul header {
+.section-side ul header {
 	font-family: "Open Sans Condensed";
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1rem;
 	display: block; 
 	}
-.section.news-section aside ul header ~ li {
+.section-side ul header ~ li {
 	font-size: .9rem;
 	font-weight: normal;
 	padding-top: .3rem;
@@ -131,8 +129,7 @@
 	}
 
 
-.section.crimson aside,
-.size-small .section.crimson {
+.section.crimson aside {
 	background: $crimson;
 	}
 .section.crimson aside:before,
@@ -145,9 +142,8 @@
 	}
 
 // Yellow
-.section.yellow aside,
-.size-small .section.yellow {
-	background: #c69214;
+.section.yellow aside {
+	background: $yellow;
 	}
 .section.yellow aside:before,
 .section.yellow .article-title a {
@@ -173,9 +169,8 @@ x.section.news-section aside .cat-item-146 {
 	}
 
 // Orange
-.section.orange aside,
-.size-small .section.orange {
-	background: #b67233;
+.section.orange aside {
+	background: $orange;
 	}
 .section.orange aside:before,
 .section.orange .article-title a {
@@ -193,9 +188,8 @@ x.section.news-section aside .cat-item-146 {
 	}
 
 // Blue
-.section.blue aside,
-.size-small .section.blue {
-	background: #4f868e;
+.section.blue aside {
+	background: $blue;
 	}
 .section.blue aside:before,
 .section.blue .article-title a {
@@ -214,9 +208,8 @@ x.section.news-section aside .cat-item-146 {
 	}
 
 // Green
-.section.green aside,
-.size-small .section.green {
-	background: #8f7e35;
+.section.green aside {
+	background: $green;
 	}
 .section.green aside:before,
 .section.green .article-title a {

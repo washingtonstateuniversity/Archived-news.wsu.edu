@@ -1,107 +1,85 @@
+.sections {
+	position: relative;
+	}
 .sections .section {
 	background-color: #f9f9f9;
 	background-repeat: repeat-x;
 	background-position: left top;
-	}
-	
-.size-gt-large .sections.row.margin-right > .column.one {
-	width: 792px;
-	}
-.size-lt-xlarge .section.crimson .row.margin-right {
-	padding-right: 40px;
-	}
-.size-lt-xlarge .section.crimson .row.margin-right .column.one {
-	width: 100%;
-	}
-
-.sections {
-	xwidth: 990px;
-	xmax-width: 990px;
-	position: relative;
-	xxmin-height: 200px;
-	}
-
-.articles {
-	max-width: 100%;
-	padding: 0 2rem;
-	overflow: hidden;
-	}
-
-.articles {
-	padding-top: 150px;
-	}
-
-.sections .news-section {
 	z-index: 100;
 	box-sizing: border-box;
+	position: absolute;
 	}
-.size-gt-small .sections .news-section {
-	position: absolute !important;
-	}
-.size-gt-small .news-section.opened .section-title {
+.section.opened .section-title {
 	display: none;
 	}
-x.sections section:nth-of-type(1),
-.sections section.crimson {
+.sections section:nth-of-type(1) {
+	width: calc(100% + 0px);
+	}
+.sections .section:nth-of-type(2) {
+	z-index: 80;
 	width: calc(100% + 40px);
 	}
-x.size-gt-small .sections .section:nth-of-type(2),
-.size-gt-small .sections .section.yellow {
-	z-index: 80;
+.sections .section:nth-of-type(3) {
+	z-index: 70;
 	width: calc(100% + 80px);
 	}
-x.size-gt-small .sections .section:nth-of-type(3),
-.size-gt-small .sections .section.blue {
-	z-index: 70;
+ .sections .section:nth-of-type(4) {
+	z-index: 60;
 	width: calc(100% + 120px);
 	}
- x.sections .section:nth-of-type(4),
- .size-gt-small .sections .section.orange {
-	z-index: 60;
+.sections .section:nth-of-type(5) {
+	z-index: 50;
 	width: calc(100% + 160px);
 	}
-x.size-gt-small .sections .section:nth-of-type(5),
-.size-gt-small .sections .section.green {
-	z-index: 50;
-	width: calc(100% + 200px);
-	}
-		
-$flips: 1,2,3,4,5;
 	
-@each $flip in $flips {
-		
-	.verso-#{$flip} {
-		$flap: 1 - $flip;
-		@each $flip in $flips {
+
+	$flips: 1,2,3,4,5;
+	
+	@each $flip in $flips {
 			
-			.sections .section:nth-of-type(#{$flip}) {
+		 .verso-#{$flip} .size-lt-xxlarge {
+			$flap: 0 - $flip;
+			@each $flip in $flips {
 				
-				width: calc(100% + #{( 40px * $flap )} );
+				.section:nth-of-type(#{$flip}) {
+					
+					//width: calc(100% + #{( 40px * $flap )} );
+				}
+				$flap: $flap + 1;
 			}
-			$flap: $flap + 1;
 		}
 	}
-}
+		
+	.verso-1 .size-lt-xxlarge {
+		padding-left: 40px;
+		padding-left: 10px;
+		padding-left: 0px;
+	}
 	
-.verso-1 #jacket {
-	padding-left: 40px;
-}
+	.verso-2 .size-lt-xxlarge {
+		padding-left: 80px;
+		padding-left: 20px;
+		padding-left: 0px;
+	}
+	
+	.verso-3 .size-lt-xxlarge {
+		padding-left: 120px;
+		padding-left: 30px;
+		padding-left: 0px;
+	}
+	
+	.verso-4 .size-lt-xxlarge {
+		padding-left: 160px;
+		padding-left: 40px;
+		padding-left: 0px;
+	}
+	
+	.verso-5 .size-lt-xxlarge {
+		padding-left: 200px;
+		padding-left: 50px;
+		padding-left: 0px;
+	}
 
-.verso-2 #jacket {
-	padding-left: 80px;
-}
-
-.verso-3 #jacket {
-	padding-left: 120px;
-}
-
-.verso-4 #jacket {
-	padding-left: 160px;
-}
-
-.verso-5 #jacket {
-	padding-left: 200px;
-}
 
 .size-gt-small .section.opened:not(:first-of-type) .section-header:hover:before {
 	content: "\00ab";
@@ -226,9 +204,7 @@ main article header .article-title {
 	}
 
 /* Section Tabs */
-.section-tabs {
-	
-	}
+
 .size-gt-medium .section-tabs {
 	position: fixed;
 	margin-left: -396px;
