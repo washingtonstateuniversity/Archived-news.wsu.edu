@@ -33,6 +33,7 @@
 					'posts_per_page'   => 1,
 					'category__not_in' => array(473),
 					'category_name'	   => 'top-stories',
+					'category__not_in'		=> $exclude_photos,
 				);
 			
 				$articles = new WP_Query( $posts_featured );
@@ -50,8 +51,8 @@
 			</div>
 		
 			<?php get_template_part( 'sections/today', '' ); ?>
-		 
-			<?php get_template_part( 'sections/section', 'cover' ); ?>
+			
+			<?php include(locate_template('sections/section-cover.php')); ?>
 	 
 		</div><!--/ articles -->
 		
