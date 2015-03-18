@@ -9,7 +9,7 @@ function spine_dev_wp_enqueue_scripts() {
 	wp_enqueue_script( 'wsu-spine', '//spine.dev/build/spine.min.js', array( 'wsu-jquery-ui-full' ), spine_get_script_version() );
 	}
 
-add_action( 'wp_enqueue_scripts', 'news_scripts' );
+//add_action( 'wp_enqueue_scripts', 'news_scripts' );
 /**
  * Enqueue child theme Javascript files.
  */
