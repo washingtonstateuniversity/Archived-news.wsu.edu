@@ -36,12 +36,11 @@
 		
 		}
 		
-
 		$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5");
 			
 		if ( indexical !== "2" && indexical !== "1" ) {
 				
-				$("body").addClass("verso-"+( indexical - 1 ));
+				$("body:not(.single)").addClass("verso-"+( indexical - 1 ));
 	
 			}
 
@@ -53,7 +52,7 @@
 			
 		$(".section").removeClass("opened");
 		
-		$(".section:not(.views)").each( function() {
+		$(".section:not(.photo)").each( function() {
 		
 			if ( ( $(this).attr("data-sec") >= indexical ) && ( $(this).attr("data-sec") !== "6" )  ) {
 			  $(this).animate({left: "0px"}, {duration:300, queue:false});
@@ -82,7 +81,7 @@
 		if ( indexical !== "1" ) {
 			
 			//alert(indexical);
-			$("body").addClass("verso-"+( indexical - 1));
+			$("body:not(.single)").addClass("verso-"+( indexical - 1));
 			
 		}
 	  
@@ -181,9 +180,105 @@
 		$(".spine-share.looseleaf li a").wrapInner("<span class='channel-title'></div>");
 		$(".spine-share.looseleaf").wrap("<div class=\"spine-share-position\"></div>");
 	}, 500);
+	
 
+// Docs at http://simpleweatherjs.com
+$(document).ready(function() {
+  $.simpleWeather({
+    location: 'Pullman, WA',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+      //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      //html += '<li class="currently">'+weather.currently+'</li>';
+  
+      $("#menu-locales li:first-of-type").append(html);
+    },
+    error: function(error) {
+      $("#menu-locales li:first-of-type").html('<p>'+error+'</p>');
+    }
+  });
+  
+  var html;
+  
+  $.simpleWeather({
+    location: 'Vancouver, WA',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+  
+      $("#menu-locales li:nth-of-type(2)").append(html);
+    },
+    error: function(error) {
+      $("#menu-locales li:nth-of-type(2)").html('<p>'+error+'</p>');
+    }
+  });
+  
+  $.simpleWeather({
+    location: 'Spokane, WA',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+  
+      $("#menu-locales li:nth-of-type(3)").append(html);
+    },
+    error: function(error) {
+      $("#menu-locales li:nth-of-type(3)").html('<p>'+error+'</p>');
+    }
+  });
+  
+  $.simpleWeather({
+    location: 'Tri Cities, WA',
+    woeid: '',
+    unit: 'f',
+    success: function(weather) {
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+  
+      $("#menu-locales li:nth-of-type(4)").append(html);
+    },
+    error: function(error) {
+      $("#menu-locales li:nth-of-type(4)").html('<p>'+error+'</p>');
+    }
+  });
+  
+});
 	
 })(jQuery);
+
+
+
+
+(function($){
+	if ( $('.home' ).length > 0 ) {
+		$('.wsuwp-json-content' ).each(function(){
+			var container = $(this);
+			var source_data_obj = $(this ).data('source');
+			var source_data = window[source_data_obj];
+
+			var json_html = '<ul>';
+			for ( var item in source_data ) {
+				json_html += '<li><a href="' + source_data[item ].link + '">' + source_data[item].title + '</a></li>';
+			}
+			json_html += '</ul>';
+			container.append( json_html );
+		});
+	} else {
+		$('.wsuwp-json-content' ).each(function(){
+			var container = $(this);
+			var source_data_obj = $(this ).data('source');
+			var source_data = window[source_data_obj];
+
+			for ( var item in source_data ) {
+				var cob_excerpt = source_data[item ].content.split('<!--more-->');
+				container.append( '<div><h2><a href="' + source_data[item ].link + '">' + source_data[item].title + '</a></h2>' + cob_excerpt[0] + '</div>');
+			}
+		});
+	}
+
+}(jQuery));
 
 (function($){
 
