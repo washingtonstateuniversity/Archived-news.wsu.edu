@@ -9,16 +9,16 @@ function spine_dev_wp_enqueue_scripts() {
 	wp_enqueue_script( 'wsu-spine', '//spine.dev/build/spine.min.js', array( 'wsu-jquery-ui-full' ), spine_get_script_version() );
 	}
 
-add_action( 'wp_enqueue_scripts', 'news_scripts' );
+add_action( 'wp_enqueue_scripts', 'news_scripts_styles' );
 /**
  * Enqueue child theme Javascript files.
  */
-function news_scripts() {
-	wp_enqueue_script( 'brand.js', get_stylesheet_directory_uri() . '/scripts.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'brand.js', get_stylesheet_directory_uri() . '/scripts/jquery.mobile.custom.min.js', array( 'jquery' ), false, true );
+function news_scripts_styles() {
+	wp_enqueue_script( 'news-scripts', get_stylesheet_directory_uri() . '/scripts.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'jquery-mobile', get_stylesheet_directory_uri() . '/scripts/jquery.mobile.custom.min.js', array( 'jquery' ), false, true );
+	wp_enqueue_style( 'weather-styles', get_stylesheet_directory_uri() . '/scripts/weather/css/weather-icons.min.css' );
+	wp_enqueue_script( 'weather-scripts', get_stylesheet_directory_uri() . '/scripts/weather/jquery.simpleWeather.min.js' );
 }
-
-
 
 add_action( 'admin_enqueue_scripts', 'news_admin_enqueue_scripts' );
 /**
@@ -36,13 +36,13 @@ add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'quote', 
 /**
  * Exclude Photo Features
  */
+add_filter('pre_get_posts', 'exclude_photo_features');
 function exclude_photo_features($query) {
-	if ($query->is_home) {
-	$query->set('cat', '-7,-67,-6');
+	if ( !is_category() || !is_page() ) {
+	$query->set('cat', '-493,-13004');
 	}
 	return $query;
 	}
-add_filter('pre_get_posts', 'exclude_photo_features');
 
 /**
  * Before or after 125th refresh
@@ -88,6 +88,64 @@ function wsunews_get_section() {
 	
 }
 
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function wsunews_sides() {
+
+	register_sidebar( array(
+		'name'          => 'Cover Sidebar',
+		'id'            => 'side-cover',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<header>',
+		'after_title'   => '</header>',
+	));
+	
+	register_sidebar( array(
+		'name'          => 'Locales Sidebar',
+		'id'            => 'side-locales',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<header>',
+		'after_title'   => '</header>',
+	));
+	
+	register_sidebar( array(
+		'name'          => 'Events Sidebar',
+		'id'            => 'side-events',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<header>',
+		'after_title'   => '</header>',
+	));
+	
+	register_sidebar( array(
+		'name'          => 'Press Sidebar',
+		'id'            => 'side-press',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<header>',
+		'after_title'   => '</header>',
+	));
+	
+	register_sidebar( array(
+		'name'          => 'People Sidebar',
+		'id'            => 'side-people',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<header>',
+		'after_title'   => '</header>',
+	));
+
+}
+add_action( 'widgets_init', 'wsunews_sides' );
+
+/**
+ * Enable shortcodes in text widget
+ */
+add_filter( 'widget_text', 'do_shortcode');
 
 /**
  * Add imagery options to settings panes.
