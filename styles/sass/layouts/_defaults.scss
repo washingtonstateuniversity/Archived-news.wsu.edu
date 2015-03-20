@@ -12,14 +12,38 @@ body main {
 main h1, main h2, main h3, main h4 {
 	color: #2a3033;
 	}
+.main-header {
+	background: $crimson;
+	}
+.main-header .header-group {
+	width: 100%;
+	box-sizing: border-box;
+	}
+.main-header .header-group sup,
+.main-header .header-group sub {
+	display: inline-block;
+	}
+.main-header .header-group sub:before {
+	// content: "| ";
+	}
+.main-header .header-group sup,
+.main-header .header-group sub:before {
+	font-family: "Open Sans Condensed";
+	font-weight: bold;
+	font-size: 4rem;
+	}
+.main-header .header-group sub {
+	display: none;
+	}
 
 .size-gt-large .story.row.margin-right > .column.one {
 	width: 792px;
 	}
-.page-template h1.article-title {
+
+.article-title h1 {
 	font-size: 1.9em;
-	font-weight: bold;
-	xxfont-weight: 800;
+	font-weight: normal;
+	@include serif;
 	line-height: 1.1em;
 	}
 .page-template h1.hero {
@@ -29,7 +53,7 @@ main h1, main h2, main h3, main h4 {
 	font-weight: 800;
 	line-height: .9em;
 	}
-.page-template main h2:not(:first-of-type) {
+.page-template main h2 {
 	margin: 2.5rem 0 .5rem;
 	font-weight: normal;
 	font-size: 2.2em;
@@ -40,7 +64,7 @@ main h1, main h2, main h3, main h4 {
 	font-weight: normal;
 	font-size: 1.5em;
 	text-transform: none;
-	color: #981e32;
+	color: $gray-dark;
 	line-height: 1em;
 	}
 .page-template main h4 {
