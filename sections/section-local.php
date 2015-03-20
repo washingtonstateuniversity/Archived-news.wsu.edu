@@ -1,12 +1,4 @@
 <?php
-	
-	$news_section = wsunews_get_section();
-	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
-	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "493" : "13004";
-	
-?>
-
-<?php
 			
 			$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 			$local_categories = "wsu-spokane-news, wsu-tri-cities-news, wsu-vancouver-news, wsu-everett-news, wsu-extension-news";
@@ -16,7 +8,7 @@
 				'paged'					=> $paged,
 				'posts_per_page'		=> 10,
 				'cat'					=> $local_categories,
-				'tag_slug__not_in'		=> 'photo-feature',
+				'tag__not_in'			=> array($exclude_photos),
 				'post_status'			=> 'publish',
 			);
 				
@@ -26,7 +18,7 @@
 			
 			while ( $articles->have_posts() ) : $articles->the_post();
 		
-				get_template_part( 'articles/post', get_post_type() );
+				get_template_part( 'articles/story-before', get_post_type() );
 		
 			endwhile;
 			
@@ -56,7 +48,7 @@
 			
 		
 			<?php 
-				if ( $news_section == "locales" ) { 
+				if ( $news_section == "campuses" ) { 
 					
 					echo '<nav class="paging">';
 					echo paginate_links( $paging );
@@ -64,7 +56,7 @@
 					
 				} else {
 					
-					echo $news_section_link;
+					echo section_link("campuses");
 				
 				}
 				

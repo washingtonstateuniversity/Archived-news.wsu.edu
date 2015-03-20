@@ -1,13 +1,6 @@
-<?php
-	
-	$news_section = wsunews_get_section();
-	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
-	
-?>
-
 
 <div class="articles-continued">
-		 <header>Headlines</header>
+		 <header class="headlines">Headlines</header>
 	 
 	 <?php
 	
@@ -19,7 +12,7 @@
 			'posts_per_page'   		=> 10,
 			'category__not_in' 		=> array(473),
 			'category_name'	   		=> 'top-stories',
-			'tag__not_in'			=> $exclude_photos,
+			'tag__not_in'			=> array($exclude_photos),
 			'offset'				=> 1,
 		);
 		
@@ -27,7 +20,7 @@
 		
 		while ( $articles->have_posts() ) : $articles->the_post();
 	
-			get_template_part( 'articles/post', get_post_type() );
+			get_template_part( 'articles/story-before', get_post_type() );
 	
 		endwhile;
 		
@@ -59,7 +52,7 @@
 			
 		} else {
 			
-			echo $news_section_link;
+			echo section_link("cover");
 		
 		}
 		
