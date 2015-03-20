@@ -146,8 +146,7 @@
 .section.crimson aside {
 	background: $crimson;
 	}
-.section.crimson aside:before,
-.section.crimson .article-title a {
+.section.crimson aside:before {
 	color: $crimson;
 	}
 .section.crimson aside hr {
@@ -165,8 +164,7 @@
 .section.yellow aside {
 	background: $yellow;
 	}
-.section.yellow aside:before,
-.section.yellow .article-title a {
+.section.yellow aside:before {
 	color: #c69214;
 	}
 .section.yellow aside:before {
@@ -207,8 +205,7 @@
 .section.orange aside {
 	background: $orange;
 	}
-.section.orange aside:before,
-.section.orange .article-title a {
+.section.orange aside:before {
 	color: #b67233;
 	}
 .section.orange aside:before {
@@ -238,8 +235,7 @@
 .section.blue aside {
 	background: $blue;
 	}
-.section.blue aside:before,
-.section.blue .article-title a {
+.section.blue aside:before {
 	color: #4f868e;
 	}
 .section.blue aside:before {
@@ -258,8 +254,7 @@
 .section.green aside {
 	background: $green;
 	}
-.section.green aside:before,
-.section.green .article-title a {
+.section.green aside:before {
 	color: #8f7e35;
 	}
 .section.green aside:before {
