@@ -7,17 +7,15 @@ body main {
 	color: #2a3033;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #f9f9f9;
 	}
 main h1, main h2, main h3, main h4 {
 	color: #2a3033;
 	}
 
-.single .max-1188 .row.margin-right .column.one {
+.size-gt-large .story.row.margin-right > .column.one {
 	width: 792px;
 	}
-
-
-
 .page-template h1.article-title {
 	font-size: 1.9em;
 	font-weight: bold;
