@@ -16,7 +16,7 @@ add_action( 'wp_enqueue_scripts', 'news_scripts_styles' );
 function news_scripts_styles() {
 	wp_enqueue_script( 'news-scripts', get_stylesheet_directory_uri() . '/scripts.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'jquery-mobile', get_stylesheet_directory_uri() . '/scripts/jquery.mobile.custom.min.js', array( 'jquery' ), false, true );
-	wp_enqueue_style( 'weather-styles', get_stylesheet_directory_uri() . '/scripts/weather/css/weather-icons.min.css' );
+	wp_enqueue_style( 'weather-styles', get_stylesheet_directory_uri() . '/scripts/weather/css/weather-icons.css' );
 	wp_enqueue_script( 'weather-scripts', get_stylesheet_directory_uri() . '/scripts/weather/jquery.simpleWeather.min.js' );
 }
 
@@ -81,6 +81,13 @@ function wsunews_get_section() {
 		/* Get the parent and set the $class with the page slug (post_name) */
 	    $parent = get_post( $id );
 		$section = $parent->post_name;
+		
+	} else {
+		
+		$path = str_replace( get_home_url(), '', get_permalink() );
+		$path = trim( $path, '/' );
+		$path = explode( '/', $path );
+		$section = $path[0];
 		
 	}
 	
