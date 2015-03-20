@@ -111,6 +111,7 @@
 	box-shadow: inset 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
 	}
 
+/* Crimson */
 .section.crimson .section-header {
 	color: #b5babe;
 	background: #981e32;
@@ -121,6 +122,7 @@
 	cursor: pointer;
 	}
 
+/* Yellow */
 .section.yellow .section-header {
 	background: #c7911b;
 	color: #e5cd93;
@@ -129,31 +131,56 @@
 	color: white;
 	background: #ffb81c;
 	}
-	
+.section.yellow a {
+	color: $yellow;
+	}
+.section.yellow a:hover {
+	color: $yellow-darker;
+	}
+
+/* Blue */
 .section.blue .section-header {
-	color: #d3e1e3;
 	color: #aec7cb;
 	background-color: #4f868e;
 	}
 .section.blue:not(.opened) .section-header:hover {
 	background: #00a5bd;
 	}
+.section.blue a {
+	color: $blue;
+	}
+.section.blue a:hover {
+	color: $blue-darker;
+	}
 
+/* Orange */
 .section.orange .section-header {
-	color: #8f7e35;
 	color: #ddbea1;
 	background-color: #b67233;
 	}
 .section.orange:not(.opened) .section-header:hover {
 	background: #f6861f;
 	}
-	
+.section.orange a {
+	color: $orange;
+	}
+.section.orange a:hover {
+	color: $orange-darker;
+	}
+
+/* Green */
 .section.green .section-header {
 	color: #cbc4a2;
 	background-color: #8f7e35;
 	}
 .section.green:not(.opened) .section-header:hover {
 	background: #ada400;
+	}
+.section.green a {
+	color: $green;
+	}
+.section.green a:hover {
+	color: $green-darker;
 	}
 	
 .section.photo .section-header {
