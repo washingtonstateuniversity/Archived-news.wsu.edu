@@ -1,10 +1,6 @@
 body.single,
 body.single #jacket {
-	background: black;
-	}
-
-.single main:before {
-	
+	background: $gray-darker;
 	}
 
 body.single {
@@ -70,7 +66,8 @@ body.single #binder {
 	letter-spacing: -2px;
 	line-height: .9em;
 	}
-.single .size-gt-small .article-title {
+.single .size-gt-large .article-title,
+.single .size-gt-medium .article-title {
 	margin-right: -33%;
 	margin-right: -198px;
 	}
@@ -158,70 +155,6 @@ x.single .main-header:after {
 	padding: 0px;
 	}
 	
-/* Side Sections */
-.side-sections li {
-	border-top: none;
-	list-style: none;
-	}
-.side-sections li a,
-.column.two .widget header {
-	font-weight: 300;
-	font-size: 2rem;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	display: block;
-	line-height: 1.2em;
-	}
-.side-sections ul {
-	margin-top: 5px;
-	}
-.column.two .widget {
-	margin-top: 1rem;
-	}
-.side-sections li.crimson a {
-	color: #981e32;
-	border-bottom-color: #981e32;
-	}
-.side-sections li.yellow a {
-	color: #c69214;
-	border-top-color: #c69214;
-	}
-.side-sections li.blue a {
-	color: #4f868e;
-	border-top-color: #4f868e;
-	}
-.side-sections li.orange a {
-	color: #b67233;
-	border-top-color: #b67233;
-	}
-.side-sections li.green a {
-	color: #8f7f35;
-	border-top-color: #8f7f35;
-	}
-.side-sections li li {
-	xdisplay: none;
-	display: inline-block;
-	}
-.side-sections ul ul li ~ li {
-	list-style: disc;
-	}
-.side-sections li.crimson li a,
-.side-sections li.yellow li a,
-.side-sections li.blue li a,
-.side-sections li.orange li a,
-.side-sections li.green li a,
-.side-sections li.green li a,
-aside.widget li a {
-	font-size: 1rem;
-	color: gray;
-	border-bottom: none;
-	display: block;
-	}
-.side-sections li li a:hover,
-aside.widget li a:hover {
-	color: #981e32;
-	color: #2a3033;
-	}
 	
 /* Side Sections */
 .footer-sections li {
@@ -234,8 +167,7 @@ aside.widget li a:hover {
 .footer-sections li:hover ul {
 	display: none;
 	}
-.footer-sections li a,
-.column.two .widget header {
+.footer-sections li a {
 	font-weight: 300;
 	font-size: 2rem;
 	border-bottom-style: solid;
@@ -247,9 +179,7 @@ aside.widget li a:hover {
 .footer-sections ul {
 	margin-top: 5px;
 	}
-.column.two .widget {
-	margin-top: 1rem;
-	}
+
 .footer-sections li.crimson a {
 	background: #981e32;
 	color: white;
