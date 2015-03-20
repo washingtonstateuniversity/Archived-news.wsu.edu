@@ -3,27 +3,38 @@
 	$news_section = wsunews_get_section();
 	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
 	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "499" : "13026";
+	//if ( !is_single() ) { $story = "articles/story-before"; } else { $story = "articles/story"; }  
+	if ( !is_single() ) { $layout = "margin-right"; } else { $layout = "single"; }
+	
+	function section_link($section) {
+		if ( $section == "" ) { $section = "cover"; }
+		echo '<a href="/'.$section.'/" class="section-link">Go to '.ucfirst($section).'</a>';
+		} 
 	
 ?>
 
-<div class="sections row margin-right equalize">
+<div class="sections row <?php echo $layout; ?> equalize">
 	
 	<div class="column one fluid nest">
 
-	<section id="crimson" class="section sec-1 crimson featured news-section nested <?php echo ( $news_section == "cover" ? "opened current" : "not-current" ); ?>" data-sec="1">
+	<section id="crimson" class="section crimson featured news-section nested <?php echo ( $news_section == "cover" ? "opened current" : "not-current" ); ?>" data-sec="1">
 		
-		<header class="section-header"><span class="section-title">News</span></header>
+		<header class="section-header"><span class="section-title">Featured</span></header>
 		
-		<div class="enclosure row margin-right">
+		<div class="enclosure row <?php echo $layout; ?>">
 		
+		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
 		
 			<?php if ( is_active_sidebar( 'side-cover' ) ) { dynamic_sidebar( 'side-cover' ); } ?>
 		
 		</aside>
+		<?php endif; ?>
 		
 		<div class="articles lead column one">
 	
+			<?php if ( !is_single() ) : ?>
+			
 			<div class="article-featured">
 			
 				<?php
@@ -32,14 +43,14 @@
 					'posts_per_page'   => 1,
 					'category__not_in' => array(473),
 					'category_name'	   => 'top-stories',
-					'tag__not_in'		=> array($exclude_photos),
+					'tag__not_in'		=> array('499'),
 				);
 			
 				$articles = new WP_Query( $posts_featured );
 				
 				while ( $articles->have_posts() ) : $articles->the_post();
 			
-					get_template_part( 'articles/post', get_post_type() );
+					get_template_part( 'articles/story-before', get_post_type() );
 			
 				endwhile;
 				
@@ -48,8 +59,11 @@
 				?>
 			 
 			</div>
-		
+			
 			<?php include(locate_template('sections/today.php')); ?>
+			
+			<?php endif; ?>
+			
 			<?php include(locate_template('sections/section-cover.php')); ?>
 	 
 		</div><!--/ articles -->
@@ -58,23 +72,25 @@
 		
 	</section>
 	
-	<section id="yellow" class="section yellow locales news-section <?php echo ( $news_section == "locales" ? "opened current" : "not-current" ); ?>" data-sec="2">
+	<section id="yellow" class="section yellow campuses locales news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
 		<header class="section-header"><span class="section-title">Locales</span></header>
 		
-		<div class="enclosure row margin-right equalize reverse nested xat-medium-full-width">
+		<div class="enclosure row <?php echo $layout; ?> equalize reverse nested">
 		
+			<?php if ( !is_single() ) : ?>
 			<aside class="section-side column two">
 				
 				<?php if ( is_active_sidebar( 'side-locales' ) ) { dynamic_sidebar( 'side-locales' ); } ?>
 			
 			</aside>
+			<?php endif; ?>
 			
 			<div class="articles column one">
 
-				<?php get_template_part( 'sections/section', 'local' ); ?>
+				<?php include(locate_template('sections/section-local.php')); ?>
 
-		</div><!--/ .column.one articles -->
+			</div><!--/ .column.one articles -->
 		
 		</div><!--/ nest -->
 		
@@ -84,39 +100,19 @@
 		
 		<header class="section-header"><span class="section-title">Press</span></header>
 		
-		<div class="enclosure row margin-right equalize reverse nested">
+		<div class="enclosure row <?php echo $layout; ?> equalize reverse nested">
 			
-		
+		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
 			
 			<?php if ( is_active_sidebar( 'side-press' ) ) { dynamic_sidebar( 'side-press' ); } ?>
 		
 		</aside>
+		<?php endif; ?>
 		
 		<div class="articles column one">
 			
-	<?php
-	
-		$articles_press = array(
-			'posts_per_page'   => 5,
-			'category_name'         => 'wsu-press-releases',
-			//'tag'			   => 'featured',
-			'suppress_filters' => true
-		);
-		
-		$articles = new WP_Query( $articles_press );
-		
-		while ( $articles->have_posts() ) : $articles->the_post();
-	
-			get_template_part( 'articles/post', get_post_type() );
-	
-		endwhile;
-		
-		wp_reset_postdata();
-		
-		?>
-		
-		<?php if ( $news_section == "press" ) { echo $news_section_link; } ?>
+			<?php include(locate_template('sections/section-press.php')); ?>
 		
 		</div><!--/ articles -->
 		
@@ -124,43 +120,23 @@
 	
 	</section>
 	
-	<section id="orange" class="section sec-4 orange events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="4">
+	<section id="orange" class="section orange events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="4">
 		<header class="section-header"><span class="section-title">Events</span></header>
 		
-		<div class="enclosure row margin-right reverse nested equalize">
+		<div class="enclosure row <?php echo $layout; ?> reverse nested equalize">
 		
+		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
 			
 			<?php if ( is_active_sidebar( 'side-events' ) ) { dynamic_sidebar( 'side-events' ); } ?>
 			<?php include(locate_template('sections/side-events.php')); ?>
 		
 		</aside>
+		<?php endif; ?>
 		
 		<div class="column one articles">
 		
-		<?php
-		
-			$articles_alumni = array(
-				'posts_per_page'   => 5,
-				'category_name'         => 'events-and-exhibit',
-				//'tag'			   => 'featured',
-				'orderby'          => 'post_date',
-				'order'            => 'DESC',
-				'post_status'      => 'publish',
-				'suppress_filters' => true,
-			);
-		
-			$articles = new WP_Query( $articles_alumni );
-			
-			while ( $articles->have_posts() ) : $articles->the_post();
-		
-				get_template_part( 'articles/post', get_post_type() );
-		
-			endwhile;
-			
-			wp_reset_postdata();
-		
-		?>
+			<?php include(locate_template('sections/section-events.php')); ?>
 	
 		</div>
 		
@@ -172,35 +148,19 @@
 	
 		<header class="section-header"><span class="section-title">People</span></header>
 		
-		<div class="enclosure row margin-right equalize reverse nested">
-			
+		<div class="enclosure row <?php echo $layout; ?> equalize reverse nested">
+		
+		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
 			
 			<?php if ( is_active_sidebar( 'side-people' ) ) { dynamic_sidebar( 'side-people' ); } ?>
 		
 		</aside>
+		<?php endif; ?>
 		
 		<div class="articles column one">
 	
-		<?php
-		
-		$posts_staff = array(
-			'posts_per_page'   => 5,
-			'category_name'         => 'wsu-alumni-features',
-			//'tag'			   => 'featured',
-		);
-	
-		$articles = new WP_Query( $posts_staff );
-		
-		while ( $articles->have_posts() ) : $articles->the_post();
-	
-			get_template_part( 'articles/post', get_post_type() );
-	
-		endwhile;
-		
-		wp_reset_postdata();
-		
-	 	?>
+			<?php include(locate_template('sections/section-people.php')); ?>
 	 
 		</div>
 		
@@ -208,6 +168,7 @@
 	
 	</section>
 	
+	<?php if ( !is_single() ) : ?>
 	<section id="photo" class="section sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
 	
 		<header class="section-header"><span class="section-title">Photo</span></header>
@@ -215,15 +176,10 @@
 		<?php include(locate_template('sections/section-photo.php')); ?>
 	 
 	</section>
+	<?php endif; ?>
 	
 	</div><!-- /.column.one -->
-	
-	<div class="column two">
-	
 		
-	
-	</div>
-	
 	<div class="section-tabs">	
 		<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
 		<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
