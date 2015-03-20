@@ -2,7 +2,7 @@
 	
 	$news_section = wsunews_get_section();
 	$news_section_link = '<a href="/'.$news_section.'/">View all stories in '.ucfirst($news_section).'</a>';
-	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "493" : "13004";
+	$exclude_photos = ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG ) ) ? "499" : "13026";
 	
 ?>
 
@@ -14,12 +14,11 @@
 		
 		<header class="section-header"><span class="section-title">News</span></header>
 		
-		<div class="enclosure row margin-right equalize">
+		<div class="enclosure row margin-right">
 		
 		<aside class="section-side column two">
 		
-			<?php // get_template_part( 'sections/side', 'cover' ); ?>
-			<?php include(locate_template('sections/side-cover.php')); ?>
+			<?php if ( is_active_sidebar( 'side-cover' ) ) { dynamic_sidebar( 'side-cover' ); } ?>
 		
 		</aside>
 		
@@ -33,7 +32,7 @@
 					'posts_per_page'   => 1,
 					'category__not_in' => array(473),
 					'category_name'	   => 'top-stories',
-					'category__not_in'		=> $exclude_photos,
+					'tag__not_in'		=> array($exclude_photos),
 				);
 			
 				$articles = new WP_Query( $posts_featured );
@@ -50,8 +49,7 @@
 			 
 			</div>
 		
-			<?php get_template_part( 'sections/today', '' ); ?>
-			
+			<?php include(locate_template('sections/today.php')); ?>
 			<?php include(locate_template('sections/section-cover.php')); ?>
 	 
 		</div><!--/ articles -->
@@ -62,13 +60,13 @@
 	
 	<section id="yellow" class="section yellow locales news-section <?php echo ( $news_section == "locales" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
-		<header class="section-header"><span class="section-title">Local</span></header>
+		<header class="section-header"><span class="section-title">Locales</span></header>
 		
 		<div class="enclosure row margin-right equalize reverse nested xat-medium-full-width">
 		
 			<aside class="section-side column two">
 				
-				<?php get_template_part( 'sections/side', 'local' ); ?>
+				<?php if ( is_active_sidebar( 'side-locales' ) ) { dynamic_sidebar( 'side-locales' ); } ?>
 			
 			</aside>
 			
@@ -91,7 +89,7 @@
 		
 		<aside class="section-side column two">
 			
-			<?php get_template_part( 'sections/side', 'press' ); ?>
+			<?php if ( is_active_sidebar( 'side-press' ) ) { dynamic_sidebar( 'side-press' ); } ?>
 		
 		</aside>
 		
@@ -133,7 +131,8 @@
 		
 		<aside class="section-side column two">
 			
-			<?php get_template_part( 'sections/side', 'events' ); ?>
+			<?php if ( is_active_sidebar( 'side-events' ) ) { dynamic_sidebar( 'side-events' ); } ?>
+			<?php include(locate_template('sections/side-events.php')); ?>
 		
 		</aside>
 		
@@ -177,7 +176,7 @@
 			
 		<aside class="section-side column two">
 			
-			<?php get_template_part( 'sections/side', 'people' ); ?>
+			<?php if ( is_active_sidebar( 'side-people' ) ) { dynamic_sidebar( 'side-people' ); } ?>
 		
 		</aside>
 		
@@ -230,7 +229,7 @@
 		<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
 		<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
 		<div class="section-tab yellow" data-sec="2"><span class="section-title">Locales</span></div>
-		<div class="section-tab crimson" data-sec="1"><span class="section-title">Front</span></div>
+		<div class="section-tab crimson" data-sec="1"><span class="section-title">Featured</span></div>
 	</div>
 	
 </div><!-- /sections -->
