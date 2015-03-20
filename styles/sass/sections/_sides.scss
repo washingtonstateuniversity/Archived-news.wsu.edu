@@ -6,7 +6,7 @@
 	display: block;
 	
 	}
-.size-lt-xlarge .section.crimson aside {
+.size-lt-xlarge.size-gt-medium .section.crimson aside {
 	display: none;
 	}
 	
@@ -55,12 +55,12 @@
 	}
 	
 .section-side {
-	padding: 0px 40px 0px 1rem;
+	padding: 15px 40px 0px 1rem;
 	}
 .section-side ul {
 	padding: 25px 0;
 	max-width: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 	}
 .section-side ul ul {
 	padding: 0;
@@ -69,45 +69,68 @@
 	padding-top: 0px;
 	}
 	
-.section-side > ul > li,
+.section-side ul {
+	padding: 0;
+	margin: 0;
+	}
+.section-side li {
+	list-style: none;
+	}
+	
+.section-side .menu li,
 .section-side ul header {
 	list-style: none;
-	font-size: 1.8em;
+	font-size: 1.4em;
 	font-weight: 300;
-	line-height: 1.2em;
+	line-height: 1em;
 	color: white;
 	padding: 0;
 	margin: 0;
 	}
-.section-side li a {
+.section-side .menu li a {
 	color: white;
 	display: inline-block;
+	padding: 5px 0;
 	}
-.section-side li a:hover {
-	padding: 2px 4px;
+
+.section-side .menu li a:hover {
+	padding: 7px 4px;
 	margin: -2px -4px;
 	}
-.section-side ul header {
+.section-side header {
 	font-family: "Open Sans Condensed";
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1rem;
-	display: block; 
+	display: block;
+	color: #dddddd;
+	margin-top: 20px;
 	}
-.section-side ul header ~ li {
+.section-side ul:not(.menu) li {
 	font-size: .9rem;
+	line-height: 1em;
 	font-weight: normal;
 	padding-top: .3rem;
+	}
+
+.section .section-side ul:not(.menu) li a:before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	margin-right: 3px;
+	margin-bottom: 1px;
+	display: inline-block;
+	color: white;
+	background: white;
 	}
 	
 
 // Crimson
 .crimson .section-side li a {
-	color: white;
-	}
-.crimson .section-side ul ul li,
-.crimson .section-side ul ul li a {
 	color: #d7dadb;
+	}
+.crimson .section-side li a:hover {
+	color: white;
 	}
 
 .section.crimson aside ul li a,
@@ -115,11 +138,10 @@
 	color: $gray-lighter;
 	}
 
-.section.crimson aside li a:hover {
+.section.crimson aside .menu li a:hover {
 	color: white;
 	background: $crimson-dark;
 	}
-
 
 .section.crimson aside {
 	background: $crimson;
@@ -131,6 +153,12 @@
 .section.crimson aside hr {
 	background: $crimson-dark;
 	display: none;
+	}
+.section.crimson aside header {
+	color: $crimson-dark;
+	}
+.section.crimson .section-side ul:not(.menu) li a:before {
+	background-color: $crimson-dark;
 	}
 
 // Yellow
@@ -148,16 +176,31 @@
 	color: $yellow-lighter;
 	display: inline-block;
 	}
-.section.yellow aside li a:hover {
+.section.yellow aside .menu li a:hover {
 	color: white;
 	background: $yellow-dark;
 	}
 .section.yellow hr {
 	background: $yellow-lighter;
 	}
-x.section.news-section aside .cat-item-146 {
-	font-size: 1.5em;
-	white-space: nowrap;
+.section.yellow aside header {
+	color: $yellow-darker;
+	}
+.section.yellow aside header {
+	color: $yellow-dark;
+	}
+.section.yellow .section-side ul:not(.menu) li a:before {
+	background-color: $yellow-dark;
+	}
+#menu-locales li:nth-of-type(5):before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: $yellow-light;
+	clear: both;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	}
 
 // Orange
@@ -172,12 +215,24 @@ x.section.news-section aside .cat-item-146 {
 	content: "Events";
 	}
 .section.orange aside li a {
-	color: $yellow-lightest;
+	color: $orange-lightest;
 	}
 .section.orange aside li a:hover {
 	color: white;
-	background: $yellow-dark;
+	background: $orange-dark;
 	}
+.section.orange aside header {
+	color: $orange-darker;
+	}
+.section.orange .section-side ul:not(.menu) li a:before {
+	background-color: $orange-darker;
+	display: none;
+	}
+.section.orange .content-item-event-date {
+	color: white;
+	background-color: $orange-dark;
+	}
+
 
 // Blue
 .section.blue aside {
@@ -218,4 +273,71 @@ x.section.news-section aside .cat-item-146 {
 	color: white;
 	color: white;
 	background: $green-dark;
+	}
+.section.green aside header {
+	color: $green-darker;
+	}
+.section.green .section-side ul:not(.menu) li a:before {
+	background: $green-dark;
+	}
+
+/* Side Sections */
+.side-sections li {
+	border-top: none;
+	list-style: none;
+	}
+.side-sections li a {
+	font-weight: 300;
+	font-size: 2rem;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: block;
+	line-height: 1.2em;
+	}
+.side-sections ul {
+	margin-top: 5px;
+	}
+.side-sections li.crimson a {
+	color: #981e32;
+	border-bottom-color: #981e32;
+	}
+.side-sections li.yellow a {
+	color: #c69214;
+	border-top-color: #c69214;
+	}
+.side-sections li.blue a {
+	color: #4f868e;
+	border-top-color: #4f868e;
+	}
+.side-sections li.orange a {
+	color: #b67233;
+	border-top-color: #b67233;
+	}
+.side-sections li.green a {
+	color: #8f7f35;
+	border-top-color: #8f7f35;
+	}
+.side-sections li li {
+	xdisplay: none;
+	display: inline-block;
+	}
+.side-sections ul ul li ~ li {
+	list-style: disc;
+	}
+.side-sections li.crimson li a,
+.side-sections li.yellow li a,
+.side-sections li.blue li a,
+.side-sections li.orange li a,
+.side-sections li.green li a,
+.side-sections li.green li a,
+aside.widget li a {
+	font-size: 1rem;
+	color: gray;
+	border-bottom: none;
+	display: block;
+	}
+.side-sections li li a:hover,
+aside.widget li a:hover {
+	color: #981e32;
+	color: #2a3033;
 	}

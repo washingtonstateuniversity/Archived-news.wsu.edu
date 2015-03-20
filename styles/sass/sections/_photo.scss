@@ -2,18 +2,34 @@
 	
 /* Photo */
 
-.photo {
-	//background-image: url('http://news.wsu.dev/wp-content/uploads/sites/18/2015/02/100603625.jpg') !important;
+.sections .photo {
 	background-size: 100% auto;
 	background-position: left center;
 	background-size: cover;
 	height: 100vh;
 	overflow: hidden;
-	z-index: 0 !important;
+	z-index: 0;
+	background-color: $gray-darker;
 	}
 .photo:not(#x) {
 	position: fixed !important;
 	}
+.photo:not(.opened) figure {
+	display: none;
+	}
+.photo:not(.opened) figure:last-of-type {
+	display: block;
+	filter: gray;
+    -webkit-filter: grayscale(100%);
+    opacity: .1;
+    background-color: $gray-darker;
+	}
+.photo:not(.opened):hover figure {
+	opacity: 1;
+	filter: none;
+	-webkit-filter: grayscale(0%);
+	}
+
 	
 .photo:not(#x):not(.opened) {
 	cursor: pointer;
@@ -60,7 +76,22 @@
 	}
 .photo.opened .section-header {
 	left: 0;
+	width: 50%;
 	right: auto;
+	}
+.photo .section-header .section-title {
+	color: $gray-light;
+	}
+.section.photo.opened:last-of-type .section-header:before {
+	top: 0;
+	content: "\00ab";
+	font-size: 60px;
+	width: 40px;
+	height: 100%;
+	border-left: 40px rgba(0, 0, 0, 0.5) solid;
+	color: white;
+	padding-top: 50%;
+	text-indent: -60px;
 	}
 
 .paddle {
@@ -77,12 +108,8 @@
 .opened .paddle.previous {
 	left: 0;
 	}
-.photo figure:not(:last-of-type) .paddle.previous {
-	//background: rgba(255, 167, 0, 0.28);
-	}
 .opened .paddle.next {
 	right: 0;
-	//background: rgba(0, 128, 0, 0.14);
 	}
 .opened .paddle.previous:before,
 .opened .paddle.next:after {
@@ -96,8 +123,7 @@
 	width: 40px;
 	height: 100%;
 	position: absolute;
-	padding-top: calc( 50% );
-	//border: pink 1px solid;
+	padding-top: 50%;
 	}
 .opened .paddle.next:after {
 	right: 0;
@@ -116,10 +142,6 @@
 	color: white;
 	background: rgba(0, 0, 0, 0.5);
 	}
-x.opened figure.focused-next {
-	right: 40px;
-	}
-
 .photo figure .article-header {
 	width: 100%;
 	display: none;
@@ -133,7 +155,7 @@ x.opened figure.focused-next {
 	padding-top: 15px;
 	text-shadow: 1px 1px 2px $gray-darker;
 	}
-.photo.opened figure .article-header .article-title a {
+.photo.opened .article-header .article-meta .article-title a {
 	color: white;
 	text-shadow: 1px 1px 2px $gray-darker;
 	}

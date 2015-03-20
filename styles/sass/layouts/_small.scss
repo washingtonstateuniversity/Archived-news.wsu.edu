@@ -1,8 +1,10 @@
-.size-lt-792 {
+.size-lt-medium {
 	
 	.sections {
 		width: 100%;
 		}
+	
+	
 		
 	.fluid & .sections section {
 		width: 100%;
@@ -16,13 +18,19 @@
 	article .article-thumbnail {
 		display: none !important;
 		}
+	
+	.story .column.one,
+	.story .column.one {
+		padding-left: 2em;
+		}	
+	
 	.section-header {
 		padding-left: 1.8rem;
 		}
 	section {
 		padding-bottom: 2rem;
 		}
-	section article:nth-of-type(2) ~ article {
+	section article:nth-of-type(4) ~ article {
 		display: none !important;
 		}
 	section .articles {
@@ -36,6 +44,10 @@
 	.article-featured hgroup.article-title h2 {
 		width: 100%;
 		}
+		
+	body[class*="verso-"] .size-lt-large #binder {
+	margin-left: 40px;
+	}
 	
 }
 	
