@@ -16,7 +16,7 @@
 				'paged'					=> $paged,
 				'posts_per_page'		=> 10,
 				'cat'					=> $local_categories,
-				'category__not_in'		=> $exclude_photos,
+				'tag_slug__not_in'		=> 'photo-feature',
 				'post_status'			=> 'publish',
 			);
 				
@@ -56,7 +56,7 @@
 			
 		
 			<?php 
-				if ( $news_section != "local" ) { 
+				if ( $news_section == "locales" ) { 
 					
 					echo '<nav class="paging">';
 					echo paginate_links( $paging );
