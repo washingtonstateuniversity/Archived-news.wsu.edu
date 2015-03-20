@@ -6,6 +6,10 @@ body.single #jacket {
 body.single {
 	background: white !important;
 	}
+	
+.page-template-margin-right .size-gt-large .max-1188 .column.one {
+	width: 792px;
+	}
 
 blockquote p:last-of-type {
 	padding-bottom: 0;
@@ -24,6 +28,7 @@ blockquote p:last-of-type {
 	}
 .single .article-title h1 {
 	margin-bottom: 0 !important;
+
 	}
 .single .article-author .affiliation {
 	text-transform: none;
@@ -39,6 +44,8 @@ blockquote p:last-of-type {
 	top: -1px;
 	
 	}
+	
+
 
 .wp-caption { max-width: 100%; }
 
@@ -96,50 +103,34 @@ body.single #binder {
 	content: "\2316";
 	content: "\301C"; /* Wave Dash */
 	content: "\224B"; /* Triple Tilde */
-	Xfont-weight: normal;
-	xheight: 10px;
-	xwidth: 10px;
 	display: inline-block;
-	xmargin-right: 3px;
 	margin-left: 4px;
 	margin-bottom: 1px;
-	xbackground: black;
-	xfont-size: 30px;
 	}
 	
-.single .main-header {
-	left: auto;
-	right: 0;
-	width: auto;
+
+	
+.single main {
+	position: relative;
 	}
-.single .main-header .header-group {
-	display: none;
-	}
-.single:not(.has-featured-image) .main-header:before,
-.single .featured-image:before {
-	content: "News";
-	text-transform: uppercase;
-	display: inline-block;
-	color: white;
-	font-family: "Open Sans Condensed";
-	font-size: 3rem;
-	padding: .5rem 1rem .5rem 4rem;
-	line-height: 1em;
-	font-weight: bold;
-	display: block;
-	width: 67%;
-	}
-.single:not(.has-featured-image) .main-header:before {
-	padding: 3.5rem 1rem .5rem 4rem;
-	}
-.single .featured-image:before {
-	right: auto;
-	left: 0px;
-	bottom: 0px;
+
+.single.has-featured-image .main-header {
 	position: absolute;
-	background: #981e32;
-	
+	top: 200px;
+	z-index: 100;
+	height: auto;
+	overflow: visible;
+	width: 75%;
+	height: 200px;
+	background: transparent;
 	box-sizing: border-box;
+	}
+
+.single.has-featured-image .main-header .header-group {
+	bottom: 0;
+	height: auto;
+	padding: .25rem .25rem .25rem 4rem;
+	background: $crimson;
 	}
 	
 .single.categorized-events-and-exhibit:not(.has-featured-image) .main-header:before,
@@ -147,86 +138,133 @@ body.single #binder {
 	content: "Press";
 	}
 	
-x.single .main-header:after {
-	content: ": Cat";
-	text-transform: uppercase;
-	}
+
 .single .column.two ul {
 	padding: 0px;
 	}
 	
 	
-/* Side Sections */
-.footer-sections li {
-	border-top: none;
-	list-style: none;
+/* Footer Sections */
+.main-footer .section {
+	position: relative;
+	clear: both;
+	width: 100%;
 	}
-.footer-sections li ul {
-	display: none;
-	}
-.footer-sections li:hover ul {
-	display: none;
-	}
-.footer-sections li a {
-	font-weight: 300;
-	font-size: 2rem;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	display: block;
-	line-height: 1.2em;
-	padding-left: 5px;
-	}
-.footer-sections ul {
-	margin-top: 5px;
+.main-footer .section ~ section {
+	clear: none !important;
+	max-width: 50% !important;
+	float: left;
 	}
 
-.footer-sections li.crimson a {
-	background: #981e32;
-	color: white;
-	border-bottom-color: #981e32;
+.main-footer .articles-continued > header:first-child {
+	display: none;
 	}
-.footer-sections li.yellow a {
-	background: #c69214;
-	color: white;
-	border-top-color: #c69214;
-	}
-.footer-sections li.blue a {
-	background: #4f868e;
-	color: white;
-	border-top-color: #4f868e;
-	}
-.footer-sections li.orange a {
-	background: #b67233;
-	color: white;
-	border-top-color: #b67233;
-	}
-.footer-sections li.green a {
+
+.main-footer .section .section-header {
+	height: auto;
+	width: calc( 100% - 4rem);
+	position: relative;
+	background: transparent;
+	left: 0;
+	right: auto;
+	height: 0px;
+	//margin-bottom: 10px;
+	//margin-top: 15px;
+	//margin-left: 10px;
 	
-	background: #8f7f35;
-	color: white;
-	border-top-color: #8f7f35;
 	}
-.footer-sections li li {
-	xdisplay: none;
-	display: inline-block;
+.main-footer:not(.x) .section .section-header:hover {
+	cursor: auto;
+	background: transparent;
 	}
-.footer-sections ul ul li ~ li {
-	list-style: disc;
+.size-lt-xlarge .section.crimson .section-header::before {
+	content: "";
 	}
-.footer-sections li.crimson li a,
-.footer-sections li.yellow li a,
-.footer-sections li.blue li a,
-.footer-sections li.orange li a,
-.footer-sections li.green li a,
-.footer-sections li.green li a,
-aside.widget li a {
+
+.main-footer:not(.x) .section.crimson .section-header,
+.main-footer:not(.x) .section.crimson .section-header:hover {
+	color: $crimson;
+	border-top: 5px $crimson solid;
+	}
+	
+.main-footer:not(.x) .section.yellow .section-header,
+.main-footer:not(.x) .section.yellow .section-header:hover {
+	color: $yellow;
+	border-top: 5px $yellow solid;
+	}
+	
+.main-footer:not(.x) .section.blue .section-header,
+.main-footer:not(.x) .section.blue .section-header:hover {
+	color: $blue;
+	border-top: 5px $blue solid;
+	}
+	
+.main-footer:not(.x) .section.orange .section-header,
+.main-footer:not(.x) .section.orange .section-header:hover {
+	color: $orange;
+	border-top: 5px $orange solid;
+	}
+	
+.main-footer:not(.x) .section.green .section-header,
+.main-footer:not(.x) .section.green .section-header:hover {
+	color: $green;
+	border-top: 5px $green solid;
+	}
+
+.main-footer .section .section-header .section-title {
+	transform: rotate(90deg);
+	transform-origin: left top;
+	right: auto;
+	left: 50px;
+	top: 0;
+	//position: relative;
+	font-size: 2rem;
+	font-family: "";
+	padding-left: 1.1rem;
+	xtext-transform: none;
+	}
+	
+
+.main-footer .enclosure .articles {
+	padding-top: .25rem;
+	padding-bottom: 1rem;
+	}	
+	
+.main-footer .enclosure .articles article {
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	}	
+
+.main-footer .enclosure .column.one {
+	padding-left: 4rem;
+	padding-right: 4rem;
+	}
+
+.main-footer .section .article-header .article-meta,
+.main-footer .section .article-header .article-byline {
+	display: none;
+	}
+
+.main-footer .section article:nth-of-type(4) ~ article {
+	display: none;
+	}
+
+.main-footer .section .article-title {
+	margin-right: 0px;
+	}
+
+.main-footer .section .article-title h2 {
 	font-size: 1rem;
-	color: gray;
-	border-bottom: none;
-	display: block;
+	letter-spacing: 0;
 	}
-.footer-sections li li a:hover,
-aside.widget li a:hover {
-	color: #981e32;
-	color: #2a3033;
+.main-footer .section .article-summary,
+.main-footer .section .article-body,
+.main-footer .section .article-footer {
+	display: none;
+	}
+	
+
+
+.main-footer .section .column {
+	min-height: 1px !important;
 	}
