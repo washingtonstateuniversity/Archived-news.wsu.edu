@@ -123,7 +123,7 @@
 				  
 		});
 		
-		$( ".section-header" ).click(function() {
+		$( ".side-section .section-header" ).click(function() {
 			
 			var indexical = $(this).parents(".section").attr("data-sec");
 			flipLeft(indexical);
@@ -189,7 +189,7 @@ $(document).ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
       //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       //html += '<li class="currently">'+weather.currently+'</li>';
   
@@ -207,7 +207,7 @@ $(document).ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
   
       $("#menu-locales li:nth-of-type(2)").append(html);
     },
@@ -221,7 +221,7 @@ $(document).ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
   
       $("#menu-locales li:nth-of-type(3)").append(html);
     },
@@ -235,7 +235,7 @@ $(document).ready(function() {
     woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</div>';
+      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
   
       $("#menu-locales li:nth-of-type(4)").append(html);
     },
