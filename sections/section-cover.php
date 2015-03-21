@@ -44,16 +44,12 @@
 
 		wp_reset_postdata();
 		
-		if ( $news_section == "locales" ) { 
+		if ( $news_section == "cover" ) { 
 			
 			echo '<nav class="paging">';
 			echo paginate_links( $paging );
 			echo '</nav>';
 			
-		} else {
-			
-			echo section_link("cover");
-		
 		}
 		
 		//get_template_part( 'parts/pager', '' );
