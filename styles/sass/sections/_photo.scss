@@ -74,14 +74,13 @@
 .photo:not(.opened) .section-header {
 	width: 100%;
 	}
+
 .photo.opened .section-header {
 	left: 0;
 	width: 50%;
 	right: auto;
 	}
-.photo .section-header .section-title {
-	color: $gray-light;
-	}
+	
 .section.photo.opened:last-of-type .section-header:before {
 	top: 0;
 	content: "\00ab";
