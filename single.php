@@ -38,14 +38,14 @@ if ( spine_has_background_image() ) {
 
 </section>
 
-<footer class="main-footer">
+<footer class="main-footer fluid">
 		
 	<section class="row halves pager prevnext gutter pad-ends">
 		<div class="column one">
-			<?php previous_post_link(); ?>
+			<?php previous_post_link('%link'); ?>
 		</div>
 		<div class="column two">
-			<?php next_post_link(); ?>
+			<?php next_post_link('%link'); ?>
 		</div>
 	</section><!--pager-->
 	
