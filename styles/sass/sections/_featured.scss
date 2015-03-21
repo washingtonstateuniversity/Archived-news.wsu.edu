@@ -1,20 +1,20 @@
 .article-featured {
 	margin-bottom: 1rem;
 	}
+
 .article-featured .article-body {
 	display: none;
 	}
+
 .articles .article-featured article header {
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0px -2rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	//-webkit-filter: grayscale(100%);
-    //filter: gray;
-    //opacity: .4;
     height: 60vh;
 	}
+
 .article-featured hgroup.article-title {
 	position: relative;
 	height: 300px;
@@ -24,24 +24,26 @@
 	padding-right: 2rem;
 	background: linear-gradient(to bottom, transparent 0%, transparent 67%, $gray-darker 100%);
 	}
+
 .article-featured hgroup.article-title h2 {
 	color: white;
 	position: absolute;
 	bottom: 0px;
 	padding-bottom: 1rem;
-	//font-family: "Open Sans Condensed";
 	text-transform: uppercase;
 	font-weight: normal;
-	font-size: 4rem !important;
+	font-size: 7vh !important;
 	padding: 0px 0px 2rem 0px;
-	width: 50%;
+	width: 80%;
 	line-height: .9em;
 	text-shadow: 2px 0px 10px $gray-darker;
 	text-shadow: 1px 2px 2px $gray-darker;
 	}
+
 .article-featured:not(.x) hgroup.article-title h2 a {
 	color: white;
 	}
+
 .article-featured hgroup.article-meta.above {
 	display: none;
 	}
