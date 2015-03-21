@@ -8,7 +8,7 @@
 	
 	function section_link($section) {
 		if ( $section == "" ) { $section = "cover"; }
-		echo '<a href="/'.$section.'/" class="section-link">Go to '.ucfirst($section).'</a>';
+		echo '<a href="/'.$section.'/" class="section-link">Go to '.ucfirst($section).' Section</a>';
 		} 
 	
 ?>
