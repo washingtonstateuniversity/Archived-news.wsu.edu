@@ -55,7 +55,7 @@ x.single .column.two {
 	background: white;
 	}
 .single .column.two {
-	background: white;
+	//background: white;
 	}
 
 body.single main {
@@ -86,16 +86,13 @@ body.single #binder {
 	padding: 2px 4px;
 	}
 .single .location {
-	color: #b5babe;
-	color: #8d959a; /* Gray Light */
+	color: $gray-light;
 	color: black;
 	display: inline-block;
-	xpadding-right: 5px;
 	margin-right: 0px;
-	xborder-right: 0px black solid;
-	
 	font-weight: bold;
 	}
+
 .single .location:after {
 	content: "\033E";
 	content: "\223F";
@@ -107,8 +104,6 @@ body.single #binder {
 	margin-left: 4px;
 	margin-bottom: 1px;
 	}
-	
-
 	
 .single main {
 	position: relative;
@@ -138,22 +133,70 @@ body.single #binder {
 	content: "Press";
 	}
 	
-
 .single .column.two ul {
 	padding: 0px;
 	}
 	
+/* Main Footer */
+
+.pager.prevnext {
+	margin: 1rem 0;
+	border-top: 5px $gray-lightly dotted;
+	//background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $gray-lightly 50%, rgba(255, 255, 255, 0) 100%);
+	}
+
+.pager.prevnext .column.one {
+	border-right: 5px $gray-lightly solid;
+	text-align: right;
+	//background: linear-gradient(to right, $gray-lightly 100%, #f9f9f9 0%);
+	}
 	
+.pager.prevnext .column.two {
+	//border-right: 5px $gray-lightly solid;
+	
+	}
+
+.pager.prevnext a[rel="next"]:before,
+.pager.prevnext a[rel="prev"]:before {
+	display: block;
+	font-weight: bold;
+	color: black;
+	}
+
+.pager.prevnext a[rel="prev"]:before {
+	content: "Previous: ";
+	}
+
+.pager.prevnext a[rel="next"]:before {
+	content: "Next: ";
+	}
+	
+.main-footer .pager .column.one,
+.main-footer .pager .column.two {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	}
+
 /* Footer Sections */
+
+.main-footer .sections {
+	padding: 0 0 0 4rem;
+	}
+
 .main-footer .section {
 	position: relative;
 	clear: both;
-	width: 100%;
+	width: 100% !important;
 	}
+
 .main-footer .section ~ section {
-	clear: none !important;
-	max-width: 50% !important;
-	float: left;
+	//clear: none !important;
+	//max-width: 50% !important;
+	//float: left;
+	}
+
+.main-footer .articles-continued {
+	margin-top: 0px;
 	}
 
 .main-footer .articles-continued > header:first-child {
@@ -168,15 +211,13 @@ body.single #binder {
 	left: 0;
 	right: auto;
 	height: 0px;
-	//margin-bottom: 10px;
-	//margin-top: 15px;
-	//margin-left: 10px;
-	
 	}
+
 .main-footer:not(.x) .section .section-header:hover {
 	cursor: auto;
 	background: transparent;
 	}
+
 .size-lt-xlarge .section.crimson .section-header::before {
 	content: "";
 	}
@@ -217,14 +258,12 @@ body.single #binder {
 	right: auto;
 	left: 50px;
 	top: 0;
-	//position: relative;
 	font-size: 2rem;
 	font-family: "";
 	padding-left: 1.1rem;
-	xtext-transform: none;
+	position: absolute;
 	}
 	
-
 .main-footer .enclosure .articles {
 	padding-top: .25rem;
 	padding-bottom: 1rem;
@@ -233,7 +272,9 @@ body.single #binder {
 .main-footer .enclosure .articles article {
 	padding-top: .25rem;
 	padding-bottom: .25rem;
-	}	
+	border-top: none;
+	border-bottom: 5px #d6dada solid;
+	}
 
 .main-footer .enclosure .column.one {
 	padding-left: 4rem;
@@ -245,8 +286,16 @@ body.single #binder {
 	display: none;
 	}
 
-.main-footer .section article:nth-of-type(4) ~ article {
+.main-footer .section:not(.crimson) article:nth-of-type(3) ~ article {
 	display: none;
+	}
+
+.main-footer .section.crimson article:nth-of-type(5) ~ article {
+	display: none;
+	}
+	
+.main-footer .section.crimson article:nth-of-type(5) {
+	border-bottom: none;
 	}
 
 .main-footer .section .article-title {
@@ -256,14 +305,20 @@ body.single #binder {
 .main-footer .section .article-title h2 {
 	font-size: 1rem;
 	letter-spacing: 0;
+	text-shadow: none;
 	}
+
 .main-footer .section .article-summary,
 .main-footer .section .article-body,
 .main-footer .section .article-footer {
 	display: none;
 	}
-	
-
+.main-footer .section-link {
+	text-transform: uppercase;
+	padding-top: 7px;
+	display: block;
+	font-size: .8em;
+	}
 
 .main-footer .section .column {
 	min-height: 1px !important;
