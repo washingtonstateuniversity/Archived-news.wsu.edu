@@ -1,5 +1,4 @@
 
-<div class="articles-continued">
 		 <header class="headlines">Headlines</header>
 	 
 	 <?php
@@ -55,4 +54,3 @@
 		//get_template_part( 'parts/pager', '' );
 	?>
 	 
-	 </div>
