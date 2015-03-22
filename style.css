@@ -210,7 +210,7 @@ body {
   background: #2a3033; }
 
 /* line 5, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_defaults.scss */
-.page-template-categorical #jacket.size-gt-small, .home #jacket.size-gt-small {
+x.page-template-categorical #jacket.size-gt-small, x.home #jacket.size-gt-small {
   overflow-x: hidden;
   overflow-y: hidden; }
 
