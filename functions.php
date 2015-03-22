@@ -111,8 +111,8 @@ function wsunews_sides() {
 	));
 	
 	register_sidebar( array(
-		'name'          => 'Locales Sidebar',
-		'id'            => 'side-locales',
+		'name'          => 'Campuses Sidebar',
+		'id'            => 'side-campuses',
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '<header>',
