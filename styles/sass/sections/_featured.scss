@@ -1,31 +1,46 @@
-.article-featured {
-	margin-bottom: 1rem;
-	}
+.article-featured article,
+main > .sections .section article:first-of-type {
 
-.article-featured .article-body {
+	background-color: $gray-lighter;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0px -2rem 2rem -2rem;
+	padding: 0px;
+	height: 60vh;
+
+.article-body {
 	display: none;
 	}
 
-.articles .article-featured article header {
-	background-size: cover;
-	background-repeat: no-repeat;
-	margin: 0px -2rem;
+header {
 	padding-left: 2rem;
 	padding-right: 2rem;
-    height: 60vh;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, $gray-darker 100%);
+    //background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.50) 67%, $gray-darker 100%);
+    //background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.50) 67%, $gray-darker 100%);
+    background-size: auto !important;
+    box-sizing: border-box;
 	}
 
-.article-featured hgroup.article-title {
+.article-meta,
+.article-byline,
+.article-thumbnail {
+	display: none;
+	}
+.article-title {
+	
 	position: relative;
 	height: 300px;
 	height: 60vh;
 	margin: 0px -2rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	background: linear-gradient(to bottom, transparent 0%, transparent 67%, $gray-darker 100%);
-	}
-
-.article-featured hgroup.article-title h2 {
+	
+	
+	
+	h2 {
+	font-family: "Open Sans", sans-serif;
 	color: white;
 	position: absolute;
 	bottom: 0px;
@@ -36,19 +51,37 @@
 	padding: 0px 0px 2rem 0px;
 	width: 80%;
 	line-height: .9em;
-	text-shadow: 2px 0px 10px $gray-darker;
-	text-shadow: 1px 2px 2px $gray-darker;
+	
+	
+		a {
+			color: white;
+			text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25);
+		}
+		
+		a:hover {
+			
+			text-shadow: -5px 0px 0px rgba(0, 0, 0, 1);
+			
+		}
+	
+	
 	}
+	
+}
 
-.article-featured:not(.x) hgroup.article-title h2 a {
+
+
+
+
+:not(.x) hgroup.article-title h2 a {
 	color: white;
 	}
 
-.article-featured hgroup.article-meta.above {
+hgroup.article-meta.above {
 	display: none;
 	}
 
-.article-featured:not(.x) hgroup.article-title h2:before {
+x:not(.x) hgroup.article-title h2:before {
 	
 	font-weight: bold;
 	font-size: 1rem;
@@ -68,21 +101,34 @@
 	box-shadow: 1px 2px 1px $gray-darker;
 	}
 	
-.article-featured article.category-rockdoc hgroup.article-title h2:before,
-.article-featured article.tag-rock-doc hgroup.article-title h2:before { content: "Rock Doc"; }
+article.category-rockdoc hgroup.article-title h2:before,
+article.tag-rock-doc hgroup.article-title h2:before { content: "Rock Doc"; }
 
-.article-featured article.category-askdruniverse hgroup.article-title h2:before,
-.article-featured article.tag-dr-universe hgroup.article-title h2:before { content: "Ask Dr. Universe"; }
+article.category-askdruniverse hgroup.article-title h2:before,
+article.tag-dr-universe hgroup.article-title h2:before { content: "Ask Dr. Universe"; }
 
-.article-featured article:first-of-type figure {
+article:first-of-type figure {
 	display: none;
 	}
 
-.article-featured .article-summary {
+.article-summary {
 	padding-top: 1rem;
 	display: none;
 	}
-	
+
++ article {
+	border-top: none;
+	}
+
+}
+
+.section.crimson aside:before,
+.section.yellow aside:before,
+.section.blue aside:before,
+.section.orange aside:before,
+.section.green aside:before {
+	text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25);
+	}
 
 
 .tagged-full-feature main section:first-of-type .column.two {
