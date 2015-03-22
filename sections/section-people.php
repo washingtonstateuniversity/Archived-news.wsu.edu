@@ -1,12 +1,12 @@
 <?php
 		
-	$posts_staff = array(
-	'posts_per_page'   => 5,
-	'category_name'         => 'wsu-alumni-features',
+	$posts_people = array(
+	'posts_per_page'   => 10,
+	'category_name'    => 'wsu-alumni-features, student-news, employee-news',
 	//'tag'			   => 'featured',
 	);
 	
-	$articles = new WP_Query( $posts_staff );
+	$articles = new WP_Query( $posts_people );
 	
 	while ( $articles->have_posts() ) : $articles->the_post();
 	
