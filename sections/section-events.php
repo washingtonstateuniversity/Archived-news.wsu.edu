@@ -7,7 +7,7 @@
 		'nopaging'				=> false,
 		'paged'					=> $paged,
 		'posts_per_page'		=> 10,
-		'category_name'			=> 'events-and-exhibits',
+		'category_name'			=> 'events-and-exhibits, events-and-exhibit',
 		'tag__not_in'			=> array($exclude_photos),
 		'post_status'			=> 'publish',
 	);
