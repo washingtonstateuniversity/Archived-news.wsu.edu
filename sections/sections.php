@@ -13,15 +13,15 @@
 	
 ?>
 
-<div class="sections row <?php echo $layout; ?> equalize">
+<div class="sections row <?php echo $layout; ?>">
 	
-	<div class="column one fluid nest">
+	<div class="column one fluid equalize">
 
 	<section id="crimson" class="section crimson featured news-section nested <?php echo ( $news_section == "cover" ? "opened current" : "not-current" ); ?>" data-sec="1">
 		
-		<header class="section-header"><span class="section-title">Featured</span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Featured</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?>">
+		<div class="enclosure row <?php echo $layout; ?> equalize">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -35,7 +35,6 @@
 	
 			<?php if ( !is_single() ) : ?>
 			
-			<div class="article-featured">
 			
 				<?php
 				
@@ -58,7 +57,6 @@
 					
 				?>
 			 
-			</div>
 			
 			<?php include(locate_template('sections/today.php')); ?>
 			
@@ -74,21 +72,21 @@
 	
 	<section id="yellow" class="section yellow campuses locales news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
-		<header class="section-header"><span class="section-title">Locales</span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Locales</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize reverse nested">
+		<div class="enclosure row <?php echo $layout; ?> equalize">
 		
 			<?php if ( !is_single() ) : ?>
 			<aside class="section-side column two">
 				
-				<?php if ( is_active_sidebar( 'side-locales' ) ) { dynamic_sidebar( 'side-locales' ); } ?>
+				<?php if ( is_active_sidebar( 'side-campuses' ) ) { dynamic_sidebar( 'side-campuses' ); } ?>
 			
 			</aside>
 			<?php endif; ?>
 			
 			<div class="articles column one">
 
-				<?php include(locate_template('sections/section-local.php')); ?>
+				<?php include(locate_template('sections/section-campuses.php')); ?>
 
 			</div><!--/ .column.one articles -->
 		
@@ -98,9 +96,9 @@
 	
 	<section id="blue" class="section blue press news-section <?php echo ( $news_section == "press" ? "opened current" : "not-current" ); ?>" data-sec="3">
 		
-		<header class="section-header"><span class="section-title">Press</span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Press</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize reverse nested">
+		<div class="enclosure row <?php echo $layout; ?> equalize">
 			
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -121,9 +119,9 @@
 	</section>
 	
 	<section id="orange" class="section orange events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="4">
-		<header class="section-header"><span class="section-title">Events</span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Events</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> reverse nested equalize">
+		<div class="enclosure row <?php echo $layout; ?> equalize">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -146,9 +144,9 @@
 	
 	<section id="people" class="section green people news-section <?php echo ( $news_section == "people" ? "opened current" : "not-current" ); ?>" data-sec="5">
 	
-		<header class="section-header"><span class="section-title">People</span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">People</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize reverse nested">
+		<div class="enclosure row <?php echo $layout; ?> equalize">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -171,7 +169,7 @@
 	<?php if ( !is_single() ) : ?>
 	<section id="photo" class="section sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
 	
-		<header class="section-header"><span class="section-title">Photo</span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Photo</span></span></header>
 	
 		<?php include(locate_template('sections/section-photo.php')); ?>
 	 
@@ -179,13 +177,14 @@
 	<?php endif; ?>
 	
 	</div><!-- /.column.one -->
-		
+
+	
 	<div class="section-tabs">	
-		<div class="section-tab green" data-sec="5"><span class="section-title">People</span></div>
-		<div class="section-tab orange" data-sec="4"><span class="section-title">Events</span></div>
-		<div class="section-tab blue" data-sec="3"><span class="section-title">Press</span></div>
-		<div class="section-tab yellow" data-sec="2"><span class="section-title">Locales</span></div>
-		<div class="section-tab crimson" data-sec="1"><span class="section-title">Featured</span></div>
+		<div class="section-tab green" data-sec="5"><span class="rotate"><span class="section-title">People</span></span></div>
+		<div class="section-tab orange" data-sec="4"><span class="rotate"><span class="section-title">Events</span></span></div>
+		<div class="section-tab blue" data-sec="3"><span class="rotate"><span class="section-title">Press</span></span></div>
+		<div class="section-tab yellow" data-sec="2"><span class="rotate"><span class="section-title">Locales</span></span></div>
+		<div class="section-tab crimson" data-sec="1"><span class="rotate"><span class="section-title">Featured</span></span></div>
 	</div>
 	
 </div><!-- /sections -->
