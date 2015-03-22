@@ -8,7 +8,7 @@
 	}
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php //echo $featured_image_bg; ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php echo $featured_image_bg; ?>>
 
 	<?php //echo $featured_image_img; ?>
 	
@@ -22,7 +22,7 @@
 
 	?>
 				
-	<header class="article-header" <?php echo $featured_image_bg; ?>>
+	<header class="article-header" <?php //echo $featured_image_bg; ?>>
 		<hgroup class="article-meta">
 			<time class="article-date" hour="<?php echo get_the_date(); ?>" datetime="<?php echo get_the_date( 'c' ); ?>">
 				<span class="default"><?php echo get_the_date(); ?></span>
