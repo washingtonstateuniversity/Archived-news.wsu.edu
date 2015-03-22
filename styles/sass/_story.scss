@@ -45,7 +45,9 @@ blockquote p:last-of-type {
 	
 	}
 	
-
+.single main {
+	// text-align: justify;
+	}
 
 .wp-caption { max-width: 100%; }
 
@@ -75,8 +77,8 @@ body.single #binder {
 	}
 .single .size-gt-large .article-title,
 .single .size-gt-medium .article-title {
-	margin-right: -33%;
-	margin-right: -198px;
+	//margin-right: -33%;
+	//margin-right: -198px;
 	}
 
 .single .byline {
@@ -187,6 +189,7 @@ body.single #binder {
 	position: relative;
 	clear: both;
 	width: 100% !important;
+	background: transparent;
 	}
 
 .main-footer .section ~ section {

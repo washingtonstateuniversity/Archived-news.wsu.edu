@@ -1,6 +1,11 @@
 body {
 	background: $gray-darker;
 	}
+.page-template-categorical #jacket.size-gt-small,
+.home #jacket.size-gt-small {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	}
 body main {
 	font-size: 16px;
 	line-height: 1.6em;
@@ -46,20 +51,21 @@ main h1, main h2, main h3, main h4 {
 	@include serif;
 	line-height: 1.1em;
 	}
-.page-template h1.hero {
+/*.page-template h1.hero {
 	margin: 2.5rem 0 .5rem;
 	font-size: 6em;
 	font-weight: bold;
 	font-weight: 800;
 	line-height: .9em;
 	}
-.page-template main h2 {
+.page-template:not(.page-template-categorical) main h2,
+.single main h2 {
 	margin: 2.5rem 0 .5rem;
 	font-weight: normal;
 	font-size: 2.2em;
 	line-height: 1em;
 	}
-.page-template main h3 {
+.page-template:not(.page-template-categorical) main h3 {
 	margin: 1em 0 .25em;
 	font-weight: normal;
 	font-size: 1.5em;
@@ -67,13 +73,10 @@ main h1, main h2, main h3, main h4 {
 	color: $gray-dark;
 	line-height: 1em;
 	}
-.page-template main h4 {
+.page-template:not(.page-template-categorical) main h4 {
 	margin: 1em 0 .25em;
 	font-weight: normal;
 	font-size: 1.5em;
 	line-height: 1em;
 	}
-	
-.column {
-	box-sizing: border-box !important;
-	}
+*/

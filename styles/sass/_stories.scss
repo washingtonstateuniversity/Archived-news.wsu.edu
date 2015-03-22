@@ -16,13 +16,14 @@ main div:not(.article-featured) article header {
 
 
 .articles {
-	max-width: 100%;
+	xmax-width: 100%;
 	padding: 0 2rem;
 	overflow: hidden;
+	padding-bottom: 50px;
 	}
-
-.articles {
-	padding-top: 150px;
+	
+.articles article:first-of-type.not-featured-image {
+	margin-top: 150px;
 	}
 	
 .article-title h2 {
@@ -32,10 +33,7 @@ main div:not(.article-featured) article header {
 	text-shadow: 0 1px 0 #FFFFFF;
 	}
 
-.article-featured .article-title h2 {
-	font-family: "Open Sans", sans-serif;
-	text-shadow: none;
-	}
+
 	
 article .article-summary p {
 	padding-bottom: 0;
@@ -50,20 +48,6 @@ article .article-thumbnail img {
 	border-bottom: 5px $gray-darker solid;
 	}
 	
-.crimson .articles {
-	padding-top: 0px;
-	}
-
-.section .article-featured .article-meta,
-.section .article-featured .article-byline {
-	display: none;
-	}
-.section .article-featured .article-title a {
-	color: white;
-	}
-.section .article-featured h2 a:hover {
-	color: white;
-	}
 
 article.has-thumbnail-image .article-thumbnail {
 	width: 198px;

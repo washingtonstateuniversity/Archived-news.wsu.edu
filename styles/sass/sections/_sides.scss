@@ -28,8 +28,6 @@
 	color: $crimson;
 	}
 
-
-
 .section aside .recent,
 .section aside .popular {
 	overflow: visible;
@@ -46,7 +44,7 @@
 	}
 	
 .section-side {
-	padding: 15px 40px 0px 1rem;
+	padding: 15px 0 0 1rem;
 	}
 .section-side ul {
 	padding: 25px 0;
@@ -231,6 +229,10 @@
 	}
 .section.blue aside:before {
 	content: "Press";
+	//background: $blue;
+	//color: $blue-lightest;
+	//width: 578px;
+	//padding-left: 4rem;
 	}
 .section.blue aside li a {
 	color: $blue-lightest;
