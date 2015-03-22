@@ -169,7 +169,7 @@
 	<?php if ( !is_single() ) : ?>
 	<section id="photo" class="section sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
 	
-		<header class="section-header"><span class="rotate"><span class="section-title">Photo</span></span></header>
+		<header class="section-header"><span class="position"><span class="rotate"><span class="section-title">Photo</span></span></span></header>
 	
 		<?php include(locate_template('sections/section-photo.php')); ?>
 	 
@@ -178,7 +178,6 @@
 	
 	</div><!-- /.column.one -->
 
-	
 	<div class="section-tabs">	
 		<div class="section-tab green" data-sec="5"><span class="rotate"><span class="section-title">People</span></span></div>
 		<div class="section-tab orange" data-sec="4"><span class="rotate"><span class="section-title">Events</span></span></div>
