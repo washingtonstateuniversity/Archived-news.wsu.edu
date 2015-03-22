@@ -866,7 +866,7 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   background-color: #9e7510; }
 
 /* line 182, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-#menu-locales li:nth-of-type(5):before {
+#menu-campuses li:nth-of-type(5):before {
   content: "";
   display: block;
   width: 100%;

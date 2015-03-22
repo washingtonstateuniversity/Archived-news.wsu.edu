@@ -225,10 +225,10 @@ $(document).ready(function() {
       //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       //html += '<li class="currently">'+weather.currently+'</li>';
   
-      $("#menu-locales li:first-of-type").append(html);
+      $("#menu-campuses li:first-of-type").append(html);
     },
     error: function(error) {
-      $("#menu-locales li:first-of-type").html('<p>'+error+'</p>');
+      $("#menu-campuses li:first-of-type").html('<p>'+error+'</p>');
     }
   });
   
@@ -241,10 +241,10 @@ $(document).ready(function() {
     success: function(weather) {
       html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
   
-      $("#menu-locales li:nth-of-type(2)").append(html);
+      $("#menu-campuses li:nth-of-type(2)").append(html);
     },
     error: function(error) {
-      $("#menu-locales li:nth-of-type(2)").html('<p>'+error+'</p>');
+      $("#menu-campuses li:nth-of-type(2)").html('<p>'+error+'</p>');
     }
   });
   
@@ -255,10 +255,10 @@ $(document).ready(function() {
     success: function(weather) {
       html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
   
-      $("#menu-locales li:nth-of-type(3)").append(html);
+      $("#menu-campuses li:nth-of-type(3)").append(html);
     },
     error: function(error) {
-      $("#menu-locales li:nth-of-type(3)").html('<p>'+error+'</p>');
+      $("#menu-campuses li:nth-of-type(3)").html('<p>'+error+'</p>');
     }
   });
   
@@ -269,10 +269,10 @@ $(document).ready(function() {
     success: function(weather) {
       html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
   
-      $("#menu-locales li:nth-of-type(4)").append(html);
+      $("#menu-campuses li:nth-of-type(4)").append(html);
     },
     error: function(error) {
-      $("#menu-locales li:nth-of-type(4)").html('<p>'+error+'</p>');
+      $("#menu-campuses li:nth-of-type(4)").html('<p>'+error+'</p>');
     }
   });
   
