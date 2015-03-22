@@ -1,7 +1,7 @@
 <?php
 	
 	$articles_press = array(
-		'posts_per_page'   		=> 5,
+		'posts_per_page'   		=> 10,
 		'category_name'         => 'wsu-press-releases',
 		//'tag'			   		=> 'featured',
 		'suppress_filters' 		=> true
