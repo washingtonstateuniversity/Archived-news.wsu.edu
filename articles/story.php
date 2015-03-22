@@ -8,7 +8,7 @@
 	}
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php //echo $featured_image_bg; ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php echo $featured_image_bg; ?>>
 
 	<?php //echo $featured_image_img; ?>
 	
