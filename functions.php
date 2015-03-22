@@ -56,8 +56,8 @@ function epoch_class( $classes ) {
 	if ( is_singular() ) {
 	$classes[] = $epoch;
 	// return the $classes array
-	return $classes;
 	}
+	return $classes;
 }
 
 /**

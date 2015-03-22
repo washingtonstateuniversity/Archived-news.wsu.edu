@@ -37,8 +37,6 @@ header {
 	padding-left: 2rem;
 	padding-right: 2rem;
 	
-	
-	
 	h2 {
 	font-family: "Open Sans", sans-serif;
 	color: white;
@@ -47,7 +45,7 @@ header {
 	padding-bottom: 1rem;
 	text-transform: uppercase;
 	font-weight: normal;
-	font-size: 7vh !important;
+	font-size: 3em;
 	padding: 0px 0px 2rem 0px;
 	width: 80%;
 	line-height: .9em;
@@ -55,12 +53,12 @@ header {
 	
 		a {
 			color: white;
-			text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25);
+			text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.25);
 		}
 		
 		a:hover {
 			
-			text-shadow: -5px 0px 0px rgba(0, 0, 0, 1);
+			text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
 			
 		}
 	

@@ -61,14 +61,8 @@ section.local .category-wsu-spokane-news:before {
 	padding: 2px 6px;
 	}
 	
-.articles article {
+article ~ article {
 	padding-bottom: 15px;
-	}
-.articles-continued {
-	margin-top: 25px;
-	}
-.articles article ~ article,
-.articles-continued article {
 	border-top-width: 5px;
 	border-top-style: solid;
 	border-top-color: #d6dada;
@@ -85,8 +79,6 @@ body.single article .article-thumbnail {
 	}
 
 /* Stories Meta */
-
-
 
 article header time::before {
 	display: none;
@@ -109,9 +101,11 @@ article header .article-meta:before {
 article header cite a {
 	color: #8d959a;
 	}
+
 article header .article-meta time span {
 	display: none;
 	}
+
 article header .article-meta time span.default {
 	display: inline-block;
 	}
@@ -124,16 +118,15 @@ article header cite::before {
 	@include serif;
 	}
 	
-.articles article {
+article {
 	padding-top: 1rem;
 	}
-.articles .article-featured article {
-	padding-top: 0;
-	}
+
 article a.more-link {
 	position: relative;
 	white-space: nowrap;
 	}
+
 article a.more-link:before {
 	content: "";
 	position: relative;
@@ -145,6 +138,7 @@ article a.more-link:before {
 	width: 3px;
 	height: 3px;
 	}
+
 article a.more-link:after {
 	content: "Continued";
 	display: inline-block;
@@ -165,3 +159,53 @@ article a span.content-more-default {
 	display: none;
 	}
 
+
+/* Category */
+
+.archive.category {
+	
+	.main-header sub {
+
+		display: inline-block;
+		color: $gray-lighter;
+		font-family: "Open Sans Condensed";
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 4rem;
+		//padding-left: 15px;
+		position: relative;
+
+	}
+	
+	.xmain-header sub:before {
+		
+		content: "";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		background: white;
+		box-shadow: 0 -18px 0 0 white, 0 -36px 0 0 white;
+		position: absolute;
+		left: 0;
+		bottom: 8px;
+
+	}
+	
+	article ~ article {
+		
+		margin-top: 2rem;
+		padding-top: 2rem;
+	
+	}
+	
+	.article-byline {
+		margin: .5rem 0;
+		}
+	
+	.article-title h2 {
+		
+		font-size: 2.5rem;
+		
+	}
+	
+}
