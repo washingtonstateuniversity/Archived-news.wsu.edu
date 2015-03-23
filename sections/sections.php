@@ -58,7 +58,7 @@
 				?>
 			 
 			
-			<?php include(locate_template('sections/today.php')); ?>
+			<?php include(locate_template('sections/section-cover-today.php')); ?>
 			
 			<?php endif; ?>
 			
