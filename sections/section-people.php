@@ -1,10 +1,10 @@
 <?php
 	
-	$section_categories = "wsu-alumni-features, student-news, employee-news";
+	$people_categories = "wsu-alumni-features, student-news, employee-news";
 	
 	if ( isset($page_section) && $news_section != "cover" ) {
-		if ( $page_section == $news_section && $page_categories != "" ) {
-			$section_categories = $page_categories;
+		if ( $page_section == "people" && $page_categories != "" ) {
+			$people_categories = $page_categories;
 		}
 	}
 	
@@ -16,7 +16,7 @@
 		'nopaging'				=> false,
 		'paged'					=> $paged,
 		'posts_per_page'		=> 10,
-		'category_name'			=> $section_categories,
+		'category_name'			=> $people_categories,
 		'tag__not_in'			=> array($exclude_photos),
 		'post_status'			=> 'publish',
 	);

@@ -41,7 +41,7 @@
 					'posts_per_page'   => 1,
 					'category__not_in' => array(473),
 					'category_name'	   => 'top-stories',
-					'tag__not_in'		=> array('499'),
+					'tag__not_in'		=> array($exclude_photos),
 				);
 			
 				$articles = new WP_Query( $posts_featured );
