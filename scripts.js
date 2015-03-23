@@ -209,8 +209,7 @@
 		
 		});
 		
-		$( "html,body" ).scroll(function() {
-		});
+		
 		
 		$( ".paddle" )
 		
@@ -243,9 +242,37 @@
 	});
 
 	setTimeout(function() {
+		
+		
+		// Tablepress
+		if ( $('.dataTables_wrapper input[type="search"]').length ) {
+			
+			var search_input = $('.dataTables_wrapper input[type="search"]').detach();
+			$('.dataTables_wrapper .dataTables_filter').prepend(search_input);
+			$('.dataTables_wrapper .dataTables_filter input[type="search"]').attr("placeholder","Filter");
+			
+		}
+		
+		if ( $('table.tablepress').length ) {
+			
+			$('.column-2').each( function() {
+				
+				if ( $(this).is(":empty") && $(this).siblings(".column-3").is(":empty") ) {
+					
+					$(this).parents("tr").addClass("table-section-header");
+					
+				}
+				
+			});
+			
+		}		
+		
+		// Sharing
 		$("body.single #spine .spine-share ul").clone().addClass("spine-share looseleaf").prependTo(".story");
 		$(".spine-share.looseleaf li a").wrapInner("<span class='channel-title'></div>");
 		$(".spine-share.looseleaf").wrap("<div class=\"spine-share-position\"></div>");
+	
+	
 	}, 500);
 	
 
