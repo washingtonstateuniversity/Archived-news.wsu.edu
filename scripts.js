@@ -109,10 +109,41 @@
 	        scrollTop: $("main").offset().top
 	    }, 200);
 	}
+	
+	function imageWrap() {
+		
+		$("article img").each( function() {
+			
+			if ( !$(this).parent().is("figure") ) {
+				
+				var img_classes = $(this).attr("class");
+				var img_src = $(this).attr("src");
+				
+				/*
+				if ( $(this).hasClass("image-back") ) {
+					
+					$(this).removeAttr("src").css("background-image","url('"+img_src+"')");
+					
+				}
+				*/
+				
+				$(this).unwrap("p").wrap('<figure class="auto-figured figure-back '+img_classes+'" style="background-image: url(\''+img_src+'\')"></figure>');
+				
+			}
+		
+		});
+	
+	}
 
 	$(document).ready( function() {
 		
 		jacketHeight();
+		
+		if ( $("body.single").length || $("body.page").length ) {
+		
+			imageWrap();
+		
+		}
 	
 		var xl_current_width = $(window).width();
 	
