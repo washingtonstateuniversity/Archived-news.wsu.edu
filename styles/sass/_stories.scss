@@ -203,6 +203,38 @@ article {
 
 	}
 	
+	.size-gt-medium {
+	
+		.main-header {
+			
+			width: 99px;
+			height: 100vh;
+			position: fixed;
+			
+		}
+		
+		.header-group {
+			
+			transform: rotate(90deg);
+			transform-origin: left top;
+			position: absolute;
+			width: 100vh;
+			bottom: auto;
+			padding-left: 0px;
+			padding-bottom: 0px;
+			top: 1rem;
+			left: 80px;
+			
+		}
+		
+		.column.one {
+			
+			margin-left: calc( 4rem + 99px );
+			
+		}
+	
+	}
+	
 	article ~ article {
 		
 		margin-top: 2rem;
