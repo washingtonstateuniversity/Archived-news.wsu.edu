@@ -1,5 +1,13 @@
 
 <?php
+	
+	$section_categories = 'events-and-exhibits, events-and-exhibit';
+	
+	if ( isset($page_section) && $news_section != "cover" ) {
+		if ( $page_section == $news_section && $page_categories != "" ) {
+			$section_categories = $page_categories;
+		}
+	}
 			
 	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 	
@@ -7,7 +15,7 @@
 		'nopaging'				=> false,
 		'paged'					=> $paged,
 		'posts_per_page'		=> 10,
-		'category_name'			=> 'events-and-exhibits, events-and-exhibit',
+		'category_name'			=> $section_categories,
 		'tag__not_in'			=> array($exclude_photos),
 		'post_status'			=> 'publish',
 	);

@@ -1,13 +1,20 @@
 <?php
+	
+	$section_categories = "wsu-spokane-news, wsu-tri-cities-news, wsu-vancouver-news, wsu-everett-news, wsu-extension-news";
+	
+	if ( isset($page_section) && $news_section != "cover" ) {
+		if ( $page_section == $news_section && $page_categories != "" ) {
+			$section_categories = $page_categories;
+		}
+	}
 			
 	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-	$local_categories = "wsu-spokane-news, wsu-tri-cities-news, wsu-vancouver-news, wsu-everett-news, wsu-extension-news";
 
 	$articles_filter = array(
 		'nopaging'				=> false,
 		'paged'					=> $paged,
 		'posts_per_page'		=> 10,
-		'cat'					=> $local_categories,
+		'cat'					=> $section_categories,
 		'tag__not_in'			=> array($exclude_photos),
 		'post_status'			=> 'publish',
 	);

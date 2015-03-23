@@ -35,7 +35,6 @@
 	
 			<?php if ( !is_single() ) : ?>
 			
-			
 				<?php
 				
 				$posts_featured = array(
