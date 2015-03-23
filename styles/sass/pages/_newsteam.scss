@@ -1,0 +1,65 @@
+
+table.tablepress {
+	
+	tr,td {
+			
+			display: block;
+			float: left;
+			border-top: none;
+			
+		}
+		
+		tr {
+			
+			clear: both;
+			width: 100%;
+			
+		}
+		
+	thead {
+		
+		th {
+			
+			background-color: transparent;
+			border-bottom: none;
+			
+		}
+		
+	}
+	
+	tbody {
+		
+		tr {
+			
+			border-top: 5px $gray-lighter solid;
+			padding-top: 15px;
+			margin-top: 15px;
+			
+			
+		}
+		
+		.column-1 {
+			
+			@include serif;
+			font-size: 3rem;
+			line-height: 1em;
+			padding: 0;
+			
+		}
+		
+		.column-2 {
+			
+			text-transform: uppercase;
+			
+		}
+		
+		.column-3,.column-4,.column-5 {
+			
+			float: left;
+			display: inline-block;
+			
+		}
+	
+	}
+	
+}
