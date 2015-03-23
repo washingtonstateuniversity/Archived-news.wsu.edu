@@ -32,11 +32,7 @@ table.tablepress {
 	tbody {
 		
 		tr {
-			
-			
-			
-			
-			
+
 		}
 		
 		td:empty {
@@ -107,6 +103,12 @@ table.tablepress {
 			
 		}
 		
+		.column-6 {
+			
+			display: none;
+			
+		}
+		
 		.table-section-header .column-1 {
 			
 			font-family: "Open Sans Condensed";
@@ -114,13 +116,6 @@ table.tablepress {
 			text-transform: uppercase;
 			border-top: none;
 			padding-top: 3rem;
-			
-		}
-		
-		.table-section-header:first-of-type .column-1 {
-			
-			padding-top: 0;
-			display: none;
 			
 		}
 			
