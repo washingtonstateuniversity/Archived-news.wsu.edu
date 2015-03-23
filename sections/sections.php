@@ -71,7 +71,7 @@
 	
 	<section id="yellow" class="section yellow campuses locales news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
-		<header class="section-header"><span class="rotate"><span class="section-title">Locales</span></span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Campuses</span></span></header>
 		
 		<div class="enclosure row <?php echo $layout; ?> equalize">
 		

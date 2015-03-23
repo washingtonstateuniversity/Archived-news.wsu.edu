@@ -11,9 +11,13 @@
 		$page_section = wsunews_get_section();
 ?>
 
-<main class="<?php // echo $categories; ?>">
+<main class="categorical">
 
-	<?php include(locate_template('/sections/sections.php')); ?>
+	<div class="main-body">
+	
+		<?php include(locate_template('/sections/sections.php')); ?>
+		
+	</div>
 
 </main>
 

@@ -37,7 +37,7 @@
 		
 		}
 		
-		if ( $("main > .sections").length ) {
+		if ( $(".main-body .sections").length ) {
 		
 			$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5");
 				
@@ -81,7 +81,7 @@
 	  				
 		$('.section[data-sec="'+indexical+'"]').addClass("opened"); 
 				
-		if ( $("main > .sections").length ) {
+		if ( $(".main-body .sections").length ) {
 		
 			$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5");
 			
@@ -170,7 +170,7 @@
 				  
 		});
 		
-		$( "main > .sections .section-header" ).click(function() {
+		$( ".main-body .sections .section-header" ).click(function() {
 			
 			var indexical = $(this).parents(".section").attr("data-sec");
 			flipLeft(indexical);

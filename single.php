@@ -24,7 +24,7 @@ if ( spine_has_background_image() ) {
 	
 ?>
 
-<section class="story row margin-right pad wide">
+<div class="main-body story row margin-right pad wide">
 
 	<div class="column one">
 
@@ -36,7 +36,7 @@ if ( spine_has_background_image() ) {
 
 	</div><!--/column-->
 
-</section>
+</div>
 
 <footer class="main-footer fluid">
 		

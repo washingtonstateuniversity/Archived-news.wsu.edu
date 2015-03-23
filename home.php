@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<main class="home">
+<main>
 
-<?php get_template_part( 'sections/sections' ); ?>
-
-<?php // get_sidebar(); ?>
+	<div class="main-body">
+	
+		<?php get_template_part( 'sections/sections' ); ?>
+	
+	</div>
 
 </main>
 
