@@ -1,6 +1,6 @@
-.single {
+body.single {
 
-	background: white !important;
+	background: white;
 	
 	#jacket {
 		background: $gray-darker;
@@ -273,37 +273,43 @@ x.single.has-featured-image .main-header .header-group {
 
 .pager.prevnext {
 	
-	margin: 1rem 0;
+	margin: 1rem 2rem;
 	border-top: 5px $gray-lightly dotted;
 	//background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $gray-lightly 50%, rgba(255, 255, 255, 0) 100%);
 	
-	.column.one {
+	
+	x.column.one {
 		border-right: 5px $gray-lightly solid;
 		text-align: right;
 	}
 	
 	a[rel="next"]:before,
 	a[rel="prev"]:before {
-		display: block;
+		display: inline-block;
 		font-weight: bold;
 		color: black;
 	}
 	
 	a[rel="prev"]:before {
-		content: "Previous: ";
+		content: "Previous:\00a0";
 	}
 	
 	a[rel="next"]:before {
-		content: "Next: ";
+		content: "Next:\00a0";
+	}
+	
+	.main-footer & .column.one,
+	.main-footer & .column.two {
+		padding-top: .5em;
+		padding-bottom: .5em;
+		padding: 0 !important;
+		width: 100%;
+		float: right;
 	}
 	
 }
 	
-.main-footer .pager .column.one,
-.main-footer .pager .column.two {
-	padding-top: .5em;
-	padding-bottom: .5em;
-	}
+
 
 /* Footer Sections */
 
@@ -311,14 +317,17 @@ x.single.has-featured-image .main-header .header-group {
 	
 	.sections {
 		padding: 0 0 0 2rem;
+	
+		.section {
+			position: relative;
+			clear: both;
+			width: 100% !important;
+			background: transparent;
+		}
+	
 	}
 	
-	.section {
-		position: relative;
-		clear: both;
-		width: 100% !important;
-		background: transparent;
-	}
+	
 	
 	.section ~ section {
 		//clear: none !important;
@@ -351,33 +360,48 @@ x.single.has-featured-image .main-header .header-group {
 			background: transparent;
 		}
 	
-		.section.crimson .section-header,
-		.section.crimson .section-header:hover {
+		.section.crimson .section-header .section-title,
+		.section.crimson .section-header:hover .section-title {
 			color: $crimson;
+		}
+		
+		.section.crimson .section-header {
 			border-top: 5px $crimson solid;
 		}
 			
-		.section.yellow .section-header,
-		.section.yellow .section-header:hover {
+		.section.yellow .section-header .section-title,
+		.section.yellow .section-header:hover .section-title {
 			color: $yellow;
+		}
+		
+		.section.yellow .section-header {
 			border-top: 5px $yellow solid;
 		}
 			
-		.section.blue .section-header,
-		.section.blue .section-header:hover {
+		.section.blue .section-header .section-title,
+		.section.blue .section-header:hover .section-title {
 			color: $blue;
+		}
+		
+		.section.blue .section-header {
 			border-top: 5px $blue solid;
 		}
 			
-		.section.orange .section-header,
-		.section.orange .section-header:hover {
+		.section.orange .section-header .section-title,
+		.section.orange .section-header:hover .section-title {
 			color: $orange;
+		}
+		
+		.section.orange .section-header {
 			border-top: 5px $orange solid;
 		}
 			
-		.section.green .section-header,
-		.section.green .section-header:hover {
+		.section.green .section-header .section-title,
+		.section.green .section-header:hover .section-title {
 			color: $green;
+		}
+		
+		.section.green .section-header {
 			border-top: 5px $green solid;
 		}
 		
@@ -430,10 +454,6 @@ x.single.has-featured-image .main-header .header-group {
 		&.crimson article:nth-of-type(5) ~ article {
 			display: none;
 		}
-			
-		&.crimson article:nth-of-type(5) {
-			border-bottom: none;
-		}
 		
 		.article-title {
 			margin-right: 0px;
@@ -443,6 +463,7 @@ x.single.has-featured-image .main-header .header-group {
 			font-size: 1rem;
 			letter-spacing: 0;
 			text-shadow: none;
+			font-weight: normal;
 		}
 		
 		.article-summary,
@@ -456,6 +477,7 @@ x.single.has-featured-image .main-header .header-group {
 			padding-top: 7px;
 			display: block;
 			font-size: .8em;
+			font-weight: bold;
 		}
 		
 		.column {
