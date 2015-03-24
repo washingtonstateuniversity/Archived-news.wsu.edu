@@ -29,11 +29,13 @@
 }
 
 $columns: ( 
+	
+	"wsu-press-releases": "Press Release",
 	"rock-doc": "Rock Doc",
 	"perspectives": "Perspectives",
 	"dr-universe": "Ask Dr. Universe",
-	"wsu-in-the-media": "In the Media",
-	"wsu-press-releases": "Press Release"
+	"wsu-in-the-media": "In the Media"
+	
 	);
 	
 @each $slug, $column in $columns {
@@ -58,7 +60,8 @@ $authors: (
 	"jcvd": ", WSU News",
 	"letizia": ", WSU Libraries",
 	"eric-sorensen": ", Science Writer, Washington State University",
-	"kantors": ", College of Agricultural, Human & Natural Resource Sciences"
+	"kantors": ", College of Agricultural, Human & Natural Resource Sciences",
+	"linda-weiford": ", WSU News"
 );
 
 @each $username, $author in $authors {

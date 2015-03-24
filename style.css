@@ -1399,69 +1399,76 @@ body.single article .article-thumbnail {
   width: auto;
   height: auto; }
 
-/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-rock-doc .article-header .article-meta::before, article.tag-rock-doc .article-header .article-meta::before, .single.categorized-rock-doc .article-header .article-meta::before, .single.tagged-rock-doc .article-header .article-meta::before {
-  content: "Rock Doc"; }
-
-/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-perspectives .article-header .article-meta::before, article.tag-perspectives .article-header .article-meta::before, .single.categorized-perspectives .article-header .article-meta::before, .single.tagged-perspectives .article-header .article-meta::before {
-  content: "Perspectives"; }
-
-/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-dr-universe .article-header .article-meta::before, article.tag-dr-universe .article-header .article-meta::before, .single.categorized-dr-universe .article-header .article-meta::before, .single.tagged-dr-universe .article-header .article-meta::before {
-  content: "Ask Dr. Universe"; }
-
-/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-wsu-in-the-media .article-header .article-meta::before, article.tag-wsu-in-the-media .article-header .article-meta::before, .single.categorized-wsu-in-the-media .article-header .article-meta::before, .single.tagged-wsu-in-the-media .article-header .article-meta::before {
-  content: "In the Media"; }
-
-/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 article.category-wsu-press-releases .article-header .article-meta::before, article.tag-wsu-press-releases .article-header .article-meta::before, .single.categorized-wsu-press-releases .article-header .article-meta::before, .single.tagged-wsu-press-releases .article-header .article-meta::before {
   content: "Press Release"; }
 
-/* line 45, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+article.category-rock-doc .article-header .article-meta::before, article.tag-rock-doc .article-header .article-meta::before, .single.categorized-rock-doc .article-header .article-meta::before, .single.tagged-rock-doc .article-header .article-meta::before {
+  content: "Rock Doc"; }
+
+/* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+article.category-perspectives .article-header .article-meta::before, article.tag-perspectives .article-header .article-meta::before, .single.categorized-perspectives .article-header .article-meta::before, .single.tagged-perspectives .article-header .article-meta::before {
+  content: "Perspectives"; }
+
+/* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+article.category-dr-universe .article-header .article-meta::before, article.tag-dr-universe .article-header .article-meta::before, .single.categorized-dr-universe .article-header .article-meta::before, .single.tagged-dr-universe .article-header .article-meta::before {
+  content: "Ask Dr. Universe"; }
+
+/* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+article.category-wsu-in-the-media .article-header .article-meta::before, article.tag-wsu-in-the-media .article-header .article-meta::before, .single.categorized-wsu-in-the-media .article-header .article-meta::before, .single.tagged-wsu-in-the-media .article-header .article-meta::before {
+  content: "In the Media"; }
+
+/* line 47, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 body:not(.single) .category-wsu-in-the-media .article-title {
   display: none; }
 
 /* Authors */
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="cynking"]:after {
   content: ", WSU News";
   color: #2a3033 !important;
   font-weight: normal !important;
   text-transform: none; }
 
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="rstrenge"]:after {
   content: ", WSU News";
   color: #2a3033 !important;
   font-weight: normal !important;
   text-transform: none; }
 
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="jcvd"]:after {
   content: ", WSU News";
   color: #2a3033 !important;
   font-weight: normal !important;
   text-transform: none; }
 
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="letizia"]:after {
   content: ", WSU Libraries";
   color: #2a3033 !important;
   font-weight: normal !important;
   text-transform: none; }
 
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="eric-sorensen"]:after {
   content: ", Science Writer, Washington State University";
   color: #2a3033 !important;
   font-weight: normal !important;
   text-transform: none; }
 
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="kantors"]:after {
   content: ", College of Agricultural, Human & Natural Resource Sciences";
+  color: #2a3033 !important;
+  font-weight: normal !important;
+  text-transform: none; }
+
+/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
+a[href*="linda-weiford"]:after {
+  content: ", WSU News";
   color: #2a3033 !important;
   font-weight: normal !important;
   text-transform: none; }
