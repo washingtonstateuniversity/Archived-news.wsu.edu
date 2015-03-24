@@ -1,15 +1,45 @@
 .size-lt-medium {
 	
+	.section .enclosure.margin-right .column.one,
+	.section .enclosure.margin-right .column.two {
 		
-	.sections .section {
-	width: 100%;
-	position: relative;
-	clear: both;
+		width: 100%;
+	
 	}
 	
-	.fluid & .sections section {
+	.section-header {
+		
+		position: static;
+		left: auto;
 		width: 100%;
-		}
+		height: auto;
+		cursor: default !important;
+		
+	}
+	
+	.section-header .section-title {
+		
+		height: auto;
+		font-family: "Open Sans Condensed";
+		font-weight: bold;
+		font-size: 4rem;
+		padding-left: 2rem;
+		
+	}
+	
+	.sections .section {
+		
+		width: 100%;
+		position: relative;
+		clear: both;
+	
+	}
+	
+	.section.crimson .section-header .rotate { color: $crimson; }
+	.section.yellow .section-header .rotate { color: $yellow; }
+	.section.blue .section-header .rotate { color: $blue; }
+	.section.orange .section-header .rotate { color: $orange; }
+	.section.green .section-header .rotate { color: $green; }
 	
 	section aside,
 	.article-summary,
