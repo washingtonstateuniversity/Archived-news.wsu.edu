@@ -142,8 +142,12 @@ body.single {
 
 .story {
 	
-	.main-body .padded-top {
+	.main-body .padded {
 		padding-top: 1rem;
+	}
+	
+	.size-gt-small & .padded {
+		padding-right: 0;
 	}
 	
 	.main-body .article-meta,
@@ -217,34 +221,39 @@ body.single {
 	margin-right: 10px;
 	margin-top: 15px;
 	width: 40px;
+	
+	.spine-share.looseleaf {
+		padding: 0px;
+		margin: 0px;
+		position: fixed;
 	}
-.spine-share.looseleaf {
-	padding: 0px;
-	margin: 0px;
-	position: fixed;
+	
+	.spine-share.looseleaf li {
+		list-style: none;
+		display: block;
+		padding: 0px;
+		margin: 0px
 	}
-.spine-share.looseleaf li {
-	list-style: none;
-	display: block;
-	padding: 0px;
-	margin: 0px
+	
+	.spine-share.looseleaf li a {
+		color: $gray-lighter;
+		border-bottom: none;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		font-size: 1.5em;
+		line-height: 1.4em;
+		display: block;
 	}
-.spine-share.looseleaf li a {
-	color: $gray-lighter;
-	border-bottom: none;
-	width: 40px;
-	height: 40px;
-	padding: 0;
-	font-size: 1.5em;
-	line-height: 1.4em;
-	display: block;
+	
+	.spine-share.looseleaf li a:hover {
+		margin: 0px;
+		background-color: transparent;
+		color: $crimson !important;
+		text-align: center;
 	}
-.spine-share.looseleaf li a:hover {
-	margin: 0px;
-	background-color: transparent;
-	color: $crimson !important;
-	text-align: center;
-	}
+	
+}
 
 .wp-caption { max-width: 100%; }
 

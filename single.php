@@ -28,7 +28,7 @@ if ( spine_has_background_image() ) {
 
 	<div class="row margin-right">
 	
-		<div class="column one padded-left padded-top">
+		<div class="column one padded">
 	
 			<?php while ( have_posts() ) : the_post(); ?>
 	
