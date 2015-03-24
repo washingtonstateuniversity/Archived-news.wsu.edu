@@ -1,3 +1,7 @@
+.today-tomorrow {
+	margin-bottom: 2rem;
+}
+
 .today-tomorrow dt.today,
 .today-tomorrow dt.tomorrow {
 	float: left;
@@ -10,7 +14,7 @@
 	}
 .today-tomorrow dt.today,
 .today-tomorrow dt.tomorrow,
-.articles-continued > header {
+header.headlines {
 	color: #d6dada;
 	color: #5e6a71;
 	padding-bottom: 5px;
@@ -20,6 +24,7 @@
 	font-size: 2rem;
 	display: block;
 	}
+
 .today-tomorrow dt.tomorrow {
 	color: #d6dada;
 	xborder-left: 5px #d6dada solid;
