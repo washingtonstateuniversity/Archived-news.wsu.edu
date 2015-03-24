@@ -21,7 +21,7 @@
 		
 		<header class="section-header"><span class="rotate"><span class="section-title">Featured</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize">
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -32,7 +32,9 @@
 		<?php endif; ?>
 		
 		<div class="articles lead column one">
-	
+			
+			<?php if ( !is_paged() ) : ?>
+			
 			<?php if ( !is_single() ) : ?>
 			
 				<?php
@@ -60,6 +62,8 @@
 			
 			<?php endif; ?>
 			
+			<?php endif; ?>
+			
 			<?php include(locate_template('sections/section-cover.php')); ?>
 	 
 		</div><!--/ articles -->
@@ -68,11 +72,11 @@
 		
 	</section>
 	
-	<section id="yellow" class="section yellow campuses locales news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
+	<section id="yellow" class="section yellow campuses local news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
 		<header class="section-header"><span class="rotate"><span class="section-title">Locales</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize">
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
 		
 			<?php if ( !is_single() ) : ?>
 			<aside class="section-side column two">
@@ -96,7 +100,7 @@
 		
 		<header class="section-header"><span class="rotate"><span class="section-title">Press</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize">
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
 			
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -119,7 +123,7 @@
 	<section id="orange" class="section orange events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="4">
 		<header class="section-header"><span class="rotate"><span class="section-title">Events</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize">
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
@@ -144,7 +148,7 @@
 	
 		<header class="section-header"><span class="rotate"><span class="section-title">People</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize">
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
