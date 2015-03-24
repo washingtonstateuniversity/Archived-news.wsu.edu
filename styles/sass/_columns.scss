@@ -3,7 +3,8 @@
 [class*="-releases"],
 [class*="-perspectives"],
 [class*="-in-the-media"],
-[class*="-releases"] {
+[class*="-releases"],
+[class*="-dr-universe"] {
 	
 	.article-header {
 		
@@ -56,15 +57,16 @@ $authors: (
 	"rstrenge": ", WSU News",
 	"jcvd": ", WSU News",
 	"letizia": ", WSU Libraries",
-	"eric-sorensen": ", Science Writer, Washington State University"	
+	"eric-sorensen": ", Science Writer, Washington State University",
+	"kantors": ", College of Agricultural, Human & Natural Resource Sciences"
 );
 
 @each $username, $author in $authors {
 	
 	a[href*="#{$username}"]:after {
 		content: "#{$author}";
-		color: $gray-darker;
-		font-weight: normal;
+		color: $gray-darker !important;
+		font-weight: normal !important;
 		text-transform: none;
 		
 	}
