@@ -46,3 +46,22 @@ body:not(.single) .category-wsu-in-the-media .article-title {
 	display: none;
 	
 }
+
+/* Authors */
+
+$authors: (
+	"cynking": ", WSU News",
+	"rstrenge": ", WSU News",
+	"jcvd": ", WSU News",
+	"letizia": ", WSU Libraries",
+	"eric-sorensen": ", Science Writer, Washington State University"	
+);
+
+@each $username, $author in $authors {
+	
+	a[href*="#{$username}"]:after {
+		content: "#{$author}";
+		
+	}
+}
+
