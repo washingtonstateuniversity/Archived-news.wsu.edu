@@ -10,42 +10,34 @@
 /* Asides */
 /* line 5, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
 .story figure.aside {
-  width: calc(292px + 1rem) !important;
-  padding: 5px 5px 0 5px !important;
-  background: #2a3033;
-  xbackground: white;
-  color: white;
-  xcolor: #2a3033;
-  xbox-shadow: -5px -5px 0px #2a3033; }
-/* line 18, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
+  padding: 0 0 0 1rem;
+  color: #2a3033; }
+/* line 14, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
 .story aside, .story .aside, .story .pullquote {
   border-left: 5px #2a3033 solid;
   padding: 0 0 0 1rem;
   margin: 0 0 1em 0em;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box; }
-/* line 26, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
-.story figure.aside {
-  width: auto !important;
-  width: 396px !important; }
-/* line 33, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
+/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
 .story .pullquote {
   font-size: 1.5em;
   line-height: 1.2em;
   width: 50%; }
 
-/* line 45, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
+/* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
 .size-gt-small .story aside, .size-gt-small .story .aside, .size-gt-small .story .pullquote {
   margin: 0 0 1em 1em;
-  margin-right: -198px;
+  xmargin-right: -198px;
+  margin-right: -33%;
   float: right; }
 
-/* line 57, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
+/* line 54, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
 .size-lt-medium .story aside, .size-lt-medium .story .aside, .size-lt-medium .story .pullquote {
   width: 100%;
   clear: both;
   margin-bottom: 1em; }
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
+/* line 62, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_asides.scss */
 .size-lt-medium .story .alignright {
   float: none; }
 
@@ -292,7 +284,7 @@ main h1, main h2, main h3, main h4 {
 .sections {
   position: relative; }
 
-/* line 4, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 5, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .sections .section {
   background-repeat: repeat-x;
   background-position: left top;
@@ -301,107 +293,113 @@ main h1, main h2, main h3, main h4 {
   position: absolute;
   background-color: #f9f9f9; }
 
-/* line 13, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 14, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .sections .section.opened {
   position: absolute; }
 
-/* line 16, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 17, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.opened .section-title {
   display: none; }
 
-/* line 19, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.sections section:nth-of-type(1) {
+/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.sections .section:nth-of-type(1) {
+  z-index: 90;
   width: calc(100% + 0px); }
 
-/* line 22, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .sections .section:nth-of-type(2) {
   z-index: 80;
-  width: calc(100% + 40px); }
+  width: calc(100% + 33px); }
 
-/* line 26, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .sections .section:nth-of-type(3) {
   z-index: 70;
-  width: calc(100% + 80px); }
+  width: calc(100% + 66px); }
 
-/* line 30, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .sections .section:nth-of-type(4) {
   z-index: 60;
-  width: calc(100% + 120px); }
+  width: calc(100% + 99px); }
 
-/* line 34, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .sections .section:nth-of-type(5) {
   z-index: 50;
-  width: calc(100% + 160px); }
+  width: calc(100% + 132px); }
 
-/* line 57, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 51, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .verso-1 .size-lt-xxlarge {
   padding-left: 40px;
   padding-left: 10px;
   padding-left: 0px; }
 
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 57, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .verso-2 .size-lt-xxlarge {
   padding-left: 80px;
   padding-left: 20px;
   padding-left: 0px; }
 
-/* line 69, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .verso-3 .size-lt-xxlarge {
   padding-left: 120px;
   padding-left: 30px;
   padding-left: 0px; }
 
-/* line 75, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 69, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .verso-4 .size-lt-xxlarge {
   padding-left: 160px;
   padding-left: 40px;
   padding-left: 0px; }
 
-/* line 81, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 75, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .verso-5 .size-lt-xxlarge {
   padding-left: 200px;
   padding-left: 50px;
   padding-left: 0px; }
 
-/* line 87, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.section.opened:not(:first-of-type) .section-header:hover:before {
+/* line 82, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.section.opened:not(.crimson) .section-header:hover .rotate:before {
   content: "\00ab";
   content: "\00bb";
+  display: block;
   position: absolute;
-  top: 50vh;
-  right: 0px;
-  left: 0px;
-  height: 50px;
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: 50%;
+  bottom: auto;
+  right: auto;
+  width: 33px;
+  height: 33px;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 30px;
-  text-align: center;
-  padding-top: 15px; }
+  font-size: 45px;
+  text-align: center; }
 
-/* line 100, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 99, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.photo.opened .section-nav:before {
   background: rgba(0, 0, 0, 0.25); }
 
-/* line 104, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 103, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-header {
-  width: 40px;
+  width: 33px;
   position: absolute;
   left: 100%;
   height: 100vh;
   z-index: 200; }
 
-/* line 112, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 111, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.photo .section-header {
   left: auto;
   right: 0px; }
 
-/* line 117, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 116, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.photo .section-header .position {
   position: absolute;
   right: 0px;
   width: 40px;
   height: 100vh; }
 
-/* line 125, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 124, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section:not(.opened):not(.photo):not(.crimson) .section-header .rotate {
   box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.1); }
 
@@ -420,17 +418,17 @@ main h1, main h2, main h3, main h4 {
 	}
 */
 /* Crimson */
-/* line 145, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 144, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.crimson .section-header {
   color: #b5babe;
   background: #981e32; }
 
-/* line 153, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 152, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section:nth-of-type(2) .section-header:not(.opened):hover, .section:nth-of-type(3) .section-header:not(.opened):hover, .section:nth-of-type(4) .section-header:not(.opened):hover, .section:nth-of-type(5) .section-header:not(.opened):hover {
   color: white;
   cursor: pointer; }
 
-/* line 158, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 157, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-title {
   font-weight: 300;
   font-size: 1.9em;
@@ -440,30 +438,30 @@ main h1, main h2, main h3, main h4 {
   padding-top: 2px;
   display: block; }
 
-/* line 168, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 167, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .size-gt-medium .main-body .sections .section-tab {
   position: relative; }
 
-/* line 173, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 172, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .size-gt-small .main-body .sections .rotate {
   -webkit-transform: rotate(90deg);
   -webkit-transform-origin: left bottom;
   display: block;
   position: relative;
-  top: -40px;
+  top: -33px;
   z-index: 100;
-  height: 40px;
+  height: 33px;
   width: 100vh; }
 
-/* line 184, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 183, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .size-gt-small .main-body .sections .section-header .rotate {
   position: fixed; }
 
-/* line 188, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 187, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .size-gt-medium .main-body .sections .section-header .relative .section-title {
   position: static; }
 
-/* line 192, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 191, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .size-gt-small .section-tabs .section-title {
   right: -7px; }
 
@@ -472,103 +470,117 @@ main h1, main h2, main h3, main h4 {
 .section.crimson .section-header .rotate {
   background: #981e32; }
 
-/* line 200, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.section.crimson:not(.opened) .section-header .rotate:hover {
-  color: white;
-  background: #c60c30; }
+/* line 201, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.main-body .section.crimson .section-header .section-title {
+  display: none; }
+
+/* line 205, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.crimson .section-title {
+  color: #b5babe; }
 
 /* Yellow */
-/* line 207, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.section.yellow .section-header .rotate {
-  background: #c7911b;
+/* line 212, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.section.yellow .section-header, .section.yellow .section-header .rotate {
+  background: #c7911b; }
+
+/* line 216, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.yellow .section-title {
   color: #e5cd93; }
 
-/* line 211, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 220, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.yellow:not(.opened) .section-header .rotate:hover {
-  color: white;
   background: #ffb81c; }
 
-/* line 215, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 224, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.yellow a {
   color: #c69214; }
 
-/* line 218, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 228, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.yellow a:hover {
   color: #ffb81c; }
 
 /* Blue */
-/* line 223, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.section.blue .section-header .rotate {
-  color: #aec7cb;
+/* line 235, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.section.blue .section-header, .section.blue .section-header .rotate {
   background-color: #4f868e; }
 
-/* line 227, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 239, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.blue .section-title {
+  color: #aec7cb; }
+
+/* line 243, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.blue:not(.opened) .section-header .rotate:hover {
   background: #00a5bd; }
 
-/* line 230, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 247, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.blue a {
   color: #4f868e; }
 
-/* line 233, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 251, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.blue a:hover {
   color: #00a5bd; }
 
 /* Orange */
-/* line 238, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.section.orange .section-header .rotate {
-  color: #ddbea1;
+/* line 258, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.section.orange .section-header, .section.orange .section-header .rotate {
   background-color: #b67233; }
 
-/* line 242, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 262, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.orange .section-title {
+  color: #ddbea1; }
+
+/* line 266, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.orange:not(.opened) .section-header .rotate:hover {
   background: #f6861f; }
 
-/* line 245, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 270, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.orange a {
   color: #b67233; }
 
-/* line 248, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 274, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.orange a:hover {
   color: #f6861f; }
 
 /* Green */
-/* line 253, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-.section.green .section-header .rotate {
-  color: #cbc4a2;
+/* line 281, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.section.green .section-header, .section.green .section-header .rotate {
   background-color: #8f7e35; }
 
-/* line 257, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 285, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.green .section-title {
+  color: #cbc4a2; }
+
+/* line 289, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.green:not(.opened) .section-header .rotate:hover {
   background: #ada400; }
 
-/* line 260, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 293, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.green a {
   color: #8f7e35; }
 
-/* line 263, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 297, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.green a:hover {
   color: #ada400; }
 
 /* Gray - Photo */
-/* line 268, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 303, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section.photo .section-header {
   color: white; }
 
-/* line 271, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 307, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .photo .section-header .section-title {
   color: #8d959a; }
 
-/* line 274, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 311, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .photo:hover .section-header .section-title {
   color: #eff0f1; }
 
-/* line 278, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
-main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
+/* line 316, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+.section .section-header:hover .section-title, .section-tabs .section-tab:hover .section-title {
   color: white; }
 
 /* Section Tabs */
-/* line 285, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 323, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tabs {
   position: fixed;
   margin-left: -396px;
@@ -579,14 +591,14 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   bottom: 0px;
   width: 200px; }
 
-/* line 300, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 340, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .size-lt-large .section-tabs {
   margin-left: -200px;
   top: 50px; }
 
-/* line 305, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 345, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tabs .section-tab {
-  width: 40px;
+  width: 33px;
   float: right;
   height: 100%;
   top: 0px;
@@ -597,12 +609,12 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   position: relative;
   display: none; }
 
-/* line 318, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 358, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tabs .section-tab:hover {
   border-right-width: 0px;
   cursor: pointer; }
 
-/* line 323, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 363, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.crimson {
   color: #981e32;
   border-right-color: #981e32;
@@ -610,14 +622,12 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   background: #981e32;
   box-shadow: inset -5px 0px 0px 0px rgba(82, 0, 14, 0.5); }
 
-/* line 331, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 371, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.crimson:hover {
   color: white;
-  background: #981e32;
-  background: #c60c30;
-  xborder-right-color: #6d1323; }
+  background: #c60c30; }
 
-/* line 338, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 376, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.yellow {
   color: #c7911b;
   border-right-color: #c7911b;
@@ -625,16 +635,16 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   background: #c7911b;
   box-shadow: inset 5px 0px 0px 0px #9e7510; }
 
-/* line 346, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 384, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.yellow {
   box-shadow: inset -5px 0px 0px 0px #9e7510; }
 
-/* line 350, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 388, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.yellow:hover {
   background: #c7911b;
   background: #ffb81c; }
 
-/* line 355, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 393, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.blue {
   color: #4f868e;
   border-right-color: #4f868e;
@@ -642,17 +652,17 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   color: white;
   box-shadow: inset 5px 0px 0px 0px #3f6b72; }
 
-/* line 363, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 401, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.blue:hover {
   color: white;
   background: #4f868e;
   background: #00a5bd; }
 
-/* line 369, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 407, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.blue {
   box-shadow: inset -5px 0px 0px 0px #3f6b72; }
 
-/* line 373, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 411, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.green {
   color: #8f7e35;
   border-right-color: #8f7e35;
@@ -660,13 +670,13 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   background: #8f7e35;
   box-shadow: inset -5px 0px 0px 0px rgba(86, 76, 32, 0.5); }
 
-/* line 381, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 419, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.green:hover {
   color: white;
   background: #8f7e35;
   background: #ada400; }
 
-/* line 387, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 425, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.orange {
   color: #b67233;
   border-right-color: #b67233;
@@ -674,19 +684,18 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   background: #b67233;
   box-shadow: inset -5px 0px 0px 0px rgba(109, 68, 31, 0.5); }
 
-/* line 395, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 433, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab.orange:hover {
   color: white;
   background: #b67233;
   background: #f6861f; }
 
-/* line 401, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 439, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tabs .section-header {
   display: block; }
 
-/* line 405, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
+/* line 443, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sections.scss */
 .section-tab .section-title {
-  padding-top: 4px;
   display: block; }
 
 /* Sections */
@@ -703,7 +712,7 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   display: none; }
 
 /* line 14, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section aside:before, .size-lt-xlarge .section.crimson .section-header:before {
+.section-side:before, .size-large .main-body .section.crimson .section-header:before {
   content: "news";
   font-size: 8em;
   line-height: 1em;
@@ -714,91 +723,81 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bold;
-  z-index: 100; }
+  z-index: 100;
+  text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25); }
 
-/* line 27, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 28, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson .section-header:before {
   color: #981e32; }
 
 /* line 32, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section aside .recent, .section aside .popular {
-  overflow: visible; }
-
-/* line 36, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section aside .recent header, .section aside .popular header {
-  padding-bottom: 5px !important; }
-
-/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section aside .recent li, .section aside .popular li {
-  border-top: 1px rgba(0, 0, 0, 0.2) solid;
-  padding-top: 3px;
-  padding-bottom: 5px !important; }
-
-/* line 46, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section-side {
   padding: 15px 0 0 1rem; }
+  /* line 37, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .recent, .section-side .popular {
+    overflow: visible; }
+  /* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .recent header, .section-side .popular header {
+    padding-bottom: 5px !important; }
+  /* line 47, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .recent li, .section-side .popular li {
+    border-top: 1px rgba(0, 0, 0, 0.2) solid;
+    padding-top: 3px;
+    padding-bottom: 5px !important; }
+  /* line 53, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side ul {
+    padding: 0 0 25px 0;
+    max-width: 100%; }
+  /* line 59, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side ul ul {
+    padding: 0; }
+  /* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side ul ~ ul {
+    padding-top: 0px; }
+  /* line 67, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .ul {
+    padding: 0;
+    margin: 0; }
+  /* line 72, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side li {
+    list-style: none; }
+  /* line 77, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .menu li, .section-side ul header {
+    list-style: none;
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1em;
+    color: white;
+    padding: 0;
+    margin: 0; }
+  /* line 87, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .menu li a {
+    color: white;
+    display: inline-block;
+    padding: 5px 0; }
+  /* line 93, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side .menu li a:hover {
+    padding: 7px 4px;
+    margin: -2px -4px; }
+  /* line 98, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side header {
+    font-family: "Open Sans Condensed";
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    color: #dddddd; }
+  /* line 107, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side header ~ ul {
+    margin-top: 0; }
+  /* line 111, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+  .section-side ul:not(.menu) li {
+    font-size: .9rem;
+    line-height: 1em;
+    font-weight: normal;
+    padding-top: .3rem; }
 
-/* line 49, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side ul {
-  padding: 25px 0;
-  max-width: 100%; }
-
-/* line 54, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side ul ul {
-  padding: 0; }
-
-/* line 57, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side ul ~ ul {
-  padding-top: 0px; }
-
-/* line 61, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side ul {
-  padding: 0;
-  margin: 0; }
-
-/* line 65, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side li {
-  list-style: none; }
-
-/* line 70, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side .menu li, .section-side ul header {
-  list-style: none;
-  font-size: 1.4em;
-  font-weight: 300;
-  line-height: 1em;
-  color: white;
-  padding: 0;
-  margin: 0; }
-
-/* line 79, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side .menu li a {
-  color: white;
-  display: inline-block;
-  padding: 5px 0; }
-
-/* line 85, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side .menu li a:hover {
-  padding: 7px 4px;
-  margin: -2px -4px; }
-
-/* line 89, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side header {
-  font-family: "Open Sans Condensed";
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1rem;
-  display: block;
-  color: #dddddd;
-  margin-top: 20px; }
-
-/* line 98, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
-.section-side ul:not(.menu) li {
-  font-size: .9rem;
-  line-height: 1em;
-  font-weight: normal;
-  padding-top: .3rem; }
-
-/* line 105, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 120, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section .section-side ul:not(.menu) li a:before {
   content: "";
   width: 8px;
@@ -809,83 +808,83 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   color: white;
   background: white; }
 
-/* line 118, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 133, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .crimson .section-side li a {
   color: #d7dadb; }
 
-/* line 121, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 136, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .crimson .section-side li a:hover {
   color: white; }
 
-/* line 126, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 141, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson aside ul li a, .section.crimson aside ul header {
   color: #b5babe; }
 
-/* line 130, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 145, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson aside .menu li a:hover {
   color: white;
   background: #6b1523; }
 
-/* line 135, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 150, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson aside {
   background: #981e32; }
 
-/* line 138, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 153, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson aside:before {
   color: #981e32; }
 
-/* line 141, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 156, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson aside hr {
   background: #6b1523;
   display: none; }
 
-/* line 145, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 160, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson aside header {
   color: #6b1523; }
 
-/* line 148, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 163, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.crimson .section-side ul:not(.menu) li a:before {
   background-color: #6b1523; }
 
-/* line 153, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 168, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside {
   background: #c69214; }
 
-/* line 156, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 171, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside:before {
   color: #c69214; }
 
-/* line 159, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 174, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside:before {
-  content: "Locales"; }
+  content: "Local"; }
 
-/* line 162, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 177, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside li a {
   color: #e5cd93;
   display: inline-block; }
 
-/* line 166, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 181, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside .menu li a:hover {
   color: white;
   background: #9e7510; }
 
-/* line 170, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 185, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow hr {
   background: #e5cd93; }
 
-/* line 173, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 188, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside header {
   color: #77580c; }
 
-/* line 176, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 191, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow aside header {
   color: #9e7510; }
 
-/* line 179, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 194, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.yellow .section-side ul:not(.menu) li a:before {
   background-color: #9e7510; }
 
-/* line 182, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 197, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 #menu-campuses li:nth-of-type(5):before {
   content: "";
   display: block;
@@ -896,101 +895,101 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-/* line 194, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 209, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange aside {
   background: #b67233; }
 
-/* line 197, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 212, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange aside:before {
   color: #b67233; }
 
-/* line 200, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 215, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange aside:before {
   content: "Events"; }
 
-/* line 203, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 218, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange aside li a {
   color: #f8f1eb; }
 
-/* line 206, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 221, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange aside li a:hover {
   color: white;
   background: #925b29; }
 
-/* line 210, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 225, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange aside header {
   color: #6d441f; }
 
-/* line 213, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 228, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange .section-side ul:not(.menu) li a:before {
   background-color: #6d441f;
   display: none; }
 
-/* line 217, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 232, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.orange .content-item-event-date {
   color: white;
   background-color: #925b29; }
 
-/* line 224, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 239, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.blue aside {
   background: #4f868e; }
 
-/* line 227, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 242, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.blue aside:before {
   color: #4f868e; }
 
-/* line 230, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 245, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.blue aside:before {
   content: "Press"; }
 
-/* line 237, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 252, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.blue aside li a {
   color: #edf3f4;
   display: inline-block; }
 
-/* line 241, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 256, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.blue aside li a:hover {
   color: white;
   background: #3f6b72; }
 
-/* line 247, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 262, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green aside {
   background: #8f7e35; }
 
-/* line 250, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 265, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green aside:before {
   color: #8f7e35; }
 
-/* line 253, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 268, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green aside:before {
   content: "People"; }
 
-/* line 256, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 271, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green aside li a {
   color: #f4f2eb;
   display: inline-block; }
 
-/* line 260, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 275, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green aside li a:hover {
   color: white;
   color: white;
   background: #72652a; }
 
-/* line 265, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 280, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green aside header {
   color: #564c20; }
 
-/* line 268, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 283, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .section.green .section-side ul:not(.menu) li a:before {
   background: #72652a; }
 
 /* Side Sections */
-/* line 273, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 288, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li {
   border-top: none;
   list-style: none; }
 
-/* line 277, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 292, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li a {
   font-weight: 300;
   font-size: 2rem;
@@ -999,52 +998,52 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   display: block;
   line-height: 1.2em; }
 
-/* line 285, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 300, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections ul {
   margin-top: 5px; }
 
-/* line 288, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 303, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li.crimson a {
   color: #981e32;
   border-bottom-color: #981e32; }
 
-/* line 292, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 307, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li.yellow a {
   color: #c69214;
   border-top-color: #c69214; }
 
-/* line 296, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 311, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li.blue a {
   color: #4f868e;
   border-top-color: #4f868e; }
 
-/* line 300, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 315, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li.orange a {
   color: #b67233;
   border-top-color: #b67233; }
 
-/* line 304, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 319, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li.green a {
   color: #8f7f35;
   border-top-color: #8f7f35; }
 
-/* line 308, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 323, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li li {
   xdisplay: none;
   display: inline-block; }
 
-/* line 312, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 327, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections ul ul li ~ li {
   list-style: disc; }
 
-/* line 321, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 336, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li.crimson li a, .side-sections li.yellow li a, .side-sections li.blue li a, .side-sections li.orange li a, .side-sections li.green li a, .side-sections li.green li a, aside.widget li a {
   font-size: 1rem;
   color: gray;
   border-bottom: none;
   display: block; }
 
-/* line 328, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
+/* line 343, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_sides.scss */
 .side-sections li li a:hover, aside.widget li a:hover {
   color: #981e32;
   color: #2a3033; }
@@ -1076,7 +1075,7 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
   /* line 31, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type .article-meta, .main-body .section article:first-of-type .article-byline, .main-body .section article:first-of-type .article-thumbnail {
     display: none; }
-  /* line 34, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 35, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type .article-title {
     position: relative;
     height: 300px;
@@ -1084,7 +1083,7 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
     margin: 0px -2rem;
     padding-left: 2rem;
     padding-right: 2rem; }
-    /* line 43, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+    /* line 44, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
     .main-body .section article:first-of-type .article-title h2 {
       font-family: "Open Sans", sans-serif;
       color: white;
@@ -1097,20 +1096,20 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
       padding: 0px 0px 2rem 0px;
       width: 80%;
       line-height: .9em; }
-      /* line 57, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+      /* line 58, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
       .main-body .section article:first-of-type .article-title h2 a {
         color: white;
         text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.25); }
-      /* line 62, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+      /* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
       .main-body .section article:first-of-type .article-title h2 a:hover {
         text-shadow: 5px 0px 0px black; }
-  /* line 76, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 77, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type :not(.x) hgroup.article-title h2 a {
     color: white; }
-  /* line 80, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 81, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type hgroup.article-meta.above {
     display: none; }
-  /* line 84, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 85, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type x:not(.x) hgroup.article-title h2:before {
     font-weight: bold;
     font-size: 1rem;
@@ -1128,28 +1127,24 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
     line-height: 1em;
     text-shadow: none;
     box-shadow: 1px 2px 1px #2a3033; }
-  /* line 105, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 106, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type article.category-rockdoc hgroup.article-title h2:before, .main-body .section article:first-of-type article.tag-rock-doc hgroup.article-title h2:before {
     content: "Rock Doc"; }
-  /* line 108, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 109, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type article.category-askdruniverse hgroup.article-title h2:before, .main-body .section article:first-of-type article.tag-dr-universe hgroup.article-title h2:before {
     content: "Ask Dr. Universe"; }
-  /* line 110, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 111, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type article:first-of-type figure {
     display: none; }
-  /* line 114, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 115, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type .article-summary {
     padding-top: 1rem;
     display: none; }
-  /* line 119, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+  /* line 120, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
   .main-body .section article:first-of-type + article {
     border-top: none; }
 
-/* line 129, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
-.section.crimson aside:before, .section.yellow aside:before, .section.blue aside:before, .section.orange aside:before, .section.green aside:before {
-  text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25); }
-
-/* line 134, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
+/* line 135, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_featured.scss */
 .tagged-full-feature main section:first-of-type .column.two {
   width: 100%;
   clear: both; }
@@ -1159,30 +1154,30 @@ main > .sections .section:not(.colorless):not(.opened) .rotate:hover {
 body:not(.single) .article-footer {
   display: none; }
 
-/* line 4, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 5, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .article-footer {
   clear: both; }
 
-/* line 9, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 10, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .single article, .single article header {
   background-image: none; }
 
-/* line 13, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 15, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 main div:not(.article-featured) article, main div:not(.article-featured) article header {
   background-size: 0 0; }
 
-/* line 18, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 20, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .articles {
   xmax-width: 100%;
   padding: 0 2rem;
   overflow: hidden;
   padding-bottom: 50px; }
 
-/* line 25, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 27, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .articles article:first-of-type.not-featured-image {
   margin-top: 150px; }
 
-/* line 29, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 31, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .article-title h2 {
   font-size: 1.75em;
   font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, Serif;
@@ -1195,11 +1190,11 @@ article .article-summary p {
   display: inline;
   clear: none; }
 
-/* line 43, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 44, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 article .article-byline {
   margin-bottom: 5px; }
 
-/* line 47, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 48, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 article .article-thumbnail img {
   border-bottom: 5px #2a3033 solid; }
 
@@ -1223,28 +1218,28 @@ article ~ article {
   border-top-color: #d6dada; }
 
 /* Thumbnails */
-/* line 73, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 74, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 body.single article .article-thumbnail {
   display: none; }
 
-/* line 77, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
-.article-summary img {
+/* line 79, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+.has-post-thumbnail .article-summary img, .has-post-thumbnail .article-summary figure {
   display: none; }
 
 /* Stories Meta */
-/* line 83, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 85, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 article {
   padding-top: 1rem; }
-  /* line 89, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 91, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header time::before {
     display: none; }
-  /* line 93, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 95, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header .article-meta {
     text-transform: uppercase;
     font-size: .8em;
     line-height: 1em;
     color: #8d959a; }
-  /* line 100, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 102, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header .article-meta::before {
     content: "";
     display: inline-block;
@@ -1253,27 +1248,27 @@ article {
     margin-right: 3px;
     background: #b5babe;
     background: #d7dadb; }
-  /* line 110, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 112, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header cite::before {
     text-transform: none;
     font-weight: normal;
     font-style: italic;
     content: "By ";
     font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, Serif; }
-  /* line 118, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 120, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header cite a {
     color: #8d959a; }
-  /* line 122, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 124, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header .article-meta time span {
     display: none; }
-  /* line 126, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 128, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article header .article-meta time span.default {
     display: inline-block; }
-  /* line 132, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 134, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article a.more-link {
     position: relative;
     white-space: nowrap; }
-  /* line 137, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 139, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article a.more-link:before {
     content: "";
     position: relative;
@@ -1284,7 +1279,7 @@ article {
     bottom: 10px;
     width: 3px;
     height: 3px; }
-  /* line 149, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 151, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article a.more-link:after {
     content: "Continued";
     display: inline-block;
@@ -1293,19 +1288,19 @@ article {
     color: #2a3033;
     font-weight: bold;
     padding-left: 5px; }
-  /* line 159, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 161, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article a.more-link:hover::before {
     background: #981e32;
     box-shadow: 0 6px 0 0 #981e32, 0 12px 0 0 #981e32; }
-  /* line 164, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 166, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article a.more-link:hover::after {
     color: #981e32; }
-  /* line 168, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+  /* line 170, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
   article a span.content-more-default {
     display: none; }
 
 /* Category */
-/* line 179, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 181, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .main-header sub, .category .main-header sub {
   display: inline-block;
   color: #b5babe;
@@ -1314,7 +1309,7 @@ article {
   text-transform: uppercase;
   font-size: 4rem;
   position: relative; }
-/* line 192, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 194, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .xmain-header sub:before, .category .xmain-header sub:before {
   content: "";
   display: inline-block;
@@ -1325,12 +1320,12 @@ article {
   position: absolute;
   left: 0;
   bottom: 8px; }
-/* line 208, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 210, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .size-gt-medium .main-header, .category .size-gt-medium .main-header {
   width: 99px;
   height: 100vh;
   position: fixed; }
-/* line 216, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 218, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .size-gt-medium .header-group, .category .size-gt-medium .header-group {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -1345,17 +1340,17 @@ article {
   padding-bottom: 0px;
   top: 1rem;
   left: 80px; }
-/* line 230, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 232, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .size-gt-medium .column.one, .category .size-gt-medium .column.one {
   margin-left: calc( 99px); }
-/* line 238, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 240, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive article ~ article, .category article ~ article {
   margin-top: 2rem;
   padding-top: 2rem; }
-/* line 245, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 247, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .article-byline, .category .article-byline {
   margin: .5rem 0; }
-/* line 249, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
+/* line 251, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_stories.scss */
 .archive .article-title h2, .category .article-title h2 {
   font-size: 2.5rem; }
 
@@ -1372,106 +1367,168 @@ body.single {
 .page-template-margin-right .size-gt-large .max-1188 .column.one {
   width: 792px; }
 
-/* line 14, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-blockquote p:last-of-type {
-  padding-bottom: 0; }
+/* line 18, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.size-gt-small .story .section-tabs {
+  display: none !important; }
+/* line 23, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.size-gt-small .story .main-body, .size-gt-small .story .main-footer {
+  width: auto; }
+/* line 29, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.size-gt-small .story .main-header {
+  height: 100vh;
+  width: 99px;
+  position: fixed;
+  background: #981e32;
+  display: block;
+  overflow: hidden; }
+  /* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .size-gt-small .story .main-header .header-group {
+    bottom: auto;
+    left: auto;
+    max-width: auto;
+    position: relative;
+    padding: 0px;
+    padding: 17px 0 0 20px;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+    xxmargin-left: 99px;
+    left: 99px;
+    width: 100vh;
+    height: 99px; }
+  /* line 60, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .size-gt-small .story .main-header sup, .size-gt-small .story .main-header sub {
+    display: inline-block;
+    position: absolute;
+    padding-right: 30px; }
+  /* line 68, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .size-gt-small .story .main-header sub {
+    display: none; }
+/* line 83, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.size-gt-small .story .main-body, .size-gt-small .story .main-footer {
+  margin-left: 99px;
+  margin-right: 60px; }
+/* line 92, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.size-gt-small .featured-image {
+  margin-left: 99px;
+  width: calc( 100% - 99px); }
+/* line 108, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.has-featured-image .size-gt-small.size-large .story .featured-image {
+  margin-left: 0px;
+  width: 100%; }
 
-/* line 17, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .article-byline {
+/* line 127, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.story .main-body .article-meta, .story .main-body .article-title {
+  margin-bottom: 1.5rem; }
+/* line 131, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.story .article-byline {
   text-transform: uppercase;
   margin-bottom: 1rem;
-  margin-top: 1.2rem;
   line-height: 1.1em; }
-
-/* line 23, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .article-byline a {
-  color: #2a3033; }
-
-/* line 26, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .article-byline a:hover {
-  color: #981e32; }
-
-/* line 29, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .article-title h1 {
-  margin-bottom: 0 !important; }
-
-/* line 33, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .article-author .affiliation {
-  text-transform: none; }
-
-/* line 36, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .article-author .affiliation:before {
-  content: "\2299";
-  content: "\25A0";
-  content: ",\00A0";
-  xmargin-right: 3px;
-  margin-left: -3px;
+  /* line 138, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .story .article-byline a {
+    color: #2a3033; }
+  /* line 142, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .story .article-byline a:hover {
+    color: #981e32; }
+  /* line 146, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .story .article-byline .article-author .affiliation {
+    text-transform: none; }
+  /* line 150, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .story .article-byline .article-author .affiliation:before {
+    content: "\2299";
+    content: "\25A0";
+    content: ",\00A0";
+    margin-left: -3px;
+    display: inline-block;
+    position: relative;
+    top: -1px; }
+/* line 162, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.story .location {
+  color: #8d959a;
+  color: black;
   display: inline-block;
-  position: relative;
-  top: -1px; }
+  margin-right: 0px;
+  font-weight: bold; }
+/* line 170, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.story .location:before {
+  content: "\E6D0";
+  font-family: "Spine-Icons";
+  line-height: 1.2em;
+  display: inline-block;
+  margin-right: 4px;
+  padding-bottom: 1px; }
+/* line 179, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.story blockquote p:last-of-type {
+  padding-bottom: 0; }
 
-/* line 52, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 185, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.spine-share-position {
+  float: right;
+  margin-right: 10px;
+  margin-top: 15px;
+  width: 40px; }
+
+/* line 191, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.spine-share.looseleaf {
+  padding: 0px;
+  margin: 0px;
+  position: fixed; }
+
+/* line 196, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.spine-share.looseleaf li {
+  list-style: none;
+  display: block;
+  padding: 0px;
+  margin: 0px; }
+
+/* line 202, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.spine-share.looseleaf li a {
+  color: #b5babe;
+  border-bottom: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  display: block; }
+
+/* line 212, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.spine-share.looseleaf li a:hover {
+  margin: 0px;
+  background-color: transparent;
+  color: #981e32 !important;
+  text-align: center; }
+
+/* line 219, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .wp-caption {
   max-width: 100%; }
 
-/* line 54, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-x.single .column.two {
-  clear: both;
-  width: 100%;
-  background: white; }
-
-/* line 63, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 222, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 body.single main {
   overflow-x: hidden; }
 
-/* line 66, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 225, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 body.single #binder {
   background: #f9f9f9; }
 
-/* line 69, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 228, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .single .article-title h1 {
-  margin-top: .5em;
-  margin-bottom: .5em;
   border-bottom: 5px #b5babe solid;
   border-bottom: 5px #2a3033 solid;
   font-size: 4em;
   letter-spacing: -2px;
   line-height: .9em; }
 
-/* line 84, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .byline {
-  display: block;
-  xbackground: #b5babe;
-  padding: 2px 4px; }
-
-/* line 90, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .location {
-  color: #8d959a;
-  color: black;
-  display: inline-block;
-  margin-right: 0px;
-  font-weight: bold; }
-
-/* line 98, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single .location:after {
-  content: "\033E";
-  content: "\223F";
-  content: "\0C02";
-  content: "\2316";
-  content: "\301C";
-  /* Wave Dash */
-  content: "\224B";
-  /* Triple Tilde */
-  display: inline-block;
-  margin-left: 4px;
-  margin-bottom: 1px; }
-
-/* line 110, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 236, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .single main {
   position: relative; }
 
-/* line 114, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single.has-featured-image .main-header {
+/* line 240, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+x.single.has-featured-image .main-header {
   position: absolute;
   top: 200px;
   z-index: 100;
@@ -1482,72 +1539,68 @@ body.single #binder {
   background: transparent;
   box-sizing: border-box; }
 
-/* line 126, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.single.has-featured-image .main-header .header-group {
+/* line 252, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+x.single.has-featured-image .main-header .header-group {
   bottom: 0;
   height: auto;
   padding: .25rem .25rem .25rem 4rem;
   background: #981e32; }
 
-/* line 134, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 260, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .single.categorized-events-and-exhibit:not(.has-featured-image) .main-header:before, .single.categorized-events-and-exhibit .featured-image:before {
   content: "Press"; }
 
-/* line 138, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 264, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .single .column.two ul {
   padding: 0px; }
 
 /* Main Footer */
-/* line 144, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 270, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .pager.prevnext {
   margin: 1rem 0;
   border-top: 5px #d7dadb dotted; }
+  /* line 276, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .pager.prevnext .column.one {
+    border-right: 5px #d7dadb solid;
+    text-align: right; }
+  /* line 282, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .pager.prevnext a[rel="next"]:before, .pager.prevnext a[rel="prev"]:before {
+    display: block;
+    font-weight: bold;
+    color: black; }
+  /* line 288, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .pager.prevnext a[rel="prev"]:before {
+    content: "Previous: "; }
+  /* line 292, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+  .pager.prevnext a[rel="next"]:before {
+    content: "Next: "; }
 
-/* line 150, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.pager.prevnext .column.one {
-  border-right: 5px #d7dadb solid;
-  text-align: right; }
-
-/* line 162, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.pager.prevnext a[rel="next"]:before, .pager.prevnext a[rel="prev"]:before {
-  display: block;
-  font-weight: bold;
-  color: black; }
-
-/* line 168, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.pager.prevnext a[rel="prev"]:before {
-  content: "Previous: "; }
-
-/* line 172, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.pager.prevnext a[rel="next"]:before {
-  content: "Next: "; }
-
-/* line 177, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 299, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .pager .column.one, .main-footer .pager .column.two {
   padding-top: .5em;
   padding-bottom: .5em; }
 
 /* Footer Sections */
-/* line 184, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 306, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .sections {
-  padding: 0 0 0 4rem; }
+  padding: 0 0 0 2rem; }
 
-/* line 188, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 310, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section {
   position: relative;
   clear: both;
   width: 100% !important;
   background: transparent; }
 
-/* line 201, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 323, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .articles-continued {
   margin-top: 0px; }
 
-/* line 205, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.main-footer .articles-continued > header:first-child {
+/* line 327, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+.main-footer .headlines {
   display: none; }
 
-/* line 209, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 331, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .section-header {
   height: auto;
   width: calc( 100% - 4rem);
@@ -1557,41 +1610,37 @@ body.single #binder {
   right: auto;
   height: 0px; }
 
-/* line 219, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 341, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer:not(.x) .section .section-header:hover {
   cursor: auto;
   background: transparent; }
 
-/* line 224, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
-.size-lt-xlarge .section.crimson .section-header::before {
-  content: ""; }
-
-/* line 229, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 347, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer:not(.x) .section.crimson .section-header, .main-footer:not(.x) .section.crimson .section-header:hover {
   color: #981e32;
   border-top: 5px #981e32 solid; }
 
-/* line 235, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 353, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer:not(.x) .section.yellow .section-header, .main-footer:not(.x) .section.yellow .section-header:hover {
   color: #c69214;
   border-top: 5px #c69214 solid; }
 
-/* line 241, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 359, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer:not(.x) .section.blue .section-header, .main-footer:not(.x) .section.blue .section-header:hover {
   color: #4f868e;
   border-top: 5px #4f868e solid; }
 
-/* line 247, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 365, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer:not(.x) .section.orange .section-header, .main-footer:not(.x) .section.orange .section-header:hover {
   color: #b67233;
   border-top: 5px #b67233 solid; }
 
-/* line 253, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 371, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer:not(.x) .section.green .section-header, .main-footer:not(.x) .section.green .section-header:hover {
   color: #8f7e35;
   border-top: 5px #8f7e35 solid; }
 
-/* line 258, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 376, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .section-header .section-title {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -1607,103 +1656,65 @@ body.single #binder {
   padding-left: 1.1rem;
   position: absolute; }
 
-/* line 270, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 388, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .enclosure .articles {
   padding-top: .25rem;
   padding-bottom: 1rem; }
 
-/* line 275, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 393, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .enclosure .articles article {
   padding-top: .25rem;
   padding-bottom: .25rem;
   border-top: none;
   border-bottom: 5px #d6dada solid; }
 
-/* line 282, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 400, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .enclosure .column.one {
   padding-left: 4rem;
   padding-right: 4rem; }
 
-/* line 288, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 406, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .article-header .article-meta, .main-footer .section .article-header .article-byline {
   display: none; }
 
-/* line 292, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 410, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section:not(.crimson) article:nth-of-type(3) ~ article {
   display: none; }
 
-/* line 296, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 414, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section.crimson article:nth-of-type(5) ~ article {
   display: none; }
 
-/* line 300, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 418, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section.crimson article:nth-of-type(5) {
   border-bottom: none; }
 
-/* line 304, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 422, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .article-title {
   margin-right: 0px; }
 
-/* line 308, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 426, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .article-title h2 {
   font-size: 1rem;
   letter-spacing: 0;
   text-shadow: none; }
 
-/* line 316, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 434, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .article-summary, .main-footer .section .article-body, .main-footer .section .article-footer {
   display: none; }
 
-/* line 319, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 437, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section-link {
   text-transform: uppercase;
   padding-top: 7px;
   display: block;
   font-size: .8em; }
 
-/* line 326, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
+/* line 444, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
 .main-footer .section .column {
   min-height: 1px !important; }
 
 /* Sharing */
-/* line 3, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_meta.scss */
-.spine-share-position {
-  float: right;
-  margin-right: 10px;
-  margin-top: 15px;
-  width: 40px; }
-
-/* line 9, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_meta.scss */
-.spine-share.looseleaf {
-  padding: 0px;
-  margin: 0px;
-  position: fixed; }
-
-/* line 14, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_meta.scss */
-.spine-share.looseleaf li {
-  list-style: none;
-  display: block;
-  padding: 0px;
-  margin: 0px; }
-
-/* line 20, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_meta.scss */
-.spine-share.looseleaf li a {
-  color: #b5babe;
-  border-bottom: none;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  font-size: 1.5em;
-  line-height: 1.4em;
-  display: block; }
-
-/* line 30, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_meta.scss */
-.spine-share.looseleaf li a:hover {
-  margin: 0px;
-  background-color: transparent;
-  color: #981e32 !important;
-  text-align: center; }
-
 /* Photo */
 /* line 5, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/sections/_photo.scss */
 .sections .photo {
@@ -1905,17 +1916,21 @@ body.single #binder {
   text-transform: uppercase; }
 
 /* Events */
-/* line 2, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 1, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+.today-tomorrow {
+  margin-bottom: 2rem; }
+
+/* line 6, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dt.today, .today-tomorrow dt.tomorrow {
   float: left; }
 
-/* line 7, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 11, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl, .today-tomorrow dt, .today-tomorrow dd {
   padding: 0;
   box-sizing: border-box; }
 
-/* line 13, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
-.today-tomorrow dt.today, .today-tomorrow dt.tomorrow, .articles-continued > header {
+/* line 17, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+.today-tomorrow dt.today, .today-tomorrow dt.tomorrow, header.headlines {
   color: #d6dada;
   color: #5e6a71;
   padding-bottom: 5px;
@@ -1925,19 +1940,19 @@ body.single #binder {
   font-size: 2rem;
   display: block; }
 
-/* line 23, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 28, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dt.tomorrow {
   color: #d6dada;
   xborder-left: 5px #d6dada solid;
   padding-left: 5px;
   xdisplay: none; }
 
-/* line 29, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 34, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dt.tomorrow:hover {
   color: #626a71;
   cursor: pointer; }
 
-/* line 33, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 38, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event {
   xbackground-color: #d6dada;
   margin-bottom: 5px;
@@ -1946,11 +1961,11 @@ body.single #binder {
   padding-top: 10px;
   padding-bottom: 5px; }
 
-/* line 43, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 48, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl dt, .today-tomorrow dl dd {
   display: block; }
 
-/* line 46, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 51, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1958,11 +1973,11 @@ body.single #binder {
   display: -webkit-flex;
   line-height: 1em; }
 
-/* line 52, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 57, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event dt, .today-tomorrow dl.event dd {
   xdisplay: flex; }
 
-/* line 55, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 60, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event dt {
   -webkit-order: 2;
   -webkit-flex: 1;
@@ -1970,20 +1985,20 @@ body.single #binder {
   -webkit-box-flex: 1;
           flex: 1; }
 
-/* line 62, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 67, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event dd {
   width: 110px;
   -webkit-order: 1; }
 
-/* line 67, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 72, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event:nth-of-type(even) dt {
   -webkit-order: 1; }
 
-/* line 71, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 76, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event:nth-of-type(even) dd {
   -webkit-order: 2; }
 
-/* line 75, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 80, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl.event time {
   xposition: absolute;
   xleft: 0px;
@@ -1993,23 +2008,23 @@ body.single #binder {
   /* Gray Lighter */
   position: relative; }
 
-/* line 84, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 89, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow a:hover dl.event time {
   color: #8d959a;
   /* Gray Light */
   color: #5e6a71;
   /* Gray */ }
 
-/* line 89, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 94, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl dd time .hour {
   font-size: 3rem;
   line-height: 1em; }
 
-/* line 94, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 99, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl dd time .hour {
   text-transform: uppercase; }
 
-/* line 98, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 103, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .meridiem {
   display: none;
   position: absolute;
@@ -2025,22 +2040,22 @@ body.single #binder {
   padding: 2px;
   line-height: 1em; }
 
-/* line 114, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 119, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow a {
   color: #626a71;
   display: block;
   clear: both; }
 
-/* line 120, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 125, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow a:hover .event-title {
   color: #981e32; }
 
-/* line 124, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 129, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow .event-title {
   padding: 4px 0px;
   display: block; }
 
-/* line 129, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 134, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow dl dt address {
   text-transform: uppercase;
   font-size: .8em;
@@ -2051,7 +2066,7 @@ body.single #binder {
   display: block;
   xpadding: 5px 0px; }
 
-/* line 139, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
+/* line 144, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_events.scss */
 .today-tomorrow a:hover dt address {
   color: #5e6a71; }
 
@@ -2080,16 +2095,16 @@ a:hover .series {
 .size-gt-large x.section.crimson .row.margin-right .column.one {
   width: 100%; }
 
-/* line 19, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_large.scss */
+/* line 21, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_large.scss */
 .size-lt-xlarge.size-gt-medium .sections .section.crimson .row.margin-right .column.one {
   width: 100% !important; }
 
-/* line 27, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_large.scss */
+/* line 29, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_large.scss */
 .size-lt-xlarge .section-tab {
   width: 10px;
   overflow: hidden;
   box-shadow: none; }
-/* line 32, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_large.scss */
+/* line 34, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_large.scss */
 .size-lt-xlarge .section-tab .section-title {
   display: none; }
 
@@ -2157,7 +2172,7 @@ a:hover .series {
 .size-lt-large body:not(.single) .hybrid .row.margin-right .column.one {
   width: 100%; }
 /* line 37, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_medium.scss */
-.size-lt-large .hybrid .row.margin-right .row.margin-right .column.one {
+.size-lt-large x.hybrid .row.margin-right .row.margin-right .column.one {
   width: 75%; }
 
 /* line 44, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_medium.scss */
@@ -2165,53 +2180,82 @@ body[class*="verso-"] .size-lt-large #binder {
   margin-left: 40px; }
 
 /* line 4, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section .enclosure.margin-right .column.one, .size-lt-medium .section .enclosure.margin-right .column.two {
+  width: 100%; }
+/* line 10, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section-header {
+  position: static;
+  left: auto;
+  width: 100%;
+  height: auto;
+  cursor: default !important; }
+/* line 20, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section-header .section-title {
+  height: auto;
+  font-family: "Open Sans Condensed";
+  font-weight: bold;
+  font-size: 4rem;
+  padding-left: 2rem; }
+/* line 30, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .sections .section {
   width: 100%;
   position: relative;
   clear: both; }
-/* line 10, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
-.fluid .size-lt-medium .sections section {
-  width: 100%; }
-/* line 19, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 38, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section.crimson .section-header .rotate {
+  color: #981e32; }
+/* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section.yellow .section-header .rotate {
+  color: #c69214; }
+/* line 40, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section.blue .section-header .rotate {
+  color: #4f868e; }
+/* line 41, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section.orange .section-header .rotate {
+  color: #b67233; }
+/* line 42, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+.size-lt-medium .section.green .section-header .rotate {
+  color: #8f7e35; }
+/* line 49, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium section aside, .size-lt-medium .article-summary, .size-lt-medium .article-footer, .size-lt-medium article .source, .size-lt-medium .article-byline, .size-lt-medium article .article-thumbnail {
   display: none !important; }
-/* line 24, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 54, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .story .column.one, .size-lt-medium .story .column.one {
   padding-left: 2em; }
-/* line 28, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 58, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .section aside:before {
   display: none; }
-/* line 32, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 62, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .section-side .section-title {
   font-size: 8rem;
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bold; }
-/* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 69, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .section-side .section-header {
   padding-left: 1.8rem; }
-/* line 43, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 73, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .news-section {
   padding-bottom: 2rem; }
-/* line 47, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 77, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium section article:nth-of-type(4) ~ article {
   display: none !important; }
-/* line 51, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 81, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium section .articles {
   padding-top: 0px; }
-/* line 56, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 86, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .article-featured article header, .size-lt-medium .article-featured hgroup.article-title {
   height: 300px; }
-/* line 60, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 90, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .article-featured hgroup.article-title h2 {
   width: 100%; }
-/* line 64, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 94, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium body[class*="verso-"] .size-lt-large #binder {
   margin-left: 40px; }
-/* line 68, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 98, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .main-footer .sections {
   padding-left: 2rem; }
-/* line 73, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
+/* line 103, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/layouts/_small.scss */
 .size-lt-medium .main-footer .row.gutter .column.one, .size-lt-medium .main-footer .row.gutter .column.two {
   padding-left: 2rem;
   padding-right: 2rem; }
