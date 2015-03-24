@@ -1,5 +1,5 @@
 <?php //echo do_shortcode( '[wsuwp_events host="calendar.wsu.edu" count=5]' ); ?>
-<a href="http://calendar.wsu.edu">All Events</a>
+<!--<a href="http://calendar.wsu.edu">All Events</a>-->
 
 <div id="" class="today-tomorrow">
 		 
