@@ -24,17 +24,21 @@ if ( spine_has_background_image() ) {
 	
 ?>
 
-<div class="main-body row margin-right">
+<div class="main-body">
 
-	<div class="column one padded-left padded-top">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'articles/post', get_post_type() ) ?>
-
-		<?php endwhile; ?>
-
-	</div><!--/column-->
+	<div class="row margin-right">
+	
+		<div class="column one padded-left padded-top">
+	
+			<?php while ( have_posts() ) : the_post(); ?>
+	
+				<?php get_template_part( 'articles/post', get_post_type() ) ?>
+	
+			<?php endwhile; ?>
+	
+		</div><!--/column-->
+	
+	</div>
 
 </div>
 
