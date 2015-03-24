@@ -32,7 +32,19 @@
 		width: 100%;
 		position: relative;
 		clear: both;
+		left: 0 !important;
 	
+	}
+	
+	.section-tabs {
+		
+		display: none;
+		
+	}
+	
+	.sections:not(#x) > .column.two,
+	.sections:not(#x) > .column.two {
+		min-height: 1px !important;
 	}
 	
 	.section.crimson .section-header .rotate { color: $crimson; }
