@@ -61,6 +61,9 @@ $authors: (
 	
 	a[href*="#{$username}"]:after {
 		content: "#{$author}";
+		color: $gray-darker;
+		font-weight: normal;
+		text-transform: none;
 		
 	}
 }

@@ -1426,23 +1426,38 @@ body:not(.single) .category-wsu-in-the-media .article-title {
 /* Authors */
 /* line 61, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="cynking"]:after {
-  content: ", WSU News"; }
+  content: ", WSU News";
+  color: #2a3033;
+  font-weight: normal;
+  text-transform: none; }
 
 /* line 61, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="rstrenge"]:after {
-  content: ", WSU News"; }
+  content: ", WSU News";
+  color: #2a3033;
+  font-weight: normal;
+  text-transform: none; }
 
 /* line 61, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="jcvd"]:after {
-  content: ", WSU News"; }
+  content: ", WSU News";
+  color: #2a3033;
+  font-weight: normal;
+  text-transform: none; }
 
 /* line 61, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="letizia"]:after {
-  content: ", WSU Libraries"; }
+  content: ", WSU Libraries";
+  color: #2a3033;
+  font-weight: normal;
+  text-transform: none; }
 
 /* line 61, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
 a[href*="eric-sorensen"]:after {
-  content: ", Science Writer, Washington State University"; }
+  content: ", Science Writer, Washington State University";
+  color: #2a3033;
+  font-weight: normal;
+  text-transform: none; }
 
 /* Story - Single */
 /* line 1, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_story.scss */
