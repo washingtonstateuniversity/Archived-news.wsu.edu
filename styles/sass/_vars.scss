@@ -4,6 +4,10 @@
 	font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, Serif;
 	}
 	
+@mixin condensed {
+	font-family: "Open Sans Condensed", "Open Sans", "Lucida Grande", sans-serif;
+	}
+	
 @mixin header-type {
 	font-weight: 300;
 	font-size: 2rem;
