@@ -11,7 +11,8 @@
 		
 	aside,
 	.aside,
-	.pullquote {
+	.pullquote,
+	figure.alignright {
 		
 		border-left: 5px #2a3033 solid;
 		padding: 0 0 0 1rem;
@@ -19,6 +20,17 @@
 		width: 50%;
 		box-sizing: border-box;
 		//background: green;
+		
+	}
+	
+	figure.alignleft {
+		
+		border-top: 5px #2a3033 solid;
+		border-bottom: 5px #2a3033 solid;
+		padding: 1rem 0;
+		margin: 0 1em 0 0em;
+		width: 50%;
+		box-sizing: border-box;
 		
 	}
 		
@@ -36,7 +48,8 @@
 	
 	aside,
 	.aside,
-	.pullquote {
+	.pullquote,
+	figure.alignright {
 		
 		margin: 0 0 1em 1em;
 		xmargin-right: -198px;
