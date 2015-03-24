@@ -5,30 +5,27 @@
 	#binder main {
 		margin: 0 0;
 		width: 100%;
-		xpadding-left: 10px;
-		}
-	x#binder main {
-		margin-left: 50px;
-		}
-
-.side-section {
-	font-size: 12px;
 	}
-	
-x.sections .section {
-	width: 100%;
-	position: relative;
-	clear: both;
+		
+	.single & .main-header {
+		padding-top: 60px !important;
+	}
+
+	.side-section {
+		font-size: 12px;
+	}
+		
+	x.sections .section {
+		width: 100%;
+		position: relative;
+		clear: both;
 	}
 		
 	#binder main {
-	margin-left: 0px;
+		margin-left: 0px;
 	}
 	
-	.sections:not(#x) > .column.two,
-	.sections:not(#x) > .column.two {
-		min-height: 1px !important;
-	}
+	
 	
 	body:not(.single) .hybrid .row.margin-right .column.one {
 		width: 100%;
@@ -40,7 +37,7 @@ x.sections .section {
 
 }
 
-
-body[class*="verso-"] .size-lt-large #binder {
-	margin-left: 40px;
-	}
+	body[class*="verso-"] .size-medium #binder {
+		margin-left: 33px;
+		}
+	
