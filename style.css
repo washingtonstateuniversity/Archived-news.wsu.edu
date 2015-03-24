@@ -1400,23 +1400,23 @@ body.single article .article-thumbnail {
   height: auto; }
 
 /* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-rock-doc .article-header .article-meta::before, .single.categorized-rock-doc .article-header .article-meta::before {
+article.category-rock-doc .article-header .article-meta::before, article.tag-rock-doc .article-header .article-meta::before, .single.categorized-rock-doc .article-header .article-meta::before, .single.tagged-rock-doc .article-header .article-meta::before {
   content: "Rock Doc"; }
 
 /* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-perspectives .article-header .article-meta::before, .single.categorized-perspectives .article-header .article-meta::before {
+article.category-perspectives .article-header .article-meta::before, article.tag-perspectives .article-header .article-meta::before, .single.categorized-perspectives .article-header .article-meta::before, .single.tagged-perspectives .article-header .article-meta::before {
   content: "Perspectives"; }
 
 /* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-dr-universe .article-header .article-meta::before, .single.categorized-dr-universe .article-header .article-meta::before {
+article.category-dr-universe .article-header .article-meta::before, article.tag-dr-universe .article-header .article-meta::before, .single.categorized-dr-universe .article-header .article-meta::before, .single.tagged-dr-universe .article-header .article-meta::before {
   content: "Ask Dr. Universe"; }
 
 /* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-wsu-in-the-media .article-header .article-meta::before, .single.categorized-wsu-in-the-media .article-header .article-meta::before {
+article.category-wsu-in-the-media .article-header .article-meta::before, article.tag-wsu-in-the-media .article-header .article-meta::before, .single.categorized-wsu-in-the-media .article-header .article-meta::before, .single.tagged-wsu-in-the-media .article-header .article-meta::before {
   content: "In the Media"; }
 
 /* line 39, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */
-article.category-wsu-press-releases .article-header .article-meta::before, .single.categorized-wsu-press-releases .article-header .article-meta::before {
+article.category-wsu-press-releases .article-header .article-meta::before, article.tag-wsu-press-releases .article-header .article-meta::before, .single.categorized-wsu-press-releases .article-header .article-meta::before, .single.tagged-wsu-press-releases .article-header .article-meta::before {
   content: "Press Release"; }
 
 /* line 44, /Users/natejacobson/Web/platform/www/wp-content/themes/wsu-news/styles/sass/_columns.scss */

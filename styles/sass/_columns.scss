@@ -37,7 +37,9 @@ $columns: (
 	
 @each $slug, $column in $columns {
 	article.category-#{$slug} .article-header .article-meta::before,
-	.single.categorized-#{$slug} .article-header .article-meta::before {
+	article.tag-#{$slug} .article-header .article-meta::before,
+	.single.categorized-#{$slug} .article-header .article-meta::before,
+	.single.tagged-#{$slug} .article-header .article-meta::before {
     	content: "#{$column}";
     }
 }
