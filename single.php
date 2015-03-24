@@ -9,7 +9,7 @@ if ( spine_has_background_image() ) {
 }
 ?>
 
-<main>
+<main class="story fluid">
 
 <?php get_template_part('parts/headers');
 
@@ -24,9 +24,9 @@ if ( spine_has_background_image() ) {
 	
 ?>
 
-<div class="main-body story row margin-right pad wide">
+<div class="main-body row margin-right">
 
-	<div class="column one">
+	<div class="column one padded-left padded-top">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -38,7 +38,7 @@ if ( spine_has_background_image() ) {
 
 </div>
 
-<footer class="main-footer fluid">
+<footer class="main-footer">
 		
 	<section class="row halves pager prevnext gutter pad-ends">
 		<div class="column one">
