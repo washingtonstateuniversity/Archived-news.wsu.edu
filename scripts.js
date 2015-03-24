@@ -155,6 +155,8 @@
 	
 			//var disclosed = $(".news-section.opened").attr("data-sec");
 			//flipLeft(disclosed + 1);
+			var alert;
+			alert("swipeleft");
 			
 		});
 		
