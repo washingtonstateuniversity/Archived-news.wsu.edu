@@ -1,12 +1,22 @@
-body.single,
-body.single #jacket {
-	background: $gray-darker;
-	}
+.single {
 
-body.single {
 	background: white !important;
+	
+	#jacket {
+		background: $gray-darker;
 	}
 	
+	main {
+		overflow-x: hidden;
+		position: relative;
+	}
+	
+	#binder {
+		background: #f9f9f9;
+	}
+	
+}
+
 .page-template-margin-right .size-gt-large .max-1188 .column.one {
 	width: 792px;
 	}
@@ -29,7 +39,7 @@ body.single {
 		.main-header {
 			
 			height: 100vh;
-			width: 99px;
+			width: 66px;
 			position: fixed;
 			background: $crimson;
 			display: block;
@@ -44,28 +54,42 @@ body.single {
 				max-width: auto;
 				position: relative;
 				padding: 0px;
-				padding: 17px 0 0 20px;
+				//padding: 17px 0 0 20px;
 				transform: rotate(90deg);
 				transform-origin: left top;
-				xxmargin-left: 99px;
-				left: 99px;
+				right: -66px;
 				width: 100vh;
-				height: 99px;
+				height: 66px;
 				
 				//border-left: 5px green solid;
 				
 			}
-					
+								
 			sup,
 			sub {
 				
-				display: inline-block;
-				position: absolute;
-				padding-right: 30px;
+				display: block;
+				//position: absolute;
+				height: 66px;
+				right: -66px;
+				margin-top: 0;
+				
+				box-sizing: border-box;
+				border: none;
+				//padding-top: 18px;
+				float: left;
 				
 			}
 			
-			sub {
+			sup {
+				
+				//background: orange;
+				padding-right: 10px;
+				
+				
+			}
+			
+			sub span {
 				
 				display: none;
 				
@@ -82,7 +106,7 @@ body.single {
 		.main-body,
 		.main-footer {
 			
-			margin-left: 99px;
+			margin-left: 66px;
 			margin-right: 60px;
 			
 		}
@@ -91,8 +115,8 @@ body.single {
 		
 	.featured-image {
 	
-		margin-left: 99px;
-		width: calc( 100% - 99px );
+		margin-left: 66px;
+		width: calc( 100% - 66px );
 		//background-attachment: fixed;
 	
 	}
@@ -114,22 +138,25 @@ body.single {
 		}
 		
 	}
-
-	
-	
-	
 	
 }
 
 
 .story {
 	
-	 .main-body .article-meta,
-	 .main-body .article-title {
+	.main-body .article-meta,
+	.main-body .article-title {
 		margin-bottom: 1.5rem;
-		}
+	}
 		
-	 .article-byline {
+	.main-body .article-title h1 {
+		border-bottom: 5px #2a3033 solid;
+		font-size: 4em;
+		letter-spacing: -2px;
+		line-height: .9em;
+	}
+		
+	.article-byline {
 		
 		text-transform: uppercase;
 		margin-bottom: 1rem;
@@ -149,7 +176,7 @@ body.single {
 		}
 		
 		.article-author .affiliation:before {
-			content: "\2299";
+			content: "\2266";
 			content: "\25A0";
 			content: ",\00A0";
 			margin-left: -3px;
@@ -219,25 +246,6 @@ body.single {
 
 .wp-caption { max-width: 100%; }
 
-
-body.single main {
-	overflow-x: hidden;
-	}
-body.single #binder {
-	background: #f9f9f9;
-	}
-.single .article-title h1 {
-	border-bottom: 5px #b5babe solid;
-	border-bottom: 5px #2a3033 solid;
-	font-size: 4em;
-	letter-spacing: -2px;
-	line-height: .9em;
-	}
-
-.single main {
-	position: relative;
-	}
-
 x.single.has-featured-image .main-header {
 	position: absolute;
 	top: 200px;
@@ -255,11 +263,6 @@ x.single.has-featured-image .main-header .header-group {
 	height: auto;
 	padding: .25rem .25rem .25rem 4rem;
 	background: $crimson;
-	}
-	
-.single.categorized-events-and-exhibit:not(.has-featured-image) .main-header:before,
-.single.categorized-events-and-exhibit .featured-image:before {
-	content: "Press";
 	}
 	
 .single .column.two ul {
