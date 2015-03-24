@@ -52,13 +52,24 @@ body:not(.single) .category-wsu-in-the-media .article-title {
 	
 }
 
+body.single.tagged-dr-universe .featured-image {
+	position: relative;
+	}
+
 body.single.tagged-dr-universe .featured-image::before {
 	content: "";
 	width: 396px;
-	height: 200px;
-	background-image: url('graphics/ask-dr-universe-white.png');
-	background-size: contain;
+	height: 150px;
+	background-image: url('graphics/columns/ask-dr-universe-white.svg');
+	background-size: 300px auto;
+	background-position: center;
 	background-repeat: no-repeat;
+	//background: green;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	filter: drop-shadow(-5px 0px 0px rgba(0,0,0,0.5));
 	
 }
 
