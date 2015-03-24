@@ -4,14 +4,14 @@
 	min-height: 100px;
 	height: 100%;
 	display: block;
-	
 	}
+
 .size-lt-xlarge.size-gt-medium .section.crimson aside {
 	display: none;
 	}
 	
-.section aside:before,
-.size-lt-xlarge .section.crimson .section-header:before {
+.section-side:before,
+.size-large .main-body .section.crimson .section-header:before {
 	content: "news";
 	font-size: 8em;
 	line-height: 1em;
@@ -23,84 +23,99 @@
 	font-family: "Open Sans Condensed";
 	font-weight: bold;
 	z-index: 100;
+	text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25);
 	}
 .section.crimson .section-header:before {
 	color: $crimson;
 	}
 
-.section aside .recent,
-.section aside .popular {
-	overflow: visible;
-	}
-.section aside .recent header,
-.section aside .popular header {
-	padding-bottom: 5px !important;
-	}
-.section aside .recent li,
-.section aside .popular li {
-	border-top: 1px rgba(0, 0, 0, 0.2) solid;
-	padding-top: 3px;
-	padding-bottom: 5px !important;
-	}
-	
 .section-side {
+	
 	padding: 15px 0 0 1rem;
+	
+	.recent,
+	.popular {
+		overflow: visible;
+		}
+	
+	.recent header,
+	.popular header {
+		padding-bottom: 5px !important;
+		}
+	
+	.recent li,
+	.popular li {
+		border-top: 1px rgba(0, 0, 0, 0.2) solid;
+		padding-top: 3px;
+		padding-bottom: 5px !important;
+		}
+	
+	ul {
+		padding: 0 0 25px 0;
+		max-width: 100%;
+		// overflow: hidden;
+		}
+		
+	ul ul {
+		padding: 0;
+		}
+		
+	ul ~ ul {
+		padding-top: 0px;
+		}
+		
+	.ul {
+		padding: 0;
+		margin: 0;
+		}
+		
+	li {
+		list-style: none;
+		}
+		
+	.menu li,
+	ul header {
+		list-style: none;
+		font-size: 1.4em;
+		font-weight: 300;
+		line-height: 1em;
+		color: white;
+		padding: 0;
+		margin: 0;
+		}
+		
+	.menu li a {
+		color: white;
+		display: inline-block;
+		padding: 5px 0;
+		}
+	
+	.menu li a:hover {
+		padding: 7px 4px;
+		margin: -2px -4px;
+		}
+		
+	header {
+		font-family: "Open Sans Condensed";
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 1rem;
+		display: block;
+		color: #dddddd;
+		}
+		
+	header ~ ul {
+		margin-top: 0;
 	}
-.section-side ul {
-	padding: 25px 0;
-	max-width: 100%;
-	// overflow: hidden;
-	}
-.section-side ul ul {
-	padding: 0;
-	}
-.section-side ul ~ ul {
-	padding-top: 0px;
+		
+	ul:not(.menu) li {
+		font-size: .9rem;
+		line-height: 1em;
+		font-weight: normal;
+		padding-top: .3rem;
 	}
 	
-.section-side ul {
-	padding: 0;
-	margin: 0;
-	}
-.section-side li {
-	list-style: none;
-	}
-	
-.section-side .menu li,
-.section-side ul header {
-	list-style: none;
-	font-size: 1.4em;
-	font-weight: 300;
-	line-height: 1em;
-	color: white;
-	padding: 0;
-	margin: 0;
-	}
-.section-side .menu li a {
-	color: white;
-	display: inline-block;
-	padding: 5px 0;
-	}
-
-.section-side .menu li a:hover {
-	padding: 7px 4px;
-	margin: -2px -4px;
-	}
-.section-side header {
-	font-family: "Open Sans Condensed";
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 1rem;
-	display: block;
-	color: #dddddd;
-	margin-top: 20px;
-	}
-.section-side ul:not(.menu) li {
-	font-size: .9rem;
-	line-height: 1em;
-	font-weight: normal;
-	padding-top: .3rem;
-	}
+}
 
 .section .section-side ul:not(.menu) li a:before {
 	content: "";
@@ -157,7 +172,7 @@
 	color: #c69214;
 	}
 .section.yellow aside:before {
-	content: "Locales";
+	content: "Local";
 	}
 .section.yellow aside li a {
 	color: $yellow-lighter;
