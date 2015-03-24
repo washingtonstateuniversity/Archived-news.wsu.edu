@@ -53,7 +53,7 @@
 		
 	} else {
 		
-		echo '<a href="/category/top-stories/">View all top stories</a>';
+		echo '<a href="/category/top-stories/" class="section-link">View all featured stories</a>';
 	
 	}
 	
