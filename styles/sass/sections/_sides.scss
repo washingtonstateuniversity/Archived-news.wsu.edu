@@ -90,7 +90,8 @@
 		padding: 5px 0;
 		}
 	
-	.menu li a:hover {
+	.menu li a:hover,
+	ul.menu > li.current > a {
 		padding: 7px 4px;
 		margin: -2px -4px;
 		}
@@ -206,33 +207,79 @@
 	}
 
 // Orange
-.section.orange aside {
-	background: $orange;
+
+.section.orange {
+	
+	aside {
+		background: $orange;
 	}
-.section.orange aside:before {
-	color: #b67233;
+	
+	aside:before {
+		color: #b67233;
 	}
-.section.orange aside:before {
-	content: "Events";
+	
+	aside:before {
+		content: "Events";
 	}
-.section.orange aside li a {
-	color: $orange-lightest;
+	
+	aside li a {
+		color: $orange-lightly;
 	}
-.section.orange aside li a:hover {
-	color: white;
-	background: $orange-dark;
+	
+	aside li a:hover {
+		color: white;
+		background: $orange-dark;
 	}
-.section.orange aside header {
-	color: $orange-darker;
+	
+	aside header {
+		color: $orange-darker;
 	}
-.section.orange .section-side ul:not(.menu) li a:before {
-	background-color: $orange-darker;
-	display: none;
+	
+	.section-side ul:not(.menu) li a:before {
+		background-color: $orange-darker;
+		display: none;
 	}
-.section.orange .content-item-event-date {
-	color: white;
-	background-color: $orange-dark;
+	
+	.content-item-event-date {
+		color: $orange;
+		//background-color: $orange-dark;
+		float: right;
+		width: 30px;
+		text-align: center;
+		text-align: left;
+		display: block;
+		font-weight: bold;
+		padding: 3px 0 3px 3px;
+		height: 100%;
+		color: $orange-dark;
+		border-left: 5px $orange-dark solid;
+		margin-left: 3px;
 	}
+	
+	.content-item-event-title {
+		clear: both;
+		
+		a {
+			color: $orange-lighter;
+		}
+		
+		a:hover {
+			background: transparent;
+		}
+		
+	}
+	
+	.content-item-event-meta {
+		font-size: .8em;
+		color: $orange-darker;
+	}
+	
+	.content-item-event-venue {
+		display: block;
+		
+	}
+	
+}
 
 
 // Blue
@@ -259,30 +306,42 @@
 	}
 
 // Green
-.section.green aside {
-	background: $green;
+
+.section.green {
+	
+	aside {
+		background: $green;
 	}
-.section.green aside:before {
-	color: #8f7e35;
+	
+	aside:before {
+		color: #8f7e35;
 	}
-.section.green aside:before {
-	content: "People";
+	
+	aside:before {
+		content: "People";
 	}
-.section.green aside li a {
-	color: $green-lightest;
-	display: inline-block;
+	
+	aside li a {
+		color: $green-lightly;
+		display: inline-block;
 	}
-.section.green aside li a:hover {
-	color: white;
-	color: white;
-	background: $green-dark;
+	
+	aside li a:hover,
+	aside ul.menu > li.current > a,
+	aside ul.menu li li.current > a {
+		color: white;
+		background: $green-dark;
 	}
-.section.green aside header {
-	color: $green-darker;
+	
+	aside header {
+		color: $green-darker;
 	}
-.section.green .section-side ul:not(.menu) li a:before {
-	background: $green-dark;
+	
+	.section-side ul:not(.menu) li a:before {
+		background: $green-dark;
 	}
+	
+}
 
 /* Side Sections */
 .side-sections li {

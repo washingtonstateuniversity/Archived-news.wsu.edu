@@ -93,6 +93,7 @@ body.single {
 	
 		margin-left: 99px;
 		width: calc( 100% - 99px );
+		//background-attachment: fixed;
 	
 	}
 	
@@ -303,144 +304,161 @@ x.single.has-featured-image .main-header .header-group {
 
 /* Footer Sections */
 
-.main-footer .sections {
-	padding: 0 0 0 2rem;
-	}
-
-.main-footer .section {
-	position: relative;
-	clear: both;
-	width: 100% !important;
-	background: transparent;
-	}
-
-.main-footer .section ~ section {
-	//clear: none !important;
-	//max-width: 50% !important;
-	//float: left;
-	}
-
-.main-footer .articles-continued {
-	margin-top: 0px;
-	}
-
-.main-footer .headlines {
-	display: none;
-	}
-
-.main-footer .section .section-header {
-	height: auto;
-	width: calc( 100% - 4rem);
-	position: relative;
-	background: transparent;
-	left: 0;
-	right: auto;
-	height: 0px;
-	}
-
-.main-footer:not(.x) .section .section-header:hover {
-	cursor: auto;
-	background: transparent;
-	}
-
-.main-footer:not(.x) .section.crimson .section-header,
-.main-footer:not(.x) .section.crimson .section-header:hover {
-	color: $crimson;
-	border-top: 5px $crimson solid;
+.main-footer {
+	
+	.sections {
+		padding: 0 0 0 2rem;
 	}
 	
-.main-footer:not(.x) .section.yellow .section-header,
-.main-footer:not(.x) .section.yellow .section-header:hover {
-	color: $yellow;
-	border-top: 5px $yellow solid;
+	.section {
+		position: relative;
+		clear: both;
+		width: 100% !important;
+		background: transparent;
 	}
 	
-.main-footer:not(.x) .section.blue .section-header,
-.main-footer:not(.x) .section.blue .section-header:hover {
-	color: $blue;
-	border-top: 5px $blue solid;
+	.section ~ section {
+		//clear: none !important;
+		//max-width: 50% !important;
+		//float: left;
+	}
+
+	.articles-continued {
+		margin-top: 0px;
 	}
 	
-.main-footer:not(.x) .section.orange .section-header,
-.main-footer:not(.x) .section.orange .section-header:hover {
-	color: $orange;
-	border-top: 5px $orange solid;
+	.headlines {
+		display: none;
 	}
 	
-.main-footer:not(.x) .section.green .section-header,
-.main-footer:not(.x) .section.green .section-header:hover {
-	color: $green;
-	border-top: 5px $green solid;
-	}
-
-.main-footer .section .section-header .section-title {
-	transform: rotate(90deg);
-	transform-origin: left top;
-	right: auto;
-	left: 50px;
-	top: 0;
-	font-size: 2rem;
-	font-family: "";
-	padding-left: 1.1rem;
-	position: absolute;
+	.section .section-header {
+		height: auto;
+		width: calc( 100% - 4rem);
+		position: relative;
+		background: transparent;
+		left: 0;
+		right: auto;
+		height: 0px;
 	}
 	
-.main-footer .enclosure .articles {
-	padding-top: .25rem;
-	padding-bottom: 1rem;
-	}	
+	&:not(.x) {
+		
+		.section .section-header:hover {
+			cursor: auto;
+			background: transparent;
+		}
 	
-.main-footer .enclosure .articles article {
-	padding-top: .25rem;
-	padding-bottom: .25rem;
-	border-top: none;
-	border-bottom: 5px #d6dada solid;
-	}
-
-.main-footer .enclosure .column.one {
-	padding-left: 4rem;
-	padding-right: 4rem;
-	}
-
-.main-footer .section .article-header .article-meta,
-.main-footer .section .article-header .article-byline {
-	display: none;
-	}
-
-.main-footer .section:not(.crimson) article:nth-of-type(3) ~ article {
-	display: none;
-	}
-
-.main-footer .section.crimson article:nth-of-type(5) ~ article {
-	display: none;
+		.section.crimson .section-header,
+		.section.crimson .section-header:hover {
+			color: $crimson;
+			border-top: 5px $crimson solid;
+		}
+			
+		.section.yellow .section-header,
+		.section.yellow .section-header:hover {
+			color: $yellow;
+			border-top: 5px $yellow solid;
+		}
+			
+		.section.blue .section-header,
+		.section.blue .section-header:hover {
+			color: $blue;
+			border-top: 5px $blue solid;
+		}
+			
+		.section.orange .section-header,
+		.section.orange .section-header:hover {
+			color: $orange;
+			border-top: 5px $orange solid;
+		}
+			
+		.section.green .section-header,
+		.section.green .section-header:hover {
+			color: $green;
+			border-top: 5px $green solid;
+		}
+		
 	}
 	
-.main-footer .section.crimson article:nth-of-type(5) {
-	border-bottom: none;
+	.enclosure  {
+		
+		.articles {
+			padding-top: .25rem;
+			padding-bottom: 1rem;
+		}	
+			
+		.articles article {
+			padding-top: .25rem;
+			padding-bottom: .25rem;
+			border-top: none;
+			border-bottom: 5px #d6dada solid;
+		}
+		
+		.column.one {
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+	
 	}
-
-.main-footer .section .article-title {
-	margin-right: 0px;
+	
+	.section {
+		
+		.section-header .section-title {
+			transform: rotate(90deg);
+			transform-origin: left top;
+			right: auto;
+			left: 50px;
+			top: 0;
+			font-size: 2rem;
+			font-family: "";
+			padding-left: 1.1rem;
+			position: absolute;
+		}
+		
+		.article-header .article-meta,
+		.article-header .article-byline {
+			display: none;
+		}
+		
+		&:not(.crimson) article:nth-of-type(3) ~ article {
+			display: none;
+		}
+		
+		&.crimson article:nth-of-type(5) ~ article {
+			display: none;
+		}
+			
+		&.crimson article:nth-of-type(5) {
+			border-bottom: none;
+		}
+		
+		.article-title {
+			margin-right: 0px;
+		}
+		
+		.article-title h2 {
+			font-size: 1rem;
+			letter-spacing: 0;
+			text-shadow: none;
+		}
+		
+		.article-summary,
+		.article-body,
+		.article-footer {
+			display: none;
+		}
+		
+		.section-link {
+			text-transform: uppercase;
+			padding-top: 7px;
+			display: block;
+			font-size: .8em;
+		}
+		
+		.column {
+			min-height: 1px !important;
+		}
+	
 	}
-
-.main-footer .section .article-title h2 {
-	font-size: 1rem;
-	letter-spacing: 0;
-	text-shadow: none;
-	}
-
-.main-footer .section .article-summary,
-.main-footer .section .article-body,
-.main-footer .section .article-footer {
-	display: none;
-	}
-.main-footer .section-link {
-	text-transform: uppercase;
-	padding-top: 7px;
-	display: block;
-	font-size: .8em;
-	}
-
-.main-footer .section .column {
-	min-height: 1px !important;
-	}
+	
+}
