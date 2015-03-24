@@ -15,30 +15,31 @@ main div:not(.article-featured) article,
 main div:not(.article-featured) article header {
 	background-size: 0 0;
 }
-
-
-.articles {
-	xmax-width: 100%;
-	padding: 0 2rem;
-	overflow: hidden;
-	padding-bottom: 50px;
-}
 	
 .articles article:first-of-type.not-featured-image {
 	margin-top: 150px;
 }
+
+.articles {
 	
-.article-title h2 {
-	font-size: 1.75em;
-	@include serif;
-	font-weight: normal;
-	text-shadow: 0 1px 0 #FFFFFF;
-}
+	padding: 0 2rem;
+	overflow: hidden;
+	padding-bottom: 50px;
 	
-article .article-summary p {
-	padding-bottom: 0;
-	display: inline;
-	clear: none;
+	.article-title h2 {
+		font-size: 1.75em;
+		@include serif;
+		font-weight: normal;
+		text-shadow: 0 1px 0 #FFFFFF;
+		margin-bottom: .25rem;
+	}
+	
+	.article-summary p {
+		padding-bottom: 0;
+		display: inline;
+		clear: none;
+	}
+
 }
 
 article .article-byline {
@@ -61,13 +62,16 @@ section.local .category-wsu-spokane-news:before {
 	padding: 2px 6px;
 	}
 	
-article ~ article {
-	padding-bottom: 15px;
+.main-body article {
+	padding-top: 1.5rem;
+	}
+
+.main-body article ~ article {
+	padding-bottom: 1.5rem;
 	border-top-width: 5px;
 	border-top-style: solid;
 	border-top-color: #d6dada;
 	}
-
 
 /* Thumbnails */
 
@@ -109,6 +113,10 @@ article {
 			background: #d7dadb;
 		}
 		
+		.article-meta time {
+			padding-top: 5px;
+		}
+		
 		cite::before {
 			text-transform: none;
 			font-weight: normal;
@@ -120,7 +128,7 @@ article {
 		cite a {
 			color: #8d959a;
 		}
-			
+		
 		.article-meta time span {
 			display: none;
 		}
@@ -128,12 +136,17 @@ article {
 		.article-meta time span.default {
 			display: inline-block;
 		}
+		
+		.article-byline {
+			line-height: 1.1em;
+			margin-bottom: .5rem;
+		}
 			
 	}
 	
 	.article-summary {
 		
-		line-height: 1.3em;
+		line-height: 1.5em;
 		
 	}
 	
