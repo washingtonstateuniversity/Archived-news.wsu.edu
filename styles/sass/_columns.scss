@@ -52,6 +52,16 @@ body:not(.single) .category-wsu-in-the-media .article-title {
 	
 }
 
+body.single.tagged-dr-universe .featured-image::before {
+	content: "";
+	width: 396px;
+	height: 200px;
+	background-image: url('graphics/ask-dr-universe-white.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	
+}
+
 /* Authors */
 
 $authors: (
