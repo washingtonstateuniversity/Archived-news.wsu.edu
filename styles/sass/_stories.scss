@@ -26,19 +26,7 @@ main div:not(.article-featured) article header {
 	overflow: hidden;
 	padding-bottom: 50px;
 	
-	.article-title h2 {
-		font-size: 1.75em;
-		@include serif;
-		font-weight: normal;
-		text-shadow: 0 1px 0 #FFFFFF;
-		margin-bottom: .25rem;
-	}
 	
-	.article-summary p {
-		padding-bottom: 0;
-		display: inline;
-		clear: none;
-	}
 
 }
 
@@ -86,110 +74,134 @@ body.single article .article-thumbnail {
 
 /* Stories Meta */
 
-article {
-	
-	padding-top: 1rem;
-	
-	header {
-	
-		time::before {
-			display: none;
+.main-body {
+
+	article {
+		
+		padding-top: 1rem;
+		
+		header {
+			
+			.article-meta {
+				text-transform: uppercase;
+				font-size: .8em;
+				line-height: 1em;
+				color: #8d959a;
+				margin-bottom: .75rem;
+			
+				&::before {
+					content: "";
+					display: inline-block;
+					height: 10px;
+					width: 10px;
+					margin-right: 3px;
+					background: $gray-light;
+				}
+				
+				time {
+					
+					padding-top: 5px;
+					
+					&::before {
+						display: none;
+					}
+				
+					span {
+						display: none;
+					}
+						
+					span.default {
+						display: inline-block;
+					}
+				
+				}
+			
+			}
+			
+			.article-title h2 {
+				font-size: 1.75em;
+				@include serif;
+				font-weight: normal;
+				text-shadow: 0 1px 0 #FFFFFF;
+				margin-bottom: .25rem;
+				padding-top: 0;
+			}
+						
+			cite::before {
+				text-transform: none;
+				font-weight: normal;
+				font-style: italic;
+				content: "By ";
+				@include serif;
+			}
+			
+			cite a {
+				color: #8d959a;
+			}
+			
+
+			
+			.article-byline {
+				line-height: 1.1em;
+				margin-bottom: .5rem;
+			}
+				
 		}
 		
-		.article-meta {
+		.article-summary {
+			
+			line-height: 1.5em;
+			
+			p {
+				padding-bottom: 0;
+				display: inline;
+				clear: none;
+			}
+			
+		}
+		
+		a.more-link {
+			position: relative;
+			white-space: nowrap;
+		}
+			
+		a.more-link:before {
+			content: "";
+			position: relative;
+			display: inline-block;
+			background: $gray-darker;
+			box-shadow: 0 6px 0 0 $gray-darker, 0 12px 0 0 $gray-darker;
+			left: 0px;
+			bottom: 10px;
+			width: 3px;
+			height: 3px;
+		}
+		
+		a.more-link:after {
+			content: "Continued";
+			display: inline-block;
 			text-transform: uppercase;
 			font-size: .8em;
-			line-height: 1em;
-			color: #8d959a;
-		}
-			
-		.article-meta::before {
-			content: "";
-			display: inline-block;
-			height: 10px;
-			width: 10px;
-			margin-right: 3px;
-			background: #b5babe;
-			background: #d7dadb;
+			color: $gray-darker;
+			font-weight: bold;
+			padding-left: 5px;
 		}
 		
-		.article-meta time {
-			padding-top: 5px;
+		a.more-link:hover::before {
+			background: $crimson;
+			box-shadow: 0 6px 0 0 $crimson, 0 12px 0 0 $crimson; 
 		}
 		
-		cite::before {
-			text-transform: none;
-			font-weight: normal;
-			font-style: italic;
-			content: "By ";
-			@include serif;
+		a.more-link:hover::after {
+			color: $crimson;
 		}
 		
-		cite a {
-			color: #8d959a;
-		}
-		
-		.article-meta time span {
+		a span.content-more-default {
 			display: none;
 		}
-			
-		.article-meta time span.default {
-			display: inline-block;
-		}
-		
-		.article-byline {
-			line-height: 1.1em;
-			margin-bottom: .5rem;
-		}
-			
-	}
-	
-	.article-summary {
-		
-		line-height: 1.5em;
 		
 	}
-	
-	a.more-link {
-		position: relative;
-		white-space: nowrap;
-	}
-		
-	a.more-link:before {
-		content: "";
-		position: relative;
-		display: inline-block;
-		background: $gray-darker;
-		box-shadow: 0 6px 0 0 $gray-darker, 0 12px 0 0 $gray-darker;
-		left: 0px;
-		bottom: 10px;
-		width: 3px;
-		height: 3px;
-	}
-	
-	a.more-link:after {
-		content: "Continued";
-		display: inline-block;
-		text-transform: uppercase;
-		font-size: .8em;
-		color: $gray-darker;
-		font-weight: bold;
-		padding-left: 5px;
-	}
-	
-	a.more-link:hover::before {
-		background: $crimson;
-		box-shadow: 0 6px 0 0 $crimson, 0 12px 0 0 $crimson; 
-	}
-	
-	a.more-link:hover::after {
-		color: $crimson;
-	}
-	
-	a span.content-more-default {
-		display: none;
-		}
-	
+
 }
 
 /* Category */
