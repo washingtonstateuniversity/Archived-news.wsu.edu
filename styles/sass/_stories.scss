@@ -14,11 +14,13 @@ body:not(.single) {
 	
 	}
 		
-	&.page-campuses .categorized {
+	&.page-campuses .categorized,
+	.section.yellow .categorized {
 		
 		position: absolute;
 		top: 0;
 		right: 0;
+		margin-top: -5px;
 		
 		//dd[class*="pullman"],
 		dd[class*="spokane"],
