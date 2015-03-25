@@ -57,20 +57,7 @@ section#crimson {
 
 /* Events */
 
-@import 'events';
-
-.series {
-	background-color: #626970;
-	background-color: #d7dadb;
-	color: white;
-	display: inline-block;
-	margin: -2px 0px -2px 0px;
-	padding: 2px 4px;
-	line-height: 1em;
-	}
-a:hover .series {
-	background-color: #981e32;
-	}
+@import 'sections/events';
 
 /* Layouts */
 
