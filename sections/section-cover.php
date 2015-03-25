@@ -1,5 +1,5 @@
 
-		 <header class="headlines">Headlines</header>
+		 <header class="headlines">Top Stories</header>
 	 
  <?php
 	 

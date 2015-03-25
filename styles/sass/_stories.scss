@@ -1,5 +1,10 @@
 body:not(.single) .article-footer {
-	display: none;
+	
+	.categorized,
+	.tagged {
+		display: none;
+	}
+	
 }
 
 .article-footer {

@@ -151,20 +151,16 @@
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
 			
-		$(window).on( "swipeleft", function() {
+		$("body,html").on( "swipeleft", function() {
 	
-			//var disclosed = $(".news-section.opened").attr("data-sec");
-			//flipLeft(disclosed + 1);
-			var alert;
-			alert("swipeleft");
-			
+			var disclosed = $(".news-section.opened").attr("data-sec");
+			flipLeft(disclosed + 1);
+
 		});
-		
-		
 		
 		$("body,html").on( "swiperight", function() {
 			
-			//flipRight();
+			flipRight();
 					
 		});
 		
