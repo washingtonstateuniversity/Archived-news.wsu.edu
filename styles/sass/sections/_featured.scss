@@ -9,21 +9,22 @@
 	background-size: cover;
 	margin: 0px -2rem 2rem -2rem;
 	padding: 0px;
-	height: 60vh;
+	height: 50vh;
+	position: relative;
 
 	.article-body {
 		display: none;
 		}
 	
-	header {
+	.article-header {
 		padding-left: 2rem;
 		padding-right: 2rem;
-	    height: 100%;
-	    background: linear-gradient(to bottom, transparent 0%, transparent 50%, $gray-darker 100%);
-	    //background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.50) 67%, $gray-darker 100%);
-	    //background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.50) 67%, $gray-darker 100%);
+	    background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
 	    background-size: auto !important;
 	    box-sizing: border-box;
+	    position: relative;
+	    bottom: 0;
+	    height: 100%;
 		}
 	
 	.article-meta,
@@ -34,30 +35,49 @@
 		
 	.article-title {
 		
-		position: relative;
-		height: 300px;
-		height: 60vh;
-		margin: 0px -2rem;
-		padding-left: 2rem;
-		padding-right: 2rem;
+		
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		
+		&::after {
+			content: "Continued";
+			color: white;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.75);
+			background: black;
+			@include condensed;
+			text-transform: uppercase;
+			font-weight: bold;
+			padding: 5px 10px;
+		}
+		
+		&:hover::after {
+			background: $crimson-dark;
+		}
 		
 		h2 {
-		font-family: "Open Sans", sans-serif;
-		color: white;
-		position: absolute;
-		bottom: 0px;
-		padding-bottom: 1rem;
-		text-transform: uppercase;
-		font-weight: normal;
-		font-size: 3em;
-		padding: 0px 0px 2rem 0px;
-		width: 80%;
-		line-height: .9em;
+			
+			font-family: "Open Sans", sans-serif;
+			color: white;
+			padding-bottom: 1rem;
+			text-transform: uppercase;
+			font-weight: normal;
+			font-size: 3em;
+			padding: 0;
+			line-height: .9em;
 	
 	
 		a {
 			color: white;
 			text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.25);
+			padding-left: 2rem;
+			padding-right: 20%;
+			padding-bottom: 2rem;
+			display: block;
 		}
 		
 		a:hover {

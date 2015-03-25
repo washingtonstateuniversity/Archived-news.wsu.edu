@@ -160,9 +160,14 @@
 	}
 .section.crimson aside header {
 	color: $crimson-dark;
+	color: $gray-lightly;
 	}
-.section.crimson .section-side ul:not(.menu) li a:before {
+.section.crimson .section-side ul:not(.menu) li a::before {
 	background-color: $crimson-dark;
+	background-color: $gray-lighter;
+	}
+.section.crimson .section-side ul:not(.menu) li a:hover::before {
+	background-color: $gray-lightly;
 	}
 
 // Yellow
