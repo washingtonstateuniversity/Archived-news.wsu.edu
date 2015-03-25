@@ -104,24 +104,7 @@ body.single.tagged-dr-universe .featured-image::before {
 	}
 }
 
-$campuses: ( 
-	
-	"wsu-pullman-news": "Pullman",
-	"wsu-spokane-news": "Spokane",
-	"wsu-vancouver-news": "Vancouver",
-	"wsu-global-campus-news": "Global Campus",
-	"wsu-tri-cities-news": "Tri-Cities"
-	
-	);
-	
-@each $slug, $campus in $campuses {
-	article.category-#{$slug} .article-footer::before,
-	article.tag-#{$slug} .article-footer::before,
-	.single.categorized-#{$slug} .article-footer::before,
-	.single.tagged-#{$slug} .article-footer::before {
-    	content: "#{$campus}";
-    }
-}
+
 
 /* Authors */
 
@@ -145,11 +128,3 @@ $authors: (
 		
 	}
 }
-
-section.local .category-wsu-spokane-news:before {
-	content: "Spokane";
-	background: #77580c;
-	color: #e5cd93;
-	text-transform: uppercase;
-	padding: 2px 6px;
-	}

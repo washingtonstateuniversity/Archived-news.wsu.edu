@@ -1,3 +1,5 @@
+body:not(.paged) {
+
 .main-body .section article:first-of-type {
 	margin-top: 130px;
 	}
@@ -29,7 +31,8 @@
 	
 	.article-meta,
 	.article-byline,
-	.article-thumbnail {
+	.article-thumbnail,
+	.article-footer {
 		display: none;
 		}
 		
@@ -85,7 +88,7 @@
 			text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
 			
 		}
-	
+			
 	}
 	
 }
@@ -156,3 +159,5 @@ article:first-of-type figure {
 	width: 100%;
 	clear: both;
 	}
+	
+}

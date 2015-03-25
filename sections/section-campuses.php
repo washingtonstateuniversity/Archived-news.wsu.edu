@@ -1,6 +1,6 @@
 <?php
 	
-	$campuses_categories = "wsu-spokane-news, wsu-tri-cities-news, wsu-vancouver-news, wsu-everett-news, wsu-extension-news";
+	$campuses_categories = "wsu-pullman-news, wsu-spokane-news, wsu-tri-cities-news, wsu-vancouver-news, wsu-everett-news, wsu-extension-news";
 	
 	if ( isset($page_section) && $news_section != "cover" ) {
 		if ( $page_section == "campuses" && $page_categories != "" ) {

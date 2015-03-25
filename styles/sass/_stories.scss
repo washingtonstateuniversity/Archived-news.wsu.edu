@@ -1,15 +1,50 @@
-body:not(.single) .article-footer {
+body:not(.single) {
 	
-	.categorized,
-	.tagged {
-		display: none;
+	.article-footer {
+	
+		.categorized dt,
+		.categorized dd,
+		.tagged {
+			display: none;
+		}
+		
+		dd::after {
+			content: "";
+		}
+	
+	}
+		
+	&.page-campuses .categorized {
+		
+		position: absolute;
+		top: 0;
+		right: 0;
+		
+		//dd[class*="pullman"],
+		dd[class*="spokane"],
+		dd[class*="tri-cities"],
+		dd[class*="vancouver"],
+		dd[class*="global"],
+		dd[class*="everett"] {
+			
+			display: block;
+			float: right;
+			padding: 0;
+			
+			a {
+				color: white;
+				background: $gray-lightly;
+				padding: 0px 6px;
+				display: block;
+			}
+		
+		}
+		
 	}
 	
 }
 
-.article-footer {
-	clear: both;
-}
+
 
 .single article,
 .single article header {
@@ -46,17 +81,7 @@ article.has-thumbnail-image .article-thumbnail {
 }
 
 
-	
-.main-body article {
-	padding-top: 1.5rem;
-	}
 
-.main-body article ~ article {
-	padding-bottom: 1.5rem;
-	border-top-width: 5px;
-	border-top-style: solid;
-	border-top-color: #d6dada;
-	}
 
 /* Thumbnails */
 
@@ -75,7 +100,9 @@ body.single article .article-thumbnail {
 
 	article {
 		
-		padding-top: 1rem;
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+		position: relative;
 		
 		header {
 			
@@ -197,6 +224,18 @@ body.single article .article-thumbnail {
 		a span.content-more-default {
 			display: none;
 		}
+		
+		.article-footer {
+			clear: both;
+			border-top: none;
+		}
+		
+		~ article {
+			//padding-bottom: 1.5rem;
+			border-top-width: 5px;
+			border-top-style: solid;
+			border-top-color: #d6dada;
+			}
 		
 	}
 

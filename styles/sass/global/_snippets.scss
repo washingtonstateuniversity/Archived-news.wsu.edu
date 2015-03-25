@@ -1,0 +1,18 @@
+$campuses: ( 
+	
+	"wsu-pullman-news": "Pullman",
+	"wsu-spokane-news": "Spokane",
+	"wsu-vancouver-news": "Vancouver",
+	"wsu-global-campus-news": "Global Campus",
+	"wsu-tri-cities-news": "Tri-Cities"
+	
+	);
+	
+@each $slug, $campus in $campuses {
+	article.category-#{$slug} .article-footer::before,
+	article.tag-#{$slug} .article-footer::before,
+	.single.categorized-#{$slug} .article-footer::before,
+	.single.tagged-#{$slug} .article-footer::before {
+    	content: "#{$campus}";
+    }
+}

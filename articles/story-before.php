@@ -80,7 +80,7 @@
 		echo '<dl class="categorized">';
 		echo '<dt><span class="categorized-default">Categorized</span></dt>';
 		foreach( get_the_category() as $category ) {
-			echo '<dd><a href="' . get_category_link( $category->cat_ID ) . '">' . $category->cat_name . '</a></dd>';
+			echo '<dd class="' . $category->slug . '"><a href="' . get_category_link( $category->cat_ID ) . '">' . $category->cat_name . '</a></dd>';
 		}
 		echo '</dl>';
 	}
