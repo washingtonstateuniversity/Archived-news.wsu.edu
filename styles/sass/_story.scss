@@ -21,123 +21,7 @@ body.single {
 	width: 792px;
 	}
 
-/* Main Header */
 
-.size-gt-small {
-	
-	.story {
-	
-		.section-tabs {
-			display: none !important;
-			}
-			
-		.main-body,
-		.main-footer {
-			
-			width: auto;
-			
-		}
-	
-		.main-header {
-			
-			height: 100vh;
-			width: 66px;
-			position: fixed;
-			background: $crimson;
-			display: block;
-			overflow: hidden;
-			padding-top: 20px;
-			
-			.header-group {
-				
-				bottom: auto;
-				left: auto;
-				max-width: auto;
-				position: relative;
-				padding: 0px;
-				transform: rotate(90deg);
-				transform-origin: left top;
-				right: -66px;
-				width: 100vh;
-				height: 66px;
-				
-			}
-								
-			sup,
-			sub {
-				
-				display: block;
-				//position: absolute;
-				height: 66px;
-				right: -66px;
-				margin-top: 0;
-				
-				box-sizing: border-box;
-				border: none;
-				//padding-top: 18px;
-				float: left;
-				
-			}
-			
-			sup {
-				
-				//background: orange;
-				padding-right: 10px;
-				z-index: 99164;
-				
-			}
-			
-			sub span {
-				
-				display: none;
-				
-			}
-			
-			& .single.has-featured-image sub {
-				
-				//top: 400px
-				
-			}
-	
-		}
-		
-		.main-body,
-		.main-footer {
-			
-			margin-left: 66px;
-			margin-right: 60px;
-			
-		}
-		
-	}
-		
-	.featured-image {
-	
-		margin-left: 66px;
-		width: calc( 100% - 66px );
-		//background-attachment: fixed;
-	
-	}
-	
-	.has-featured-image &.size-large .story {
-		
-		.main-header .header-group {
-
-			//padding-left: 445px;
-			//background: green;
-					
-		}
-		
-		.featured-image {
-			
-			margin-left: 0px;
-			width: 100%;
-		
-		}
-		
-	}
-	
-}
 
 
 .story {
@@ -263,6 +147,124 @@ body.single {
 	
 }
 
+/* Main Header */
+
+.size-gt-small {
+	
+	.story {
+	
+		.section-tabs {
+			display: none !important;
+			}
+			
+		.main-body,
+		.main-footer {
+			
+			width: auto;
+			
+		}
+	
+		.main-header {
+			
+			height: 100vh;
+			width: 66px;
+			position: fixed;
+			background: $crimson;
+			display: block;
+			overflow: hidden;
+			padding-top: 20px;
+			
+			.header-group {
+				
+				bottom: auto;
+				left: auto;
+				max-width: auto;
+				position: relative;
+				padding: 0px;
+				transform: rotate(90deg);
+				transform-origin: left top;
+				right: -66px;
+				width: 100vh;
+				height: 66px;
+				
+			}
+								
+			sup,
+			sub {
+				
+				display: block;
+				//position: absolute;
+				height: 66px;
+				right: -66px;
+				margin-top: 0;
+				
+				box-sizing: border-box;
+				border: none;
+				//padding-top: 18px;
+				float: left;
+				
+			}
+			
+			sup {
+				
+				//background: orange;
+				padding-right: 10px;
+				z-index: 99164;
+				
+			}
+			
+			sub span {
+				
+				display: none;
+				
+			}
+			
+			& .single.has-featured-image sub {
+				
+				//top: 400px
+				
+			}
+	
+		}
+		
+		.main-body,
+		.main-footer {
+			
+			margin-left: 66px;
+			margin-right: 60px;
+			
+		}
+		
+	}
+		
+	.featured-image {
+	
+		margin-left: 66px;
+		width: calc( 100% - 66px );
+		//background-attachment: fixed;
+	
+	}
+	
+	.has-featured-image &.size-large .story {
+		
+		.main-header .header-group {
+
+			//padding-left: 445px;
+			//background: green;
+					
+		}
+		
+		.featured-image {
+			
+			margin-left: 0px;
+			width: 100%;
+		
+		}
+		
+	}
+	
+}
+
 .wp-caption { max-width: 100%; }
 
 x.single.has-featured-image .main-header {
@@ -290,40 +292,97 @@ x.single.has-featured-image .main-header .header-group {
 	
 /* Main Footer */
 
-.pager.prevnext {
+.pager.prevnext:not(.x) {
 	
-	margin: 1rem 2rem;
-	border-top: 5px $gray-lightly dotted;
-	//background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, $gray-lightly 50%, rgba(255, 255, 255, 0) 100%);
+	margin: 1rem 0rem 1rem 2rem;
+	width: auto;
+	padding: 0px;
 	
+	.column.one,
+	.column.two {
+		width: auto;
+		float: none;
+	}
 	
-	x.column.one {
-		border-right: 5px $gray-lightly solid;
-		text-align: right;
+	a[rel="next"],
+	a[rel="prev"] {
+		color: $gray-lighter;
+		background: $gray-darker;
+		margin-top: 5px;
+		padding: 5px 10px;
+		display: block;
+		
+	}
+	
+	a[rel="prev"] {
+		//margin-left: 4rem;
+	}
+	
+	a[rel="next"]:hover,
+	a[rel="prev"]:hover {
+		background: $crimson;
 	}
 	
 	a[rel="next"]:before,
 	a[rel="prev"]:before {
 		display: inline-block;
 		font-weight: bold;
-		color: black;
+		color: white;
+		font-weight: 300;
+		text-transform: uppercase;
 	}
 	
 	a[rel="prev"]:before {
-		content: "Previous:\00a0";
+		content: "Previous \25AA\00a0";
 	}
 	
 	a[rel="next"]:before {
-		content: "Next:\00a0";
+		content: "Next\00a0";
 	}
 	
 	.main-footer & .column.one,
 	.main-footer & .column.two {
-		padding-top: .5em;
-		padding-bottom: .5em;
 		padding: 0 !important;
-		width: 100%;
-		float: right;
+	}
+	
+}
+
+.next-post {
+	
+	&::before {
+		content: "Keep Reading";
+		font-weight: 300;
+		font-size: 2rem;
+		color: $gray-darker;
+		text-transform: uppercase;
+		display: block;
+		border-bottom: 5px $gray-darker solid;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+	}
+	
+	article {
+		padding-left: 4rem;
+	}
+	
+	.article-meta,
+	.article-footer,
+	.article-byline {
+		display: none;
+	}
+	
+	.main-footer & .article-thumbnail {
+		display: block;
+		margin-top: 10px;
+	}
+	
+	.article-header {
+		
+		.article-title h2 {
+			@include serif;
+			font-weight: normal;
+		}
+		
 	}
 	
 }
@@ -364,7 +423,7 @@ x.single.has-featured-image .main-header .header-group {
 	
 	.section .section-header {
 		height: auto;
-		width: calc( 100% - 4rem);
+		width: 100%;
 		position: relative;
 		background: transparent;
 		left: 0;
@@ -442,7 +501,7 @@ x.single.has-featured-image .main-header .header-group {
 		
 		.column.one {
 			padding-left: 4rem;
-			padding-right: 4rem;
+			padding-right: 0;
 		}
 	
 	}
@@ -466,11 +525,15 @@ x.single.has-featured-image .main-header .header-group {
 			display: none;
 		}
 		
-		&:not(.crimson) article:nth-of-type(3) ~ article {
+		&:not(.crimson):not(.yellow) article:nth-of-type(3) ~ article {
 			display: none;
 		}
 		
 		&.crimson article:nth-of-type(5) ~ article {
+			display: none;
+		}
+		
+		&.yellow article:nth-of-type(4) ~ article {
 			display: none;
 		}
 		

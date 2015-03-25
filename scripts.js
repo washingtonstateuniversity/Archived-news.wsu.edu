@@ -161,6 +161,7 @@
 		$("body,html").on( "swiperight", function() {
 			
 			flipRight();
+			$("#spine").css("background","gray !important");
 					
 		});
 		

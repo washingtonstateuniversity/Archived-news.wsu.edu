@@ -45,11 +45,36 @@ if ( spine_has_background_image() ) {
 <footer class="main-footer">
 		
 	<section class="row halves pager prevnext gutter pad-ends">
-		<div class="column one">
-			<?php previous_post_link('%link'); ?>
+		<div class="column one next-post">
+			
+			<span class="section"><header class="section-header"><span class="rotate"><span class="section-title">Next</span></span></header></span>
+			
+			<?php 
+				
+			$next_post = get_next_post();
+				
+			$next_filter = array(
+				'posts_per_page'		=> 1,
+				'p'						=> $next_post->ID, 
+			);
+				
+			$article = new WP_Query( $next_filter );
+			
+			if ( is_a( $next_post , 'WP_Post' ) ) {
+			
+				while ( $article->have_posts() ) : $article->the_post();
+				
+					get_template_part( 'articles/story-before', get_post_type() );
+				
+				endwhile; 
+			
+			}
+			
+			?>
+
 		</div>
 		<div class="column two">
-			<?php next_post_link('%link'); ?>
+			<?php previous_post_link('%link'); ?>
 		</div>
 	</section><!--pager-->
 	
