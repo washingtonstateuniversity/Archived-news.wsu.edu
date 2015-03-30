@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'wp_enqueue_scripts', 'spine_dev_wp_enqueue_scripts' );
+//add_action( 'wp_enqueue_scripts', 'spine_dev_wp_enqueue_scripts' );
 	
 function spine_dev_wp_enqueue_scripts() {
     wp_dequeue_style( 'wsu-spine' );
