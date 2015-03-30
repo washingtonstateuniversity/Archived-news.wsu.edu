@@ -1,6 +1,6 @@
 <?php
 	
-	$press_categories = "wsu-press-releases, wsu-in-the-media, press-releases, in-the-media";
+	$press_categories = "athletics";
 	
 	if ( isset($page_section) && $news_section != "cover" ) {
 		if ( $page_section == "press" && $page_categories != "" ) {
@@ -49,7 +49,7 @@
 	
 	if ( $news_section == "press" ) { 
 		
-		echo '<nav class="paging">';
+		echo 'heelo<nav class="paging">';
 		echo paginate_links( $paging );
 		echo '</nav>';
 		
@@ -58,5 +58,9 @@
 		echo section_link("press");
 	
 	}
+	
+	
 		
 ?>
+
+<?php //if ( is_active_sidebar( 'section-athletics' ) ) { dynamic_sidebar( 'section-athletics' ); } ?>

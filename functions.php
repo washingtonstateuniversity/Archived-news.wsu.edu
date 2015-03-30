@@ -1,6 +1,6 @@
 <?php
 
-//add_action( 'wp_enqueue_scripts', 'spine_dev_wp_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'spine_dev_wp_enqueue_scripts' );
 	
 function spine_dev_wp_enqueue_scripts() {
     wp_dequeue_style( 'wsu-spine' );
@@ -55,7 +55,6 @@ function epoch_class( $classes ) {
 	
 	if ( is_singular() ) {
 	$classes[] = $epoch;
-	// return the $classes array
 	}
 	return $classes;
 }
@@ -69,16 +68,13 @@ function wsunews_get_section() {
 		
 		$section = "cover";
 		
-		}
+	}
 	
 	else if ( is_page() ) {
 		
 		global $post;
-	        /* Get an array of Ancestors and Parents if they exist */
 		$parents = get_post_ancestors( $post->ID );
-	        /* Get the top Level page->ID count base 1, array base 0 so -1 */ 
 		$id = ($parents) ? $parents[count($parents)-1]: $post->ID;
-		/* Get the parent and set the $class with the page slug (post_name) */
 	    $parent = get_post( $id );
 		$section = $parent->post_name;
 		
@@ -111,8 +107,8 @@ function wsunews_sides() {
 	));
 	
 	register_sidebar( array(
-		'name'          => 'Campuses Sidebar',
-		'id'            => 'side-campuses',
+		'name'          => 'Local Sidebar',
+		'id'            => 'side-local',
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '<header>',
@@ -129,8 +125,17 @@ function wsunews_sides() {
 	));
 	
 	register_sidebar( array(
-		'name'          => 'Press Sidebar',
-		'id'            => 'side-press',
+		'name'          => 'Athletics Sidebar',
+		'id'            => 'side-athletics',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<header>',
+		'after_title'   => '</header>',
+	));
+	
+	register_sidebar( array(
+		'name'          => 'Athletics Section',
+		'id'            => 'section-athletics',
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '<header>',

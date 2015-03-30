@@ -200,7 +200,7 @@
 .section.yellow .section-side ul:not(.menu) li a:before {
 	background-color: $yellow-dark;
 	}
-#menu-campuses li:nth-of-type(5):before {
+#menu-local li:nth-of-type(5):before {
 	content: "";
 	display: block;
 	width: 100%;
@@ -212,7 +212,6 @@
 	}
 
 // Orange
-
 .section.orange {
 	
 	aside {
@@ -224,7 +223,7 @@
 	}
 	
 	aside:before {
-		content: "Events";
+		content: "Athletics";
 	}
 	
 	aside li a {
@@ -240,14 +239,19 @@
 		color: $orange-darker;
 	}
 	
+}
+
+
+.section.events {
+	
 	.section-side ul:not(.menu) li a:before {
-		background-color: $orange-darker;
+		background-color: $blue-darker;
 		display: none;
 	}
 	
 	.content-item-event-date {
-		color: $orange;
-		//background-color: $orange-dark;
+		color: $blue;
+		//background-color: $blue-dark;
 		float: right;
 		width: 30px;
 		text-align: center;
@@ -256,8 +260,8 @@
 		font-weight: bold;
 		padding: 3px 0 3px 3px;
 		height: 100%;
-		color: $orange-dark;
-		border-left: 5px $orange-dark solid;
+		color: $blue-dark;
+		border-left: 5px $blue-dark solid;
 		margin-left: 3px;
 	}
 	
@@ -265,7 +269,7 @@
 		clear: both;
 		
 		a {
-			color: $orange-lighter;
+			color: $blue-lighter;
 		}
 		
 		a:hover {
@@ -276,7 +280,7 @@
 	
 	.content-item-event-meta {
 		font-size: .8em;
-		color: $orange-darker;
+		color: $blue-darker;
 	}
 	
 	.content-item-event-venue {
@@ -295,11 +299,7 @@
 	color: #4f868e;
 	}
 .section.blue aside:before {
-	content: "Press";
-	//background: $blue;
-	//color: $blue-lightest;
-	//width: 578px;
-	//padding-left: 4rem;
+	content: "Events";
 	}
 .section.blue aside li a {
 	color: $blue-lightest;

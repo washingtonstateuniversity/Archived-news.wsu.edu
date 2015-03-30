@@ -72,23 +72,23 @@
 		
 	</section>
 	
-	<section id="yellow" class="section yellow campuses local news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
+	<section id="yellow" class="section yellow local news-section <?php echo ( $news_section == "campuses" ? "opened current" : "not-current" ); ?>" data-sec="2">
 		
-		<header class="section-header"><span class="rotate"><span class="section-title">Locations</span></span></header>
+		<header class="section-header"><span class="rotate"><span class="section-title">Local</span></span></header>
 		
 		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
 		
 			<?php if ( !is_single() ) : ?>
 			<aside class="section-side column two">
 				
-				<?php if ( is_active_sidebar( 'side-campuses' ) ) { dynamic_sidebar( 'side-campuses' ); } ?>
+				<?php if ( is_active_sidebar( 'side-local' ) ) { dynamic_sidebar( 'side-local' ); } ?>
 			
 			</aside>
 			<?php endif; ?>
 			
 			<div class="articles column one">
 
-				<?php include(locate_template('sections/section-campuses.php')); ?>
+				<?php include(locate_template('sections/section-local.php')); ?>
 
 			</div><!--/ .column.one articles -->
 		
@@ -96,55 +96,7 @@
 		
 	</section>
 	
-	<section id="blue" class="section blue press news-section <?php echo ( $news_section == "press" ? "opened current" : "not-current" ); ?>" data-sec="3">
-		
-		<header class="section-header"><span class="rotate"><span class="section-title">Press</span></span></header>
-		
-		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
-			
-		<?php if ( !is_single() ) : ?>
-		<aside class="section-side column two">
-			
-			<?php if ( is_active_sidebar( 'side-press' ) ) { dynamic_sidebar( 'side-press' ); } ?>
-		
-		</aside>
-		<?php endif; ?>
-		
-		<div class="articles column one">
-			
-			<?php include(locate_template('sections/section-press.php')); ?>
-		
-		</div><!--/ articles -->
-		
-		</div><!--/ nest -->
-	
-	</section>
-	
-	<section id="orange" class="section orange events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="4">
-		<header class="section-header"><span class="rotate"><span class="section-title">Events</span></span></header>
-		
-		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
-		
-		<?php if ( !is_single() ) : ?>
-		<aside class="section-side column two">
-			
-			<?php if ( is_active_sidebar( 'side-events' ) ) { dynamic_sidebar( 'side-events' ); } ?>
-			<?php include(locate_template('sections/side-events.php')); ?>
-		
-		</aside>
-		<?php endif; ?>
-		
-		<div class="column one articles">
-		
-			<?php include(locate_template('sections/section-events.php')); ?>
-	
-		</div>
-		
-		</div><!-- /encolure -->
-	
-	</section>
-	
-	<section id="people" class="section green people news-section <?php echo ( $news_section == "people" ? "opened current" : "not-current" ); ?>" data-sec="5">
+	<section id="people" class="section green people news-section <?php echo ( $news_section == "people" ? "opened current" : "not-current" ); ?>" data-sec="3">
 	
 		<header class="section-header"><span class="rotate"><span class="section-title">People</span></span></header>
 		
@@ -168,8 +120,56 @@
 	
 	</section>
 	
+	<section class="section orange athletics news-section <?php echo ( $news_section == "athletics" ? "opened current" : "not-current" ); ?>" data-sec="4">
+		
+		<header class="section-header"><span class="rotate"><span class="section-title">Athletics</span></span></header>
+		
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
+			
+		<?php if ( !is_single() ) : ?>
+		<aside class="section-side column two">
+			
+			<?php if ( is_active_sidebar( 'side-athletics' ) ) { dynamic_sidebar( 'side-athletics' ); } ?>
+		
+		</aside>
+		<?php endif; ?>
+		
+		<div class="articles column one">
+			
+			<?php include(locate_template('sections/section-athletics.php')); ?>
+		
+		</div><!--/ articles -->
+		
+		</div><!--/ nest -->
+	
+	</section>
+	
+	<section class="section blue events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="5">
+		<header class="section-header"><span class="rotate"><span class="section-title">Events</span></span></header>
+		
+		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
+		
+		<?php if ( !is_single() ) : ?>
+		<aside class="section-side column two">
+			
+			<?php if ( is_active_sidebar( 'side-events' ) ) { dynamic_sidebar( 'side-events' ); } ?>
+			<?php include(locate_template('sections/side-events.php')); ?>
+		
+		</aside>
+		<?php endif; ?>
+		
+		<div class="column one articles">
+		
+			<?php include(locate_template('sections/section-events.php')); ?>
+	
+		</div>
+		
+		</div><!-- /encolure -->
+	
+	</section>
+	
 	<?php if ( !is_single() ) : ?>
-	<section id="photo" class="section sec-6 gray-darkest photo gray-darkest-back photo column five news-section unbound recto" data-sec="6">
+	<section id="photo" class="section gray-darkest photo gray-darkest-back photo column news-section unbound recto" data-sec="6">
 	
 		<header class="section-header"><span class="position"><span class="rotate"><span class="section-title">Photo</span></span></span></header>
 	
@@ -181,9 +181,9 @@
 	</div><!-- /.column.one -->
 
 	<div class="section-tabs">	
-		<div class="section-tab green" data-sec="5"><span class="rotate"><span class="section-title">People</span></span></div>
-		<div class="section-tab orange" data-sec="4"><span class="rotate"><span class="section-title">Events</span></span></div>
-		<div class="section-tab blue" data-sec="3"><span class="rotate"><span class="section-title">Press</span></span></div>
+		<div class="section-tab blue" data-sec="5"><span class="rotate"><span class="section-title">Events</span></span></div>
+		<div class="section-tab orange" data-sec="4"><span class="rotate"><span class="section-title">Athletics</span></span></div>
+		<div class="section-tab green" data-sec="3"><span class="rotate"><span class="section-title">People</span></span></div>
 		<div class="section-tab yellow" data-sec="2"><span class="rotate"><span class="section-title">Locales</span></span></div>
 		<div class="section-tab crimson" data-sec="1"><span class="rotate"><span class="section-title">Featured</span></span></div>
 	</div>
