@@ -525,7 +525,7 @@ x.single.has-featured-image .main-header .header-group {
 			display: none;
 		}
 		
-		&:not(.crimson):not(.yellow) article:nth-of-type(3) ~ article {
+		&:not(.crimson):not(.orange) article:nth-of-type(3) ~ article {
 			display: none;
 		}
 		
@@ -533,7 +533,7 @@ x.single.has-featured-image .main-header .header-group {
 			display: none;
 		}
 		
-		&.yellow article:nth-of-type(4) ~ article {
+		&.orange article:nth-of-type(4) ~ article {
 			display: none;
 		}
 		

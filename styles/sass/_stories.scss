@@ -252,10 +252,13 @@ body.single article .article-thumbnail {
 
 		display: inline-block;
 		color: $gray-lighter;
-		font-family: "Open Sans Condensed";
-		font-weight: bold;
+		font-family: "Open Sans Condensed" !important;
+		//font-weight: bold;
+		//font-weight: normal;
 		text-transform: uppercase;
 		font-size: 4rem;
+		font-weight: 300 !important;
+		font-style: normal;
 		//padding-left: 15px;
 		position: relative;
 

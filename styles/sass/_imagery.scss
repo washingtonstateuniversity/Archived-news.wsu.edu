@@ -2,6 +2,69 @@
 	background-image: none !important;
 	}
 
+/* Figure */
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+figure {
+	
+	cite.attribution {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: white;
+		display: block;
+		text-align: right;
+		font-size: 11px;
+		line-height: 1.1em;
+		padding: 10px 40px 10px 10px;
+		min-height: 25px;
+	
+		span {
+			display: block;
+		}
+
+		span.citation-text {
+			display: none;
+		}
+	
+		span.credit::before {
+			display: inline-block;
+			content: "";
+		}
+	
+		&:hover {
+			background-color: #2a3033;
+			//cursor: help;
+		}
+	
+		&:hover span.citation-text {
+			display: block;
+			animation: fade-in 1s ease-out;
+		}
+
+		&::before {
+			content: "\2139";
+			font-family: "Spine-Icons";
+			font-size: 2em;
+			position: absolute;
+			right: 10px;
+			width: 30px;
+			padding-top: 7px;
+			color: white;
+			opacity: .5;
+		}
+	
+		&:hover::before {
+			opacity: 1;
+		}
+		
+	}
+	
+}
 
 /* Gallery */
 .gallery:before,
@@ -159,4 +222,20 @@ figure.gallery {
 .size-lt-medium .gallery .gallery-item .gallery-icon.portrait img {
 	width: 100% !important;
 	height: auto !important;
+}
+
+.plate {
+	
+	position: fixed;
+	top: 0px;
+	width: calc(50% + 396px);
+	height: 100vh;
+	left: calc(50% - 594px + 198px); /* 1188/2 offset 198px Spine */
+	background: rgba(255, 191, 202, 0.79);
+	z-index: 99164;
+}
+
+.rim .alignright {
+	
+	float: left !important;
 }

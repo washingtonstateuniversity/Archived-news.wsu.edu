@@ -96,10 +96,6 @@ $sections: 1,2,3,4,5;
 	text-align: center;
 }
 
-.section.photo.opened .section-nav:before {
-	background: rgba(0, 0, 0, 0.25);
-}
-	
 .section-header {
 	width: 33px;
 	position: absolute;
@@ -108,37 +104,7 @@ $sections: 1,2,3,4,5;
 	z-index: 200;
 }
 
-.section.photo .section-header {
-	left: auto;
-	right: 0px;
-}
-	
-.section.photo .section-header .position {
-	position: absolute;
-	right: 0px;
-	width: 40px;
-	height: 100vh;
-}
 
-
-.section:not(.opened):not(.photo):not(.crimson) .section-header .rotate {
-	box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.1);
-	}
-	
-/*
-.section.yellow,
-.section.blue,
-.section.orange,
-.section.green {
-	
-	&:not(.opened) {
-		
-		.section-header .rotate
-		
-		}
-	
-	}
-*/
 
 /* Crimson */
 .section.crimson .section-header {

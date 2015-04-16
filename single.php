@@ -13,16 +13,33 @@ if ( spine_has_background_image() ) {
 
 <?php get_template_part('parts/headers');
 
+	$featured_image = get_post( get_post_thumbnail_id() );
+	$featured_image_title = $featured_image->post_title;
+	$featured_image_caption = $featured_image->post_excerpt;
+	$featured_image_description = $featured_image->post_content;
+	
 	if ( spine_has_featured_image() ) {
 		$featured_image_src = spine_get_featured_image_src();
 		?>
 		<figure class="featured-image" style="background-image: url('<?php echo $featured_image_src ?>');">
-			<?php spine_the_featured_image(); ?>
-		</figure>
 		<?php
+				
+			spine_the_featured_image();
+			
+			if ( $featured_image_description !== "" ) {
+				
+				echo '<cite class="attribution"><span class="citation-text"><span class="image-title">'.$featured_image_title.' </span><span class="credit">'.$featured_image_description.'</span></cite>';
+				
+			}
+			
+			if ( $featured_image_caption !== "" ) {
+				
+				echo '<figcaption class="caption">'.$featured_image_caption.'</figcaption>';
+				
+			} 
 	}
-	
-?>
+		?>
+		</figure>
 
 <div class="main-body">
 
@@ -47,11 +64,15 @@ if ( spine_has_background_image() ) {
 	<section class="row halves pager prevnext gutter pad-ends">
 		<div class="column one next-post">
 			
-			<span class="section"><header class="section-header"><span class="rotate"><span class="section-title">Next</span></span></header></span>
-			
 			<?php 
 				
 			$next_post = get_next_post();
+			
+			if ( is_a( $next_post , 'WP_Post' ) ) : ?>
+			
+			<span class="section"><header class="section-header"><span class="rotate"><span class="section-title">Next</span></span></header></span>
+			
+			<?php
 				
 			$next_filter = array(
 				'posts_per_page'		=> 1,
@@ -60,15 +81,15 @@ if ( spine_has_background_image() ) {
 				
 			$article = new WP_Query( $next_filter );
 			
-			if ( is_a( $next_post , 'WP_Post' ) ) {
+			while ( $article->have_posts() ) : $article->the_post();
 			
-				while ( $article->have_posts() ) : $article->the_post();
-				
-					get_template_part( 'articles/story-before', get_post_type() );
-				
-				endwhile; 
+				get_template_part( 'articles/story-before', get_post_type() );
 			
-			}
+			endwhile;
+				
+			wp_reset_query();
+			
+			endif;
 			
 			?>
 

@@ -10,7 +10,7 @@
 	
 	while ( $articles->have_posts() ) : $articles->the_post();
 
-		get_template_part( 'articles/post', 'image' );
+		get_template_part( 'articles/post', 'photo' );
 
 	endwhile;
 	
@@ -19,5 +19,3 @@
 	
 	
  	?>
- 	
- 	go to photos

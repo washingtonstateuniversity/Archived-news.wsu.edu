@@ -128,8 +128,34 @@
 		});
 	
 	}
+	
+	function plates(plated) {
+		
+		//$(plated).addClass("plated").parents("figure").wrap("<div class=\"rim\">").wrap("<div class=\"charger\">");
+		
+		var src = $(plated).attr("href");
+		$("main").prepend('<div class="plate" style="background-image:'+src+';"><div class="frame"></div></div>');
+		
+		
+		//alert("hello");
+		$(".plate").on("click", function() {
+			
+			
+			$(this).remove();
+		
+		});
+		
+	}
 
 	$(document).ready( function() {
+		
+		$('a[href$=".jpg"]').on("click", function(e) {
+			
+			e.preventDefault();
+			var plated = $(this);
+			
+			plates(plated);
+		});
 				
 		if ( $("body.single").length || $("body.page").length ) {
 		
@@ -188,41 +214,25 @@
 			var x = e.pageX - pOffset.left;
 			if( pWidth/2 > x ) {
 			    //console.log("left");
-			    $(this).next("figure").animate({left: "0px"}, {duration:500, queue:false});
+			    $(this).next("figure").removeClass("lain-left").addClass("lain-right").animate({left: "0px"}, {duration:500, queue:false});
 			} else {
 			    //console.log("right");
-			    $(this).animate({left: "-2000px"}, {duration:500, queue:false});
+			    $(this).not(":first-of-type").removeClass("lain-right").addClass("lain-left").animate({left: "-2000px"}, {duration:500, queue:false}).prev("figure").addClass("lain-right");
 			}
 		
 		});
 		
+		$( ".photo figure:last-of-type .next" ).click(function() {
 		
-		
-		$( ".paddle" )
-		
-		.mouseenter( function() {
-			
-			var paddle = $(this).attr("role");
-			$(this).addClass("focused").parents("figure").addClass("focused-"+paddle);
-			
-			
-		})
-		
-		.mouseleave( function() {
-			
-			$(this).removeClass("focused");
-			$(this).parents("figure").removeClass("focused-next focused-previous");
+			$("section.photo").addClass("lain");
 		
 		});
 		
-/*
-		$( ".opened .section-header" ).click(function() {
-	  
-			var indexical = $(this).parents(".section").attr("data-sec");
-			flipRight(indexical-1);
-			
+		$( ".photo figure:nth-last-of-type(2) .previous" ).click(function() {
+		
+			$("section.photo").removeClass("lain");
+		
 		});
-*/
 				
 		flipLeft();
 			
