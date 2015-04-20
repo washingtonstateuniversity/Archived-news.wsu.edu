@@ -177,10 +177,11 @@
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
 			
-		$("body,html").on( "swipeleft", function() {
+		$("body,html,section").on( "swipeleft", function() {
 	
 			var disclosed = $(".news-section.opened").attr("data-sec");
 			flipLeft(disclosed + 1);
+			$("#spine").css("background","pink !important");
 
 		});
 		
