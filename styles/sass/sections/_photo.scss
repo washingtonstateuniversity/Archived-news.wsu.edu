@@ -232,6 +232,15 @@ figure:not(:first-of-type) .flip.next {
 	display: block;
 }
 
+.photo.opened .photo-header .photo-title a::after {
+	content: " > Story";
+	display: inline-block;
+	color: white;
+	background: $crimson;
+	margin: -8px -10px -8px 0;
+	padding: 8px;
+}
+
 .photo .photo-header .photo-meta {
 	color: white;
 	background: $gray-darker;

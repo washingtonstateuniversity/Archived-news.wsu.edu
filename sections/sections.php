@@ -144,7 +144,7 @@
 	
 	</section>
 	
-	<section class="section blue events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="5">
+	<section class="section column blue events news-section <?php echo ( $news_section == "events" ? "opened current" : "not-current" ); ?>" data-sec="5">
 		<header class="section-header"><span class="rotate"><span class="section-title">Events</span></span></header>
 		
 		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
@@ -177,6 +177,8 @@
 	 
 	</section>
 	<?php endif; ?>
+	
+	<section>hello</section>
 	
 	</div><!-- /.column.one -->
 
