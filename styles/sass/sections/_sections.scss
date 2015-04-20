@@ -104,7 +104,9 @@ $sections: 1,2,3,4,5;
 	z-index: 200;
 }
 
-
+.section:not(.crimson):not(.photo):not(.opened) .section-header .rotate {
+	box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, .2);
+}
 
 /* Crimson */
 .section.crimson .section-header {
@@ -184,7 +186,8 @@ $sections: 1,2,3,4,5;
 }
 
 .section.yellow:not(.opened) .section-header .rotate:hover {
-	background: #ffb81c;
+	background: $yellow-er;
+	//background: $yellow-dark;
 }
 
 .section.yellow a {
@@ -207,7 +210,8 @@ $sections: 1,2,3,4,5;
 }
 
 .section.blue:not(.opened) .section-header .rotate:hover {
-	background: #00a5bd;
+	background: $blue-er;
+	//background: $blue-dark;
 }
 
 .section.blue a {
@@ -230,7 +234,8 @@ $sections: 1,2,3,4,5;
 }
 
 .section.orange:not(.opened) .section-header .rotate:hover {
-	background: #f6861f;
+	background: $orange-er;
+	//background: $orange-dark;
 }
 
 .section.orange a {
