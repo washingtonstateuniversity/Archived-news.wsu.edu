@@ -1,5 +1,8 @@
+<?php if ( !is_paged() ) : ?>
 
-		 <header class="headlines">Top Stories</header>
+	<header class="headlines">Headlines</header>
+	
+<?php endif; ?>
 	 
  <?php
 	 
