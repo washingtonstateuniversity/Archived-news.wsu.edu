@@ -58,7 +58,7 @@ main div:not(.article-featured) article header {
 	background-size: 0 0;
 }
 	
-.articles article:first-of-type.not-featured-image {
+.main-body .articles article:not(.has-post-thumbnail):first-of-type {
 	margin-top: 150px;
 }
 

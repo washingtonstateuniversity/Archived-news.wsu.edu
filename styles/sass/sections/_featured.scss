@@ -1,10 +1,4 @@
-body:not(.paged) {
-
-.main-body .section article:first-of-type {
-	margin-top: 130px;
-	}
-
-.main-body .section article:first-of-type {
+.main-body .articles article.has-post-thumbnail:first-of-type {
 
 	background-color: $gray-lighter;
 	background-repeat: no-repeat;
@@ -32,7 +26,8 @@ body:not(.paged) {
 	.article-meta,
 	.article-byline,
 	.article-thumbnail,
-	.article-footer {
+	.article-footer,
+	.article-summary {
 		display: none;
 		}
 		
@@ -90,7 +85,6 @@ body:not(.paged) {
 			
 		}
 			
-	}
 	
 }
 

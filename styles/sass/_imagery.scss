@@ -231,8 +231,10 @@ figure.gallery {
 	width: calc(50% + 396px);
 	height: 100vh;
 	left: calc(50% - 594px + 198px); /* 1188/2 offset 198px Spine */
-	background: rgba(255, 191, 202, 0.79);
+	background-color: rgba(255, 191, 202, 0.79);
 	z-index: 99164;
+	background-size: cover;
+	background-position: center center;
 }
 
 .rim .alignright {

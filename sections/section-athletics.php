@@ -1,10 +1,10 @@
 <?php
 	
-	$press_categories = "athletics";
+	$athletics_categories = "athletics";
 	
 	if ( isset($page_section) && $news_section != "cover" ) {
-		if ( $page_section == "press" && $page_categories != "" ) {
-			$press_categories = $page_categories;
+		if ( $page_section == "athletics" && $page_categories != "" ) {
+			$athletics_categories = $page_categories;
 		}
 	}
 			
@@ -14,7 +14,7 @@
 		'nopaging'				=> false,
 		'paged'					=> $paged,
 		'posts_per_page'		=> 10,
-		'category_name'			=> $press_categories,
+		'category_name'			=> $athletics_categories,
 		'tag__not_in'			=> array($exclude_photos),
 		'post_status'			=> 'publish',
 	);

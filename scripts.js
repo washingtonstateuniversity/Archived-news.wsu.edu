@@ -134,7 +134,7 @@
 		//$(plated).addClass("plated").parents("figure").wrap("<div class=\"rim\">").wrap("<div class=\"charger\">");
 		
 		var src = $(plated).attr("href");
-		$("main").prepend('<div class="plate" style="background-image:'+src+';"><div class="frame"></div></div>');
+		$("main").prepend('<div class="plate" style="background-image: url('+src+');"><div class="frame"></div></div>');
 		
 		
 		//alert("hello");
@@ -156,13 +156,27 @@
 			
 			plates(plated);
 		});
-				
+		
+		$(function() {      
+      $("#test").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          $(this).text("You swiped " + direction );  
+        }
+      });
+    });
+		
+		// Wrap Images with figure
 		if ( $("body.single").length || $("body.page").length ) {
 		
 			imageWrap();
 		
 		}
-	
+		
+		$("img.aside").removeClass("aside").parents("figure").addClass("aside");
+		
+		
+		// Expand binder size for xxlarge widths
 		var xl_current_width = $(window).width();
 	
 		if ( xl_current_width >= 1396 ) {
@@ -172,23 +186,23 @@
 		}
 
 		
-		$("img.aside").removeClass("aside").parents("figure").addClass("aside");
-	
+		
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
 			
-		$("body,html,section").on( "swipeleft", function() {
+		$("html").on("swipeleft", function() {
 	
-			var disclosed = $(".news-section.opened").attr("data-sec");
+			var disclosed = $(".section.opened").attr("data-sec");
 			flipLeft(disclosed + 1);
-			$("#spine").css("background","pink !important");
+			throw("left");
 
 		});
 		
-		$("body,html").on( "swiperight", function() {
+		$("html").on("swiperight", function() {
 			
-			flipRight();
-			$("#spine").css("background","gray !important");
+			var disclosed = $(".section.opened").attr("data-sec");
+			flipRight(disclosed);
+			throw("right");
 					
 		});
 		
