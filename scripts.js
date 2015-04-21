@@ -157,14 +157,12 @@
 			plates(plated);
 		});
 		
-		$(function() {      
-      $("section").swipe( {
+      $("#supercalifragilistic").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
           $(this).text("You swiped " + direction );  
         }
       });
-    });
 		
 		// Wrap Images with figure
 		if ( $("body.single").length || $("body.page").length ) {
@@ -186,24 +184,28 @@
 		}
 
 		
-		
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
-			
-		$("html").on("swipeleft", function() {
+		$("html").swipe( {
 	
-			var disclosed = $(".section.opened").attr("data-sec");
-			flipLeft(disclosed + 1);
-			throw("left");
-
-		});
-		
-		$("html").on("swiperight", function() {
-			
-			var disclosed = $(".section.opened").attr("data-sec");
-			flipRight(disclosed);
-			throw("right");
+			swipe:function(event,direction) {
+				
+				if ( direction === "left" ) {
+				
+					var opened = $(".section.opened").attr("data-sec");
+					flipLeft(opened + 1);
+					throw("left");
+				
+				} else if ( direction === "right" ) {
+				
+					var opened = $(".section.opened").attr("data-sec");
+					flipRight(opened - 1);
+					throw("right");
 					
+				}
+			
+			}
+
 		});
 		
 		$( ".section-tab" ).click(function() {
