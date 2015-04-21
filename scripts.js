@@ -186,24 +186,22 @@
 		
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
-		$("html").swipe( {
+		$("section").swipe( {
 	
-			swipe:function(event,direction) {
+			swipeLeft:function() {
 				
-				if ( direction === "left" ) {
+				var opened = $(".section.opened").attr("data-sec");
+				flipLeft(opened + 1);
+				throw("left");
 				
-					var opened = $(".section.opened").attr("data-sec");
-					flipLeft(opened + 1);
-					throw("left");
-				
-				} else if ( direction === "right" ) {
-				
-					var opened = $(".section.opened").attr("data-sec");
-					flipRight(opened - 1);
-					throw("right");
-					
-				}
+			},
 			
+			swipeRight:function() {
+				
+				var opened = $(".section.opened").attr("data-sec");
+				flipRight(opened - 1);
+				throw("right");
+					
 			}
 
 		});
