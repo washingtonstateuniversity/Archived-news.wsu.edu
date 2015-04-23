@@ -1,18 +1,28 @@
 .sections {
 	position: relative;
+	
 	}
+	
+.sections > .column.one {
+	width: 2000px !important;
+}
 
 .sections .section {
 	background-repeat: repeat-x;
 	background-position: left top;
 	z-index: 100;
 	box-sizing: border-box;
-	position: absolute;
+	//position: absolute;
 	background-color: #f9f9f9;
+	float: left;
+	clear: none;
 	}
 
 .sections .section.opened {
-	position: absolute;;
+	//position: absolute;;
+	}
+.sections .section.opened ~ section {
+	//margin-left: -693px;
 	}
 .section.opened .section-title {
 	display: none;
@@ -24,11 +34,15 @@ $sections: 1,2,3,4,5;
 		
 	.sections .section:nth-of-type(#{$section}) {
 		z-index: 100 - ( 10 * $section);
-		width: calc(100% + #{( 33px * ( $section - 1 ) )} );
-	
+		width: calc(693px + #{( 33px * ( $section - 1 ) )} );
+		margin-right: #{( -693px - ( 33px * ( $section - 1 ) ) )};
 	}
 	
 }
+
+.sections .section.opened {
+	margin-left: 0px;
+	}
 	
 
 	$flips: 1,2,3,4,5;
@@ -148,8 +162,9 @@ $sections: 1,2,3,4,5;
 	width: 100vh;
 	}
 
-.size-gt-small .main-body .sections .section-header .rotate {
+.size-gt-small .main-body .sections section:not(.lain-left) .section-header .rotate {
 	position: fixed;
+	
 }
 	
 .size-gt-medium .main-body .sections .section-header .relative .section-title {
