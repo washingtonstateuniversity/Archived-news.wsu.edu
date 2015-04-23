@@ -8,8 +8,8 @@
  Version:        0.0.1
 */
 
-@import 'vars';
-@import 'colors';
+@import 'global/vars';
+@import 'global/colors';
 
 @import 'asides';
 @import 'imagery';
@@ -17,12 +17,6 @@
 #jacket {
 	overflow-x: hidden;
 	overflow-y: visible;
-	
-	}
-	
-section#crimson {
-	//color: $gray-lighter;
-	//background: $gray-dark;
 	}
 
 .size-lt-medium .fluid .ten-twelfths {
@@ -39,7 +33,6 @@ section#crimson {
 @import 'sections/sections';
 @import 'sections/featured';
 
-
 /* Stories - Listings */
 
 @import 'stories';
@@ -50,9 +43,7 @@ section#crimson {
 /* Story - Single */ 
 
 @import 'story';
-	
 @import 'meta';
-
 @import 'sections/photo';
 
 /* Events */
@@ -67,5 +58,5 @@ section#crimson {
 
 /* Pages */
 
-@import 'pages/newsteam';
+//@import 'pages/newsteam';
 

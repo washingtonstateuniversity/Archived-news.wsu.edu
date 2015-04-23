@@ -56,6 +56,16 @@ $yellow: #c69214;
 	$yellow-darker: #77580c;
 	$yellow-darkest: #4f3a08;
 
+// Primary Colors
+
+$primary_colors: (
+	crimson: $crimson,
+	yellow: $yellow,
+	green: $green,
+	orange: $orange,
+	blue: $blue
+);
+
 // Spine Colors
 
 $spine-colors: (
@@ -68,7 +78,7 @@ $spine-colors: (
 	darker: darken($gray-darker,3%),
 	darkest: $gray-darkest,
 	crimson: $crimson
-	);
+);
 
 // Spine Transparency
 @mixin vellum($color) {

@@ -4,13 +4,15 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin: 0px -2rem 2rem -2rem;
+	//margin: 0px 0rem 2rem 0rem;
 	padding: 0px;
 	height: 50vh;
 	position: relative;
 
-	.article-body {
+	.article-body,
+	.article-summary {
 		display: none;
-		}
+	}
 	
 	.article-header {
 		padding-left: 2rem;
@@ -21,7 +23,7 @@
 	    position: relative;
 	    bottom: 0;
 	    height: 100%;
-		}
+	}
 	
 	.article-meta,
 	.article-byline,
@@ -29,33 +31,14 @@
 	.article-footer,
 	.article-summary {
 		display: none;
-		}
+	}
 		
 	.article-title {
-		
 		
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		left: 0;
-		
-		&::after {
-			content: "Continued";
-			color: white;
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			background: rgba(0, 0, 0, 0.75);
-			background: black;
-			@include condensed;
-			//text-transform: uppercase;
-			font-weight: bold;
-			padding: 5px 10px;
-		}
-		
-		&:hover::after {
-			background: $crimson-dark;
-		}
 		
 		h2 {
 			
@@ -70,73 +53,91 @@
 			line-height: .9em;
 	
 	
-		a {
-			color: white;
-			text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.25);
-			padding-left: 2rem;
-			padding-right: 20%;
-			padding-bottom: 2rem;
-			display: block;
-		}
+			a {
+				color: white;
+				text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.25);
+				padding-left: 2rem;
+				padding-right: 20%;
+				padding-bottom: 2rem;
+				display: block;
+				
+				&::after {
+					content: "Continued";
+					color: white;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					background: rgba(0, 0, 0, 0.75);
+					background: black;
+					@include condensed;
+					text-transform: uppercase;
+					font-size: 16px;
+					font-weight: bold;
+					line-height: 1em;
+					padding: 8px 16px;
+				}
+				
+				&:hover::after {
+					background: $crimson-dark;
+				}
+				
+			} //a
+			
+			a:hover {
+				text-shadow: 2px 0px 0px rgba(0, 0, 0, 1);
+			}		
+
+		} //h2
 		
-		a:hover {
-			
-			text-shadow: 5px 0px 0px rgba(0, 0, 0, 1);
-			
-		}
-			
+	} //.article-title
 	
-}
 
 
-
-
-
-:not(.x) hgroup.article-title h2 a {
-	color: white;
-	}
-
-hgroup.article-meta.above {
-	display: none;
-	}
-
-x:not(.x) hgroup.article-title h2:before {
-	
-	font-weight: bold;
-	font-size: 1rem;
-	background: black;
-	xxbackground: #5e6a71;
-	background: #2a3033;
-	color: $gray-darker;
-	background: $gray-lightly;
-	background: white;
-	display: inline-block;
-	position: absolute;
-	bottom: calc(100% + 5px);
-	padding: 2px 4px;
-	text-transform: uppercase;
-	line-height: 1em;
-	text-shadow: none;
-	box-shadow: 1px 2px 1px $gray-darker;
+	&:not(.x) hgroup.article-title h2 a {
+		color: white;
 	}
 	
-article.category-rockdoc hgroup.article-title h2:before,
-article.tag-rock-doc hgroup.article-title h2:before { content: "Rock Doc"; }
-
-article.category-askdruniverse hgroup.article-title h2:before,
-article.tag-dr-universe hgroup.article-title h2:before { content: "Ask Dr. Universe"; }
-
-article:first-of-type figure {
-	display: none;
+	x:not(.x) hgroup.article-title h2:before {
+		
+		font-weight: bold;
+		font-size: 1rem;
+		background: black;
+		xxbackground: #5e6a71;
+		background: #2a3033;
+		color: $gray-darker;
+		background: $gray-lightly;
+		background: white;
+		display: inline-block;
+		position: absolute;
+		bottom: calc(100% + 5px);
+		padding: 2px 4px;
+		text-transform: uppercase;
+		line-height: 1em;
+		text-shadow: none;
+		box-shadow: 1px 2px 1px $gray-darker;
 	}
-
-.article-summary {
-	padding-top: 1rem;
-	display: none;
+		
+	article.category-rockdoc hgroup.article-title h2:before,
+	article.tag-rock-doc hgroup.article-title h2:before {
+		content: "Rock Doc";
 	}
-
-+ article {
-	border-top: none;
+	
+	article.category-askdruniverse hgroup.article-title h2:before,
+	article.tag-dr-universe hgroup.article-title h2:before {
+		content: "Ask Dr. Universe";
+	}
+	
+	article:first-of-type figure {
+		display: none;
+	}
+	
+	.article-summary {
+		padding-top: 1rem;
+	}
+	
+	+ article {
+		border-top: none;
+		padding-top: 0;
 	}
 
 }
@@ -147,12 +148,15 @@ article:first-of-type figure {
 .section.orange aside:before,
 .section.green aside:before {
 	
-	}
+}
 
 
 .tagged-full-feature main section:first-of-type .column.two {
 	width: 100%;
 	clear: both;
-	}
-	
 }
+	
+.section.yellow .articles article.has-post-thumbnail:first-of-type .article-title h2 a:hover::after { background: $yellow-darker; }
+.section.green .articles article.has-post-thumbnail:first-of-type .article-title h2 a:hover::after { background: $green-darker; }
+.section.orange .articles article.has-post-thumbnail:first-of-type .article-title h2 a:hover::after { background: $orange-darker; }
+.section.blue .articles article.has-post-thumbnail:first-of-type .article-title h2 a:hover::after { background: $blue-darker; }

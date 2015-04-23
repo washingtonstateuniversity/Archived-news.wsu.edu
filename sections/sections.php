@@ -15,7 +15,7 @@
 
 <div class="sections row <?php echo $layout; ?>">
 	
-	<div class="column one fluid equalize" style="min-height: 3000px">
+	<div class="column one fluid equalize">
 
 	<section id="crimson" class="section crimson featured news-section nested <?php echo ( $news_section == "cover" ? "opened current" : "not-current" ); ?>" data-sec="1">
 		
@@ -177,8 +177,6 @@
 	 
 	</section>
 	<?php endif; ?>
-	
-	<section>hello</section>
 	
 	</div><!-- /.column.one -->
 

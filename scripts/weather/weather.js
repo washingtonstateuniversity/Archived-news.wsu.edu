@@ -1,20 +1,69 @@
-// Docs at http://simpleweatherjs.com
-$(document).ready(function() {
-  $.simpleWeather({
-    location: 'Austin, TX',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
-  
-      $(".yellow aside").html(html);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
-});
+(function($){
 
+	// Docs at http://simpleweatherjs.com
+	$(document).ready(function() {
+		
+		//throw "hello";
+		var html;
+		
+		$.simpleWeather({
+			location: 'Pullman, WA',
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			  //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+			  //html += '<li class="currently">'+weather.currently+'</li>';
+			
+			  $("#menu-local li:first-of-type").append(html);
+			},
+			error: function(error) {
+			  $("#menu-local li:first-of-type").html('<p>'+error+'</p>');
+			}
+		});
+		  
+		$.simpleWeather({
+			location: 'Vancouver, WA',
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			
+			$("#menu-local li:nth-of-type(2)").append(html);
+			},
+			error: function(error) {
+			  $("#menu-local li:nth-of-type(2)").html('<p>'+error+'</p>');
+			}
+		});
+		  
+		$.simpleWeather({
+			location: 'Spokane, WA',
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			
+			  $("#menu-local li:nth-of-type(3)").append(html);
+			},
+			error: function(error) {
+			  $("#menu-local li:nth-of-type(3)").html('<p>'+error+'</p>');
+			}
+		});
+		  
+		$.simpleWeather({
+			location: 'Tri Cities, WA',
+			woeid: '',
+			unit: 'f',
+			success: function(weather) {
+			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			
+			  $("#menu-local li:nth-of-type(4)").append(html);
+			},
+			error: function(error) {
+			  $("#menu-local li:nth-of-type(4)").html('<p>'+error+'</p>');
+			}
+		});
+	  
+	});
+
+})(jQuery);
