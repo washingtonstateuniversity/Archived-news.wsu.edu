@@ -18,7 +18,8 @@
 				
 					if ( ( $(this).attr("data-sec") < indexical ) && ( $(this).attr("data-sec") !== "6" ) ) {
 					  //$(this).removeClass("delivered");
-					  $(this).animate({left: "-1000px"}, {duration:500, queue:false});
+					  var section_width = $(this).width() + 33;
+					  $(this).animate({"left":"-1000px"}, 500 ).addClass("lain-left");
 					}
 				
 				});
@@ -64,7 +65,7 @@
 		$(".section:not(.photo)").each( function() {
 		
 			if ( ( $(this).attr("data-sec") >= indexical ) && ( $(this).attr("data-sec") !== "6" )  ) {
-			  $(this).animate({left: "0px"}, {duration:300, queue:false});
+			  $(this).removeClass("lain-left").animate({left: "0px"}, {duration:300, queue:false});
 		  	}
 			if ( $(this).attr("data-sec") === indexical ) {
 			  $(this).addClass("opened");
@@ -129,19 +130,22 @@
 	
 	}
 	
-	function plates(plated) {
+	function tipIn(tip) {
 		
-		//$(plated).addClass("plated").parents("figure").wrap("<div class=\"rim\">").wrap("<div class=\"charger\">");
+		var img_src = $(tip).attr("href");
+		var img_width = $(tip).first("img").clientWidth;
+		var img_height = $(tip).first("img").clientHeight;
+		var img_ratio = ( img_width > img_height ) ? "img-landscape" : "img-portrait";
 		
-		var src = $(plated).attr("href");
-		$("main").prepend('<div class="plate" style="background-image: url('+src+');"><div class="frame"></div></div>');
+		$("main").prepend('<div class="tipped '+img_ratio+'" style="background-image: url('+img_src+');"><div class="frame"></div></div>');
 		
-		
-		//alert("hello");
-		$(".plate").on("click", function() {
+		$(".tipped").addClass("in").on("click", function() {
 			
+			$(this).addClass("out").delay(2000).queue(function(next){
 			
-			$(this).remove();
+				$(this).remove(); next();
+
+			});
 		
 		});
 		
@@ -152,17 +156,10 @@
 		$('a[href$=".jpg"]').on("click", function(e) {
 			
 			e.preventDefault();
-			var plated = $(this);
+			var tip = $(this);
 			
-			plates(plated);
+			tipIn(tip);
 		});
-		
-      $("#supercalifragilistic").swipe( {
-        //Generic swipe handler for all directions
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-          $(this).text("You swiped " + direction );  
-        }
-      });
 		
 		// Wrap Images with figure
 		if ( $("body.single").length || $("body.page").length ) {
@@ -186,21 +183,21 @@
 		
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
-		$("section").swipe( {
+		$(".section").swipe( {
 	
 			swipeLeft:function() {
 				
-				var opened = $(".section.opened").attr("data-sec");
+				var opened = $(this).attr("data-sec");
 				flipLeft(opened + 1);
-				throw("left");
+				//throw("left");
 				
 			},
 			
 			swipeRight:function() {
 				
-				var opened = $(".section.opened").attr("data-sec");
+				var opened = $(this).attr("data-sec");
 				flipRight(opened - 1);
-				throw("right");
+				throw "right";
 					
 			}
 
@@ -286,72 +283,7 @@
 	
 	
 	}, 500);
-	
 
-// Docs at http://simpleweatherjs.com
-$(document).ready(function() {
-  $.simpleWeather({
-    location: 'Pullman, WA',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
-      //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      //html += '<li class="currently">'+weather.currently+'</li>';
-  
-      $("#menu-local li:first-of-type").append(html);
-    },
-    error: function(error) {
-      $("#menu-local li:first-of-type").html('<p>'+error+'</p>');
-    }
-  });
-  
-  var html;
-  
-  $.simpleWeather({
-    location: 'Vancouver, WA',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
-  
-      $("#menu-local li:nth-of-type(2)").append(html);
-    },
-    error: function(error) {
-      $("#menu-local li:nth-of-type(2)").html('<p>'+error+'</p>');
-    }
-  });
-  
-  $.simpleWeather({
-    location: 'Spokane, WA',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
-  
-      $("#menu-local li:nth-of-type(3)").append(html);
-    },
-    error: function(error) {
-      $("#menu-local li:nth-of-type(3)").html('<p>'+error+'</p>');
-    }
-  });
-  
-  $.simpleWeather({
-    location: 'Tri Cities, WA',
-    woeid: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
-  
-      $("#menu-local li:nth-of-type(4)").append(html);
-    },
-    error: function(error) {
-      $("#menu-local li:nth-of-type(4)").html('<p>'+error+'</p>');
-    }
-  });
-  
-});
-	
 })(jQuery);
 
 
