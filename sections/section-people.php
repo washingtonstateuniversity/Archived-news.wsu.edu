@@ -10,7 +10,7 @@
 	
 	//echo $section_categories;
 			
-	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+	$paged = ( $news_section == "people" && get_query_var('paged') ) ? get_query_var('paged') : 1; 
 	
 	$articles_filter = array(
 		'nopaging'				=> false,
@@ -40,8 +40,8 @@
 		'end_size'     => 3,
 		'mid_size'     => 3,
 		'prev_next'    => True,
-		'prev_text'    => __('« Previous'),
-		'next_text'    => __('Next »'),
+		'prev_text'    => __('«'),
+		'next_text'    => __('»'),
 		'type'         => 'plain',
 		'add_args'     => False,
 		'add_fragment' => ''

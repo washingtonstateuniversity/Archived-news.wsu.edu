@@ -8,7 +8,7 @@
 		}
 	}
 			
-	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+	$paged = ( $news_section == "athletics" && get_query_var('paged') ) ? get_query_var('paged') : 1; 
 	
 	$articles_filter = array(
 		'nopaging'				=> false,
@@ -38,8 +38,8 @@
 		'end_size'     => 3,
 		'mid_size'     => 3,
 		'prev_next'    => True,
-		'prev_text'    => __('« Previous'),
-		'next_text'    => __('Next »'),
+		'prev_text'    => __('«'),
+		'next_text'    => __('»'),
 		'type'         => 'plain',
 		'add_args'     => False,
 		'add_fragment' => ''
@@ -47,15 +47,15 @@
 	
 	wp_reset_postdata();
 	
-	if ( $news_section == "press" ) { 
+	if ( $news_section == "athletics" ) { 
 		
-		echo 'heelo<nav class="paging">';
+		echo '<nav class="paging">';
 		echo paginate_links( $paging );
 		echo '</nav>';
 		
 	} else {
 		
-		echo section_link("press");
+		echo section_link("athletics");
 	
 	}
 	

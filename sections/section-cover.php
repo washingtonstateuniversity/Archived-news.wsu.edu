@@ -39,8 +39,8 @@
 		'end_size'     => 3,
 		'mid_size'     => 3,
 		'prev_next'    => True,
-		'prev_text'    => __('« Previous'),
-		'next_text'    => __('Next »'),
+		'prev_text'    => __('«'),
+		'next_text'    => __('»'),
 		'type'         => 'plain',
 		'add_args'     => False,
 		'add_fragment' => ''
