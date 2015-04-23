@@ -19,11 +19,12 @@ add_action( 'wp_enqueue_scripts', 'news_scripts_styles' );
  */
 function news_scripts_styles() {
 	wp_enqueue_script( 'news-scripts', get_stylesheet_directory_uri() . '/scripts.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'jquery-mobile', get_stylesheet_directory_uri() . '/scripts/jquery.touchSwipe.min.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'jquery-mobile', get_stylesheet_directory_uri() . '/scripts/touch/jquery.touchSwipe.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_style( 'weather-styles', get_stylesheet_directory_uri() . '/scripts/weather/css/weather-icons.css' );
-	wp_enqueue_script( 'weather-scripts', get_stylesheet_directory_uri() . '/scripts/weather/jquery.simpleWeather.min.js' );
-	wp_enqueue_style( 'colorbox-styles', get_stylesheet_directory_uri() . '/scripts/colorbox/colorbox.css' );
-	wp_enqueue_script( 'colorbox-scripts', get_stylesheet_directory_uri() . '/scripts/colorbox/jquery.colorbox.js' );
+	wp_enqueue_script( 'weather-simple', get_stylesheet_directory_uri() . '/scripts/weather/jquery.simpleWeather.min.js' );
+	wp_enqueue_script( 'weather-scripts', get_stylesheet_directory_uri() . '/scripts/weather/weather.js', array( 'jquery' ), false, true );
+	//wp_enqueue_style( 'colorbox-styles', get_stylesheet_directory_uri() . '/scripts/colorbox/colorbox.css' );
+	//wp_enqueue_script( 'colorbox-scripts', get_stylesheet_directory_uri() . '/scripts/colorbox/jquery.colorbox.js' );
 }
 
 add_action( 'admin_enqueue_scripts', 'news_admin_enqueue_scripts' );
