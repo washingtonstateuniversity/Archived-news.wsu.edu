@@ -66,7 +66,30 @@ figure {
 	
 }
 
+.story {
+	
+	.featured-image {
+		
+		position: relative;
+		
+		figcaption {
+			
+			color: white;
+			position: absolute;
+			bottom: 0;
+			padding-left: 2rem;
+			padding-bottom: 1rem;
+			max-width: 50%;
+			
+		}
+		
+	}
+	
+}
+
+
 /* Gallery */
+
 .gallery:before,
 .gallery:after {
 	content: " ";
@@ -230,11 +253,61 @@ figure.gallery {
 	height: 100vh;
 	left: calc(50% - 594px + 198px); /* 1188/2 offset 198px Spine */
 	background-color: rgba(255, 191, 202, 0.79);
+	background-color: $gray-darker;
+	background-color: rgba(42, 48, 51, 0.95);
 	z-index: 99164;
 	background-size: cover;
 	background-position: center center;
+	background-repeat: no-repeat;
 	overflow: hidden;
 	width: 0;
+	
+}
+
+.tipped.fit {
+	background-size: contain;
+	background-position: left center;
+}
+
+.tipped button.fit {
+	
+	color: white;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	width: 50px;
+	background: $gray-dark;
+	text-align: center;
+	border: none;
+	border-radius: 0;
+	
+}
+
+.tipped:hover {
+	cursor: w-resize;
+}
+
+.tipped button:hover {
+	cursor: nesw-resize;
+}
+
+.tipped button.fit::before {
+	content: "[ - ]";
+}
+
+.tipped button.fit:hover::before {
+	content: "[-]";
+}
+
+.tipped .fit:hover {
+	background: white;
+	color: black;
+}
+
+xx.tipped.img-portrait {
+	background-size: auto 100%;
+	background-position: left top;
 }
 
 .tipped.in {
@@ -245,8 +318,8 @@ figure.gallery {
 
 .tipped.out {
 	animation: tip-out .4s ease-in;
-	left: auto;
-	right: 0;
+	//left: auto;
+	//right: 0;
 	width: 0px;
 }
 
