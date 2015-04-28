@@ -8,18 +8,24 @@
 		color: $gray-darker;
 
 	}
+	
+	figure.alignright,
+	figure.alignleft {
+		background: -webkit-linear-gradient(top, $gray-lightly 0%, transparent 50%, transparent 100%);
+		border-bottom: 5px $gray-lightly solid;
+		//background: white;
+	}
 		
 	aside,
 	.aside,
 	.pullquote,
 	figure.alignright {
 		
-		border-left: 5px #2a3033 solid;
-		padding: 0 0 0 1rem;
+		border-top: 0px $gray-darker solid;
+		padding: 5px;
 		margin: 0 0 1em 0em;
 		width: 50%;
 		box-sizing: border-box;
-		//background: green;
 		
 	}
 	
@@ -40,6 +46,12 @@
 		line-height: 1.2em;
 		width: 50%;
 		
+	}
+	
+	.wp-caption {
+		font-size: .9em;
+		color: $gray-dark;
+		line-height: 1.1em;
 	}
 			
 }
