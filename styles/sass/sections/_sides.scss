@@ -6,12 +6,12 @@
 	display: block;
 	}
 
-.size-lt-xlarge.size-gt-medium .section.crimson aside {
+.section.crimson aside {
 	display: none;
 	}
 	
 .section-side:before,
-.size-large .main-body .section.crimson .section-header:before {
+.main-body .section.crimson .section-header:before {
 	content: "news";
 	font-size: 8em;
 	line-height: 1em;
@@ -72,6 +72,10 @@
 	li {
 		list-style: none;
 		}
+			
+	ul.menu {
+		margin-bottom: 1rem;
+	}
 		
 	.menu li,
 	ul header {
@@ -103,6 +107,8 @@
 		font-size: 1rem;
 		display: block;
 		color: #dddddd;
+		margin-left: -1rem;
+		padding-left: 1rem;
 		}
 		
 	header ~ ul {
@@ -128,7 +134,6 @@
 	color: white;
 	background: white;
 	}
-	
 
 // Crimson
 .crimson .section-side li a {
@@ -171,35 +176,48 @@
 	}
 
 // Yellow
-.section.yellow aside {
-	background: $yellow;
+.section.yellow {
+	
+	.section-side {
+	
+		background: $yellow;
+
+		&:before {
+			color: #c69214;
+			content: "Local";
+		}
+	
+		li a {
+			color: $yellow-lightly;
+			display: inline-block;
+		}
+		
+		.menu li a:hover {
+			color: white;
+			background: $yellow-dark;
+		}
+		
+		ul:not(.menu) li a:before {
+			background-color: $yellow-dark;
+		}
+		
+		hr {
+			background: $yellow-lighter;
+		}
+		
+		header {
+			color: $yellow-dark;
+		}
+		
+		.weather-report,
+		.weather-report i {
+			color: $yellow-lighter;
+		}
+
 	}
-.section.yellow aside:before {
-	color: #c69214;
-	}
-.section.yellow aside:before {
-	content: "Local";
-	}
-.section.yellow aside li a {
-	color: $yellow-lighter;
-	display: inline-block;
-	}
-.section.yellow aside .menu li a:hover {
-	color: white;
-	background: $yellow-dark;
-	}
-.section.yellow hr {
-	background: $yellow-lighter;
-	}
-.section.yellow aside header {
-	color: $yellow-darker;
-	}
-.section.yellow aside header {
-	color: $yellow-dark;
-	}
-.section.yellow .section-side ul:not(.menu) li a:before {
-	background-color: $yellow-dark;
-	}
+
+}
+
 #menu-local li:nth-of-type(5):before {
 	content: "";
 	display: block;
@@ -214,35 +232,76 @@
 // Orange
 .section.orange {
 	
-	aside {
-		background: $orange;
-	}
-	
-	aside:before {
-		color: #b67233;
-	}
-	
-	aside:before {
-		content: "Athletics";
-	}
-	
-	aside li a {
+	.section-side {
+		color: $orange-darkest;
 		color: $orange-lightly;
-	}
+		background: $orange;
 	
-	aside li a:hover {
-		color: white;
-		background: $orange-dark;
-	}
+		&::before {
+			color: #b67233;
+		}
+		
+		&::before {
+			content: "Athletics";
+		}
+		
+		li a {
+			color: $orange-lightly;
+		}
+		
+		li a:hover {
+			color: white;
+			background: $orange-dark;
+		}
+		
+		header {
+			background: $orange-dark;
+			margin-bottom: .25rem;
+		}
+		
+		header,
+		header a {
+			color: $orange-light;
+		}
+		
+		a.rsswidget:not(.x):not(.y) {
+			font-weight: bold;
+			color: $orange-lightest;
+			display: block;
+			padding: .25rem;
+			margin: -.25rem;
+		}
+		
+		a.rsswidget:not(.x):not(.y):hover {
+			color: white;
+		}
+		
+		header a.rsswidget:first-of-type:not(.x):not(.y) {
+			display: none;
+		}
+		
+		span.rss-date {
+			display: block;
+			color: $orange-lighter;
+			text-transform: uppercase;
+			font-size: .9em;
+			padding: 2px 0;
+		}
+		
+		ul:not(.menu) li a::before {
+			background: $orange-lighter;
+		}
+		
+		ul:not(.menu) li a:hover::before {
+			background: white;
+		}
+
 	
-	aside header {
-		color: $orange-darker;
 	}
 	
 }
 
-
-.section.events {
+.section.blue {
 	
 	.section-side ul:not(.menu) li a:before {
 		background-color: $blue-darker;
@@ -252,27 +311,32 @@
 	.content-item-event-date {
 		color: $blue;
 		//background-color: $blue-dark;
-		float: right;
-		width: 30px;
+		//float: right;
+		//width: 30px;
 		text-align: center;
 		text-align: left;
 		display: block;
 		font-weight: bold;
-		padding: 3px 0 3px 3px;
-		height: 100%;
-		color: $blue-dark;
-		border-left: 5px $blue-dark solid;
-		margin-left: 3px;
+		padding: 3px 0 3px 5px;
+		color: $blue-darker;
+		//border-left: 5px $blue-darker solid;
+		//margin-left: 3px;
 	}
 	
 	.content-item-event-title {
-		clear: both;
 		
-		a {
-			color: $blue-lighter;
+		//clear: both;
+		//border-left: 5px $blue-darker solid;
+		//border-left: 5px transparent solid;
+		padding: 0px 0 3px 5px;
+		display: block;
+		
+		a:not(.x):not(.y) {
+			color: $blue-lightly;
 		}
 		
-		a:hover {
+		a:not(.x):not(.y):hover {
+			color: white;
 			background: transparent;
 		}
 		
@@ -281,6 +345,8 @@
 	.content-item-event-meta {
 		font-size: .8em;
 		color: $blue-darker;
+		margin-left: 10px;
+		display: block;
 	}
 	
 	.content-item-event-venue {
@@ -290,92 +356,131 @@
 	
 }
 
-
 // Blue
-.section.blue aside {
-	background: $blue;
+.section.blue {
+	
+	.section-side {
+	
+		background: $blue;
+	
+		&::before {
+			color: #4f868e;
+			}
+		
+		&::before {
+			content: "Events";
+			}
+			
+		header {
+			background: $blue-darker;
+			color: $blue-lighter;
+		}
+	
+		li a {
+			color: $blue-lightest;
+			display: inline-block;
+		}
+		
+		li a:hover {
+			color: white;
+			background: $blue-dark;
+		}
+		
+		ul:not(.menu) li a::before {
+			background: $blue-lighter;
+		}
+		
+		ul:not(.menu) li a:hover::before {
+			background: white;
+		}
+	
 	}
-.section.blue aside:before {
-	color: #4f868e;
-	}
-.section.blue aside:before {
-	content: "Events";
-	}
-.section.blue aside li a {
-	color: $blue-lightest;
-	display: inline-block;
-	}
-.section.blue aside li a:hover {
-	color: white;
-	background: $blue-dark;
-	}
+	
+}
 
 // Green
 
 .section.green {
 	
-	aside {
+	.section-side {
+		
 		background: $green;
-	}
 	
-	aside:before {
-		color: #8f7e35;
-	}
+		&::before {
+			color: #8f7e35;
+		}
+		
+		&::before {
+			content: "People";
+		}
+		
+		header {
+			color: $green-lighter;
+			background: $green-darker;
+		}
+		
+		li a {
+			color: $green-lightly;
+			display: inline-block;
+			padding: .25rem;
+			margin: -.25rem;
+		}
+		
+		li a:hover,
+		ul.menu > li.current > a,
+		ul.menu li li.current > a {
+			color: white;
+			background: $green-dark;
+		}
+			
+		ul:not(.menu) li a::before {
+			background: $green-lighter;
+		}
+		
+		ul:not(.menu) li a:hover::before {
+			background: white;
+		}
 	
-	aside:before {
-		content: "People";
-	}
-	
-	aside li a {
-		color: $green-lightly;
-		display: inline-block;
-	}
-	
-	aside li a:hover,
-	aside ul.menu > li.current > a,
-	aside ul.menu li li.current > a {
-		color: white;
-		background: $green-dark;
-	}
-	
-	aside header {
-		color: $green-darker;
-	}
-	
-	.section-side ul:not(.menu) li a:before {
-		background: $green-dark;
 	}
 	
 }
 
 /* Side Sections */
-.side-sections li {
-	border-top: none;
-	list-style: none;
+.side-sections {
+	ul {
+		margin-top: 5px;
+		}
+	li {
+		border-top: none;
+		list-style: none;
+		
+		a {
+			font-weight: 300;
+			font-size: 2rem;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			display: block;
+			line-height: 1.2em;
+		}
+		
+		&.crimson a {
+			color: #981e32;
+			border-bottom-color: #981e32;
+		}
+		
+		&.yellow a {
+			color: #c69214;
+			border-top-color: #c69214;
+		}
+		
+		&.blue a {
+			color: #4f868e;
+			border-top-color: #4f868e;
+		}
+		
 	}
-.side-sections li a {
-	font-weight: 300;
-	font-size: 2rem;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	display: block;
-	line-height: 1.2em;
-	}
-.side-sections ul {
-	margin-top: 5px;
-	}
-.side-sections li.crimson a {
-	color: #981e32;
-	border-bottom-color: #981e32;
-	}
-.side-sections li.yellow a {
-	color: #c69214;
-	border-top-color: #c69214;
-	}
-.side-sections li.blue a {
-	color: #4f868e;
-	border-top-color: #4f868e;
-	}
+}
+
 .side-sections li.orange a {
 	color: #b67233;
 	border-top-color: #b67233;
@@ -408,3 +513,7 @@ aside.widget li a:hover {
 	color: #981e32;
 	color: #2a3033;
 	}
+	
+header .rsswidget img {
+	display: none;
+}

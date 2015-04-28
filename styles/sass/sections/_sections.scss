@@ -1,10 +1,12 @@
+@import '../global/vars';
+
 .sections {
 	position: relative;
 	
 	}
 	
 .sections > .column.one {
-	width: 2000px !important;
+	//width: 1000px !important;
 }
 
 .sections .section {
@@ -96,6 +98,9 @@ $sections: 1,2,3,4,5;
 .section.opened:not(.crimson) .section-header:hover .rotate:before {
 	content: "\00ab";
 	content: "\00bb";
+	content: "\21E5";
+	//@include condensed;
+	font-weight: 300;
 	display: block;
 	position: absolute;
 	top: 0;
@@ -106,8 +111,11 @@ $sections: 1,2,3,4,5;
 	width: 33px;
 	height: 33px;
 	color: rgba(255, 255, 255, 0.5);
-	font-size: 45px;
+	font-size: 25px;
 	text-align: center;
+	//border-color: white;
+	//border-width: 1px 1px 0 0;
+	//border-style: solid;
 }
 
 .section-header {
@@ -191,14 +199,19 @@ $sections: 1,2,3,4,5;
 
 /* Yellow */
 
-.section.yellow .section-header,
-.section.yellow .section-header .rotate {
-	background: #c7911b;
+.section.yellow {
+	
+	.section-header,
+	.section-header .rotate {
+		background: #c7911b;
+	}
+	
+	.section-title {
+		color: #e5cd93;
+	}
+	
 }
 
-.yellow .section-title {
-	color: #e5cd93;
-}
 
 .section.yellow:not(.opened) .section-header .rotate:hover {
 	background: $yellow-er;
@@ -307,129 +320,123 @@ $sections: 1,2,3,4,5;
 /* Section Tabs */
 
 .section-tabs {
-	position: fixed;
-	margin-left: -396px;
-	z-index: 999164;
-	top: 0px;
-	bottom: 0px;
-	top: 0px;
-	bottom: 0px;
-	width: 200px;
-	}
-
-.section-tabs {
-	//margin-left: 693px;
-	}
 	
-
+	}
 
 .size-lt-large .section-tabs {
 	margin-left: -200px;
 	top: 50px;
 	}
 	
-.section-tabs .section-tab {
-	width: 33px;
-	float: right;
-	height: 100%;
+body[class*="verso-"] .section-tabs {
+	background: $crimson;
+}
+	
+.section-tabs {
+	
+	position: fixed;
+	margin-left: -996px;
+	z-index: 999164;
 	top: 0px;
 	bottom: 0px;
-	overflow: hidden;
-	box-sizing: border-box;
-	box-shadow: inset -5px 0px 0px 0px rgba(0, 0, 0, .5);
-	position: relative;
-	display: none;
+	top: 0px;
+	bottom: 0px;
+	width: 800px;
+
+	.section-tab {
+		
+		width: 33px;
+		float: right;
+		height: 100%;
+		top: 0px;
+		bottom: 0px;
+		overflow: hidden;
+		box-sizing: border-box;
+		box-shadow: inset -5px 0px 0px 0px rgba(0, 0, 0, .5);
+		position: relative;
+		display: none;
+		
+		&:hover {
+			border-right-width: 0px;
+			cursor: pointer;
+		}
+		
+		&.crimson {
+			color: #981e32;
+			border-right-color: #981e32;
+			color: white;
+			background: #981e32;
+			box-shadow: inset -5px 0px 0px 0px rgba(82, 0, 14, 0.5);
+		}
+		
+		&.crimson:hover {
+			color: white;
+			background: #c60c30;
+		}
+		
+		&.yellow {
+			color: #c7911b;
+			border-right-color: #c7911b;
+			color: white;
+			background: #c7911b;
+			box-shadow: inset 5px 0px 0px 0px $yellow-dark;
+			box-shadow: inset -5px 0px 0px 0px $yellow-dark;
+			}
+			
+		&.yellow:hover {
+			background: #c7911b;
+			background: #ffb81c;
+		}
+		
+		&.blue {
+			color: #4f868e;
+			border-right-color: #4f868e;
+			background: #4f868e;
+			color: white;
+			box-shadow: inset 5px 0px 0px 0px $blue-dark;
+			box-shadow: inset -5px 0px 0px 0px $blue-dark;
+		}
+		
+		&.blue:hover {
+			color: white;
+			background: #00a5bd;
+		}
+		
+		&.green {
+			color: #8f7e35;
+			border-right-color: #8f7e35;
+			color: white;
+			background: #8f7e35;
+			box-shadow: inset -5px 0px 0px 0px rgba(86, 76, 32, 0.5);
+		}
+		
+		&.green:hover {
+			color: white;
+			background: #ada400;
+		}
+		
+		&.orange {
+			color: #b67233;
+			border-right-color: #b67233;
+			color: white;
+			background: #b67233;
+			box-shadow: inset -5px 0px 0px 0px rgba(109, 68, 31, 0.5);
+		}
+		
+		&.orange:hover {
+			color: white;
+			background: #b67233;
+			background: #f6861f;
+		}
+		
 	}
 
-.section-tabs .section-tab:hover {
-	border-right-width: 0px;
-	cursor: pointer;
-	}
-
-.section-tab.crimson {
-	color: #981e32;
-	border-right-color: #981e32;
-	color: white;
-	background: #981e32;
-	box-shadow: inset -5px 0px 0px 0px rgba(82, 0, 14, 0.5);
-	}
-
-.section-tab.crimson:hover {
-	color: white;
-	background: #c60c30;
+	.section-header,
+	.section-title {
+		display: block;
 	}
 	
-.section-tab.yellow {
-	color: #c7911b;
-	border-right-color: #c7911b;
-	color: white;
-	background: #c7911b;
-	box-shadow: inset 5px 0px 0px 0px $yellow-dark;
-	}
-
-.section-tab.yellow {
-	box-shadow: inset -5px 0px 0px 0px $yellow-dark;
-	}
-
-.section-tab.yellow:hover {
-	background: #c7911b;
-	background: #ffb81c;
-	}
-
-.section-tab.blue {
-	color: #4f868e;
-	border-right-color: #4f868e;
-	background: #4f868e;
-	color: white;
-	box-shadow: inset 5px 0px 0px 0px $blue-dark;
-	}
-
-.section-tab.blue:hover {
-	color: white;
-	background: #4f868e;
-	background: #00a5bd;
-	}
-
-.section-tab.blue {
-	box-shadow: inset -5px 0px 0px 0px $blue-dark;
-	}
-	
-.section-tab.green {
-	color: #8f7e35;
-	border-right-color: #8f7e35;
-	color: white;
-	background: #8f7e35;
-	box-shadow: inset -5px 0px 0px 0px rgba(86, 76, 32, 0.5);
-	}
-
-.section-tab.green:hover {
-	color: white;
-	background: #8f7e35;
-	background: #ada400;
-	}
-
-.section-tab.orange {
-	color: #b67233;
-	border-right-color: #b67233;
-	color: white;
-	background: #b67233;
-	box-shadow: inset -5px 0px 0px 0px rgba(109, 68, 31, 0.5);
-	}
-
-.section-tab.orange:hover {
-	color: white;
-	background: #b67233;
-	background: #f6861f;
-	}
-	
-.section-tabs .section-header {
-	display: block;
-	}
-	
-.section-tab .section-title {
-	//padding-top: 4px;
-	display: block;
-	}
+}
 	
 /* Sections */
 

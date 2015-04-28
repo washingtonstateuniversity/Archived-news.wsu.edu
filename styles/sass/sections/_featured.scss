@@ -54,8 +54,8 @@
 	
 	
 			a {
-				color: white;
-				text-shadow: 5px 0px 0px rgba(0, 0, 0, 0.25);
+				color: rgba(255, 255, 255, 0.9);
+				text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25);
 				padding-left: 2rem;
 				padding-right: 20%;
 				padding-bottom: 2rem;
@@ -84,38 +84,13 @@
 			} //a
 			
 			a:hover {
-				text-shadow: 2px 0px 0px rgba(0, 0, 0, 1);
+				color: white;
+				text-shadow: -2px 0px 0px rgba(0, 0, 0, 1);
 			}		
 
 		} //h2
 		
 	} //.article-title
-	
-
-
-	&:not(.x) hgroup.article-title h2 a {
-		color: white;
-	}
-	
-	x:not(.x) hgroup.article-title h2:before {
-		
-		font-weight: bold;
-		font-size: 1rem;
-		background: black;
-		xxbackground: #5e6a71;
-		background: #2a3033;
-		color: $gray-darker;
-		background: $gray-lightly;
-		background: white;
-		display: inline-block;
-		position: absolute;
-		bottom: calc(100% + 5px);
-		padding: 2px 4px;
-		text-transform: uppercase;
-		line-height: 1em;
-		text-shadow: none;
-		box-shadow: 1px 2px 1px $gray-darker;
-	}
 		
 	article.category-rockdoc hgroup.article-title h2:before,
 	article.tag-rock-doc hgroup.article-title h2:before {

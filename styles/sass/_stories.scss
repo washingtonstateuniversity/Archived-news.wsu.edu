@@ -1,17 +1,21 @@
 @import 'global/colors';
 
-body:not(.single) {
+body {
 	
-	.article-footer {
+	&:not(.single) {
 	
-		.categorized dt,
-		.categorized dd,
-		.tagged {
-			display: none;
-		}
+		.article-footer {
 		
-		dd::after {
-			content: "";
+			.categorized dt,
+			.categorized dd,
+			.tagged {
+				display: none;
+			}
+			
+			dd::after {
+				content: "";
+			}
+		
 		}
 	
 	}
@@ -49,7 +53,6 @@ body:not(.single) {
 }
 
 
-
 .single article,
 .single article header {
 	background-image: none;
@@ -65,7 +68,6 @@ main div:not(.article-featured) article header {
 }
 
 .articles {
-	
 	padding: 0 2rem;
 	overflow: hidden;
 	padding-bottom: 50px;
@@ -179,7 +181,7 @@ body.single article .article-thumbnail {
 		.article-summary {
 			
 			line-height: 1.5em;
-			display: none;
+			//display: none;
 			
 			p {
 				padding-bottom: 0;
@@ -332,7 +334,8 @@ body.single article .article-thumbnail {
 	
 }
 
-.paging {
+.paging,
+.archive-footer {
 	
 	margin-top: 2rem;
 	
