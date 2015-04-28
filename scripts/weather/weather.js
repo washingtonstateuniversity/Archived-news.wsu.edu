@@ -11,7 +11,7 @@
 			woeid: '',
 			unit: 'f',
 			success: function(weather) {
-			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			  html = '<div class="weather-report"><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
 			  //html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
 			  //html += '<li class="currently">'+weather.currently+'</li>';
 			
@@ -27,7 +27,7 @@
 			woeid: '',
 			unit: 'f',
 			success: function(weather) {
-			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			  html = '<div class="weather-report"><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
 			
 			$("#menu-local li:nth-of-type(2)").append(html);
 			},
@@ -41,7 +41,7 @@
 			woeid: '',
 			unit: 'f',
 			success: function(weather) {
-			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			  html = '<div class="weather-report"><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
 			
 			  $("#menu-local li:nth-of-type(3)").append(html);
 			},
@@ -55,7 +55,7 @@
 			woeid: '',
 			unit: 'f',
 			success: function(weather) {
-			  html = '<div><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
+			  html = '<div class="weather-report"><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'<span class="currently"> '+weather.currently+'</span></div>';
 			
 			  $("#menu-local li:nth-of-type(4)").append(html);
 			},
