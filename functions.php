@@ -106,8 +106,8 @@ function wsunews_sides() {
 	register_sidebar( array(
 		'name'          => 'Cover Sidebar',
 		'id'            => 'side-cover',
-		'before_widget' => '',
-		'after_widget'  => '',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<header>',
 		'after_title'   => '</header>',
 	));
@@ -115,9 +115,9 @@ function wsunews_sides() {
 	register_sidebar( array(
 		'name'          => 'Local Sidebar',
 		'id'            => 'side-local',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<header>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<header class="widget-header">',
 		'after_title'   => '</header>',
 	));
 	
@@ -133,27 +133,27 @@ function wsunews_sides() {
 	register_sidebar( array(
 		'name'          => 'Athletics Sidebar',
 		'id'            => 'side-athletics',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<header>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<header class="widget-header">',
 		'after_title'   => '</header>',
 	));
 	
 	register_sidebar( array(
 		'name'          => 'Athletics Section',
 		'id'            => 'section-athletics',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<header>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<header class="widget-header">',
 		'after_title'   => '</header>',
 	));
 	
 	register_sidebar( array(
 		'name'          => 'People Sidebar',
 		'id'            => 'side-people',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<header>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<header class="widget-header">',
 		'after_title'   => '</header>',
 	));
 
