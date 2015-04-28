@@ -18,7 +18,7 @@
 				
 					if ( ( $(this).attr("data-sec") < indexical ) && ( $(this).attr("data-sec") !== "6" ) ) {
 					  //$(this).removeClass("delivered");
-					  var section_width = $(this).width() + 33;
+					  //var section_width = $(this).width() + 33;
 					  $(this).animate({"left":"-1000px"}, 500 ).addClass("lain-left");
 					}
 				
@@ -44,7 +44,7 @@
 			
 				$("body").removeClass("verso-0 verso-1 verso-2 verso-3 verso-4 verso-5");
 					
-				if ( indexical !== "2" && indexical !== "1" ) {
+				if ( indexical !== "1" ) {
 						
 						$("body:not(.single)").addClass("verso-"+( indexical - 1 ));
 			
@@ -135,21 +135,35 @@
 		var img_src = $(tip).attr("href");
 		var img_width = $(tip).first("img").clientWidth;
 		var img_height = $(tip).first("img").clientHeight;
+		var viewport_width = $(window).width();
+		var viewport_height = $(window).height();
 		var img_ratio = ( img_width > img_height ) ? "img-landscape" : "img-portrait";
+		var viewport_ratio = ( viewport_width > viewport_height ) ? "viewport-landscape" : "viewport-portrait";
 		
-		$("main").prepend('<div class="tipped '+img_ratio+'" style="background-image: url('+img_src+');"><div class="frame"></div></div>');
+		$("body").addClass(viewport_ratio);
+		$("main").prepend('<div class="tipped '+img_ratio+'" style="background-image: url('+img_src+');"><div class="frame"></div><button class="fit"></button></div>');
 		
 		$(".tipped").addClass("in").on("click", function() {
 			
 			$(this).addClass("out").delay(2000).queue(function(next){
 			
 				$(this).remove(); next();
+				$("body").removeClass("viewport-landscape viewport-portrait");
 
 			});
 		
 		});
 		
+		$(".tipped .fit").on("click", function(e) {
+			
+			e.stopPropagation();
+			$(this).parents(".tipped").toggleClass("fit");
+			
+		});
+		
 	}
+	
+	flipLeft();
 
 	$(document).ready( function() {
 		
@@ -168,8 +182,7 @@
 		
 		}
 		
-		$("img.aside").removeClass("aside").parents("figure").addClass("aside");
-		
+		$("img.aside").removeClass("aside").parents("figure").addClass("aside");		
 		
 		// Expand binder size for xxlarge widths
 		var xl_current_width = $(window).width();
@@ -318,7 +331,14 @@
 
 }(jQuery));
 
+
+
 (function($){
+	
+	$(document).keyup(function(e) {
+			if (e.keyCode === 13) { $('.tipped').remove(); }    // enter
+			if (e.keyCode === 27) { $('.tipped').remove(); }   // esc
+		});
 
 	$(document).ready(function() {
 	
