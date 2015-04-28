@@ -21,7 +21,7 @@
 		
 		<header class="section-header"><span class="rotate"><span class="section-title">Featured</span></span></header>
 		
-		<div class="enclosure row <?php echo $layout; ?> equalize equalize-medium">
+		<div class="enclosure row single equalize equalize-medium">
 		
 		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
