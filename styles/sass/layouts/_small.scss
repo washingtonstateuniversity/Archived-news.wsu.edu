@@ -15,6 +15,10 @@
 		height: auto;
 		cursor: default !important;
 		
+		&::before {
+			right: 0 !important;
+		}
+		
 	}
 	
 	.section-header .section-title {

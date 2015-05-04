@@ -3,7 +3,8 @@
 	
 	#binder,
 	#binder main {
-		margin: 0 0;
+		//margin-left: 0;
+		//margin-right: 0;
 		width: 100%;
 	}
 		
@@ -19,6 +20,14 @@
 		margin-left: 0px;
 	}
 	
+	.section-header .section-title {
+		padding-left: 75px;
+	}
+	
+	.photo.opened figure .photo-header .photo-title {
+		background-color: $gray-lightly;
+	}
+	
 }
 
 body:not(.single) .size-lt-large .hybrid .row.single .column.one {
@@ -26,5 +35,5 @@ body:not(.single) .size-lt-large .hybrid .row.single .column.one {
 }
 
 body[class*="verso-"] .size-medium #binder {
-	margin-left: 33px;
+	//margin-left: 33px;
 }

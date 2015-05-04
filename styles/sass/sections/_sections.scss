@@ -36,22 +36,24 @@ $sections: 1,2,3,4,5;
 		
 	.size-gt-small .sections .section:nth-of-type(#{$section}) {
 		z-index: 100 - ( 10 * $section);
-		width: calc(643px + #{( 33px * ( $section - 1 ) )} );
-		margin-right: #{( -643px - ( 33px * ( $section - 1 ) ) )};
+		width: calc(528px + #{( 33px * ( $section - 1 ) )} );
+		margin-right: #{( -528px - ( 33px * ( $section - 1 ) ) )};
 	}
 	
 }
 
 @each $section in $sections {
 		
-	.size-gt-small .sections .section:nth-of-type(#{$section}) {
-		width: calc(693px + #{( 33px * ( $section - 1 ) )} );
-		margin-right: #{( -693px - ( 33px * ( $section - 1 ) ) )};
+	.size-gt-medium .sections .section:nth-of-type(#{$section}) {
+		width: calc(594px + #{( 33px * ( $section - 1 ) )} );
+		margin-right: #{( -594px - ( 33px * ( $section - 1 ) ) )};
 	}
 	
 }
 
-
+.hybrid .row.margin-right .column.one {
+	//width: 100%;
+}
 
 .sections .section.opened {
 	margin-left: 0px;
@@ -74,36 +76,30 @@ $sections: 1,2,3,4,5;
 			}
 		}
 	}
+
+.size-gt-small {
 		
-	.verso-1 .size-lt-xxlarge {
-		padding-left: 40px;
-		padding-left: 10px;
-		padding-left: 0px;
+	.verso-1 #binder {
+		margin-left: 33px;
 	}
 	
-	.verso-2 .size-lt-xxlarge {
-		padding-left: 80px;
-		padding-left: 20px;
-		padding-left: 0px;
+	.verso-2 #binder {
+		margin-left: 66px;
 	}
 	
-	.verso-3 .size-lt-xxlarge {
-		padding-left: 120px;
-		padding-left: 30px;
-		padding-left: 0px;
+	.verso-3 #binder {
+		margin-left: 99px;
 	}
 	
-	.verso-4 .size-lt-xxlarge {
-		padding-left: 160px;
-		padding-left: 40px;
-		padding-left: 0px;
+	.verso-4 #binder {
+		margin-left: 122px;
 	}
 	
-	.verso-5 .size-lt-xxlarge {
-		padding-left: 200px;
-		padding-left: 50px;
-		padding-left: 0px;
+	.verso-5 #binder {
+		margin-left: 155px;
 	}
+	
+}
 
 
 .section.opened:not(.crimson) .section-header:hover .rotate:before {
@@ -208,6 +204,7 @@ $sections: 1,2,3,4,5;
 	
 	.section-title {
 		color: darken($crimson-dark, 10%);
+		color: $crimson-dark;
 	}
 
 }
@@ -359,6 +356,7 @@ $sections: 1,2,3,4,5;
 body[class*="verso-"] .size-gt-medium .section-tabs {
 	background: $crimson;
 	width: 800px;
+	margin-left: -996px;
 }
 
 body.verso-1 .size-gt-medium .section-tabs:hover {
