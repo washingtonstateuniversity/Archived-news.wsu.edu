@@ -30,7 +30,8 @@
 					}
 				});
 				
-				$('.section[data-sec="'+indexical+'"]').addClass("opened");
+				$('.section[data-sec="'+indexical+'"]').delay(500).addClass("opened");
+			  
 				
 			}
 			
@@ -68,14 +69,11 @@
 			  $(this).removeClass("lain-left").animate({left: "0px"}, {duration:300, queue:false});
 		  	}
 			if ( $(this).attr("data-sec") === indexical ) {
-			  $(this).addClass("opened");
+			  
+			  	$(this).addClass("opened");
+			  
 		  	}
-		  	/*
 		  	
-		  	var section_adjustment = $(this).width() + ( 40 * indexical );
-				  $(this).css("width", section_adjustment);
-	*/
-		
 		});
 		
 		$(".section-tab").each( function() {
@@ -130,18 +128,20 @@
 	
 	}
 	
-	function tipIn(tip) {
+	function tipIn(tip,attr) {
 		
-		var img_src = $(tip).attr("href");
+		var img_src = $(tip).attr(attr);
+		if ( attr === "src" ) { img_src = img_src.replace("-198x198", ""); }
 		var img_width = $(tip).first("img").clientWidth;
 		var img_height = $(tip).first("img").clientHeight;
+		var img_classes = $(tip).attr("classes");
 		var viewport_width = $(window).width();
 		var viewport_height = $(window).height();
 		var img_ratio = ( img_width > img_height ) ? "img-landscape" : "img-portrait";
 		var viewport_ratio = ( viewport_width > viewport_height ) ? "viewport-landscape" : "viewport-portrait";
 		
 		$("body").addClass(viewport_ratio);
-		$("main").prepend('<div class="tipped '+img_ratio+'" style="background-image: url('+img_src+');"><div class="frame"></div><button class="fit"></button></div>');
+		$("main").prepend('<div class="tipped '+img_ratio+' '+img_classes+'" style="background-image: url('+img_src+');"><div class="frame"></div><button class="fit"></button></div>');
 		
 		$(".tipped").addClass("in").on("click", function() {
 			
@@ -171,8 +171,16 @@
 			
 			e.preventDefault();
 			var tip = $(this);
+			tipIn(tip,"href");
+		
+		});
+		
+		$('.gallery-icon a[href^="http"] img').on("click", function(e) {
 			
-			tipIn(tip);
+			e.preventDefault();
+			var tip = $(this);
+			tipIn(tip,"src");
+		
 		});
 		
 		// Wrap Images with figure
@@ -196,11 +204,11 @@
 		
 		//var opened = $(".news-section.opened").attr("data-sec");
 		
-		$(".section").swipe( {
-	
+		$("body").swipe( {
+			
 			swipeLeft:function() {
 				
-				var opened = $(this).attr("data-sec");
+				var opened = $(".section.opened").attr("data-sec");
 				flipLeft(opened + 1);
 				//throw("left");
 				
@@ -208,7 +216,7 @@
 			
 			swipeRight:function() {
 				
-				var opened = $(this).attr("data-sec");
+				var opened = $(".section.opened").attr("data-sec");
 				flipRight(opened - 1);
 				throw "right";
 					
