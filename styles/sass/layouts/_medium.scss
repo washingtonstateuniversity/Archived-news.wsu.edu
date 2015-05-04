@@ -15,29 +15,16 @@
 		font-size: 12px;
 	}
 		
-	x.sections .section {
-		width: 100%;
-		position: relative;
-		clear: both;
-	}
-		
 	#binder main {
 		margin-left: 0px;
 	}
 	
-	
-	
-	body:not(.single) .hybrid .row.margin-right .column.one {
-		width: 100%;
-		}
-		
-	x.hybrid .row.margin-right .row.margin-right .column.one {
-		width: 75%;
-		}
-
 }
 
-	body[class*="verso-"] .size-medium #binder {
-		margin-left: 33px;
-		}
-	
+body:not(.single) .size-lt-large .hybrid .row.single .column.one {
+		width: 100%;
+}
+
+body[class*="verso-"] .size-medium #binder {
+	margin-left: 33px;
+}

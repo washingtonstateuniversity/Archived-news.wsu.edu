@@ -34,13 +34,24 @@ $sections: 1,2,3,4,5;
 
 @each $section in $sections {
 		
-	.sections .section:nth-of-type(#{$section}) {
+	.size-gt-small .sections .section:nth-of-type(#{$section}) {
 		z-index: 100 - ( 10 * $section);
+		width: calc(643px + #{( 33px * ( $section - 1 ) )} );
+		margin-right: #{( -643px - ( 33px * ( $section - 1 ) ) )};
+	}
+	
+}
+
+@each $section in $sections {
+		
+	.size-gt-small .sections .section:nth-of-type(#{$section}) {
 		width: calc(693px + #{( 33px * ( $section - 1 ) )} );
 		margin-right: #{( -693px - ( 33px * ( $section - 1 ) ) )};
 	}
 	
 }
+
+
 
 .sections .section.opened {
 	margin-left: 0px;
@@ -146,17 +157,22 @@ $sections: 1,2,3,4,5;
 
 .section-title {
 	font-weight: 300;
+	font-weight: bold;
+	@include condensed;
 	font-size: 1.9em;
 	line-height: 1em;
 	text-transform: uppercase;
-	padding-left: 5px;
-	padding-top: 2px;
+	padding-left: 20px;
+	padding-top: 3px;
 	display: block;
-	}
+}
+
+.section-tab .section-title {
+	padding-top: 0;
+}
 	
 .size-gt-medium .main-body .sections .section-tab {
 	position: relative;
-	text-align: 
 	}
 
 .size-gt-small .main-body .sections .rotate {
@@ -171,35 +187,35 @@ $sections: 1,2,3,4,5;
 	}
 
 .size-gt-small .main-body .sections section:not(.lain-left) .section-header .rotate {
-	position: fixed;
-	
+	position: fixed;	
 }
 	
 .size-gt-medium .main-body .sections .section-header .relative .section-title {
 	position: static;
 }
-	
-.size-gt-small .section-tabs .section-title {
-	right: -7px;
-}
 
 /* Crimson */
 
-.section.crimson .section-header .rotate {
-	background: $crimson;
-}
+.crimson {
 
-.main-body .section.crimson .section-header .section-title {
-	display: none;
-}
+	.section-header .rotate {
+		background: $crimson;
+	}
+	
+	.main-body & .section-header .section-title {
+		display: none;
+	}
+	
+	.section-title {
+		color: darken($crimson-dark, 10%);
+	}
 
-.crimson .section-title {
-	color: $gray-lighter;
 }
 
 /* Yellow */
 
-.section.yellow {
+
+.yellow {
 	
 	.section-header,
 	.section-header .rotate {
@@ -208,93 +224,108 @@ $sections: 1,2,3,4,5;
 	
 	.section-title {
 		color: #e5cd93;
+		color: $yellow-dark;
 	}
 	
-}
+	a {
+		color: $yellow;
+	}
+	
+	a:hover {
+		color: $yellow-er;
+	}
 
+}
 
 .section.yellow:not(.opened) .section-header .rotate:hover {
 	background: $yellow-er;
 	//background: $yellow-dark;
 }
 
-.section.yellow a {
-	color: $yellow;
-}
-	
-.section.yellow a:hover {
-	color: $yellow-er;
-}
-
 /* Blue */
 
-.section.blue .section-header,
-.section.blue .section-header .rotate {	
-	background-color: #4f868e;
-}
+.blue {
 	
-.blue .section-title {
-	color: #aec7cb;
-}
+	.section-header,
+	.section-header .rotate {	
+		background-color: #4f868e;
+	}
+		
+	.section-title {
+		color: #aec7cb;
+		color: $blue-dark;
+	}
+	
+	&:not(.opened) .section-header .rotate:hover {
+		background: $blue-er;
+		//background: $blue-dark;
+	}
+	
+	a {
+		color: $blue;
+	}
+	
+	a:hover {
+		color: $blue-er;
+	}
 
-.section.blue:not(.opened) .section-header .rotate:hover {
-	background: $blue-er;
-	//background: $blue-dark;
-}
-
-.section.blue a {
-	color: $blue;
-}
-
-.section.blue a:hover {
-	color: $blue-er;
 }
 
 /* Orange */
 
-.section.orange .section-header,
-.section.orange .section-header .rotate {
-	background-color: #b67233;
-}
+.orange {
 
-.orange .section-title {
-	color: #ddbea1;
-}
+	.section-header,
+	.section-header .rotate {
+		background-color: #b67233;
+	}
+	
+	.section-title {
+		color: #ddbea1;
+		color: $orange-dark;
+	}
+	
+	&:not(.opened) .section-header .rotate:hover {
+		background: $orange-er;
+		//background: $orange-dark;
+	}
+	
+	a {
+		color: $orange;
+	}
+	
+	a:hover {
+		color: $orange-er;
+	}
 
-.section.orange:not(.opened) .section-header .rotate:hover {
-	background: $orange-er;
-	//background: $orange-dark;
-}
-
-.section.orange a {
-	color: $orange;
-}
-
-.section.orange a:hover {
-	color: $orange-er;
 }
 
 /* Green */
 
-.section.green .section-header,
-.section.green .section-header .rotate {
-	background-color: #8f7e35;
-}
-	
-.green .section-title {
-	color: #cbc4a2;
-}
-	
-.section.green:not(.opened) .section-header .rotate:hover {
-	background: #ada400;
-}
+.green {
 
-.section.green a {
-	color: $green;
-}
+	.section-header,
+	.section-header .rotate {
+		background-color: #8f7e35;
+	}
+		
+	.section-title {
+		color: #cbc4a2;
+		color: $green-dark;
+	}
+		
+	&:not(.opened) .section-header .rotate:hover {
+		background: #ada400;
+	}
+	
+	a {
+		color: $green;
+	}
+	
+	a:hover {
+		color: $green-er;
+	}
 
-.section.green a:hover {
-	color: $green-er;
 }
 
 /* Gray - Photo */	
@@ -313,23 +344,25 @@ $sections: 1,2,3,4,5;
 	
 .section .section-header:hover .section-title,
 .section-tabs .section-tab:hover .section-title {
-	color: white;
+	//color: white;
 	}
 
 
 /* Section Tabs */
 
-.section-tabs {
-	
-	}
-
 .size-lt-large .section-tabs {
 	margin-left: -200px;
+	width: 200px;
 	top: 50px;
 	}
 	
-body[class*="verso-"] .section-tabs {
+body[class*="verso-"] .size-gt-medium .section-tabs {
 	background: $crimson;
+	width: 800px;
+}
+
+body.verso-1 .size-gt-medium .section-tabs:hover {
+	//background: $crimson-er;
 }
 	
 .section-tabs {
@@ -341,8 +374,7 @@ body[class*="verso-"] .section-tabs {
 	bottom: 0px;
 	top: 0px;
 	bottom: 0px;
-	width: 800px;
-
+	
 	.section-tab {
 		
 		width: 33px;
@@ -370,7 +402,7 @@ body[class*="verso-"] .section-tabs {
 		}
 		
 		&.crimson:hover {
-			color: white;
+			//color: white;
 			background: #c60c30;
 		}
 		

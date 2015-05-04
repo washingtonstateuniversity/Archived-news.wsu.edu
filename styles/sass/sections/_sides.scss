@@ -11,7 +11,7 @@
 	}
 	
 .section-side:before,
-.main-body .section.crimson .section-header:before {
+.main-body .section.crimson .section-header::before {
 	content: "news";
 	font-size: 8em;
 	line-height: 1em;
@@ -25,9 +25,10 @@
 	z-index: 100;
 	text-shadow: -5px 0px 0px rgba(0, 0, 0, 0.25);
 	}
+
 .section.crimson .section-header:before {
 	color: $crimson;
-	}
+}
 
 .section-side {
 	
@@ -64,6 +65,7 @@
 		padding-top: 0px;
 		}
 		
+		
 	.ul {
 		padding: 0;
 		margin: 0;
@@ -75,6 +77,14 @@
 			
 	ul.menu {
 		margin-bottom: 1rem;
+	}
+	
+	ul.menu ul li:last-of-type {
+		margin-top: 5px;
+	}
+	
+	ul.menu ul li:last-of-type {
+		margin-bottom: 10px;
 	}
 		
 	.menu li,
@@ -98,6 +108,10 @@
 	ul.menu > li.current > a {
 		padding: 7px 4px;
 		margin: -2px -4px;
+		}
+		
+	ul.menu > li.current > a {
+		font-weight: bold;
 		}
 		
 	header {
@@ -124,7 +138,8 @@
 	
 }
 
-.section .section-side ul:not(.menu) li a:before {
+.section .section-side ul:not(.menu) li a::before,
+.content-item-event-date::before {
 	content: "";
 	width: 8px;
 	height: 8px;
@@ -136,29 +151,37 @@
 	}
 
 // Crimson
-.crimson .section-side li a {
-	color: #d7dadb;
-	}
-.crimson .section-side li a:hover {
-	color: white;
+
+.crimson {
+	
+	.section-side {
+		
+		background: $crimson;
+		
+		&:before {
+			color: $crimson;
+		}
+		
+		li a {
+			color: #d7dadb;
+		}
+		
+		li a:hover {
+			color: white;
+		}
+		
+		ul li a,
+		ul header {
+			color: $gray-lighter;
+		}
+		
+		.menu li a:hover {
+			color: white;
+			background: $crimson-dark;
+		}
+	
 	}
 
-.section.crimson aside ul li a,
-.section.crimson aside ul header {
-	color: $gray-lighter;
-	}
-
-.section.crimson aside .menu li a:hover {
-	color: white;
-	background: $crimson-dark;
-	}
-
-.section.crimson aside {
-	background: $crimson;
-	}
-.section.crimson aside:before {
-	color: $crimson;
-	}
 .section.crimson aside hr {
 	background: $crimson-dark;
 	display: none;
@@ -174,6 +197,8 @@
 .section.crimson .section-side ul:not(.menu) li a:hover::before {
 	background-color: $gray-lightly;
 	}
+
+}
 
 // Yellow
 .section.yellow {
@@ -301,7 +326,7 @@
 	
 }
 
-.section.blue {
+.blue {
 	
 	.section-side ul:not(.menu) li a:before {
 		background-color: $blue-darker;
@@ -309,18 +334,23 @@
 	}
 	
 	.content-item-event-date {
-		color: $blue;
 		//background-color: $blue-dark;
 		//float: right;
 		//width: 30px;
-		text-align: center;
-		text-align: left;
+		//text-align: center;
+		//text-align: left;
 		display: block;
 		font-weight: bold;
-		padding: 3px 0 3px 5px;
+		//padding: 3px 0 3px 5px;
 		color: $blue-darker;
 		//border-left: 5px $blue-darker solid;
 		//margin-left: 3px;
+		text-transform: uppercase;
+	
+		&::before {
+			background: $blue-darker;
+		}
+	
 	}
 	
 	.content-item-event-title {
@@ -328,7 +358,7 @@
 		//clear: both;
 		//border-left: 5px $blue-darker solid;
 		//border-left: 5px transparent solid;
-		padding: 0px 0 3px 5px;
+		//padding: 0px 0 3px 5px;
 		display: block;
 		
 		a:not(.x):not(.y) {
@@ -345,7 +375,7 @@
 	.content-item-event-meta {
 		font-size: .8em;
 		color: $blue-darker;
-		margin-left: 10px;
+		//margin-left: 10px;
 		display: block;
 	}
 	
@@ -450,6 +480,7 @@
 	ul {
 		margin-top: 5px;
 		}
+
 	li {
 		border-top: none;
 		list-style: none;
@@ -478,24 +509,28 @@
 			border-top-color: #4f868e;
 		}
 		
+		&.orange a {
+			color: #b67233;
+			border-top-color: #b67233;
+		}
+		
+		&.green a {
+			color: #8f7f35;
+			border-top-color: #8f7f35;
+		}
+		
+		li {
+			display: inline-block;
+		}
+		
 	}
+
 }
 
-.side-sections li.orange a {
-	color: #b67233;
-	border-top-color: #b67233;
-	}
-.side-sections li.green a {
-	color: #8f7f35;
-	border-top-color: #8f7f35;
-	}
-.side-sections li li {
-	xdisplay: none;
-	display: inline-block;
-	}
 .side-sections ul ul li ~ li {
 	list-style: disc;
-	}
+}
+
 .side-sections li.crimson li a,
 .side-sections li.yellow li a,
 .side-sections li.blue li a,
@@ -507,12 +542,13 @@ aside.widget li a {
 	color: gray;
 	border-bottom: none;
 	display: block;
-	}
+}
+
 .side-sections li li a:hover,
 aside.widget li a:hover {
 	color: #981e32;
 	color: #2a3033;
-	}
+}
 	
 header .rsswidget img {
 	display: none;
