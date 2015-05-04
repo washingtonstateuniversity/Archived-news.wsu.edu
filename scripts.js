@@ -200,6 +200,8 @@
 		} else {
 			$("#jacket").addClass("size-lt-xxlarge");
 		}
+
+		//var opened = $(".news-section.opened").attr("data-sec");
 		
 		$("body").swipe( {
 			

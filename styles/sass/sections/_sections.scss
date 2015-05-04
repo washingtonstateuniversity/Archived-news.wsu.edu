@@ -77,29 +77,32 @@ $sections: 1,2,3,4,5;
 		}
 	}
 
-.size-gt-small {
+ 
 		
-	.verso-1 #binder {
+	.verso-1 .size-gt-small #binder {
 		margin-left: 33px;
 	}
 	
-	.verso-2 #binder {
+	.verso-2 .size-gt-small #binder {
 		margin-left: 66px;
+		margin-left: 33px;
 	}
 	
-	.verso-3 #binder {
+	.verso-3 .size-gt-small #binder {
 		margin-left: 99px;
+		margin-left: 33px;
 	}
 	
-	.verso-4 #binder {
+	.verso-4 .size-gt-small #binder {
 		margin-left: 122px;
+		margin-left: 33px;
 	}
 	
-	.verso-5 #binder {
+	.verso-5 .size-gt-small #binder {
 		margin-left: 155px;
+		margin-left: 33px;
 	}
 	
-}
 
 
 .section.opened:not(.crimson) .section-header:hover .rotate:before {

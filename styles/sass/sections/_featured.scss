@@ -117,6 +117,16 @@
 
 }
 
+/** iOS */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait),
+all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape),
+screen and (device-aspect-ratio: 40/71) {
+  .main-body .articles article.has-post-thumbnail:first-of-type {
+    height: 400px;
+  }
+}
+
+
 .section.crimson aside:before,
 .section.yellow aside:before,
 .section.blue aside:before,
