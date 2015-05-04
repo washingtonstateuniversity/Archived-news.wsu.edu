@@ -52,10 +52,22 @@ body {
 	
 }
 
+.articles,
+.stories {
+	
+	.article-footer {
+		
+		display: none;
+		
+	}
+	
+}
+
 
 .single article,
 .single article header {
 	background-image: none;
+	background-size: 0 0;
 }
 
 .main-body div:not(.article-featured) article,
@@ -375,7 +387,7 @@ body.single article .article-thumbnail {
 	
 	article ~ article {
 		
-		margin-top: 2rem;
+		//margin-top: 2rem;
 		padding-top: 2rem;
 	
 	}
