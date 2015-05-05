@@ -1,15 +1,16 @@
 <?php if ( !is_paged() ) : ?>
 
-	<header class="headlines">Headlines</header>
+	<!--<header class="headlines">Headlines</header>-->
 	
 <?php endif; ?>
 	 
  <?php
-	 
+	
 	$cover_categories = 'top-stories';
 
  	$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-
+ 	$offset = ( !is_paged() ) ? 1 : "";
+ 	
 	$posts_featured = array(
 		'nopaging'				=> false,
 		'paged'					=> $paged,
@@ -17,12 +18,12 @@
 		'category__not_in' 		=> array(473),
 		'category_name'	   		=> $cover_categories,
 		'tag__not_in'			=> array($exclude_photos),
-		'offset'				=> 1,
+		'offset'				=> $offset
 	);
 	
-	$articles = new WP_Query( $posts_featured );
+	$cover_articles = new WP_Query( $posts_featured );
 	
-	while ( $articles->have_posts() ) : $articles->the_post();
+	while ( $cover_articles->have_posts() ) : $cover_articles->the_post();
 
 		get_template_part( 'articles/story-before', get_post_type() );
 
@@ -33,8 +34,8 @@
 	$paging = array(
 		'base'         => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 		'format'       => '/page/%#%',
-		'total'        => $articles->max_num_pages,
-		'current'      => max( 1, get_query_var('paged') ),
+		'total'        => $cover_articles->max_num_pages,
+		'current'      => max( 1, $paged ),
 		'show_all'     => False,
 		'end_size'     => 3,
 		'mid_size'     => 3,
