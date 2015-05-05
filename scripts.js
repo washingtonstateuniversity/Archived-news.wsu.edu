@@ -47,7 +47,7 @@
 					
 				if ( indexical !== "1" ) {
 						
-						$("body:not(.single)").addClass("verso-"+( indexical - 1 ));
+					$("body:not(.single)").addClass("verso-"+( indexical - 1 ));
 			
 				}
 			
@@ -128,6 +128,17 @@
 	
 	}
 	
+	function sizeXXL() {
+	
+		var xl_current_width = $(window).width();
+		
+		if ( xl_current_width >= 1396 ) {
+			$("#jacket").addClass("size-gt-xlarge");
+		} else {
+			$("#jacket").addClass("size-lt-xxlarge");
+		}
+	}
+	
 	function tipIn(tip,attr) {
 		
 		var img_src = $(tip).attr(attr);
@@ -163,9 +174,13 @@
 		
 	}
 	
+	// On Load
 	flipLeft();
+	
 
 	$(document).ready( function() {
+		
+		sizeXXL();
 		
 		$('a[href$=".jpg"]').on("click", function(e) {
 			
@@ -192,16 +207,7 @@
 		
 		$("img.aside").removeClass("aside").parents("figure").addClass("aside");		
 		
-		// Expand binder size for xxlarge widths
-		var xl_current_width = $(window).width();
-	
-		if ( xl_current_width >= 1396 ) {
-			$("#jacket").addClass("size-gt-xlarge");
-		} else {
-			$("#jacket").addClass("size-lt-xxlarge");
-		}
-
-		//var opened = $(".news-section.opened").attr("data-sec");
+		
 		
 		$("body").swipe( {
 			
@@ -209,7 +215,7 @@
 				
 				var opened = $(".section.opened").attr("data-sec");
 				flipLeft(opened + 1);
-				//throw("left");
+				throw("left");
 				
 			},
 			
@@ -315,7 +321,6 @@
 			var container = $(this);
 			var source_data_obj = $(this ).data('source');
 			var source_data = window[source_data_obj];
-
 			var json_html = '<ul>';
 			for ( var item in source_data ) {
 				json_html += '<li><a href="' + source_data[item ].link + '">' + source_data[item].title + '</a></li>';
