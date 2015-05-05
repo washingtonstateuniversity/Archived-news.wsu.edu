@@ -13,6 +13,14 @@ if ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG )) {
 
 }
 
+add_action('wp_feed_options', 'force_feed', 10, 1);
+function force_feed($feed) {
+	$feed->force_feed(true);
+	$feed->set_timeout(100000);
+	$feed->init();
+	$feed->handle_content_type();
+}
+
 add_action( 'wp_enqueue_scripts', 'news_scripts_styles' );
 /**
  * Enqueue child theme Javascript files.
