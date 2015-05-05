@@ -75,35 +75,41 @@ body.single.tagged-dr-universe .featured-image::before {
 
 /* Campuses */
 
-.section-campuses {
+.page-campuses,
+.page-locales {
 	
-	[class*="-pullman"],
-	[class*="-spokane"],
-	[class*="-vancouver"],
-	[class*="-global-campus"],
-	[class*="-tri-cities"],
-	[class*="-extension"] {
+	article[class*="-pullman"],
+	article[class*="-spokane"],
+	article[class*="-vancouver"],
+	article[class*="-global-campus"],
+	article[class*="-tri-cities"],
+	article[class*="-extension"] {
 		
-		.article-footer::before {
-				//position: absolute;
+		.article-header {
+		
+			.article-meta::before {
+				
 				@include condensed;
 				font-weight: bold;
 				display: inline-block;
 				background: $gray-light;
 				color: white;
 				position: static;
-				//right: 0;
-				//float: right;
-				//width: 50%;
 				padding: 5px;
-				//margin-top: -5px;
 				width: auto;
 				height: auto;
-		
+			
+			}
 		}
 	}
 }
 
+article[class*="-pullman"] .article-header .article-meta::before { content: "" }
+article[class*="-spokane"] .article-header .article-meta::before { content: "Spokane" }
+article[class*="-vancouver"] .article-header .article-meta::before { content: "Vancouver" }
+article[class*="-tricities"] .article-header .article-meta::before { content: "Tri-Cities" }
+article[class*="-everett"] .article-header .article-meta::before { content: "Everett" }
+article[class*="-global"] .article-header .article-meta::before { content: "Global Campus" }
 
 
 /* Authors */
