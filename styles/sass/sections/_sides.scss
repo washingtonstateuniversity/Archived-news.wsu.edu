@@ -1,17 +1,13 @@
-.section aside {
+.section-side{
 	float: right !important;
 	width: 198px;
+	min-height: 100%;
 	min-height: 100vh;
-	height: 100%;
 	display: block;
 	}
 
-.section.crimson aside {
-	display: none;
-	}
-	
 .section-side:before,
-.main-body .section.crimson .section-header::before {
+.size-large .main-body .crimson .section-header::before {
 	content: "news";
 	font-size: 8em;
 	line-height: 1em;
@@ -30,26 +26,19 @@
 	color: $crimson;
 }
 
+.people #text-4,
+.people #rss-4 {
+	display: none;
+}
+
+.page-faculty-staff .people #text-4,
+.page-students .people #rss-4 {
+	display: block;
+}
+
 .section-side {
 	
 	padding: 15px 0 0 1rem;
-	
-	.recent,
-	.popular {
-		overflow: visible;
-		}
-	
-	.recent header,
-	.popular header {
-		padding-bottom: 5px !important;
-		}
-	
-	.recent li,
-	.popular li {
-		border-top: 1px rgba(0, 0, 0, 0.2) solid;
-		padding-top: 3px;
-		padding-bottom: 5px !important;
-		}
 	
 	ul {
 		padding: 0 0 25px 0;
@@ -58,7 +47,7 @@
 		}
 		
 	ul ul {
-		padding: 0;
+		padding: 0 0 0 3px;
 		}
 		
 	ul ~ ul {
@@ -80,7 +69,7 @@
 	}
 	
 	ul.menu ul li:last-of-type {
-		margin-top: 5px;
+		//margin-top: 5px;
 	}
 	
 	ul.menu ul li:last-of-type {
@@ -95,24 +84,23 @@
 		line-height: 1em;
 		color: white;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 5px 0;
 		}
 		
 	.menu li a {
 		color: white;
 		display: inline-block;
-		padding: 5px 0;
 		}
+
+	li a {
+		padding: 2px 0px;
+	}
 	
-	.menu li a:hover,
-	ul.menu > li.current > a {
-		padding: 7px 4px;
+	li a:hover,
+	li.current > a {
+		padding: 4px 4px;
 		margin: -2px -4px;
-		}
-		
-	ul.menu > li.current > a {
-		font-weight: bold;
-		}
+	}
 		
 	header {
 		font-family: "Open Sans Condensed";
@@ -138,7 +126,7 @@
 	
 }
 
-.section .section-side ul:not(.menu) li a::before,
+.section-side ul:not(.menu) li a::before,
 .content-item-event-date::before {
 	content: "";
 	width: 8px;
@@ -149,6 +137,10 @@
 	color: white;
 	background: white;
 	}
+	
+.weather-report {
+	//display: inline;
+}
 
 // Crimson
 
@@ -164,6 +156,7 @@
 		
 		li a {
 			color: #d7dadb;
+			display: block;
 		}
 		
 		li a:hover {
@@ -175,19 +168,38 @@
 			color: $gray-lighter;
 		}
 		
-		.menu li a:hover {
+		li a:hover {
 			color: white;
 			background: $crimson-dark;
+		}
+		
+		ul li a::before {
+			background: $gray-lighter;
+		}
+		
+		ul li a:hover::before {
+			background: white;
+		}
+		
+		.popular {
+			overflow: visible;
+		}
+	
+		.popular header {
+			padding-bottom: 5px !important;
+		}
+		
+		.popular li {
+			border-top: 1px rgba(0, 0, 0, 0.2) solid;
+			padding-top: 3px;
+			padding-bottom: 5px !important;
 		}
 	
 	}
 
-.section.crimson aside hr {
-	background: $crimson-dark;
-	display: none;
-	}
+
 .section.crimson aside header {
-	color: $crimson-dark;
+	background: $crimson-dark;
 	color: $gray-lightly;
 	}
 .section.crimson .section-side ul:not(.menu) li a::before {
@@ -217,14 +229,12 @@
 			display: inline-block;
 		}
 		
-		.menu li a:hover {
+		li a:hover {
 			color: white;
 			background: $yellow-dark;
 		}
 		
-		ul:not(.menu) li a:before {
-			background-color: $yellow-dark;
-		}
+		
 		
 		hr {
 			background: $yellow-lighter;
@@ -326,56 +336,21 @@
 	
 }
 
-.blue {
+.section-side {
 	
-	.section-side ul:not(.menu) li a:before {
-		background-color: $blue-darker;
-		display: none;
+	.content-item-event-title {
+		display: block;
 	}
 	
 	.content-item-event-date {
-		//background-color: $blue-dark;
-		//float: right;
-		//width: 30px;
-		//text-align: center;
-		//text-align: left;
 		display: block;
 		font-weight: bold;
-		//padding: 3px 0 3px 5px;
-		color: $blue-darker;
-		//border-left: 5px $blue-darker solid;
-		//margin-left: 3px;
 		text-transform: uppercase;
 	
-		&::before {
-			background: $blue-darker;
-		}
-	
-	}
-	
-	.content-item-event-title {
-		
-		//clear: both;
-		//border-left: 5px $blue-darker solid;
-		//border-left: 5px transparent solid;
-		//padding: 0px 0 3px 5px;
-		display: block;
-		
-		a:not(.x):not(.y) {
-			color: $blue-lightly;
-		}
-		
-		a:not(.x):not(.y):hover {
-			color: white;
-			background: transparent;
-		}
-		
 	}
 	
 	.content-item-event-meta {
 		font-size: .8em;
-		color: $blue-darker;
-		//margin-left: 10px;
 		display: block;
 	}
 	
@@ -386,8 +361,75 @@
 	
 }
 
+.crimson {
+	
+	.section-side .content-item-event-title a:before {
+		display: none;
+	}
+	
+	.content-item-event-date {
+		color: darken($crimson-dark, 5%);
+	
+		&::before {
+			background: darken($crimson-dark, 5%);
+		}
+	
+	}
+	
+	.content-item-event-title {
+		
+		a:not(.x):not(.y) {
+			//color: $crimson-lightly;
+		}
+		
+		a:not(.x):not(.y):hover {
+			color: white;
+		}
+		
+	}
+	
+	.content-item-event-meta {
+		color: darken($crimson-dark, 5%);
+	}
+	
+}
+
+.blue {
+	
+	.section-side ul:not(.menu) li a:before {
+		background-color: $blue-darker;
+		display: none;
+	}
+	
+	.content-item-event-date {
+		color: $blue-darker;
+	
+		&::before {
+			background: $blue-darker;
+		}
+	
+	}
+	
+	.content-item-event-title {
+		
+		a:not(.x):not(.y) {
+			color: $blue-lightly;
+		}
+		
+		a:not(.x):not(.y):hover {
+			color: white;
+		}
+		
+	}
+	
+	.content-item-event-meta {
+		color: $blue-darker;
+	}
+	
+}
+
 // Blue
-.section.blue {
+.blue {
 	
 	.section-side {
 	
@@ -403,7 +445,7 @@
 			
 		header {
 			background: $blue-darker;
-			color: $blue-lighter;
+			color: $blue;
 		}
 	
 		li a {
@@ -456,9 +498,7 @@
 			margin: -.25rem;
 		}
 		
-		li a:hover,
-		ul.menu > li.current > a,
-		ul.menu li li.current > a {
+		li a:hover {
 			color: white;
 			background: $green-dark;
 		}
