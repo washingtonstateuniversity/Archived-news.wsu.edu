@@ -21,15 +21,14 @@
 		
 		<header class="section-header"><span class="rotate"><span class="section-title">Featured</span></span></header>
 		
-		<div class="enclosure row single equalize equalize-medium">
+		<div class="enclosure row margin-right equalize equalize-medium">
 		
-		<?php if ( !is_single() ) : ?>
 		<aside class="section-side column two">
-		
+			
+			<?php //echo do_shortcode( '[wsuwp_events host="calendar.wsu.edu" count=7]' ) ?>
 			<?php if ( is_active_sidebar( 'side-cover' ) ) { dynamic_sidebar( 'side-cover' ); } ?>
 		
 		</aside>
-		<?php endif; ?>
 		
 		<div class="articles lead column one">
 			
@@ -58,7 +57,7 @@
 					
 				?>
 			 
-			<?php include(locate_template('sections/section-cover-today.php')); ?>
+			<?php // include(locate_template('sections/section-cover-today.php')); ?>
 			
 			<?php endif; ?>
 			
