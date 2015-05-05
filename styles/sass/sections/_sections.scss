@@ -33,20 +33,49 @@
 $sections: 1,2,3,4,5;
 
 @each $section in $sections {
-		
-	.size-gt-small .sections .section:nth-of-type(#{$section}) {
-		z-index: 100 - ( 10 * $section);
-		width: calc(528px + #{( 33px * ( $section - 1 ) )} );
-		margin-right: #{( -528px - ( 33px * ( $section - 1 ) ) )};
+	
+	@media only screen 
+  
+		and (min-width: 692px) {
+	  
+		.sections .section:nth-of-type(#{$section}) {
+			z-index: 100 - ( 10 * $section);
+			width: calc(594px + #{( 33px * ( $section - 1 ) )} );
+			margin-right: #{( -594px - ( 33px * ( $section - 1 ) ) )};
+		}
+	
 	}
 	
 }
 
 @each $section in $sections {
-		
-	.size-gt-medium .sections .section:nth-of-type(#{$section}) {
-		width: calc(594px + #{( 33px * ( $section - 1 ) )} );
-		margin-right: #{( -594px - ( 33px * ( $section - 1 ) ) )};
+	
+	@media only screen 
+  
+		and (min-width: 1188px) {
+	  
+		.sections .section:nth-of-type(#{$section}) {
+			z-index: 100 - ( 10 * $section);
+			width: calc(693px + #{( 33px * ( $section - 1 ) )} );
+			margin-right: #{( -693px - ( 33px * ( $section - 1 ) ) )};
+		}
+	
+	}
+	
+}
+
+@each $section in $sections {
+	
+	@media only screen 
+  
+		and (min-width: 1396px) {
+	  
+		.sections .section:nth-of-type(#{$section}) {
+			z-index: 100 - ( 10 * $section);
+			width: calc(792px + #{( 33px * ( $section - 1 ) )} );
+			margin-right: #{( -792px - ( 33px * ( $section - 1 ) ) )};
+		}
+	
 	}
 	
 }
@@ -77,8 +106,6 @@ $sections: 1,2,3,4,5;
 		}
 	}
 
- 
-		
 	x.verso-1 .size-gt-small #binder {
 		margin-left: 33px;
 	}
@@ -164,6 +191,7 @@ $sections: 1,2,3,4,5;
 	padding-left: 20px;
 	padding-top: 3px;
 	display: block;
+
 }
 
 .section-tab .section-title {
@@ -350,16 +378,22 @@ $sections: 1,2,3,4,5;
 
 /* Section Tabs */
 
-.size-lt-large .section-tabs {
-	margin-left: -200px;
+.section-tabs {
+	margin-left: -400px;
 	width: 200px;
+}
+
+.size-lt-large .section-tabs {
 	top: 50px;
-	}
+}
 	
-body[class*="verso-"] .size-gt-medium .section-tabs {
-	background: $crimson;
+.size-gt-medium .section-tabs {
 	width: 800px;
 	margin-left: -996px;
+}
+
+body[class*="verso-"] .size-gt-medium .section-tabs {
+	background: $crimson;
 }
 
 body.verso-1 .size-gt-medium .section-tabs:hover {
