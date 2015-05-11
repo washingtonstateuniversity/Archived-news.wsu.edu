@@ -1,10 +1,4 @@
-<?php if ( !is_paged() ) : ?>
-
-	<!--<header class="headlines">Headlines</header>-->
-	
-<?php endif; ?>
-	 
- <?php
+<?php
 	
 	$cover_categories = 'top-stories';
 
