@@ -24,6 +24,14 @@
 				
 	<header class="article-header" <?php echo $featured_image_bg; ?>>
 		<hgroup class="article-meta">
+			<?php
+				$story_referenced_date = get_post_meta( get_the_ID(), 'story_referenced_date', true );
+				if( ! empty( $story_referenced_date ) ) : ?>
+			
+			<time class="referenced-date">
+				<?php echo $story_referenced_date; ?>
+			</time>
+			<?php else : ?>
 			<time class="article-date" hour="<?php echo get_the_date(); ?>" datetime="<?php echo get_the_date( 'c' ); ?>">
 				<span class="default"><?php echo get_the_date(); ?></span>
 				<span class="year-four"><?php echo get_the_date( 'Y' ); ?></span>
@@ -36,6 +44,7 @@
 				<span class="timezone"><?php echo get_the_date( 'T' ); ?></span>
 				<?php // echo get_the_date( 'c' ); ?>
 			</time>
+			<?php endif; ?>
 		</hgroup>
 		
 		<hgroup class="article-title">
@@ -53,7 +62,7 @@
 		<hgroup class="article-byline">
 			<cite class="article-author">
 				<?php
-				$alt_byline = get_post_meta( get_the_ID(), 'wsunews_alt_byline', true );
+				$alt_byline = get_post_meta( get_the_ID(), 'story_alt_byline', true );
 				if( ! empty( $alt_byline ) ) { echo $alt_byline; } else {
 				?>
 				<b class="author" role="author"><?php the_author_posts_link(); ?></b>
