@@ -301,13 +301,16 @@ x.single.has-featured-image .main-header .header-group {
 		float: none;
 	}
 	
-	a[rel="next"],
 	a[rel="prev"] {
 		color: $gray-lighter;
-		background: $gray-darker;
+		//background: $gray-darker;
 		margin-top: 5px;
-		padding: 5px 10px;
+		margin-left: 4rem;
+		border-top: 5px $gray-lighter solid;
+		padding: 5px 0px;
 		display: block;
+		clear: both;
+		
 		
 	}
 	
@@ -317,15 +320,13 @@ x.single.has-featured-image .main-header .header-group {
 	
 	a[rel="next"]:hover,
 	a[rel="prev"]:hover {
-		background: $crimson;
+		color: $gray;
+		//background: $gray-lighter;
 	}
 	
-	a[rel="next"]:before,
 	a[rel="prev"]:before {
 		display: inline-block;
 		font-weight: bold;
-		color: white;
-		font-weight: 300;
 		text-transform: uppercase;
 	}
 	
