@@ -1,5 +1,6 @@
 <?php
 
+// Local Spine for Development
 if ( ( defined( 'WSU_LOCAL_CONFIG' ) && true === WSU_LOCAL_CONFIG )) {
 
 	add_action( 'wp_enqueue_scripts', 'spine_dev_wp_enqueue_scripts' );
@@ -33,6 +34,7 @@ function news_scripts_styles() {
 	wp_enqueue_script( 'weather-scripts', get_stylesheet_directory_uri() . '/scripts/weather/weather.js', array( 'jquery' ), false, true );
 	//wp_enqueue_style( 'colorbox-styles', get_stylesheet_directory_uri() . '/scripts/colorbox/colorbox.css' );
 	//wp_enqueue_script( 'colorbox-scripts', get_stylesheet_directory_uri() . '/scripts/colorbox/jquery.colorbox.js' );
+	
 }
 
 add_action( 'admin_enqueue_scripts', 'news_admin_enqueue_scripts' );
@@ -42,6 +44,8 @@ add_action( 'admin_enqueue_scripts', 'news_admin_enqueue_scripts' );
 function news_admin_enqueue_scripts() {
 	wp_enqueue_style( 'admin-interface-styles', get_stylesheet_directory_uri() . '/includes/theme-admin.css' );
 	wp_enqueue_script( 'admin-interface-scripts', get_stylesheet_directory_uri() . '/includes/theme-admin.js' );
+	wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_style('jquery-ui-custom', 'https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css');
 	add_editor_style( 'includes/theme-editor.css' );
 }
 
@@ -176,7 +180,11 @@ add_filter( 'widget_text', 'do_shortcode');
 /**
  * Include media tweaks
  */
-include_once( 'includes/media-admin.php' ); // Alter media insertion and settings
+if ( is_admin() ) {
+	include_once( 'includes/media-admin.php' ); // Alter media insertion and settings
+	include_once 'includes/metaboxes.php';
+}
+
 
 /**
  * Add byline field
@@ -193,23 +201,6 @@ function add_byline_to_user($profile_fields) {
 	return $profile_fields;
 }
 add_filter('user_contactmethods', 'add_byline_to_user');
-
-
-function notes_add_meta_box() {
-
-	$details = array( 'post' );
-
-	foreach ( $details as $detail ) {
-
-		add_meta_box(
-			'notes_sectionid',
-			__( 'Story Details', 'notes_textdomain' ),
-			'notes_meta_box_callback',
-			$detail
-		);
-	}
-}
-add_action( 'add_meta_boxes', 'notes_add_meta_box' );
 
 
 add_filter('mce_css', 'news_mcekit_editor_style');
@@ -282,16 +273,7 @@ function news_mce_before_init( $settings ) {
 			'block' => 'blockquote',  
 			'classes' => 'pullquote',
 			'wrapper' => true,
-		),
-        array(
-            'title' => 'Red Uppercase Text',
-            'inline' => 'span',
-            'styles' => array(
-                'color' => '#ff0000',
-                'fontWeight' => 'bold',
-                'textTransform' => 'uppercase'
-            )
-        )
+		)
     );
  
     $settings['style_formats'] = json_encode( $style_formats );
@@ -316,36 +298,6 @@ function news_mcekit_editor_enqueue() {
   wp_enqueue_style( 'myCustomStyles', $StyleUrl );
 }
 
-
-/* function news_insert_image( $html, $id, $caption, $title, $align, $url  ) {
-	
-	//$image_tag = get_image_tag($id, '', $title, $align, $size);
-	//$img_classes = apply_filters('get_image_tag_class', $class, $id, $align, $size);
-  
-  	//$img_classes = wp_get_attachment_image_attributes( $id );
-  	//$img_classes = get_image_tag_class($id);
-  	//$img_classes = "unknown";
-  	
-  	//$image_specs = wp_get_attachment_image_src( $id );
-  	$image_url = wp_get_attachment_image_src( $id, $size, $icon ); 
-  	$image_url = $image_url[0]; 
-  	//$image_attributes = wp_get_attachment_image_attributes( $id );
-  
-	$html5 = "<figure id='post-$id media-$id' class='align-$align'>";
-	$html5 .= "<img src='$image_url' alt='$title' />";
-	//$html5 .= $image_url;
-	//$html5 .= $image_attributes[0];
-	//$html5 .= $image_specs[0];
-	if ($caption) {
-    	$html5 .= "<figcaption>$caption</figcaption>";
-	}
-	$html5 .= "</figure>";
-	
-	return $html5;
-	
-	}
-	
-add_filter( 'image_send_to_editor', 'news_insert_image', 10, 9 ); */
 
 
 /**
