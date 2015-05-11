@@ -6,7 +6,7 @@
 	display: block;
 	}
 
-.section-side:before,
+.section-side:not(.sidebar)::before,
 .size-large .main-body .crimson .section-header::before {
 	content: "news";
 	font-size: 8em;
@@ -290,18 +290,18 @@
 		}
 		
 		header {
-			background: $orange-dark;
+			background: $orange-darker;
 			margin-bottom: .25rem;
 		}
 		
 		header,
 		header a {
-			color: $orange-light;
+			color: $orange;
 		}
 		
 		a.rsswidget:not(.x):not(.y) {
 			font-weight: bold;
-			color: $orange-lightest;
+			color: $orange;
 			display: block;
 			padding: .25rem;
 			margin: -.25rem;
@@ -567,6 +567,70 @@
 
 }
 
+.sidebar {
+	
+	aside.widget {
+		
+		margin-bottom: 1rem;
+		min-width: 264px;
+		
+		header {
+			color: $gray-light;
+			font-size: 1.4rem;
+			padding-bottom: 5px;
+		}
+		
+		a {
+		
+			color: $gray-light;
+			font-size: 1em;
+			
+			&:hover {
+				
+				color: $crimson;
+				
+			}
+		
+			&:not(.x)::before {
+				
+				background: $gray-lightly;
+				
+			}
+			
+			&:not(.x):hover::before {
+				
+				background: $gray;
+				
+			}
+		
+		}
+		
+		.post-date {
+			
+			text-transform: uppercase;
+			font-size: .9em;
+			color: $gray-lighter;
+			
+		}
+		
+	}
+	
+	
+	
+	.tagcloud a {
+		
+		color: $gray-lighter;
+		
+	}
+	
+	.tagcloud a:hover {
+		
+		color: $crimson;
+		
+	}
+	
+}
+
 .side-sections ul ul li ~ li {
 	list-style: disc;
 }
@@ -598,11 +662,16 @@ header .rsswidget img {
 
 .tagcloud {
 	
-	line-height: 1em;
+	line-height: 1.1em;
 	
+}
+
+.crimson .tagcloud {
+		
 	a {
 		
 		color: $gray-lighter;
+		color: darken($crimson-dark, 10%);
 		
 	}
 	

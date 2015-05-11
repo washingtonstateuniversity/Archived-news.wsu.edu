@@ -13,6 +13,8 @@
 	
 	
 	}
+	
+
 
 
 
@@ -34,6 +36,20 @@
 		background: #f9f9f9;
 	}
 			
+}
+
+.size-gt-medium {
+	
+	.archive &,
+	.category & {
+		
+		.column.two {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+	}
+	
 }
 	
 .size-lt-xlarge {
