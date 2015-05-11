@@ -123,7 +123,7 @@
 	            type       : "GET",
 	            data       : {numPosts : 5, pageNumber: page},
 	            dataType   : "html",
-	            url        : "http://news.wsu.dev/next-posts/?pageNumber="+page+"",
+	            url        : "/next-posts/?pageNumber="+page+"",
 	            beforeSend : function(){
 	                
 	                if(page !== 1){
