@@ -52,8 +52,13 @@
 		
 		<hgroup class="article-byline">
 			<cite class="article-author">
-				<span class="author" role="author"><?php the_author_posts_link(); ?></span>
-				<span class="affiliation"><?php echo get_the_author_meta('affiliation'); ?></span>
+				<?php
+				$alt_byline = get_post_meta( get_the_ID(), 'wsunews_alt_byline', true );
+				if( ! empty( $alt_byline ) ) { echo $alt_byline; } else {
+				?>
+				<b class="author" role="author"><?php the_author_posts_link(); ?></b>
+				<i class="affiliation"><?php echo get_the_author_meta('affiliation'); ?></i>
+				<?php }; ?>
 			</cite>
 		</hgroup>
 		
