@@ -75,8 +75,8 @@ body.single.tagged-dr-universe .featured-image::before {
 
 /* Campuses */
 
-.page-campuses,
-.page-locales {
+x.page-campuses,
+x.page-locales {
 	
 	article[class*="-pullman"],
 	article[class*="-spokane"],
@@ -103,6 +103,33 @@ body.single.tagged-dr-universe .featured-image::before {
 		}
 	}
 }
+
+	
+	article[class*="-pullman"],
+	article[class*="-spokane"],
+	article[class*="-vancouver"],
+	article[class*="-global-campus"],
+	article[class*="-tri-cities"],
+	article[class*="-extension"] {
+		
+		.article-header {
+		
+			.article-meta::before {
+				
+				@include condensed;
+				font-weight: bold;
+				display: inline-block;
+				background: $gray-light;
+				color: white;
+				position: static;
+				padding: 5px;
+				width: auto;
+				height: auto;
+			
+			}
+		}
+	}
+
 
 article[class*="-pullman"] .article-header .article-meta::before { content: "" }
 article[class*="-spokane"] .article-header .article-meta::before { content: "Spokane" }
