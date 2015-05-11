@@ -111,7 +111,7 @@
 	    }, 200);
 	}
 	
-	// See http://code.tutsplus.com/tutorials/getting-loopy-ajax-powered-loops-with-jquery-and-wordpress--wp-23232
+	// See code.tutsplus.com/tutorials/getting-loopy-ajax-powered-loops-with-jquery-and-wordpress--wp-23232
 	
 	function loadMore() {
 	    var page = 1;
