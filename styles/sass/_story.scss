@@ -148,7 +148,9 @@ body.single {
 
 .size-gt-small {
 	
-	.story {
+	.story,
+	.spine-blank-template,
+	.spine-margin-right-template {
 	
 		.section-tabs {
 			display: none !important;
@@ -159,6 +161,10 @@ body.single {
 			
 			width: auto;
 			
+		}
+		
+		.main-body {
+			margin-left: 66px;
 		}
 	
 		.main-header {
@@ -384,7 +390,17 @@ x.single.has-featured-image .main-header .header-group {
 	}
 	
 }
+
+.story .article-footer {
 	
+	.categorized,
+	.tagged {
+		
+		display: none;
+		
+	}
+	
+}
 
 
 /* Footer Sections */
