@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<main class="spine-sideright-template">
+<main class="spine-margin-right-template">
 
 <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
@@ -11,7 +11,7 @@
 
 <div class="main-body">
 
-<section class="row side-right pad">
+<section class="row margin-right pad">
 
 	<div class="column one">
 
