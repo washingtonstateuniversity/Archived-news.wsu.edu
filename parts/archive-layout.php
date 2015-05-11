@@ -14,7 +14,11 @@
 
 	<div class="column two">
 
-		
+		<div class="section-side sidebar">
+			
+			<?php if ( is_active_sidebar( 'sidebar' ) ) { dynamic_sidebar( 'sidebar' ); } ?>
+			
+		</div>
 
 	</div><!--/column two-->
 
