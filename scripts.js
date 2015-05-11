@@ -1,3 +1,7 @@
+
+
+
+
 (function($){
 		
 	function flipLeft(indexical) {
@@ -52,7 +56,7 @@
 				}
 			
 			}
-		
+					
 		}
 
 	}
@@ -105,6 +109,69 @@
 		$('html, body').animate({
 	        scrollTop: $("main").offset().top
 	    }, 200);
+	}
+	
+	// See http://code.tutsplus.com/tutorials/getting-loopy-ajax-powered-loops-with-jquery-and-wordpress--wp-23232
+	
+	function loadMore() {
+	    var page = 1;
+	    var loading = false;
+	    var $window = $(window);
+	    var content = $(".main-body .section.opened .articles");
+		var load_posts = function(){
+	        $.ajax({
+	            type       : "GET",
+	            data       : {numPosts : 5, pageNumber: page},
+	            dataType   : "html",
+	            url        : "http://news.wsu.dev/next-posts/?pageNumber="+page+"",
+	            beforeSend : function(){
+	                
+	                if(page !== 1){
+	                    content.append('<div id="temp_load"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+	                }
+	            },
+	            success    : function(data){
+	                $data = $(data);
+	                //var content = $(".main-body .section.opened .articles");
+	                if($data.length){
+	                    $data.hide();
+	                    $(".main-body .section.opened .articles").append($data);
+	                    $data.fadeIn(500, function(){
+	                        $("#temp_load").remove();
+	                        loading = false;
+	                        
+	                    });
+	                } else {
+	                    $("#temp_load").remove();
+	                }
+	            },
+	            error     : function(jqXHR, textStatus, errorThrown) {
+	                $("#temp_load").remove();
+	                window.alert(jqXHR + " :: " + textStatus + " :: " + errorThrown);
+	            }
+	        });
+	        };
+    		    
+	    $window.scroll(function() {
+	        //var content = $(".main-body .section.opened .articles");
+	        //$(".pagecount").remove();
+	        //$(".spine-sitenav").prepend("<span class=\"pagecount\">"+page+"</span>");
+	        var content_offset = content.offset();
+	        window.console.log(content_offset.top);
+	        if(!loading && ($window.scrollTop() +
+	            $window.height()) > (content.scrollTop() +
+	            content.height() + content_offset.top)) {
+	                loading = true;
+	                page++;
+	                load_posts();
+	                
+	                
+	        }
+	        //$("body").spine('equalizing','');
+	        
+	    });
+	    //load_posts();
+	    
 	}
 	
 	function imageWrap() {
@@ -178,7 +245,10 @@
 	flipLeft();
 	
 
+	
 	$(document).ready( function() {
+		
+		loadMore();
 		
 		sizeXXL();
 		
@@ -208,6 +278,25 @@
 		$("img.aside").removeClass("aside").parents("figure").addClass("aside");		
 		
 		
+		// Flip sections
+		
+		$( ".section-tab" ).click(function() {
+	  
+		  	var indexical = $(this).attr("data-sec");
+			flipRight(indexical);
+			pageTop();
+				  
+		});
+		
+		$( ".main-body .sections .section-header" ).click(function() {
+			
+			var indexical = $(this).parents(".section").attr("data-sec");
+			flipLeft(indexical);
+			pageTop();
+			
+		});
+		
+		flipLeft();
 		
 		$("body").swipe( {
 			
@@ -227,22 +316,6 @@
 					
 			}
 
-		});
-		
-		$( ".section-tab" ).click(function() {
-	  
-		  	var indexical = $(this).attr("data-sec");
-			flipRight(indexical);
-			pageTop();
-				  
-		});
-		
-		$( ".main-body .sections .section-header" ).click(function() {
-			
-			var indexical = $(this).parents(".section").attr("data-sec");
-			flipLeft(indexical);
-			pageTop();
-			
 		});
 	
 		$( ".photo figure" ).click(function(e) {
@@ -272,7 +345,7 @@
 		
 		});
 				
-		flipLeft();
+		
 			
 	});
 
@@ -302,7 +375,7 @@
 			
 		}		
 		
-		// Sharing
+		// Sharing Icons on Single Stories
 		$("body.single #spine .spine-share ul").clone().addClass("spine-share looseleaf").prependTo(".story");
 		$(".spine-share.looseleaf li a").wrapInner("<span class='channel-title'></div>");
 		$(".spine-share.looseleaf").wrap("<div class=\"spine-share-position\"></div>");
@@ -311,8 +384,6 @@
 	}, 500);
 
 })(jQuery);
-
-
 
 
 (function($){
