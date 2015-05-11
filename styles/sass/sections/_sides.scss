@@ -593,3 +593,23 @@ aside.widget li a:hover {
 header .rsswidget img {
 	display: none;
 }
+
+/* Tagcloud */
+
+.tagcloud {
+	
+	line-height: 1em;
+	
+	a {
+		
+		color: $gray-lighter;
+		
+	}
+	
+	a:hover {
+		
+		color: white;
+		
+	}
+	
+}

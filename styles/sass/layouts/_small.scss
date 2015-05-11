@@ -7,6 +7,14 @@
 	
 	}
 	
+	.crimson,
+	.yellow,
+	.green,
+	.orange,
+	.blue {
+		background: #f9f9f9;
+	}
+	
 	.section-header {
 		
 		position: static;
@@ -90,10 +98,10 @@
 		padding-bottom: 2rem;
 		}
 		
-	section article:nth-of-type(4) ~ article {
+	.section:not(.opened) article:nth-of-type(5) ~ article {
 		display: none !important;
 		}
-		
+				
 	section .articles {
 		padding-top: 0px;
 		}

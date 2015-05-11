@@ -21,9 +21,6 @@ body.single {
 	width: 792px;
 	}
 
-
-
-
 .story {
 	
 	.main-body .padded {
@@ -405,7 +402,9 @@ x.single.has-featured-image .main-header .header-group {
 	
 	}
 	
-	
+	.section-side {
+		display: none;
+	}
 	
 	.section ~ section {
 		//clear: none !important;
