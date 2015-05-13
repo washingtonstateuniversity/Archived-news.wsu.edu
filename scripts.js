@@ -126,7 +126,7 @@
 	            url        : "/next-posts/?pageNumber="+page+"",
 	            beforeSend : function(){
 	                
-	                if(page !== 1){
+	                if(page !== 1 && page <= 3){
 	                    content.append('<div id="temp_load"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
 	                }
 	            },
