@@ -335,6 +335,10 @@ body.single article .article-thumbnail {
 	
 	}
 	
+	.main-body {
+		margin-left: 66px;
+	}
+	
 	.main-header sup {
 		
 		display: inline-block;
@@ -375,7 +379,7 @@ body.single article .article-thumbnail {
 	
 		.main-header {
 			
-			width: 99px;
+			width: 66px;
 			height: 100vh;
 			position: fixed;
 			
@@ -392,12 +396,6 @@ body.single article .article-thumbnail {
 			padding-bottom: 0px;
 			top: 1rem;
 			left: 80px;
-			
-		}
-		
-		.column.one {
-			
-			margin-left: calc( 99px );
 			
 		}
 	

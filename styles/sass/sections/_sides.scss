@@ -301,14 +301,18 @@
 		
 		a.rsswidget:not(.x):not(.y) {
 			font-weight: bold;
-			color: $orange;
+			color: $orange-lightly;
 			display: block;
 			padding: .25rem;
 			margin: -.25rem;
 		}
 		
+		header a.rsswidget:not(.x):not(.y) {
+			color: $orange;
+		}
+		
 		a.rsswidget:not(.x):not(.y):hover {
-			color: $orange-lightly;
+			color: white;
 		}
 		
 		header a.rsswidget:first-of-type:not(.x):not(.y) {
@@ -487,7 +491,7 @@
 		}
 		
 		header {
-			color: $green-lighter;
+			color: $green;
 			background: $green-darker;
 		}
 		
@@ -510,9 +514,25 @@
 		ul:not(.menu) li a:hover::before {
 			background: white;
 		}
+		
+		.rss-date {
+			color: $green-light;
+			font-size: .9em;
+			text-transform: uppercase;
+		}
+		
+		
+		
+		
 	
 	}
 	
+}
+
+.page-faculty-staff #text-9,
+.page-alumni #text-9,
+.page-students #text-9 {
+	display: none;
 }
 
 /* Side Sections */
@@ -599,7 +619,7 @@
 			
 			&:not(.x):hover::before {
 				
-				background: $gray;
+				background: $crimson;
 				
 			}
 		
@@ -614,8 +634,6 @@
 		}
 		
 	}
-	
-	
 	
 	.tagcloud a {
 		
@@ -662,7 +680,7 @@ header .rsswidget img {
 
 .tagcloud {
 	
-	line-height: 1.1em;
+	line-height: 1.4em;
 	
 }
 

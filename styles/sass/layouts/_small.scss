@@ -129,5 +129,55 @@
 		padding-right: 2rem;
 		}
 	
+	.main-footer {
+		
+		.sections {
+			
+			padding-right: 4rem;
+			
+		}
+		
+		.next-post article,
+		.pager.prevnext:not(.x) a[rel="prev"] {
+			
+			padding-left: 0;
+			margin-left: 0;
+			
+		}
+		
+		.sections .section {
+			
+			width: auto !important;
+			padding-bottom: 1rem;
+			
+		}
+		
+		.section-header {
+			
+			height: auto;
+			
+			.section-title {
+				
+				transform: none;
+				left: 0;
+				position: relative;
+				padding-left: 0;
+				padding-bottom: 5px;
+				margin-bottom: 0;
+				line-height: 1em;
+				border-bottom: 5px $gray-lightly solid;
+				
+			}
+			
+		}
+		
+	}
+	
+	.main-footer .sections.row.single .column.one {
+		
+		padding-left: 0;
+		
+	}
+	
 }
 	
