@@ -72,7 +72,8 @@ article[class*="-global"] .article-header .article-meta::before { content: "Glob
 [class*="-perspectives"],
 [class*="-in-the-media"],
 [class*="-releases"],
-[class*="-dr-universe"] {
+[class*="-dr-universe"],
+[class*="-obituaries"] {
 	
 	.article-header {
 		
@@ -96,22 +97,23 @@ article[class*="-global"] .article-header .article-meta::before { content: "Glob
 	}
 }
 
-$columns: ( 
+$labels: ( 
 	
 	//"wsu-press-releases": "Press Release",
 	"rock-doc": "Rock Doc",
 	"perspectives": "Perspectives",
 	"dr-universe": "Ask Dr. Universe",
-	"wsu-in-the-media": "In the Media"
+	"wsu-in-the-media": "In the Media",
+	"wsu-obituaries": "Obituary"
 	
 	);
 	
-@each $slug, $column in $columns {
+@each $slug, $label in $labels {
 	article.category-#{$slug} .article-header .article-meta::before,
 	article.tag-#{$slug} .article-header .article-meta::before,
 	.single.categorized-#{$slug} .article-header .article-meta::before,
 	.single.tagged-#{$slug} .article-header .article-meta::before {
-    	content: "#{$column}";
+    	content: "#{$label}";
     }
 }
 
