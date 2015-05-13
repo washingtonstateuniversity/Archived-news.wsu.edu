@@ -195,7 +195,7 @@ if ( is_admin() ) {
 function add_byline_to_user($profile_fields) {
 
 	// Add new fields
-	$profile_fields['affiliation'] = 'Author Affiliation <br>(for byline)';
+	$profile_fields['author_title'] = 'Author Title <br>(for byline)';
 	// $profile_fields['byline'] = 'Author Byline';
 
 	return $profile_fields;
