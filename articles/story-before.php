@@ -46,8 +46,12 @@
 		
 		<hgroup class="article-byline">
 			<cite class="article-author">
-				<span class="author" role="author"><?php the_author_posts_link(); ?></span>
-				<span class="affiliation"><?php echo get_the_author_meta('affiliation'); ?></span>
+				<?php
+				$author_byline = get_post_meta( get_the_ID(), 'story_author_byline', true );
+				$author_byline_title = get_post_meta( get_the_ID(), 'story_author_byline_title', true );
+				?>
+				<b class="author" role="author"><?php if( ! empty( $author_byline ) &&  $author_byline !== "uncredited" ) { echo $author_byline; } else { the_author_posts_link(); } ?></b>
+				<i class="affiliation"><?php if( ! empty( $author_byline_title ) && $author_byline_title !== "untitled" ) { echo $author_byline_title; } else { echo get_the_author_meta('author_title'); } ?></i>
 			</cite>
 		</hgroup>
 		
